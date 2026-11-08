@@ -235,5 +235,30 @@
         "no_detections_visible": 95
       }
     }
+  },
+  "video_training_pilot": {
+    "source": "video_training.md",
+    "video_validation_baseline": {
+      "metrics/precision(B)": 0.98563185669349,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9934000000000002,
+      "metrics/mAP50-95(B)": 0.5096901984934742,
+      "fitness": 0.5096901984934742
+    },
+    "video_validation_candidate": {
+      "metrics/precision(B)": 0.9882575097541451,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9905555555555557,
+      "metrics/mAP50-95(B)": 0.5194169080895424,
+      "fitness": 0.5194169080895424
+    },
+    "cub_validation_candidate": {
+      "metrics/precision(B)": 0.9579472795849525,
+      "metrics/recall(B)": 0.9491538015806515,
+      "metrics/mAP50(B)": 0.9811630342836805,
+      "metrics/mAP50-95(B)": 0.8081083462569831,
+      "fitness": 0.8081083462569831
+    },
+    "adopted_as_release": false
   }
 }

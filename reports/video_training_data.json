@@ -1,0 +1,33 @@
+{
+  "counts": {
+    "train": 87,
+    "val": 32
+  },
+  "positives": {
+    "train": 76,
+    "val": 24
+  },
+  "negatives": {
+    "train": 11,
+    "val": 8
+  },
+  "negative_full_frames": 3,
+  "negative_crops": 16,
+  "training_flight_frames": 35,
+  "training_small_targets_at_640": 11,
+  "audit_errors": 0,
+  "cross_split_pairs": 0,
+  "pairs_after": 0,
+  "similarity_exclusions": [],
+  "reserved_video_sequences_excluded": [
+    "bird-2",
+    "bird-3",
+    "bird-15",
+    "bird-17"
+  ],
+  "source_revision": "a97464600e8c1ab91eb91a47332a20732830585e",
+  "archive_sha256": "33e05e600732608fe7c35413b94558c959ffbe145eb03a918fa3d7d07f949e39",
+  "selection_sha256": "e9ebc51fe3a002d6a3d13ed6210c2ed452c2c2329d2f4117a88f9d6589836bdb",
+  "review_method": "Усі вибрані позитивні кадри й негативні вирізки візуально переглянуті асистентом. Прогнози моделі не використовувалися як розмітка.",
+  "note": "Малий навчальний відеонабір; негативні повні кадри й фонові вирізки обліковані окремо. Нові валідаційні ролики не використовуються для навчання."
+}

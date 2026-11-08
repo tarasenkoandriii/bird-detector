@@ -1,0 +1,2440 @@
+{
+  "reviewed": true,
+  "records": [
+    {
+      "file": "bird-1-00000001.jpg",
+      "sequence": "bird-1",
+      "frame": 1,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        207.0,
+        120.0,
+        21.0,
+        46.0
+      ],
+      "source_sha256": "45e6146f6f1a43e8292b019ea206b83be83968b0c6313d5c25cb0bc433b392fa",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000195.jpg",
+      "sequence": "bird-1",
+      "frame": 195,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        256.0,
+        81.0,
+        29.0,
+        64.0
+      ],
+      "source_sha256": "f2af4c143dd04db40751fd7d4cc7b8edd1761559ab4118eda4c2d3344173edf3",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000390.jpg",
+      "sequence": "bird-1",
+      "frame": 390,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        197.0,
+        110.0,
+        40.0,
+        94.0
+      ],
+      "source_sha256": "6ed747f6b3924467ccad0240e5e8c23ac4e28857d6bf71ec579c076fe8a38344",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000584.jpg",
+      "sequence": "bird-1",
+      "frame": 584,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        202.0,
+        89.0,
+        46.0,
+        110.0
+      ],
+      "source_sha256": "c32b492f6cfdadd819f0d70c75c93d252d5da8451077bcbafa74b9e8952d57dc",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000779.jpg",
+      "sequence": "bird-1",
+      "frame": 779,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        194.0,
+        104.0,
+        54.0,
+        128.0
+      ],
+      "source_sha256": "b5a26fd41f12cbbccd65b819cfc4b4293fcaff71adcd32a556b29f5dd4e06bad",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000973.jpg",
+      "sequence": "bird-1",
+      "frame": 973,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        204.0,
+        115.0,
+        56.0,
+        132.0
+      ],
+      "source_sha256": "f2aec0eb4b049f1058ab2e4e54203567976e85f7a9eb53ff8314bc60dc8a07e2",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00001168.jpg",
+      "sequence": "bird-1",
+      "frame": 1168,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        187.0,
+        77.0,
+        56.0,
+        133.0
+      ],
+      "source_sha256": "32f5222012b294b252c8515130625894e20ccadf69c8401b7583c99e454e99dc",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00001362.jpg",
+      "sequence": "bird-1",
+      "frame": 1362,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        179.0,
+        141.0,
+        74.0,
+        177.0
+      ],
+      "source_sha256": "cf880ea01ea049340c592d0190d40b33345bb9a12b029e2c17752480fd44283b",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00001557.jpg",
+      "sequence": "bird-1",
+      "frame": 1557,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        192.0,
+        112.0,
+        74.0,
+        171.0
+      ],
+      "source_sha256": "727c82bcdfd0fd541fb2f2733d247beeca4539722f97a2aad91ec017964ed6b3",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00001751.jpg",
+      "sequence": "bird-1",
+      "frame": 1751,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        192.0,
+        123.0,
+        73.0,
+        169.0
+      ],
+      "source_sha256": "ee980f744e8cc7e6eb69f811e319af4e387cbed05e06c007a9064540b36a6b54",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00001946.jpg",
+      "sequence": "bird-1",
+      "frame": 1946,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        150.0,
+        134.0,
+        87.0,
+        207.0
+      ],
+      "source_sha256": "f21479276ececc224a2447deaeea08a148266e95afea6cfbef436ba543ecd24e",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00002140.jpg",
+      "sequence": "bird-1",
+      "frame": 2140,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        184.0,
+        96.0,
+        103.0,
+        236.0
+      ],
+      "source_sha256": "c8111799d156febd7757b541526dae3887f02c722baeabdb3e5fd47f4b2440d7",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00002335.jpg",
+      "sequence": "bird-1",
+      "frame": 2335,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        196.0,
+        97.0,
+        101.0,
+        231.0
+      ],
+      "source_sha256": "abb1e706ea5adb0aa3340b2a5d441f7968c82c04446a327a209b19b94346548c",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00002529.jpg",
+      "sequence": "bird-1",
+      "frame": 2529,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        126.0,
+        78.0,
+        119.0,
+        273.0
+      ],
+      "source_sha256": "c932fd2bc05d27febfc5a4bc0dec54e325f76d10e528f09e60ecae293217cb25",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00002724.jpg",
+      "sequence": "bird-1",
+      "frame": 2724,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        191.0,
+        65.0,
+        134.0,
+        295.0
+      ],
+      "source_sha256": "60d1ab83a6c09cd41ee43167b5802815309b71858f603f2168b910fe26491b6f",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00002918.jpg",
+      "sequence": "bird-1",
+      "frame": 2918,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        178.0,
+        50.0,
+        144.0,
+        281.0
+      ],
+      "source_sha256": "c74d4fd0bae5e9a4a5a3146063519828fb5213949b0d66a20420c711f0983e75",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00003113.jpg",
+      "sequence": "bird-1",
+      "frame": 3113,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        184.0,
+        75.0,
+        143.0,
+        276.0
+      ],
+      "source_sha256": "4a7915bed5796a737ee94720c47983aaa21379b2534796cf137682d344a29731",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00003307.jpg",
+      "sequence": "bird-1",
+      "frame": 3307,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        186.0,
+        91.0,
+        141.0,
+        268.0
+      ],
+      "source_sha256": "619c389dacf53f9b38c1175179f099c24c8fc5692a7c73fa14559f2f7a0fab1f",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00003502.jpg",
+      "sequence": "bird-1",
+      "frame": 3502,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        190.0,
+        66.0,
+        144.0,
+        294.0
+      ],
+      "source_sha256": "f5412215412958aa28b164bf4d8e43f9bc556a6b968c47358cc7312c563eb8a2",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00003696.jpg",
+      "sequence": "bird-1",
+      "frame": 3696,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        190.0,
+        84.0,
+        143.0,
+        274.0
+      ],
+      "source_sha256": "a5b6adbf42a75591383a0084e295597f6ecef7194685ec2c8c1380342cebf75e",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00003891.jpg",
+      "sequence": "bird-1",
+      "frame": 3891,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        184.0,
+        1.0,
+        143.0,
+        304.0
+      ],
+      "source_sha256": "d133f3de022047b15aa8626c963bba27e99af641eb0422f587aec6a405d1e84f",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00004085.jpg",
+      "sequence": "bird-1",
+      "frame": 4085,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        188.0,
+        38.0,
+        142.0,
+        316.0
+      ],
+      "source_sha256": "5462a85f9580a17fdcceff98ff6ff319097a5dd756e8200d648640b0b41d0bd3",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00004280.jpg",
+      "sequence": "bird-1",
+      "frame": 4280,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        189.0,
+        45.0,
+        143.0,
+        315.0
+      ],
+      "source_sha256": "20c605382193a3508c56162a9f86c3feeebddcfd511a09296c797cc175b24288",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00004475.jpg",
+      "sequence": "bird-1",
+      "frame": 4475,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        175.0,
+        55.0,
+        141.0,
+        305.0
+      ],
+      "source_sha256": "be07d428f823fdbc0bcc23b745486c639731a7813b928a176cabe44318d345d0",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000001.jpg",
+      "sequence": "bird-6",
+      "frame": 1,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        475.0,
+        313.0,
+        159.0,
+        204.0
+      ],
+      "source_sha256": "ef95eebc50a9e9480ea14a069031c65cb0ffe2c4444d11635d86e8ecb49b079a",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000054.jpg",
+      "sequence": "bird-6",
+      "frame": 54,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        520.0,
+        348.0,
+        115.0,
+        183.0
+      ],
+      "source_sha256": "e22a2bbaa45026a94f627e5e6b121e57771ed39e48e2444243a3adb5fe1429b3",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000108.jpg",
+      "sequence": "bird-6",
+      "frame": 108,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        386.0,
+        263.0,
+        522.0,
+        230.0
+      ],
+      "source_sha256": "d6e84260d14aab4cc2c655ff7c2541dc86abb324145096936468d72c4b119505",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000162.jpg",
+      "sequence": "bird-6",
+      "frame": 162,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        452.0,
+        240.0,
+        407.0,
+        228.0
+      ],
+      "source_sha256": "6829474c924f9d5036ef95f993e669d1b820ed67c4f2274543e12b75d7c39c56",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000216.jpg",
+      "sequence": "bird-6",
+      "frame": 216,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        556.0,
+        235.0,
+        113.0,
+        217.0
+      ],
+      "source_sha256": "1d13ce21ef258ad40053d1ecd988fa8e24d9653258569bdd6572893b3ad32fb3",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000270.jpg",
+      "sequence": "bird-6",
+      "frame": 270,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        566.0,
+        268.0,
+        142.0,
+        166.0
+      ],
+      "source_sha256": "afc5c0fbefca0e71235572b8e6302038e2060d6b20e3b719e8fd8beabc802b27",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000324.jpg",
+      "sequence": "bird-6",
+      "frame": 324,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        518.0,
+        227.0,
+        154.0,
+        205.0
+      ],
+      "source_sha256": "9e0bbeb216558dba61eb211c9c3a9f5fe5334e499fa627c968e508bcc54cbd85",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000378.jpg",
+      "sequence": "bird-6",
+      "frame": 378,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        524.0,
+        256.0,
+        130.0,
+        208.0
+      ],
+      "source_sha256": "340bec04a7cf72feb91e769ea625fb316c13999860c8bbf3847eb95328d858bd",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000432.jpg",
+      "sequence": "bird-6",
+      "frame": 432,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        558.0,
+        302.0,
+        117.0,
+        209.0
+      ],
+      "source_sha256": "9d507137cc02b1dc4a06159641c2351e09af2386802266d208d729d00d4ec2fd",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000486.jpg",
+      "sequence": "bird-6",
+      "frame": 486,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        572.0,
+        349.0,
+        110.0,
+        206.0
+      ],
+      "source_sha256": "ae36a20994708a4c6b62bf84f3798c58a01dae2bcee6e3c88ad344072fce7a1c",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000540.jpg",
+      "sequence": "bird-6",
+      "frame": 540,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        591.0,
+        387.0,
+        129.0,
+        189.0
+      ],
+      "source_sha256": "28bc9788b75e572cfd77fb5ca14d312d6bb7d957a89082a0a642bf1d77da51d1",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000594.jpg",
+      "sequence": "bird-6",
+      "frame": 594,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        558.0,
+        395.0,
+        142.0,
+        193.0
+      ],
+      "source_sha256": "fceb3317d9e9f620763048249c7a4265ca964de793d8dba75cde021d001b6f7c",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000647.jpg",
+      "sequence": "bird-6",
+      "frame": 647,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        487.0,
+        312.0,
+        123.0,
+        192.0
+      ],
+      "source_sha256": "80b43701c72b8b2be831b083a0281b60d02147d31e39954ed275b525ba309231",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000701.jpg",
+      "sequence": "bird-6",
+      "frame": 701,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        303.0,
+        227.0,
+        441.0,
+        221.0
+      ],
+      "source_sha256": "1ced49428f697aa20076be1020d130d8f65a855486280a65c6f727d7e749ab0a",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000755.jpg",
+      "sequence": "bird-6",
+      "frame": 755,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        377.0,
+        233.0,
+        233.0,
+        206.0
+      ],
+      "source_sha256": "77538974c03e55a8e0e72f21e713e65e5b7ab217e0a977d50db8ec6fb7a726cf",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000809.jpg",
+      "sequence": "bird-6",
+      "frame": 809,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        342.0,
+        251.0,
+        246.0,
+        206.0
+      ],
+      "source_sha256": "21389818801d93e9062ab189c992e7fa0e9334d36ff93d3d8e069e9f9547fa50",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000863.jpg",
+      "sequence": "bird-6",
+      "frame": 863,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        827.0,
+        22.0,
+        312.0,
+        443.0
+      ],
+      "source_sha256": "ebbd76273cc728789110676687542d27b39f4b4570c4b60cab4aef7c4a6bc4d8",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00000931.jpg",
+      "sequence": "bird-6",
+      "frame": 931,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        873.0,
+        233.0,
+        165.0,
+        68.0
+      ],
+      "source_sha256": "6e02ddd6fdf33f0ffed90ef735a842ff6174709d6a1c1ea89166aa14fe027255",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00000991.jpg",
+      "sequence": "bird-6",
+      "frame": 991,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        613.0,
+        334.0,
+        158.0,
+        105.0
+      ],
+      "source_sha256": "0a7c7ddf3d533f5609e6f7dd9322aff490d5f13fdf677da2a5aec2b82e7fbbc4",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00001045.jpg",
+      "sequence": "bird-6",
+      "frame": 1045,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        579.0,
+        321.0,
+        150.0,
+        74.0
+      ],
+      "source_sha256": "0a3d6a8f1829309ad7f4d7127700b69b9ca681f576443e464bf5e6b2383613fc",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00001099.jpg",
+      "sequence": "bird-6",
+      "frame": 1099,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        434.0,
+        366.0,
+        346.0,
+        139.0
+      ],
+      "source_sha256": "5653caea101e76168f8da4beaf544cd05625aa95167fd9c553245f3708682c49",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00001153.jpg",
+      "sequence": "bird-6",
+      "frame": 1153,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        422.0,
+        348.0,
+        227.0,
+        112.0
+      ],
+      "source_sha256": "1eb34e2092dbc569db3085a3147949a8ebe062bf4b7647f64ef20c69b0953837",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-6-00001207.jpg",
+      "sequence": "bird-6",
+      "frame": 1207,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        604.0,
+        580.0,
+        54.0,
+        105.0
+      ],
+      "source_sha256": "397c6b8cf4f3098526c8d4be3563b1de4664f1026be523c3edcd2bbd4d151d56",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00001261.jpg",
+      "sequence": "bird-6",
+      "frame": 1261,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        770.0,
+        410.0,
+        55.0,
+        105.0
+      ],
+      "source_sha256": "fa9413dfe49644dc1b6fa57f100c1281a58e59a5eeb033dd3e52f98cbb5a3cff",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000874.jpg",
+      "sequence": "bird-6",
+      "frame": 874,
+      "split": "train",
+      "kind": "negative_full",
+      "bbox_xywh": [
+        4.0,
+        447.0,
+        31.0,
+        115.0
+      ],
+      "source_sha256": "7409e7802eed165a72a681a4ba7f0b7bf372b176ce7dbec9b5b3d3ccf9b476ea",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000880.jpg",
+      "sequence": "bird-6",
+      "frame": 880,
+      "split": "train",
+      "kind": "negative_full",
+      "bbox_xywh": [
+        4.0,
+        447.0,
+        31.0,
+        115.0
+      ],
+      "source_sha256": "1bc84678a0991d49e1d08e976d676af2bac6641aa37c216ad8953b3da1c808fd",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-6-00000901.jpg",
+      "sequence": "bird-6",
+      "frame": 901,
+      "split": "train",
+      "kind": "negative_full",
+      "bbox_xywh": [
+        1027.0,
+        449.0,
+        138.0,
+        271.0
+      ],
+      "source_sha256": "b9ab149ce5df817cfb034cfc579d7859e40abffcde96b9e841e999166c623e59",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-18-00000001.jpg",
+      "sequence": "bird-18",
+      "frame": 1,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        293.0,
+        136.0,
+        40.0,
+        67.0
+      ],
+      "source_sha256": "35dfd8bed996c61a3ee6b2627333884e4f00eb1af67b90f0a36d0b9456067709",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-18-00000157.jpg",
+      "sequence": "bird-18",
+      "frame": 157,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        292.0,
+        144.0,
+        34.0,
+        71.0
+      ],
+      "source_sha256": "078f7dc93d9084a80711fea5a58d336974f4c049c0b870dd422450191259fd54",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-18-00000313.jpg",
+      "sequence": "bird-18",
+      "frame": 313,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        271.0,
+        148.0,
+        36.0,
+        68.0
+      ],
+      "source_sha256": "44d8aa09f3164f53300746be93dc2f2a1b2cbbf22431bfa344711c9566860320",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-18-00000469.jpg",
+      "sequence": "bird-18",
+      "frame": 469,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        192.0,
+        105.0,
+        129.0,
+        95.0
+      ],
+      "source_sha256": "494d8a427636717568b7fa3d34f0758b08caab2758a537b5128535e5a33915b0",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00000625.jpg",
+      "sequence": "bird-18",
+      "frame": 625,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        174.0,
+        175.0,
+        84.0,
+        74.0
+      ],
+      "source_sha256": "b302155ce1fe8f953764ac5845e95d6aef37b98378eb1456c49d3004a0171cbc",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00000781.jpg",
+      "sequence": "bird-18",
+      "frame": 781,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        180.0,
+        174.0,
+        99.0,
+        111.0
+      ],
+      "source_sha256": "2aba4068f1e98bb2bdf45b8064e5c20615943b76840b4d2061e0e2176040f2c4",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00000937.jpg",
+      "sequence": "bird-18",
+      "frame": 937,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        174.0,
+        155.0,
+        97.0,
+        96.0
+      ],
+      "source_sha256": "c820c7a3ed5a147bb21956b7eff425a17340a5430d4113904c1c70c13ebb5430",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001093.jpg",
+      "sequence": "bird-18",
+      "frame": 1093,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        284.0,
+        191.0,
+        79.0,
+        85.0
+      ],
+      "source_sha256": "c8ce5e093eff7b4534605c932236d6727c413efd93e6fa231b5962647b8f462b",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001249.jpg",
+      "sequence": "bird-18",
+      "frame": 1249,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        232.0,
+        174.0,
+        103.0,
+        92.0
+      ],
+      "source_sha256": "97538583ab29ccc7eaa33139612bcd33ab2f8a48c1a6197570d75d901bf23186",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001405.jpg",
+      "sequence": "bird-18",
+      "frame": 1405,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        174.0,
+        202.0,
+        48.0,
+        53.0
+      ],
+      "source_sha256": "8f7e47bea246fc180c6155039af4663baa3ff6f729e453139a8316697e366a1b",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001561.jpg",
+      "sequence": "bird-18",
+      "frame": 1561,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        202.0,
+        168.0,
+        87.0,
+        40.0
+      ],
+      "source_sha256": "d2b4e9e6ce31053f25a50f7a5bd7decdf07b1407bfb1950c00c27aaed1656d00",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001717.jpg",
+      "sequence": "bird-18",
+      "frame": 1717,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        211.0,
+        136.0,
+        63.0,
+        35.0
+      ],
+      "source_sha256": "eb1910e9b4eb8491556b8473503d96f343bad6f5434e37f58e7164b4ec958972",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00001873.jpg",
+      "sequence": "bird-18",
+      "frame": 1873,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        196.0,
+        153.0,
+        37.0,
+        39.0
+      ],
+      "source_sha256": "0cbd7bcbd7932435f40f53db8ba76245c21191b22df42b6b2af695cec3064edf",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002029.jpg",
+      "sequence": "bird-18",
+      "frame": 2029,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        183.0,
+        136.0,
+        60.0,
+        32.0
+      ],
+      "source_sha256": "d8d0fa21212691a28fcf26e5c547add3db7a89b257e71e9501e0c39471a5f161",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002185.jpg",
+      "sequence": "bird-18",
+      "frame": 2185,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        241.0,
+        170.0,
+        42.0,
+        21.0
+      ],
+      "source_sha256": "f087f1b4d101d9d0c800e0323f457f4c83d019ab11bc7ae0e790661dcb27709d",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002341.jpg",
+      "sequence": "bird-18",
+      "frame": 2341,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        225.0,
+        178.0,
+        33.0,
+        25.0
+      ],
+      "source_sha256": "d7a6c38a70a137bc5a044fefb0b54f89bf0d5a1ffaec2b7f904e33ec429fe2a7",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002497.jpg",
+      "sequence": "bird-18",
+      "frame": 2497,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        263.0,
+        186.0,
+        34.0,
+        22.0
+      ],
+      "source_sha256": "b961912c1ebbd2a2e15b0a5f06579d1c33ee5e8c7f4dd2d7c5107e7781d66b32",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002653.jpg",
+      "sequence": "bird-18",
+      "frame": 2653,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        259.0,
+        222.0,
+        28.0,
+        21.0
+      ],
+      "source_sha256": "3d2ba77afe5e5ec29bdd076b27262090efd5b7c0fc66ce72e730de569d2416fc",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002809.jpg",
+      "sequence": "bird-18",
+      "frame": 2809,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        284.0,
+        179.0,
+        26.0,
+        15.0
+      ],
+      "source_sha256": "c41676c4794f39d035059642c936fef816fb6e5cba449681cbbb160f1cdc10ad",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00002965.jpg",
+      "sequence": "bird-18",
+      "frame": 2965,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        254.0,
+        193.0,
+        28.0,
+        12.0
+      ],
+      "source_sha256": "28a232dcbb9f41330571159f50ded059b0a397f084d44dfca21f7ea68ca9b1c3",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003121.jpg",
+      "sequence": "bird-18",
+      "frame": 3121,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        231.0,
+        190.0,
+        15.0,
+        22.0
+      ],
+      "source_sha256": "1a7407c8e1ae8fffd137e4f094b720aebb209cf9a7585fea4d5e1de21e48f43e",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003287.jpg",
+      "sequence": "bird-18",
+      "frame": 3287,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        209.0,
+        175.0,
+        27.0,
+        11.0
+      ],
+      "source_sha256": "c6cc5c5708ed3452b3a8f1023c539bcd9ec4a528d0b07fc63c0dc359c41d7b7f",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003443.jpg",
+      "sequence": "bird-18",
+      "frame": 3443,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        256.0,
+        178.0,
+        19.0,
+        15.0
+      ],
+      "source_sha256": "cf7d1d55915455ea267a3687d98df8312a36f55815828f349eecde11612c15cb",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003600.jpg",
+      "sequence": "bird-18",
+      "frame": 3600,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        274.0,
+        174.0,
+        20.0,
+        19.0
+      ],
+      "source_sha256": "fd366655980c73e59c8f14b059bbecb5ce63faa78c3cb36211661c13b3fdcb12",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-7-00000001.jpg",
+      "sequence": "bird-7",
+      "frame": 1,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        481.0,
+        203.0,
+        235.0,
+        344.0
+      ],
+      "source_sha256": "634c3b0ffa751ebf063d75a9c64181ff2fa60020169df891b33cc61777370d86",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00000265.jpg",
+      "sequence": "bird-7",
+      "frame": 265,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        515.0,
+        149.0,
+        225.0,
+        459.0
+      ],
+      "source_sha256": "12cb54b8c7293fe49ad2d106d9eaa1bc4a12d95bf6c9163b7540ef111410a450",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00000530.jpg",
+      "sequence": "bird-7",
+      "frame": 530,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        496.0,
+        149.0,
+        291.0,
+        472.0
+      ],
+      "source_sha256": "e1dcedb36eb636b9751ad3807621a4a97c50642af9ce5a0214dd1cd7d919cd9c",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00000794.jpg",
+      "sequence": "bird-7",
+      "frame": 794,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        448.0,
+        131.0,
+        541.0,
+        514.0
+      ],
+      "source_sha256": "073874ccb1636056618e186edb8444456e24b29273fe413707ec621b36e8e522",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00001059.jpg",
+      "sequence": "bird-7",
+      "frame": 1059,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        289.0,
+        159.0,
+        843.0,
+        461.0
+      ],
+      "source_sha256": "b6f8b7ff9df403960fee561ab4ada9f4a9ec2962b32a63d64bc69daaf8dc5600",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00001323.jpg",
+      "sequence": "bird-7",
+      "frame": 1323,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        380.0,
+        2.0,
+        739.0,
+        419.0
+      ],
+      "source_sha256": "545e1f01f1c85ade97e4ddb671e63bc40ee56cf44602500d8950ee3859215233",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00001588.jpg",
+      "sequence": "bird-7",
+      "frame": 1588,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        373.0,
+        1.0,
+        794.0,
+        421.0
+      ],
+      "source_sha256": "69f88f0f3c0533b6964e4b72a108052d0e0538848b6e571de2a2c3cd9d063428",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00001852.jpg",
+      "sequence": "bird-7",
+      "frame": 1852,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        465.0,
+        77.0,
+        796.0,
+        457.0
+      ],
+      "source_sha256": "6a7996180461d9b62306f115c0a00db97e8ca06eac12eb94a4e345cc5e4fd3c9",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00002117.jpg",
+      "sequence": "bird-7",
+      "frame": 2117,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        366.0,
+        107.0,
+        900.0,
+        353.0
+      ],
+      "source_sha256": "bdbb847372054f144b0e151a76af6183fb2350c4e731531081ab273c8333b5cc",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00002381.jpg",
+      "sequence": "bird-7",
+      "frame": 2381,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        297.0,
+        97.0,
+        831.0,
+        418.0
+      ],
+      "source_sha256": "83b978286adfcc521e2af5f71b66384f336583dc8dc0107a882cf17b7c33b196",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00002646.jpg",
+      "sequence": "bird-7",
+      "frame": 2646,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        371.0,
+        147.0,
+        812.0,
+        455.0
+      ],
+      "source_sha256": "7e5491c2c9d9b3d99422f803f93310ab820c6a84b961120a9281d107d979db2c",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-7-00002911.jpg",
+      "sequence": "bird-7",
+      "frame": 2911,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        231.0,
+        203.0,
+        905.0,
+        488.0
+      ],
+      "source_sha256": "b639b5a4749989c083882d6d70f4d7fd1e45c76b1324c075f85299352f10e0f0",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000001.jpg",
+      "sequence": "bird-8",
+      "frame": 1,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        525.0,
+        240.0,
+        191.0,
+        224.0
+      ],
+      "source_sha256": "a762a3116db4aeff05d966a1eec1969dc8666caa788aab3964e5e37859508387",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000183.jpg",
+      "sequence": "bird-8",
+      "frame": 183,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        561.0,
+        228.0,
+        121.0,
+        233.0
+      ],
+      "source_sha256": "e9012499b9c323fe8efd27242b0fc6c41bb83a209866011737444a14e9eb3a84",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000366.jpg",
+      "sequence": "bird-8",
+      "frame": 366,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        505.0,
+        204.0,
+        104.0,
+        245.0
+      ],
+      "source_sha256": "b175fbe629fb0e9d8c532597bda1cf954a8b68af00dbb1ec809480209b38cd26",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000549.jpg",
+      "sequence": "bird-8",
+      "frame": 549,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        608.0,
+        218.0,
+        142.0,
+        239.0
+      ],
+      "source_sha256": "4bf6c38547f2cc8914df2e428f0b94d1609671a89f668376ad90bee6a43183b0",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000731.jpg",
+      "sequence": "bird-8",
+      "frame": 731,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        654.0,
+        220.0,
+        116.0,
+        258.0
+      ],
+      "source_sha256": "277f7fa03b7713662284e06c605db34c1a747dcafb13f4c662ce4ded3c7cf763",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00000914.jpg",
+      "sequence": "bird-8",
+      "frame": 914,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        663.0,
+        209.0,
+        132.0,
+        265.0
+      ],
+      "source_sha256": "c45b84ef06c661cb22b43588fcbf00f4e3547226f3aa48fa332034edce0a3d4f",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00001097.jpg",
+      "sequence": "bird-8",
+      "frame": 1097,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        621.0,
+        193.0,
+        116.0,
+        274.0
+      ],
+      "source_sha256": "e06afc805866482fb1c13d3a7293d2f2c2bb584c79d458dc38763545d38fe749",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00001280.jpg",
+      "sequence": "bird-8",
+      "frame": 1280,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        562.0,
+        176.0,
+        152.0,
+        290.0
+      ],
+      "source_sha256": "5d01b4a0444f4f4900cf884e7fb85afbc34dd63c7f4563f0e94bb59397100fc6",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00001462.jpg",
+      "sequence": "bird-8",
+      "frame": 1462,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        556.0,
+        187.0,
+        260.0,
+        293.0
+      ],
+      "source_sha256": "d479ed2ca7fd1443c0557b5cb74f527cc0332be7d2e2a1fb24d4c15347641328",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00001645.jpg",
+      "sequence": "bird-8",
+      "frame": 1645,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        607.0,
+        192.0,
+        340.0,
+        298.0
+      ],
+      "source_sha256": "031e3e2d521d3d3912f49a0e06706cd05fe150037c7fa1866d937576787da554",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00001828.jpg",
+      "sequence": "bird-8",
+      "frame": 1828,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        492.0,
+        193.0,
+        337.0,
+        312.0
+      ],
+      "source_sha256": "e004e4a31d60ef6bbbd77199b177de90ef11569e93d9ad959d2f4322e7b0c06c",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-8-00002011.jpg",
+      "sequence": "bird-8",
+      "frame": 2011,
+      "split": "val",
+      "kind": "positive",
+      "bbox_xywh": [
+        632.0,
+        129.0,
+        330.0,
+        305.0
+      ],
+      "source_sha256": "740b4634f7da160b6466d1e83880cbcb55be7c1b36fefe96f79e1c79ae25770a",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false
+    },
+    {
+      "file": "bird-1-00000001.jpg",
+      "sequence": "bird-1",
+      "frame": 1,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        207.0,
+        120.0,
+        21.0,
+        46.0
+      ],
+      "source_sha256": "45e6146f6f1a43e8292b019ea206b83be83968b0c6313d5c25cb0bc433b392fa",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-1-00001168.jpg",
+      "sequence": "bird-1",
+      "frame": 1168,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        187.0,
+        77.0,
+        56.0,
+        133.0
+      ],
+      "source_sha256": "32f5222012b294b252c8515130625894e20ccadf69c8401b7583c99e454e99dc",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-1-00002529.jpg",
+      "sequence": "bird-1",
+      "frame": 2529,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        126.0,
+        78.0,
+        119.0,
+        273.0
+      ],
+      "source_sha256": "c932fd2bc05d27febfc5a4bc0dec54e325f76d10e528f09e60ecae293217cb25",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        336,
+        0,
+        480,
+        108
+      ]
+    },
+    {
+      "file": "bird-1-00004475.jpg",
+      "sequence": "bird-1",
+      "frame": 4475,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        175.0,
+        55.0,
+        141.0,
+        305.0
+      ],
+      "source_sha256": "be07d428f823fdbc0bcc23b745486c639731a7813b928a176cabe44318d345d0",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        120,
+        90
+      ]
+    },
+    {
+      "file": "bird-18-00000001.jpg",
+      "sequence": "bird-18",
+      "frame": 1,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        293.0,
+        136.0,
+        40.0,
+        67.0
+      ],
+      "source_sha256": "35dfd8bed996c61a3ee6b2627333884e4f00eb1af67b90f0a36d0b9456067709",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-18-00001249.jpg",
+      "sequence": "bird-18",
+      "frame": 1249,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        232.0,
+        174.0,
+        103.0,
+        92.0
+      ],
+      "source_sha256": "97538583ab29ccc7eaa33139612bcd33ab2f8a48c1a6197570d75d901bf23186",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-18-00002497.jpg",
+      "sequence": "bird-18",
+      "frame": 2497,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        263.0,
+        186.0,
+        34.0,
+        22.0
+      ],
+      "source_sha256": "b961912c1ebbd2a2e15b0a5f06579d1c33ee5e8c7f4dd2d7c5107e7781d66b32",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-18-00003600.jpg",
+      "sequence": "bird-18",
+      "frame": 3600,
+      "split": "train",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        274.0,
+        174.0,
+        20.0,
+        19.0
+      ],
+      "source_sha256": "fd366655980c73e59c8f14b059bbecb5ce63faa78c3cb36211661c13b3fdcb12",
+      "size": [
+        480,
+        360
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        144,
+        108
+      ]
+    },
+    {
+      "file": "bird-7-00000001.jpg",
+      "sequence": "bird-7",
+      "frame": 1,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        481.0,
+        203.0,
+        235.0,
+        344.0
+      ],
+      "source_sha256": "634c3b0ffa751ebf063d75a9c64181ff2fa60020169df891b33cc61777370d86",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-7-00000794.jpg",
+      "sequence": "bird-7",
+      "frame": 794,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        448.0,
+        131.0,
+        541.0,
+        514.0
+      ],
+      "source_sha256": "073874ccb1636056618e186edb8444456e24b29273fe413707ec621b36e8e522",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-7-00001852.jpg",
+      "sequence": "bird-7",
+      "frame": 1852,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        465.0,
+        77.0,
+        796.0,
+        457.0
+      ],
+      "source_sha256": "6a7996180461d9b62306f115c0a00db97e8ca06eac12eb94a4e345cc5e4fd3c9",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-7-00002911.jpg",
+      "sequence": "bird-7",
+      "frame": 2911,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        231.0,
+        203.0,
+        905.0,
+        488.0
+      ],
+      "source_sha256": "b639b5a4749989c083882d6d70f4d7fd1e45c76b1324c075f85299352f10e0f0",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        256,
+        144
+      ]
+    },
+    {
+      "file": "bird-8-00000001.jpg",
+      "sequence": "bird-8",
+      "frame": 1,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        525.0,
+        240.0,
+        191.0,
+        224.0
+      ],
+      "source_sha256": "a762a3116db4aeff05d966a1eec1969dc8666caa788aab3964e5e37859508387",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-8-00000549.jpg",
+      "sequence": "bird-8",
+      "frame": 549,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        608.0,
+        218.0,
+        142.0,
+        239.0
+      ],
+      "source_sha256": "4bf6c38547f2cc8914df2e428f0b94d1609671a89f668376ad90bee6a43183b0",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-8-00001280.jpg",
+      "sequence": "bird-8",
+      "frame": 1280,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        562.0,
+        176.0,
+        152.0,
+        290.0
+      ],
+      "source_sha256": "5d01b4a0444f4f4900cf884e7fb85afbc34dd63c7f4563f0e94bb59397100fc6",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-8-00002011.jpg",
+      "sequence": "bird-8",
+      "frame": 2011,
+      "split": "val",
+      "kind": "negative_crop",
+      "bbox_xywh": [
+        632.0,
+        129.0,
+        330.0,
+        305.0
+      ],
+      "source_sha256": "740b4634f7da160b6466d1e83880cbcb55be7c1b36fefe96f79e1c79ae25770a",
+      "size": [
+        1280,
+        720
+      ],
+      "flight": false,
+      "crop_xyxy": [
+        0,
+        0,
+        384,
+        216
+      ]
+    },
+    {
+      "file": "bird-18-00002594.jpg",
+      "sequence": "bird-18",
+      "frame": 2594,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        242.0,
+        190.0,
+        22.0,
+        18.0
+      ],
+      "source_sha256": "feece36cbba347957e3e6bf307a5559ad9e4fa29ca4ff517976aefd84c13d982",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003062.jpg",
+      "sequence": "bird-18",
+      "frame": 3062,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        241.0,
+        173.0,
+        21.0,
+        12.0
+      ],
+      "source_sha256": "2b343451c34c26c1fe253ce735f9f11b1f618fc405bb26e96137ee163b283ba3",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003153.jpg",
+      "sequence": "bird-18",
+      "frame": 3153,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        222.0,
+        200.0,
+        23.0,
+        12.0
+      ],
+      "source_sha256": "d048494705c3ed7bc45de26643a1c85cc014def1e6a7b07f6ca134e4a9189671",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003223.jpg",
+      "sequence": "bird-18",
+      "frame": 3223,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        233.0,
+        196.0,
+        23.0,
+        12.0
+      ],
+      "source_sha256": "f9922cfee52e413f839968b146a16d164b0a8dea99dad4ea6a2560a8d102337f",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003327.jpg",
+      "sequence": "bird-18",
+      "frame": 3327,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        211.0,
+        181.0,
+        20.0,
+        15.0
+      ],
+      "source_sha256": "14db2085adb8a1dd5e92e04f759dc040713abcb1ae5bc3b1149b81b91b8bf327",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003381.jpg",
+      "sequence": "bird-18",
+      "frame": 3381,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        241.0,
+        180.0,
+        22.0,
+        12.0
+      ],
+      "source_sha256": "814e70f82fc3e3981368df3edc2823bbb7d73dd081a9e37d86e21608ab345cae",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003496.jpg",
+      "sequence": "bird-18",
+      "frame": 3496,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        239.0,
+        181.0,
+        21.0,
+        20.0
+      ],
+      "source_sha256": "392694fe8ead2a7ad7eac62d6027fe8ebdf3224fc5032175d5dc34e7c352a683",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    },
+    {
+      "file": "bird-18-00003554.jpg",
+      "sequence": "bird-18",
+      "frame": 3554,
+      "split": "train",
+      "kind": "positive",
+      "bbox_xywh": [
+        249.0,
+        189.0,
+        19.0,
+        19.0
+      ],
+      "source_sha256": "ab23e8dc360069353a85f661773cb7afdd962fac1728c6f64b5fb7c6df190f5b",
+      "size": [
+        480,
+        360
+      ],
+      "flight": true
+    }
+  ],
+  "review_method": "Усі вибрані позитивні кадри й негативні вирізки візуально переглянуті асистентом. Прогнози моделі не використовувалися як розмітка.",
+  "negative_policy": "Три повні кадри без видимого птаха; решта негативних прикладів — перевірені фонові вирізки. Невидимість цілі у LaSOT сама по собі недостатня."
+}
