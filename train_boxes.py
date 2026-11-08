@@ -3,6 +3,7 @@
 
 import hashlib
 import json
+import time
 from pathlib import Path
 from common import ROOT, UkrainianParser, resolve_device
 
@@ -31,6 +32,21 @@ def main():
     model = YOLO(str(a.model))
     head = len(model.model.model) - 1
     protected = {}
+    timing = {"train_seconds": [], "validation_seconds": []}
+    started = {}
+
+    def phase_start(phase):
+        def callback(t):
+            started[phase] = time.perf_counter()
+
+        return callback
+
+    def phase_end(phase):
+        def callback(t):
+            timing[phase + "_seconds"].append(time.perf_counter() - started[phase])
+            (out / "phase_timing.json").write_text(json.dumps(timing, indent=2))
+
+        return callback
 
     def setup(t):
         for n, param in t.model.named_parameters():
@@ -73,6 +89,10 @@ def main():
         if changed:
             raise RuntimeError("Змінилися захищені параметри.")
 
+    model.add_callback("on_train_epoch_start", phase_start("train"))
+    model.add_callback("on_train_epoch_end", phase_end("train"))
+    model.add_callback("on_val_start", phase_start("validation"))
+    model.add_callback("on_val_end", phase_end("validation"))
     model.add_callback("on_train_start", setup)
     model.add_callback("on_train_batch_start", freeze_bn)
     model.add_callback("on_fit_epoch_end", verify)

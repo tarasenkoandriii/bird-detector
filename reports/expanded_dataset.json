@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "train": 5377,
+    "val": 600,
+    "test": 499
+  },
+  "species": 200,
+  "invalid_bbox_rejected": 30,
+  "pairs_before": 2,
+  "pairs_after": 0,
+  "leakage_after": 0,
+  "previous_train": 998,
+  "previous_val": 200,
+  "previous_test_excluded": 100,
+  "additional_previous_test_similarity_excluded": 1,
+  "new_val_excluded_for_previous_train_similarity": 0,
+  "note": "Test не оцінювався моделлю. DHash — евристика, не гарантія відсутності всіх семантичних дублікатів. CUB не є відеодатасетом.",
+  "repo": "bentrevett/caltech-ucsd-birds-200-2011",
+  "revision": "1ef09e021b0b65b40337f6f285909656f407f6e0",
+  "audit_errors": 0
+}

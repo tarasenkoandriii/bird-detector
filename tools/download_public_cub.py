@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Дослідницька підвибірка CUB без ключа: перші шарди train/test, фіксований seed."""
 
-import argparse, hashlib, io, json, random, shutil, urllib.request
+import argparse, hashlib, io, json, random, shutil, subprocess
 from pathlib import Path
 import sys
 
@@ -33,9 +33,22 @@ def main():
         if not target.exists():
             tmp = target.with_suffix(".part")
             print("Завантаження", split, flush=True)
-            urllib.request.urlretrieve(
-                f"https://huggingface.co/datasets/{REPO}/resolve/{REV}/data/{split}-00000-of-00002.parquet",
-                tmp,
+            # curl використовує системне сховище сертифікатів macOS.
+            subprocess.run(
+                [
+                    "curl",
+                    "-fL",
+                    "--retry",
+                    "3",
+                    "--connect-timeout",
+                    "30",
+                    "--max-time",
+                    "1200",
+                    "-o",
+                    str(tmp),
+                    f"https://huggingface.co/datasets/{REPO}/resolve/{REV}/data/{split}-00000-of-00002.parquet",
+                ],
+                check=True,
             )
             tmp.rename(target)
         if hashlib.sha256(target.read_bytes()).hexdigest() != SHA[split]:

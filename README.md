@@ -145,7 +145,7 @@ python -m unittest discover -s tests -v
 
 Тести покривають збереження кожного кадру, порожні детекції, відмову перезапису/однакового input-output, очищення часткового файлу після помилки, некоректне відео, NMS, валідацію розмітки та cross-split дублікати. Є CPU/MPS-регресія координат (MPS-гілка виконується за доступності GPU).
 
-Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md). У поточній версії 16 автоматичних тестів, включно з COCO→bird mapping, вибором навчальних параметрів і обліком дублікатів як FP.
+Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md). У поточній версії 17 автоматичних тестів, включно з COCO→bird mapping, вибором навчальних параметрів і обліком дублікатів як FP.
 
 ## Структура
 
@@ -188,3 +188,7 @@ python train_boxes.py --model runs/train/bird/weights/best.pt --name bbox-conser
 Скрипт навчає лише bbox-гілки 3 епохи на CPU із lr0=0.00001; backbone, neck, класифікація та статистика BN зафіксовані. Результат — `runs/experiments/bbox-conservative/weights/best.pt`. Додані ваги автоматично не перезаписуються. На цьому Mac етап зайняв близько 4 хвилин. При 640 validation mAP50–95 = **81,41%**, test = **80,80%**; для обох використано CPU. Це метрики офіційного валідатора; додатковий відео-NMS є окремою постобробкою. Деталі — [improvement.md](reports/improvement.md).
 
 Огляд офіційних рекомендацій, перевірка локального API та рецепти наступних експериментів — [finetuning_recommendations.md](reports/finetuning_recommendations.md). Це план, поточні ваги ним не змінені.
+
+## Розширений набір даних
+
+Підготовлено окремий CUB-набір: 5 377 train / 600 validation / 499 резервних test, з аудитом дублікатів та захистом попередніх split. Скрипти `prepare_expanded.py` і `benchmark_expanded.py`; виміряний прогноз bbox-навчання при 640 на CPU — близько години на 3 епохи. Дані не включені в репозиторій. Протокол і команди Warp — [expanded_dataset.md](reports/expanded_dataset.md). Поточні ваги цим benchmark не замінено.

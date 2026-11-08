@@ -1,0 +1,32 @@
+{
+  "device": "cpu",
+  "imgsz": 640,
+  "batch": 8,
+  "strategy": "bbox_only",
+  "sample_counts": {
+    "train": 128,
+    "val": 64
+  },
+  "full_counts": {
+    "train": 5377,
+    "val": 600
+  },
+  "wall_seconds": 54.80544906501018,
+  "phase_timing": {
+    "train_seconds": [
+      27.272304401994916
+    ],
+    "validation_seconds": [
+      11.108658690995071,
+      7.667152013003943
+    ]
+  },
+  "projected_epoch_seconds": 1249.7935249900058,
+  "projected_3_epochs_hours": 1.0414946041583382,
+  "estimated_range_3_epochs_hours": [
+    0.624896762495003,
+    1.4580924458216735
+  ],
+  "note": "Екстраполяція малого холодного запуску, не гарантія часу. Test не використовувався; робочі ваги не замінено. Benchmark-checkpoint не є кандидатом на реліз.",
+  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18"
+}
