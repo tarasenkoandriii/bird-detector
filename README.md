@@ -2,7 +2,7 @@
 
 Детекція одного класу `bird` на зображеннях і **кожному кадрі відео**. У репозиторії є навчені ваги, справжній вхідний MP4, оброблений MP4 та приклади кадрів.
 
-**Оновлення моделі:** виконано контрольоване донавчання лише класифікаційної голови. Порівняння з початковою YOLO26n та аналіз помилок наведені в [звіті про покращення](reports/improvement.md).
+**Оновлення моделі:** виконано двоетапне донавчання класифікації та bbox-гілок. Порівняння з початковою YOLO26n та аналіз помилок наведені в [звіті про покращення](reports/improvement.md).
 
 ![Приклад детекції](examples/frame-000.jpg)
 
@@ -97,7 +97,7 @@ python train.py --resume runs/train/bird/weights/last.pt --strategy head --batch
 python train.py --strategy full --epochs 50 --batch 8 --lr0 0.001 --name full-experiment
 ```
 
-Поточні `weights/best.pt` отримані контрольованим п’ятиепоховим навчанням; параметри — [training_provenance.json](reports/training_provenance.json). Новий запуск не гарантує побітового збігу ваг.
+Поточні `weights/best.pt` отримані за два етапи: 5 епох класифікації та 3 епохи bbox-гілок (обрано checkpoint першої bbox-епохи); параметри — [training_provenance.json](reports/training_provenance.json). Новий запуск не гарантує побітового збігу ваг.
 
 ## Метрики
 
@@ -105,10 +105,10 @@ python train.py --strategy full --epochs 50 --batch 8 --lr0 0.001 --name full-ex
 
 | Метрика | Validation, 200 зображень | Test, 100 зображень |
 | --- | ---: | ---: |
-| Precision | 95.95% | 95.83% |
-| Recall | 95.00% | 91.89% |
-| mAP50 | 97.04% | 95.33% |
-| mAP50–95 | 77.58% | 77.50% |
+| Precision | 95.95% | 96.84% |
+| Recall | 95.00% | 91.81% |
+| mAP50 | 97.05% | 95.36% |
+| mAP50–95 | 79.26% | 78.96% |
 
 Повні числа, версії, SHA256 і швидкість — [val.json](reports/val.json) та [test.json](reports/test.json). Перевірити:
 
@@ -145,7 +145,7 @@ python -m unittest discover -s tests -v
 
 Тести покривають збереження кожного кадру, порожні детекції, відмову перезапису/однакового input-output, очищення часткового файлу після помилки, некоректне відео, NMS, валідацію розмітки та cross-split дублікати. Є CPU/MPS-регресія координат (MPS-гілка виконується за доступності GPU).
 
-Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md). У поточній версії 15 автоматичних тестів, включно з COCO→bird mapping, вибором навчальних параметрів і обліком дублікатів як FP.
+Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md). У поточній версії 16 автоматичних тестів, включно з COCO→bird mapping, вибором навчальних параметрів і обліком дублікатів як FP.
 
 ## Структура
 
@@ -176,3 +176,13 @@ bird-detector/
 ## Додаткові експерименти з якістю
 
 Перевірено роздільності 448–1280 та об’єднання звичайного й дзеркального прогнозів. 512 покращив validation, але перевага не підтвердилася на test; типовий режим 640 збережено. Протокол, метрики та команди — [further_experiments.md](reports/further_experiments.md). Ваги не змінено.
+
+## Донавчання точності рамок
+
+Після класифікаційного етапу запустіть:
+
+```bash
+python train_boxes.py --model runs/train/bird/weights/best.pt --name bbox-conservative
+```
+
+Скрипт навчає лише bbox-гілки 3 епохи на CPU із lr0=0.00001; backbone, neck, класифікація та статистика BN зафіксовані. Результат — `runs/experiments/bbox-conservative/weights/best.pt`. Додані ваги автоматично не перезаписуються. На цьому Mac етап зайняв близько 4 хвилин. При 640 validation mAP50–95 = **81,41%**, test = **80,80%**; для обох використано CPU. Це метрики офіційного валідатора; додатковий відео-NMS є окремою постобробкою. Деталі — [improvement.md](reports/improvement.md).

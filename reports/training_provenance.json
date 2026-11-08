@@ -3,8 +3,10 @@
   "classes": {
     "0": "bird"
   },
-  "strategy": "classifier_only",
-  "training": {
+  "strategy": "classifier_then_bbox",
+  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "note": "Спочатку 5 епох класифікації, потім 3 епохи bbox-гілок. Checkpoint обрано за validation. Test оцінено після вибору; за ним параметри не коригувалися.",
+  "classifier_training": {
     "epochs": 5,
     "imgsz": 320,
     "batch": 8,
@@ -23,6 +25,17 @@
     "workers": 0,
     "amp": false
   },
-  "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
-  "note": "Навчалися лише cv3 та one2one_cv3 останньої голови. Backbone, neck і bbox-параметри незмінні. Вибір кандидата — лише за validation; test оцінено після цього вибору."
+  "bbox_training": {
+    "epochs": 3,
+    "selected_epoch": 1,
+    "imgsz": 320,
+    "batch": 8,
+    "lr0": 1e-05,
+    "lrf": 0.1,
+    "weight_decay": 0,
+    "fliplr": 0,
+    "device": "cpu",
+    "seed": 26,
+    "freeze": "backbone, neck, classifier; all BN statistics fixed"
+  }
 }

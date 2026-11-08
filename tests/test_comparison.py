@@ -37,6 +37,16 @@ class FreezeSelection(unittest.TestCase):
         self.assertFalse(classifier_parameter("model.4.cv3.conv.weight", 23))
 
 
+class BoxFreezeSelection(unittest.TestCase):
+    def test_bbox_only_in_last_head(self):
+        from train_boxes import box_parameter
+
+        self.assertTrue(box_parameter("model.23.cv2.0.0.conv.weight", 23))
+        self.assertTrue(box_parameter("model.23.one2one_cv2.0.0.conv.weight", 23))
+        self.assertFalse(box_parameter("model.23.cv3.0.2.weight", 23))
+        self.assertFalse(box_parameter("model.4.cv2.conv.weight", 23))
+
+
 class Matching(unittest.TestCase):
     def test_duplicates_and_disjoint_predictions(self):
         from analyze_errors import match

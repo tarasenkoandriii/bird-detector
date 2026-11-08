@@ -49,38 +49,38 @@
       "model": "finetuned",
       "imgsz": 320,
       "source_class": 0,
-      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
       "metrics": {
         "metrics/precision(B)": 0.9594777874696128,
         "metrics/recall(B)": 0.95,
-        "metrics/mAP50(B)": 0.9704369494796581,
-        "metrics/mAP50-95(B)": 0.7757545941934237,
-        "fitness": 0.7757545941934237
+        "metrics/mAP50(B)": 0.9704510205305468,
+        "metrics/mAP50-95(B)": 0.7925503801060744,
+        "fitness": 0.7925503801060744
       },
       "speed_ms_per_image": {
-        "preprocess": 0.37654908002878074,
-        "inference": 33.304606739766314,
-        "loss": 0.0003295899659860879,
-        "postprocess": 0.8091943049657857
+        "preprocess": 0.4890595655160724,
+        "inference": 39.921338810017915,
+        "loss": 0.0005000599048798904,
+        "postprocess": 0.9426020550745307
       }
     },
     {
       "model": "finetuned",
       "imgsz": 640,
       "source_class": 0,
-      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
       "metrics": {
         "metrics/precision(B)": 0.9596856295975343,
         "metrics/recall(B)": 0.9522082358762792,
-        "metrics/mAP50(B)": 0.9790946203925418,
-        "metrics/mAP50-95(B)": 0.7945722562831039,
-        "fitness": 0.7945722562831039
+        "metrics/mAP50(B)": 0.9791260679273079,
+        "metrics/mAP50-95(B)": 0.8140689983100484,
+        "fitness": 0.8140689983100484
       },
       "speed_ms_per_image": {
-        "preprocess": 1.4081995502783684,
-        "inference": 94.73234445998969,
-        "loss": 0.0006147147360024974,
-        "postprocess": 1.3965002298209583
+        "preprocess": 1.830007379903691,
+        "inference": 116.43173007003497,
+        "loss": 0.0005403097020462155,
+        "postprocess": 1.5740613396337721
       }
     }
   ]
