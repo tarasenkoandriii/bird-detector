@@ -1,0 +1,215 @@
+{
+  "note": "Зведено зі збережених JSON, без повторного навчання. Порівнювати лише однакові split, кількість зображень і роздільність.",
+  "runs": [
+    {
+      "stage": "Початкова YOLO26n",
+      "source": "model_comparison.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 320,
+      "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "metrics": {
+        "metrics/precision(B)": 0.9642816864707466,
+        "metrics/recall(B)": 0.93,
+        "metrics/mAP50(B)": 0.969484496117794,
+        "metrics/mAP50-95(B)": 0.7653690685188352,
+        "fitness": 0.7653690685188352
+      }
+    },
+    {
+      "stage": "Початкова YOLO26n",
+      "source": "model_comparison.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 640,
+      "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+      "metrics": {
+        "metrics/precision(B)": 0.9488637186196742,
+        "metrics/recall(B)": 0.965,
+        "metrics/mAP50(B)": 0.9750340143405257,
+        "metrics/mAP50-95(B)": 0.7878477069299563,
+        "fitness": 0.7878477069299563
+      }
+    },
+    {
+      "stage": "Класифікаційна голова",
+      "source": "head_model_comparison.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 320,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.9594777874696128,
+        "metrics/recall(B)": 0.95,
+        "metrics/mAP50(B)": 0.9704369494796581,
+        "metrics/mAP50-95(B)": 0.7757545941934237,
+        "fitness": 0.7757545941934237
+      }
+    },
+    {
+      "stage": "Класифікаційна голова",
+      "source": "head_model_comparison.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 640,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.9596856295975343,
+        "metrics/recall(B)": 0.9522082358762792,
+        "metrics/mAP50(B)": 0.9790946203925418,
+        "metrics/mAP50-95(B)": 0.7945722562831039,
+        "fitness": 0.7945722562831039
+      }
+    },
+    {
+      "stage": "Навчання рамок",
+      "source": "bbox_validation.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 320,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9594777874696128,
+        "metrics/recall(B)": 0.95,
+        "metrics/mAP50(B)": 0.9704510205305468,
+        "metrics/mAP50-95(B)": 0.7925503801060744,
+        "fitness": 0.7925503801060744
+      }
+    },
+    {
+      "stage": "Навчання рамок",
+      "source": "bbox_validation.json",
+      "split": "val",
+      "images": 200,
+      "imgsz": 640,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9596856295975343,
+        "metrics/recall(B)": 0.9522082358762792,
+        "metrics/mAP50(B)": 0.9791260679273079,
+        "metrics/mAP50-95(B)": 0.8140689983100484,
+        "fitness": 0.8140689983100484
+      }
+    },
+    {
+      "stage": "Класифікаційна голова",
+      "source": "head_stage_test.json",
+      "split": "test",
+      "images": 100,
+      "imgsz": 320,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.9582848876596528,
+        "metrics/recall(B)": 0.9188954386400833,
+        "metrics/mAP50(B)": 0.9532519080394504,
+        "metrics/mAP50-95(B)": 0.7750181674068994,
+        "fitness": 0.7750181674068994
+      }
+    },
+    {
+      "stage": "Класифікаційна голова",
+      "source": "head_stage_test_640.json",
+      "split": "test",
+      "images": 100,
+      "imgsz": 640,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.9963012615387254,
+        "metrics/recall(B)": 0.94,
+        "metrics/mAP50(B)": 0.9865173444345083,
+        "metrics/mAP50-95(B)": 0.7948478788318398,
+        "fitness": 0.7948478788318398
+      }
+    },
+    {
+      "stage": "Навчання рамок",
+      "source": "bbox_stage_test.json",
+      "split": "test",
+      "images": 100,
+      "imgsz": 320,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9683558140604829,
+        "metrics/recall(B)": 0.9180580652003718,
+        "metrics/mAP50(B)": 0.9535514953730272,
+        "metrics/mAP50-95(B)": 0.7895894961563152,
+        "fitness": 0.7895894961563152
+      }
+    },
+    {
+      "stage": "Навчання рамок",
+      "source": "bbox_stage_test_640.json",
+      "split": "test",
+      "images": 100,
+      "imgsz": 640,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9963012615387254,
+        "metrics/recall(B)": 0.94,
+        "metrics/mAP50(B)": 0.986460383851232,
+        "metrics/mAP50-95(B)": 0.8080485975576328,
+        "fitness": 0.8080485975576328
+      }
+    },
+    {
+      "stage": "До розширеного навчання",
+      "source": "expanded_baseline.json",
+      "split": "val",
+      "images": 600,
+      "imgsz": 640,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9528278165465431,
+        "metrics/recall(B)": 0.9516666666666667,
+        "metrics/mAP50(B)": 0.9805424733769029,
+        "metrics/mAP50-95(B)": 0.8023728684152408,
+        "fitness": 0.8023728684152408
+      }
+    },
+    {
+      "stage": "Поточна модель",
+      "source": "expanded_candidate_validation.json",
+      "split": "val",
+      "images": 600,
+      "imgsz": 640,
+      "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+      "metrics": {
+        "metrics/precision(B)": 0.9528278165465431,
+        "metrics/recall(B)": 0.9516666666666667,
+        "metrics/mAP50(B)": 0.9805866505963368,
+        "metrics/mAP50-95(B)": 0.8108172076455288,
+        "fitness": 0.8108172076455288
+      }
+    },
+    {
+      "stage": "До розширеного навчання",
+      "source": "expanded_test_baseline.json",
+      "split": "test",
+      "images": 499,
+      "imgsz": 640,
+      "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+      "metrics": {
+        "metrics/precision(B)": 0.9800400582606109,
+        "metrics/recall(B)": 0.9639278557114228,
+        "metrics/mAP50(B)": 0.9911154916543655,
+        "metrics/mAP50-95(B)": 0.8288274841471089,
+        "fitness": 0.8288274841471089
+      }
+    },
+    {
+      "stage": "Поточна модель",
+      "source": "expanded_test_candidate.json",
+      "split": "test",
+      "images": 499,
+      "imgsz": 640,
+      "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+      "metrics": {
+        "metrics/precision(B)": 0.98207756357924,
+        "metrics/recall(B)": 0.9659318637274549,
+        "metrics/mAP50(B)": 0.9915862453547344,
+        "metrics/mAP50-95(B)": 0.8361772755712437,
+        "fitness": 0.8361772755712437
+      }
+    }
+  ]
+}
