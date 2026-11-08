@@ -211,5 +211,29 @@
         "fitness": 0.8361772755712437
       }
     }
-  ]
+  ],
+  "video_target_evaluation": {
+    "source": "video_test.json",
+    "annotation_scope": "Один цільовий птах; це не mAP детектора всіх птахів.",
+    "splits": {
+      "val": {
+        "sampled_frames": 100,
+        "visible_target_frames": 100,
+        "excluded_invisible_target_frames": 0,
+        "target_recall_iou50": 0.3,
+        "target_recall_iou75": 0.28,
+        "mean_best_iou_visible": 0.2744741897057109,
+        "no_detections_visible": 41
+      },
+      "test": {
+        "sampled_frames": 300,
+        "visible_target_frames": 300,
+        "excluded_invisible_target_frames": 0,
+        "target_recall_iou50": 0.5933333333333334,
+        "target_recall_iou75": 0.5,
+        "mean_best_iou_visible": 0.5194432664643602,
+        "no_detections_visible": 95
+      }
+    }
+  }
 }

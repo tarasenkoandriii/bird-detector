@@ -1,0 +1,19 @@
+{
+  "source": "LaSOT",
+  "revision": "a97464600e8c1ab91eb91a47332a20732830585e",
+  "archive_sha256": "33e05e600732608fe7c35413b94558c959ffbe145eb03a918fa3d7d07f949e39",
+  "sequences": {
+    "bird-2": "val",
+    "bird-3": "test",
+    "bird-15": "test",
+    "bird-17": "test"
+  },
+  "sampling": "100 рівномірних індексів у кожному ролику, до запуску моделі",
+  "frames": 400,
+  "cub_similarity_exclusions": 0,
+  "previous_cub_similarity_matches": [],
+  "cross_split_pairs": [],
+  "scope": "Повна перевірка кадрів за хешами, не семантичний доказ незалежності від будь-якого pretraining.",
+  "official_testing_list_sha256": "11709952a85f42307ffe7a8952378169d9bf026ec904099f040f0de40db5434e",
+  "official_testing_list_url": "https://huggingface.co/datasets/l-lt/LaSOT/resolve/a97464600e8c1ab91eb91a47332a20732830585e/testing_set.txt"
+}
