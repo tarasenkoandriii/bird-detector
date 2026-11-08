@@ -186,3 +186,5 @@ python train_boxes.py --model runs/train/bird/weights/best.pt --name bbox-conser
 ```
 
 Скрипт навчає лише bbox-гілки 3 епохи на CPU із lr0=0.00001; backbone, neck, класифікація та статистика BN зафіксовані. Результат — `runs/experiments/bbox-conservative/weights/best.pt`. Додані ваги автоматично не перезаписуються. На цьому Mac етап зайняв близько 4 хвилин. При 640 validation mAP50–95 = **81,41%**, test = **80,80%**; для обох використано CPU. Це метрики офіційного валідатора; додатковий відео-NMS є окремою постобробкою. Деталі — [improvement.md](reports/improvement.md).
+
+Огляд офіційних рекомендацій, перевірка локального API та рецепти наступних експериментів — [finetuning_recommendations.md](reports/finetuning_recommendations.md). Це план, поточні ваги ним не змінені.
