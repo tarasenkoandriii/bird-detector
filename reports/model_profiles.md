@@ -56,3 +56,5 @@ python compare_profiles.py
 `compare_profiles.py` читає збережені JSON, не запускає навчання. Існуючі каталоги запусків не перезаписуються. Для іншого повтору задайте новий --name.
 
 Точні числа, хеші та джерела — [model_profiles.json](model_profiles.json). Основний звіт — [improvement.md](improvement.md).
+
+Окремо виконується [дослідження стійкості D на п’яти seed](seed_study/README.md); часткові результати не вважаються підсумком.

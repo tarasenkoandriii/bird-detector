@@ -1,0 +1,29 @@
+{
+  "seeds": [
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "criterion": "Обидві validation mAP50–95 ≥ A, принаймні одна > A; фонові FP ≤ A.",
+  "data_seed": 26,
+  "source_weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+  "epochs": 3,
+  "cub_images": 512,
+  "baseline_a": {
+    "cub": 0.8108172076455288,
+    "video": 0.5096901984934742,
+    "background_fp_images": 0
+  },
+  "dataset_sha256": "949074d4a5c7591e215df2e8a6d6675e4253fcebecd36f29798c977d7842dd3a",
+  "train_selection_sha256": "24b24cdfd4b786f7fc069ae66ce8eab90212f4007c74947718f4859511069370",
+  "train_code_sha256": "ca25ee40a0510b9f3d027e72690066f592cb803f83a4c6187073b71b054544be",
+  "controller_code_sha256": "9c9059b7d22c37c43df3baa6bb824b8893882cbd0ac922fe0470aa6afc9dca55",
+  "environment": {
+    "torch": "2.2.2",
+    "ultralytics": "8.4.204",
+    "numpy": "1.26.4",
+    "Pillow": "13.0.0"
+  }
+}

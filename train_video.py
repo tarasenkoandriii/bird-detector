@@ -16,6 +16,9 @@ def main():
     p.add_argument("--lr0", type=float, default=0.00001)
     p.add_argument("--cub-images", type=int, default=128)
     p.add_argument("--seed", type=int, default=26)
+    p.add_argument(
+        "--data-seed", type=int, help="Фіксований відбір фото; типово збігається з --seed"
+    )
     a = p.parse_args()
     if (
         not a.data.is_file()
@@ -36,7 +39,8 @@ def main():
     photos = sorted((ROOT / "datasets/bird-expanded/train/images").glob("*.jpg"))
     if not videos or not photos:
         p.error("Потрібні відеонабір і розширений CUB.")
-    random.Random(a.seed).shuffle(photos)
+    data_seed = a.seed if a.data_seed is None else a.data_seed
+    random.Random(data_seed).shuffle(photos)
     photos = photos[: a.cub_images]
     work = ROOT / "work" / a.name
     work.mkdir(parents=True, exist_ok=True)
@@ -84,6 +88,10 @@ def main():
                     "nbs": 8,
                     "lr0": a.lr0,
                     "seed": a.seed,
+                    "data_seed": data_seed,
+                    "train_selection_sha256": hashlib.sha256(
+                        "\n".join(x.name for x in videos + photos).encode()
+                    ).hexdigest(),
                     "note": "Навчається вся голова; backbone/neck і BN-статистика зафіксовані. Test не використовується. Релізні ваги не перезаписуються.",
                 },
                 indent=2,

@@ -1,0 +1,42 @@
+{
+  "n": 1,
+  "cub": {
+    "n": 1,
+    "mean": 0.8117036776208397,
+    "sd": null,
+    "min": 0.8117036776208397,
+    "max": 0.8117036776208397
+  },
+  "video": {
+    "n": 1,
+    "mean": 0.5198413335002593,
+    "sd": null,
+    "min": 0.5198413335002593,
+    "max": 0.5198413335002593
+  },
+  "joint_passes": 1,
+  "max_background_fp_images": 0,
+  "completed": false,
+  "planned_seeds": [
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "rows": [
+    {
+      "seed": 26,
+      "cub": 0.8117036776208397,
+      "video": 0.5198413335002593,
+      "background_fp_images": 0,
+      "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f"
+    }
+  ],
+  "baseline_a": {
+    "cub": 0.8108172076455288,
+    "video": 0.5096901984934742,
+    "background_fp_images": 0
+  },
+  "state": "підготовлено"
+}
