@@ -1,5 +1,5 @@
 {
-  "note": "Historical MPS result before video coordinate-restoration fix; use val.json and test.json for the final CPU reference evaluation.",
+  "note": "Історичний MPS-результат до виправлення відновлення координат відео; для фінальної еталонної CPU-оцінки див. val.json і test.json.",
   "metrics": {
     "metrics/precision(B)": 0.5862410037223669,
     "metrics/recall(B)": 0.43923792601907624,

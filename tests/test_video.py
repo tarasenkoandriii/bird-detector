@@ -28,7 +28,7 @@ class FakeModel:
 class FailingModel(FakeModel):
     def predict(self, **kwargs):
         if self.calls == 1:
-            raise RuntimeError("simulated inference failure")
+            raise RuntimeError("змодельований збій інференсу")
         return super().predict(**kwargs)
 
 

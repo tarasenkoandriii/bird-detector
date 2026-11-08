@@ -1,4 +1,4 @@
-"""Regression: old MPS strided operations must not corrupt restored image boxes."""
+"""Регресія: старі операції MPS не повинні спотворювати відновлені bbox."""
 
 import unittest
 from types import SimpleNamespace
@@ -12,7 +12,7 @@ class Coordinates(unittest.TestCase):
         predictor = object.__new__(SafeDetectionPredictor)
         predictor.model = SimpleNamespace(names={0: "bird"})
         original = np.zeros((360, 640, 3), dtype=np.uint8)
-        # Letterbox image is 192x320: scale .5 and vertical padding 6.
+        # Letterbox 192x320: масштаб .5, вертикальний відступ 6.
         expected = torch.tensor([[200.0, 68.0, 480.0, 308.0, 0.9, 0.0]])
         devices = ["cpu"] + (["mps"] if torch.backends.mps.is_available() else [])
         for device in devices:

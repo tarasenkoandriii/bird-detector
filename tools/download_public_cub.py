@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""No-key research fallback: first train/test CUB shards, deterministic subset."""
+"""Дослідницька підвибірка CUB без ключа: перші шарди train/test, фіксований seed."""
 
 import argparse, hashlib, io, json, random, shutil, urllib.request
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from common import UkrainianParser
 import pyarrow.parquet as pq
 from PIL import Image
 import yaml
@@ -16,26 +20,28 @@ SHA = {
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = UkrainianParser(description=__doc__)
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--cache", type=Path, required=True)
     a = p.parse_args()
     if a.out.exists():
-        p.error("Output exists")
+        p.error("Каталог результату вже існує")
     a.cache.mkdir(parents=True, exist_ok=True)
     files = {}
     for split in ["train", "test"]:
         target = a.cache / f"cub-{split}.parquet"
         if not target.exists():
             tmp = target.with_suffix(".part")
-            print("Downloading", split, flush=True)
+            print("Завантаження", split, flush=True)
             urllib.request.urlretrieve(
                 f"https://huggingface.co/datasets/{REPO}/resolve/{REV}/data/{split}-00000-of-00002.parquet",
                 tmp,
             )
             tmp.rename(target)
         if hashlib.sha256(target.read_bytes()).hexdigest() != SHA[split]:
-            raise ValueError(f"Checksum mismatch: {target}; remove corrupt cache and retry")
+            raise ValueError(
+                f"Контрольна сума не збігається: {target}; видаліть пошкоджений кеш і повторіть"
+            )
         files[split] = target
     rows = {s: pq.read_table(f).to_pylist() for s, f in files.items()}
     rng = random.Random(26)
@@ -81,9 +87,9 @@ def main():
             {
                 "repo": REPO,
                 "revision": REV,
-                "scope": "only shard 0 of 2 in official train/test; NOT full CUB or Roboflow Birds",
+                "scope": "Лише шард 0 із 2 офіційних train/test; це не повний CUB і не Roboflow Birds",
                 "seed": 26,
-                "license": "Non-commercial research and educational use only; image copyrights retained by owners",
+                "license": "Лише некомерційні дослідження та навчання; права на зображення належать власникам",
                 "official_source": "https://www.vision.caltech.edu/datasets/cub_200_2011/",
                 "sha256": {s: hashlib.sha256(f.read_bytes()).hexdigest() for s, f in files.items()},
                 "rejected_invalid_bbox": rejected,
@@ -92,7 +98,7 @@ def main():
             indent=2,
         )
     )
-    print("Written", len(provenance), "rejected invalid bbox:", len(rejected))
+    print("Записано", len(provenance), "виключено некоректних bbox:", len(rejected))
 
 
 if __name__ == "__main__":

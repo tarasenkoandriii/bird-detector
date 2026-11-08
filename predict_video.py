@@ -1,43 +1,43 @@
 #!/usr/bin/env python3
-"""Run bird detection on every video frame, preserving FPS and frame size."""
+"""Детекція птахів на кожному кадрі відео зі збереженням FPS і розміру кадрів."""
 
-import argparse, hashlib, json, math, os, shutil, subprocess, tempfile, time
+import hashlib, json, math, os, shutil, subprocess, tempfile, time
 from pathlib import Path
-from common import ROOT, resolve_device
+from common import UkrainianParser, ROOT, resolve_device
 
 
 def parser():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--input", required=True, type=Path)
-    p.add_argument("--output", required=True, type=Path)
+    p = UkrainianParser(description=__doc__)
+    p.add_argument("--input", required=True, type=Path, help="Шлях до вхідного відео")
+    p.add_argument("--output", required=True, type=Path, help="Шлях до вихідного MP4")
     p.add_argument("--weights", type=Path, default=ROOT / "weights/best.pt")
     p.add_argument("--conf", type=float, default=0.25)
     p.add_argument(
-        "--iou", type=float, default=0.5, help="CPU NMS threshold for duplicate bird boxes"
+        "--iou", type=float, default=0.5, help="Поріг CPU NMS для повторних рамок тієї самої птиці"
     )
     p.add_argument("--imgsz", type=int, default=640)
-    p.add_argument("--device", default="auto", help="auto, cpu, mps, or CUDA device index")
-    p.add_argument("--overwrite", action="store_true")
+    p.add_argument("--device", default="auto", help="auto, cpu, mps або індекс пристрою CUDA")
+    p.add_argument("--overwrite", action="store_true", help="Дозволити заміну наявного результату")
     return p
 
 
 def validate(a):
     if not a.input.is_file():
-        raise ValueError(f"Input video does not exist: {a.input}")
+        raise ValueError(f"Вхідне відео не існує: {a.input}")
     if not a.weights.is_file():
-        raise ValueError(f"Weights do not exist: {a.weights}")
+        raise ValueError(f"Файл ваг не існує: {a.weights}")
     if a.input.resolve() == a.output.resolve():
-        raise ValueError("Input and output must be different files.")
+        raise ValueError("Вхідний і вихідний файли мають бути різними.")
     if a.output.suffix.lower() != ".mp4":
-        raise ValueError("Output must have .mp4 extension.")
+        raise ValueError("Вихідний файл має мати розширення .mp4.")
     if a.output.exists() and not a.overwrite:
-        raise ValueError("Output already exists; use --overwrite explicitly.")
+        raise ValueError("Вихідний файл уже існує; явно додайте --overwrite.")
     if not 0 < a.conf < 1:
-        raise ValueError("--conf must be between 0 and 1.")
+        raise ValueError("--conf має бути між 0 та 1.")
     if not 0 < a.iou < 1:
-        raise ValueError("--iou must be between 0 and 1.")
+        raise ValueError("--iou має бути між 0 та 1.")
     if a.imgsz < 32 or a.imgsz % 32:
-        raise ValueError("--imgsz must be a positive multiple of 32.")
+        raise ValueError("--imgsz має бути додатним числом, кратним 32.")
 
 
 def suppress_duplicates(boxes, iou):
@@ -88,7 +88,7 @@ def video_info(cap):
     w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
     if not math.isfinite(fps) or fps <= 0 or min(w, h) <= 0:
-        raise ValueError("Invalid video FPS or frame dimensions.")
+        raise ValueError("Некоректний FPS або розмір кадру відео.")
     return fps, w, h
 
 
@@ -101,7 +101,7 @@ def run(a, model_factory=None):
     temporary = []
     try:
         if not cap.isOpened():
-            raise ValueError("Cannot decode input video.")
+            raise ValueError("Не вдалося декодувати вхідне відео.")
         fps, w, h = video_info(cap)
         expected = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         device = resolve_device(a.device)
@@ -113,7 +113,7 @@ def run(a, model_factory=None):
         from inference import SafeDetectionPredictor
 
         if dict(model.names) != {0: "bird"}:
-            raise ValueError("Expected bird-only weights with names {0: bird}.")
+            raise ValueError("Потрібні ваги одного класу з names {0: bird}.")
         a.output.parent.mkdir(parents=True, exist_ok=True)
 
         def temp():
@@ -128,7 +128,7 @@ def run(a, model_factory=None):
         raw = temp()
         writer = cv2.VideoWriter(str(raw), cv2.VideoWriter_fourcc(*"mp4v"), fps, (w, h))
         if not writer.isOpened():
-            raise ValueError("Cannot open MP4 video writer.")
+            raise ValueError("Не вдалося відкрити запис MP4.")
         count = 0
         detected = 0
         total_boxes = 0
@@ -157,16 +157,18 @@ def run(a, model_factory=None):
                 samples.append({"frame": count - 1, "detections": boxes})
             if count % 25 == 0:
                 print(
-                    f"{count} frames | {count/(time.perf_counter()-start):.2f} frames/s", flush=True
+                    f"{count} кадрів | {count/(time.perf_counter()-start):.2f} кадрів/с", flush=True
                 )
         elapsed = time.perf_counter() - start
         writer.release()
         writer = None
         cap.release()
         if not count:
-            raise ValueError("Video contains no decodable frames.")
+            raise ValueError("У відео немає кадрів, які вдалося декодувати.")
         if expected > 0 and abs(count - expected) > 1:
-            raise ValueError(f"Incomplete decode: got {count}, header claims {expected} frames.")
+            raise ValueError(
+                f"Неповне декодування: прочитано {count}, заголовок указує {expected} кадрів."
+            )
         encoded = raw
         codec = "mp4v"
         if shutil.which("ffmpeg") and w % 2 == 0 and h % 2 == 0:
@@ -196,7 +198,7 @@ def run(a, model_factory=None):
         written = 0
         try:
             if not check.isOpened():
-                raise ValueError("Output could not be reopened.")
+                raise ValueError("Не вдалося повторно відкрити вихідне відео.")
             out_fps, out_w, out_h = video_info(check)
             while True:
                 ok, _ = check.read()
@@ -206,9 +208,9 @@ def run(a, model_factory=None):
         finally:
             check.release()
         if written != count or (out_w, out_h) != (w, h) or abs(out_fps - fps) > 0.01:
-            raise ValueError("Output verification failed: frames, FPS or dimensions changed.")
+            raise ValueError("Перевірка результату не пройшла: змінилися кадри, FPS або розміри.")
         if a.output.exists() and not a.overwrite:
-            raise ValueError("Output appeared during processing; refusing overwrite.")
+            raise ValueError("Вихідний файл з’явився під час обробки; перезапис скасовано.")
         os.replace(encoded, a.output)
         report = {
             "input": str(a.input),
@@ -230,7 +232,7 @@ def run(a, model_factory=None):
             "frames_with_detections": detected,
             "total_detections": total_boxes,
             "codec": codec,
-            "audio": "not copied",
+            "audio": "не копіюється",
             "sample_detections": samples,
         }
         a.output.with_suffix(".metrics.json").write_text(json.dumps(report, indent=2))
@@ -250,9 +252,9 @@ def main():
     try:
         run(a)
     except (ValueError, OSError, RuntimeError, subprocess.CalledProcessError) as e:
-        p.exit(1, f"Error: {e}\n")
+        p.exit(1, f"Помилка: {e}\n")
     except KeyboardInterrupt:
-        p.exit(130, "Interrupted; unfinished output was removed.\n")
+        p.exit(130, "Обробку перервано; незавершений файл видалено.\n")
 
 
 if __name__ == "__main__":

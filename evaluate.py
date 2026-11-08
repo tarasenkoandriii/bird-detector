@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
-"""Evaluate the bundled bird weights on validation or held-out test."""
+"""Оцінювання найкращих ваг bird на валідації або окремій тестовій вибірці."""
 
-import argparse, hashlib, json
+import hashlib, json
 from pathlib import Path
-from common import ROOT, resolve_device
+from common import UkrainianParser, ROOT, resolve_device
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = UkrainianParser(description=__doc__)
     p.add_argument("--data", type=Path, default=ROOT / "datasets/bird/data.yaml")
     p.add_argument("--weights", type=Path, default=ROOT / "weights/best.pt")
     p.add_argument("--split", choices=["val", "test"], default="val")
     p.add_argument(
-        "--device", default="cpu", help="CPU is the reference for coordinates on this old MPS stack"
+        "--device",
+        default="cpu",
+        help="CPU — еталонний пристрій для перевірки координат у цьому старому MPS-стеку",
     )
     p.add_argument("--imgsz", type=int, default=320)
     p.add_argument("--batch", type=int, default=4)
     p.add_argument("--report", type=Path)
     a = p.parse_args()
     if not a.data.is_file() or not a.weights.is_file():
-        p.error("Data or weights missing. Run prepare_data.py first.")
+        p.error("Дані або ваги відсутні. Спочатку виконайте prepare_data.py.")
     from ultralytics import YOLO
     import torch, ultralytics
 

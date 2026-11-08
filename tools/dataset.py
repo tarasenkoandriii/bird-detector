@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Audit Roboflow YOLO detection exports, then optionally prepare bird-only data."""
+"""Аудит YOLO detection export і підготовка датасету одного класу bird."""
 
 import argparse, collections, hashlib, json, math, random, re, shutil
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from common import UkrainianParser
 from PIL import Image
 import yaml
 
@@ -21,7 +25,7 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
     )
     bird = {k for k, v in names.items() if str(v).casefold() in bird_names}
     if not bird:
-        raise ValueError(f"No selected bird classes in {names}; specify --bird-names explicitly.")
+        raise ValueError(f"У {names} немає вибраних класів птахів; задайте --bird-names явно.")
     records = []
     errors = []
     warnings = []
@@ -35,7 +39,7 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
         labels = base / "labels"
         if not images.exists():
             if split != "test":
-                errors.append(f"Missing {images}")
+                errors.append(f"Відсутній каталог {images}")
             continue
         seen = set()
         for img in sorted(images.rglob("*")):
@@ -63,14 +67,14 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
                         for y in range(8)
                         for x in range(8)
                     )
-                    # Near-hash matching of flat images is unreliable.
+                    # Порівняння одноколірних зображень за near-hash ненадійне.
                     usable = max(px) - min(px) > 15
                 raw = digest(img.read_bytes())
             except Exception:
-                errors.append(f"Unreadable image: {img}")
+                errors.append(f"Не вдалося прочитати зображення: {img}")
                 continue
             if not lab.exists():
-                issues.append("missing label (not silently treated as background)")
+                issues.append("відсутня розмітка; такий кадр не вважається фоновим автоматично")
             else:
                 for n, line in enumerate(lab.read_text().splitlines(), 1):
                     if not line.strip():
@@ -78,26 +82,26 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
                     try:
                         fields = line.split()
                         if len(fields) != 5:
-                            raise ValueError("expected 5 detection fields")
+                            raise ValueError("очікується 5 полів detection")
                         c = float(fields[0])
                         x, y, bw, bh = map(float, fields[1:])
                         if not all(math.isfinite(v) for v in (c, x, y, bw, bh)):
-                            raise ValueError("non-finite")
+                            raise ValueError("нескінченне або нечислове значення")
                         if not c.is_integer() or int(c) not in names:
-                            raise ValueError("unknown class")
+                            raise ValueError("невідомий клас")
                         if not (0 <= x <= 1 and 0 <= y <= 1 and 0 < bw <= 1 and 0 < bh <= 1):
-                            raise ValueError("range")
+                            raise ValueError("координати поза допустимим діапазоном")
                         if (
                             min(x - bw / 2, y - bh / 2) < -1e-6
                             or max(x + bw / 2, y + bh / 2) > 1 + 1e-6
                         ):
-                            raise ValueError("box outside image")
+                            raise ValueError("bbox за межами зображення")
                         if int(c) in bird:
                             boxes.append([0, x, y, bw, bh])
                     except ValueError as e:
-                        issues.append(f"line {n}: {e}")
+                        issues.append(f"рядок {n}: {e}")
             if len({tuple(b) for b in boxes}) < len(boxes):
-                issues.append("duplicate boxes")
+                issues.append("повторні bbox")
             if issues:
                 errors.append({"image": str(img), "issues": issues})
             family = re.sub(r"\.rf\.[^.]+$", "", img.stem) if ".rf." in img.stem else None
@@ -117,9 +121,9 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
             )
         for lab in labels.rglob("*.txt") if labels.exists() else []:
             if lab not in seen:
-                errors.append(f"Orphan label: {lab}")
+                errors.append(f"Розмітка без зображення: {lab}")
     if not records:
-        errors.append("No images")
+        errors.append("Немає зображень")
     parent = list(range(len(records)))
 
     def find(i):
@@ -158,17 +162,17 @@ def audit(root, bird_names=("bird", "birds"), distance=4):
         pairs=pairs,
         records=records,
         notes=[
-            "Near duplicates are heuristic candidates, not proof. Crops/video frames may escape detection. Provide source/video grouping before scientific evaluation."
+            "Схожі зображення — евристичні кандидати. Обрізані кадри можуть не виявитися. Для наукової оцінки потрібне групування за джерелом або відео."
         ],
     )
 
 
 def prepare(report, out, seed, limit):
     if report["errors"]:
-        raise ValueError("Audit errors must be corrected in source before preparation.")
+        raise ValueError("Перед підготовкою виправте помилки аудиту у вихідних даних.")
     if out.exists():
-        raise ValueError("Output exists; refusing overwrite.")
-    # Preserve source split; protect held-out data by removing duplicates from train first.
+        raise ValueError("Каталог результату вже існує; перезапис скасовано.")
+    # Зберігаємо split; для захисту тестової вибірки спершу прибираємо копії з train.
     priority = {"test": 0, "val": 1, "train": 2}
     groups = collections.defaultdict(list)
     for r in report["records"]:
@@ -184,16 +188,16 @@ def prepare(report, out, seed, limit):
         if limit:
             rows = rows[: dict(zip(["train", "val", "test"], limit))[split]]
         if split != "test" and not rows:
-            raise ValueError(f"No {split} images after deduplication.")
+            raise ValueError(f"Після видалення дублікатів немає зображень у {split}.")
         for r in rows:
             manifest.append(r)
     if not any(r["boxes"] for r in manifest if r["split"] == "train"):
-        raise ValueError("No training bird boxes")
+        raise ValueError("У навчальній вибірці немає bbox птахів")
     out.mkdir(parents=True)
     for r in manifest:
         s = r["split"]
         image = Path(r["image"])
-        name = r["pixel"][:16]  # stable across checkout locations
+        name = r["pixel"][:16]  # стабільне ім’я незалежно від розташування проєкту
         ip = out / s / "images" / f"{name}{image.suffix.lower()}"
         lp = out / s / "labels" / f"{name}.txt"
         ip.parent.mkdir(parents=True, exist_ok=True)
@@ -215,7 +219,7 @@ def prepare(report, out, seed, limit):
         json.dumps(
             {
                 "seed": seed,
-                "policy": "preserve splits; one representative per connected duplicate/candidate group, prefer test then val then train",
+                "policy": "Зберігаємо splits; один представник зв’язаної групи дублікатів/кандидатів; пріоритет test, val, train",
                 "records": manifest,
             },
             indent=2,
@@ -225,7 +229,7 @@ def prepare(report, out, seed, limit):
 
 
 def main():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = UkrainianParser(description=__doc__)
     p.add_argument("--source", type=Path, required=True)
     p.add_argument("--report", type=Path, required=True)
     p.add_argument("--prepare", type=Path)
@@ -235,15 +239,15 @@ def main():
     p.add_argument("--limit", type=int, nargs=3, metavar=("TRAIN", "VAL", "TEST"))
     a = p.parse_args()
     if not 0 <= a.distance <= 64 or (a.limit and min(a.limit) < 1):
-        p.error("Invalid distance/limits")
+        p.error("Некоректна відстань або ліміти")
     r = audit(
         a.source.resolve(), tuple(n.strip().casefold() for n in a.bird_names.split(",")), a.distance
     )
     a.report.parent.mkdir(parents=True, exist_ok=True)
     a.report.write_text(json.dumps(r, indent=2))
-    print("Audit:", r["counts"], "errors:", len(r["errors"]), "duplicate pairs:", len(r["pairs"]))
+    print("Аудит:", r["counts"], "помилки:", len(r["errors"]), "пари дублікатів:", len(r["pairs"]))
     if a.prepare:
-        print("Prepared:", prepare(r, a.prepare.resolve(), a.seed, a.limit))
+        print("Підготовлено:", prepare(r, a.prepare.resolve(), a.seed, a.limit))
     elif r["errors"]:
         raise SystemExit(2)
 

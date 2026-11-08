@@ -58,5 +58,5 @@
     "invalid_bbox_excluded": 2
   },
   "weights_sha256": "0d53dc154ea6e7bd489d8c59b616409302909a10a66f3b83958d7f2927bac4ee",
-  "note": "The bundled best model predates the last epoch. Fresh default training uses one batch size; reproducing execution does not imply bitwise identical experimental weights. time in the raw CSV resets on resumed sessions."
+  "note": "Додані найкращі ваги отримані до останньої епохи. Нове типове навчання має фіксований batch; відтворення запуску не гарантує побітово однакових ваг. Час у CSV починається заново після відновлень."
 }
