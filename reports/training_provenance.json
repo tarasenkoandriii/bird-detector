@@ -3,9 +3,9 @@
   "classes": {
     "0": "bird"
   },
-  "strategy": "classifier_then_bbox_then_expanded_bbox",
-  "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
-  "note": "Після двох початкових етапів виконано 3 bbox-епохи на розширеному CUB. Кандидат обраний за validation. Резервний test оцінено після вибору; його не використовували для наступного підбору.",
+  "strategy": "classifier_bbox_expanded_then_video_mix_D",
+  "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+  "note": "До фото-орієнтира A додано 3 епохи всієї голови на 87 відеоприкладах і 512 фото CUB. D обраний за двома валідаціями до оцінювання тестів. A і B збережені як окремі варіанти.",
   "classifier_training": {
     "epochs": 5,
     "imgsz": 320,
@@ -52,5 +52,17 @@
     "device": "cpu",
     "source_weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
     "protected_parameters_unchanged": true
+  },
+  "video_mix_training": {
+    "source_weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+    "video_train_images": 87,
+    "cub_train_images": 512,
+    "epochs": 3,
+    "imgsz": 640,
+    "batch": 8,
+    "nbs": 8,
+    "lr0": 1e-05,
+    "seed": 26,
+    "note": "Навчається вся голова; backbone/neck і BN-статистика зафіксовані. Test не використовується. Релізні ваги не перезаписуються."
   }
 }

@@ -54,15 +54,20 @@ python prepare_expanded.py
 python train_boxes.py --data datasets/bird-expanded/data.yaml \
   --model runs/experiments/bbox-conservative/weights/best.pt \
   --imgsz 640 --epochs 3 --lr0 0.00001 --name expanded-bbox640
+
+# D: відеокадри + 512 фото CUB.
+python prepare_video_training.py
+python train_video.py --model runs/experiments/expanded-bbox640/weights/best.pt \
+  --cub-images 512 --lr0 0.00001 --name video-more-photos
 ```
 
-Етапи: 5 епох класифікації → 3 bbox-епохи при 320 → 3 bbox-епохи при 640. AdamW, batch=8, CPU; backbone і neck зафіксовані. Останній етап зайняв близько **48 хв**. Параметри — [training_provenance.json](reports/training_provenance.json).
+Етапи: 5 епох класифікації → 3 bbox-епохи при 320 → 3 bbox-епохи при 640 → 3 епохи голови на суміші відео й фото. AdamW, batch=8, CPU; backbone і neck зафіксовані. Останній етап із валідаціями зайняв **8 хв 28 с**. Параметри — [training_provenance.json](reports/training_provenance.json).
 
-Результат: `runs/experiments/expanded-bbox640/weights/best.pt`. Обробка відео власними навченими вагами:
+Результат: `runs/experiments/video-more-photos/weights/best.pt`. Обробка відео власними навченими вагами:
 
 ```bash
 python predict_video.py --input examples/input.mp4 --output examples/my_output.mp4 \
-  --weights runs/experiments/expanded-bbox640/weights/best.pt
+  --weights runs/experiments/video-more-photos/weights/best.pt
 ```
 
 Додані `weights/best.pt` не перезаписуються. Для повторного навчання задайте нове `--name`; уже підготовлені каталоги даних пропустіть. Повторний запуск може дати дещо інші числа.
@@ -73,12 +78,12 @@ CPU, 640 px, batch=4; кандидат обрано за validation, test оці
 
 | Метрика | Валідація, 600 | Тест, 499 |
 |---|---:|---:|
-| Precision | 95,28% | 98,21% |
-| Recall | 95,17% | 96,59% |
-| mAP50 | 98,06% | 99,16% |
-| mAP50–95 | **81,08%** | **83,62%** |
+| Precision | 95,96% | 97,87% |
+| Recall | 94,98% | 96,99% |
+| mAP50 | 98,19% | 99,17% |
+| mAP50–95 | **81,17%** | **83,60%** |
 
-Останній етап додав **+0,84 в.п. validation** і **+0,73 в.п. test mAP50–95** на тих самих вибірках. Усі етапи й експерименти — [improvement.md](reports/improvement.md).
+Це поточний варіант **D**. Порівняно з A: CUB validation +0,09 в.п., нова відеовалідація +1,02 в.п.; CUB test −0,02 в.п. [Усі варіанти й правило вибору](reports/model_profiles.md).
 
 ```bash
 python evaluate.py --data datasets/bird-expanded/data.yaml --split val --imgsz 640
@@ -90,7 +95,7 @@ python -m unittest discover -s tests -v
 
 ## Відеоперевірка
 
-Окремий LaSOT-тест: **59,33% цільового recall при IoU≥0,5 на 300 кадрах**. Розмітка охоплює одного птаха на кадр, тому це не повний mAP відеодетектора. [Метрики й команди](reports/video_test.md).
+Окремий LaSOT-тест: **64,00% цільового recall при IoU≥0,5 на 300 кадрах**. Розмітка охоплює одного птаха на кадр, тому це не повний mAP відеодетектора. [Метрики й команди](reports/video_test.md).
 
 ## Навчальні відеокадри
 
@@ -98,25 +103,24 @@ python -m unittest discover -s tests -v
 
 ```bash
 python prepare_video_training.py
-python train_video.py
+python train_video.py --model weights/photo_reference.pt --cub-images 512 --name video-more-photos
 ```
 
-Це окремий пілот; додані релізні ваги не перезаписуються. Уже підготовлений набір повторно створювати не потрібно.
+D включений до релізу; нові запуски не перезаписують додані ваги. Уже підготовлений набір повторно створювати не потрібно.
 
 ## Варіанти моделі
 
 | Варіант | Ваги | CUB / відео mAP50–95 на валідації |
 |---|---|---:|
-| [**A — основний**](examples/output.mp4) | [best.pt](weights/best.pt) | 81,08% / 50,97% |
-| [**B — відеопілот**](examples/output_video_pilot.mp4) | [video_pilot.pt](weights/video_pilot.pt) | 80,81% / 51,94% |
+| [**D — основний**](examples/output.mp4) | [best.pt](weights/best.pt) | 81,17% / 51,98% |
+| [A — фото-орієнтир](examples/output_photo_reference.mp4) | [photo_reference.pt](weights/photo_reference.pt) | 81,08% / 50,97% |
+| [B — попередній відеопілот](examples/output_video_pilot.mp4) | [video_pilot.pt](weights/video_pilot.pt) | 80,81% / 51,94% |
 
-За замовчуванням використовується A. Для B додайте `--weights weights/video_pilot.pt`. Усі тестові метрики вище стосуються A.
-
-C із меншим LR перевірено й відхилено: гірший за A на обох валідаціях. D із більшою часткою фото запущено; метрики з’являться після завершення. [Повна таблиця, параметри та правило вибору](reports/model_profiles.md).
+За замовчуванням використовується D. Для іншого варіанта передайте його файл через `--weights`. C з меншим LR перевірено й відхилено. [Порівняння A/B/C/D](reports/model_profiles.md).
 
 ## Проблеми та можливі покращення
 
-- Пілот на відеоданих: mAP50–95 на новій відеовалідації +0,97 в.п., на CUB −0,27 в.п.; релізні ваги збережені.
+- Відеовалідація мала: 24 позитивні кадри й 8 фонових вирізок. Результати одного запуску не доводять статистичної переваги на всіх відеосценах.
 - Старий MPS спотворював відновлення координат: `SafeDetectionPredictor` виконує цей крок на CPU, залишаючи нейромережу на вибраному пристрої.
 - Відео має додатковий NMS IoU=0.5; офіційні метрики валідатора його не включають. Покадрової еталонної розмітки прикладу немає.
 

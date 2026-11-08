@@ -18,5 +18,6 @@
   "released_weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
   "release_validation_report": "expanded_candidate_validation.json",
   "test_evaluated_after_selection": true,
-  "test_report": "expanded_test_candidate.json"
+  "test_report": "expanded_test_candidate.json",
+  "scope_note": "Історичний фотоетап A; поточний варіант D описано у model_profiles.json."
 }

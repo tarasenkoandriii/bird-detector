@@ -167,7 +167,7 @@
       }
     },
     {
-      "stage": "Поточна модель",
+      "stage": "Фото-орієнтир A",
       "source": "expanded_candidate_validation.json",
       "split": "val",
       "images": 600,
@@ -197,7 +197,7 @@
       }
     },
     {
-      "stage": "Поточна модель",
+      "stage": "Фото-орієнтир A",
       "source": "expanded_test_candidate.json",
       "split": "test",
       "images": 499,
@@ -210,6 +210,36 @@
         "metrics/mAP50-95(B)": 0.8361772755712437,
         "fitness": 0.8361772755712437
       }
+    },
+    {
+      "stage": "Поточна модель D",
+      "source": "profile_d_cub_validation.json",
+      "split": "val",
+      "images": 600,
+      "imgsz": 640,
+      "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+      "metrics": {
+        "metrics/precision(B)": 0.959585988720978,
+        "metrics/recall(B)": 0.9497560999343557,
+        "metrics/mAP50(B)": 0.9819216656568109,
+        "metrics/mAP50-95(B)": 0.8117036776208397,
+        "fitness": 0.8117036776208397
+      }
+    },
+    {
+      "stage": "Поточна модель D",
+      "source": "profile_d_cub_test.json",
+      "split": "test",
+      "images": 499,
+      "imgsz": 640,
+      "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+      "metrics": {
+        "metrics/precision(B)": 0.9787304668949867,
+        "metrics/recall(B)": 0.969939879759519,
+        "metrics/mAP50(B)": 0.9917375522884183,
+        "metrics/mAP50-95(B)": 0.8360196996947785,
+        "fitness": 0.8360196996947785
+      }
     }
   ],
   "video_target_evaluation": {
@@ -220,19 +250,19 @@
         "sampled_frames": 100,
         "visible_target_frames": 100,
         "excluded_invisible_target_frames": 0,
-        "target_recall_iou50": 0.3,
-        "target_recall_iou75": 0.28,
-        "mean_best_iou_visible": 0.2744741897057109,
-        "no_detections_visible": 41
+        "target_recall_iou50": 0.42,
+        "target_recall_iou75": 0.4,
+        "mean_best_iou_visible": 0.39045257524806204,
+        "no_detections_visible": 22
       },
       "test": {
         "sampled_frames": 300,
         "visible_target_frames": 300,
         "excluded_invisible_target_frames": 0,
-        "target_recall_iou50": 0.5933333333333334,
-        "target_recall_iou75": 0.5,
-        "mean_best_iou_visible": 0.5194432664643602,
-        "no_detections_visible": 95
+        "target_recall_iou50": 0.64,
+        "target_recall_iou75": 0.5533333333333333,
+        "mean_best_iou_visible": 0.5670561156080997,
+        "no_detections_visible": 78
       }
     }
   },
@@ -263,14 +293,15 @@
   },
   "model_profiles": {
     "source": "model_profiles.json",
-    "default": "A",
-    "experimental_video": "B",
+    "default": "D",
+    "alternatives": [
+      "A",
+      "B"
+    ],
     "rejected": [
       "C"
     ],
-    "not_tested": [],
-    "running": [
-      "D"
-    ]
+    "running": [],
+    "not_tested": []
   }
 }

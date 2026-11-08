@@ -1,3 +1,5 @@
+> Оновлення: нижче описано пілот B. Варіант D із 512 фото вже перевірений і обраний основним; порівняння — [model_profiles.md](model_profiles.md).
+
 # Навчальні відеокадри — готово
 
 Підготовлено окремий YOLO-набір із перевіреною розміткою птахів і негативними прикладами.
@@ -38,7 +40,7 @@
 
 ```bash
 python prepare_video_training.py
-python train_video.py
+python train_video.py --model weights/photo_reference.pt
 python evaluate.py --data datasets/bird-video/data.yaml --imgsz 640 \
   --weights runs/experiments/video-head-pilot/weights/best.pt \
   --report reports/video_training_repeat.json

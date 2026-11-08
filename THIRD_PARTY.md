@@ -17,7 +17,7 @@ CUB-200-2011: Wah, Branson, Welinder, Perona та Belongie, Caltech, 2011.
 - Першоджерело Flickr: https://www.flickr.com/photos/qmnonic/3675639120/
 - Ліцензія: [Creative Commons Attribution 2.0](https://creativecommons.org/licenses/by/2.0/).
 - Зміни для `examples/input.mp4`: фрагмент із 2-ї до 10-ї секунди, розмір 640×360, кодування H.264, видалення аудіо.
-- Зміни для `examples/output.mp4`, `examples/output_video_pilot.mp4` і `frame-*.jpg`: додані рамки моделі, назва класу та confidence; з результату виділені окремі кадри. Зазначення авторства й вихідна ліцензія CC BY 2.0 поширюються також на ці приклади.
+- Зміни для `examples/output.mp4`, `examples/output_photo_reference.mp4`, `examples/output_video_pilot.mp4` і `frame-*.jpg`: додані рамки моделі, назва класу та confidence; з результату виділені окремі кадри. Зазначення авторства й вихідна ліцензія CC BY 2.0 поширюються також на ці приклади.
 - Відео призначене для якісної демонстрації та не має перевіреної покадрової розмітки. Воно не використовувалося для навчання чи розрахунку чисельних тестових метрик.
 
 ## Програмне забезпечення

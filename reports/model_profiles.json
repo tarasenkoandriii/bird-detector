@@ -1,4 +1,6 @@
 {
+  "default_profile": "D",
+  "reference_profile": "A",
   "datasets": {
     "cub_validation_images": 600,
     "video_validation_images": 32,
@@ -12,7 +14,7 @@
   "profiles": [
     {
       "id": "A",
-      "name": "Релізна модель",
+      "name": "Фото-орієнтир",
       "status": "виміряно",
       "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
       "lr0": null,
@@ -22,15 +24,15 @@
       "negative_images_with_fp": 0,
       "sources": [
         "video_training_baseline.json",
-        "val.json",
+        "expanded_candidate_validation.json",
         "video_backgrounds_baseline.json"
       ],
       "video_train_images": 0,
       "video_delta_pp": 0.0,
       "cub_delta_pp": 0.0,
       "dominates_release": false,
-      "decision": "основний",
-      "published_weights": "weights/best.pt"
+      "decision": "фото-орієнтир",
+      "published_weights": "weights/photo_reference.pt"
     },
     {
       "id": "B",
@@ -51,7 +53,7 @@
       "video_delta_pp": 0.972670959606825,
       "cub_delta_pp": -0.2708861388545647,
       "dominates_release": false,
-      "decision": "компромісний пілот",
+      "decision": "попередній пілот",
       "published_weights": "weights/video_pilot.pt"
     },
     {
@@ -79,11 +81,24 @@
     {
       "id": "D",
       "name": "Більша частка фото",
-      "status": "виконується",
+      "status": "виміряно",
+      "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
       "lr0": 1e-05,
       "cub_train_images": 512,
+      "video_map50_95": 0.5198413335002593,
+      "cub_map50_95": 0.8117036776208397,
+      "negative_images_with_fp": 0,
+      "sources": [
+        "profile_d_video_validation.json",
+        "profile_d_cub_validation.json",
+        "profile_d_backgrounds.json"
+      ],
       "video_train_images": 87,
-      "decision": "виконується"
+      "video_delta_pp": 1.0151135006785106,
+      "cub_delta_pp": 0.0886469975310944,
+      "dominates_release": true,
+      "decision": "основний",
+      "published_weights": "weights/best.pt"
     }
   ]
 }

@@ -4,14 +4,14 @@
 
 | Варіант | Рішення / статус | CUB mAP50–95 | Відео mAP50–95 | Негативні кадри з FP / 8 |
 |---|---|---:|---:|---:|
-| A: Релізна модель | основний | 81,08% | 50,97% | 0 |
-| B: Відеопілот | компромісний пілот | 80,81% | 51,94% | 0 |
+| A: Фото-орієнтир | фото-орієнтир | 81,08% | 50,97% | 0 |
+| B: Відеопілот | попередній пілот | 80,81% | 51,94% | 0 |
 | C: Відео: менший LR | відхилено | 81,07% | 50,66% | 0 |
-| D: Більша частка фото | **виконується** | — | — | — |
+| D: Більша частка фото | основний | 81,17% | 51,98% | 0 |
 
 ## Що відрізняється
 
-- **A — реліз:** чинні `weights/best.pt`; основний орієнтир якості на CUB.
+- **A — фото-орієнтир:** попередні ваги `weights/photo_reference.pt`.
 - **B — відеопілот:** 87 відеоприкладів + 128 фото CUB, 3 епохи, AdamW 1e-5; навчається вся голова.
 - **C — менший крок:** ті самі дані, seed=26 і 3 епохи, LR=3e-6. Від B змінено лише LR.
 - **D — баланс даних:** 87 відеоприкладів + 512 фото, LR=1e-5. Запущено окремо; змінює також кількість кроків за епоху, тому це окремий рецепт.
@@ -20,20 +20,20 @@ B і C починаються з однакових ваг A. Для них зб
 
 ## Поточний вибір
 
-**A залишається основним. B доступний окремо як відеопілот:** на цій відеовалідації він кращий, на CUB — гірший. **C відхилено в цьому запуску:** він поступився A за обома mAP50–95. D виконується; метрики ще не отримані.
+**D — основний варіант:** перевищив A на обох валідаціях, фонові помилки не зросли. **A і B залишені для порівняння. C відхилено в цьому запуску.**
 
 ```bash
-# A: основна модель.
-python predict_video.py --input examples/input.mp4 --output examples/photo_profile.mp4 --weights weights/best.pt
-# B: експериментальний відеопілот.
-python predict_video.py --input examples/input.mp4 --output examples/video_profile.mp4 --weights weights/video_pilot.pt
+# D: поточна основна модель.
+python predict_video.py --input examples/input.mp4 --output examples/result_d.mp4 --weights weights/best.pt
+# A: фото-орієнтир.
+python predict_video.py --input examples/input.mp4 --output examples/result_a.mp4 --weights weights/photo_reference.pt
+# B: попередній відеопілот.
+python predict_video.py --input examples/input.mp4 --output examples/result_b.mp4 --weights weights/video_pilot.pt
 ```
 
-Приклади: [A](../examples/output.mp4) · [B](../examples/output_video_pilot.mp4).
+Приклади: [D](../examples/output.mp4) · [A](../examples/output_photo_reference.mp4) · [B](../examples/output_video_pilot.mp4).
 
-Малі відмінності одного запуску не доводять статистичної переваги.
-
-Test-метрики інших звітів стосуються A; для B/C тестові результати не заявляються.
+Після вибору D: CUB test mAP50–95 **83,60%** проти **83,62%** у A; цільовий recall відеотесту **64,00%** проти **59,33%**. За тестами параметри не змінювалися. Малі відмінності одного запуску не доводять статистичної переваги; повний mAP і цільовий recall — різні метрики.
 
 ## Правило вибору
 
@@ -46,10 +46,10 @@ Test-метрики інших звітів стосуються A; для B/C �
 Після підготовки відеоданих та CUB:
 
 ```bash
-python train_video.py --lr0 0.00001 --cub-images 128 --name video-head-pilot
-python train_video.py --lr0 0.000003 --cub-images 128 --name video-low-lr
+python train_video.py --model weights/photo_reference.pt --lr0 0.00001 --cub-images 128 --name video-head-pilot
+python train_video.py --model weights/photo_reference.pt --lr0 0.000003 --cub-images 128 --name video-low-lr
 # D: окремий рецепт із більшою часткою фото.
-python train_video.py --lr0 0.00001 --cub-images 512 --name video-more-photos
+python train_video.py --model weights/photo_reference.pt --lr0 0.00001 --cub-images 512 --name video-more-photos
 python compare_profiles.py
 ```
 
