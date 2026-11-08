@@ -4,11 +4,11 @@
 
 ![Приклад детекції](examples/frame-000.jpg)
 
-[Вхідне відео](examples/input.mp4) · [Результат](examples/output.mp4) · [Порівняння всіх етапів](reports/improvement.md)
+[Вхідне відео](examples/input.mp4) · [Результат](examples/output.mp4) · [Підсумковий звіт](reports/improvement.md)
 
 ## Встановлення
 
-Перевірено на macOS 15.8.1, Intel i7/Radeon 555X, 32 ГБ, Python 3.11.6. Версії залежностей зафіксовані.
+Перевірено на стенді з конфігурацією: **Intel Core i7-8750H (6 ядер / 12 потоків), Radeon Pro 555X (4 ГБ), 32 ГБ RAM, macOS 15.8.1, Python 3.11.6**. Версії основних бібліотек зафіксовані; для Pillow і PyArrow задано допустимі діапазони в [requirements.txt](requirements.txt).
 
 ```bash
 git clone https://github.com/tarasenkoandriii/bird-detector.git
@@ -26,10 +26,10 @@ python -m pip check
 Датасет завантажувати не потрібно.
 
 ```bash
-python predict_video.py --input examples/input.mp4 --output examples/output.mp4 --overwrite
+python predict_video.py --input examples/input.mp4 --output examples/result.mp4
 ```
 
-Типові параметри: `--weights weights/best.pt --imgsz 640 --conf 0.25 --iou 0.5 --device auto`. Пристрій можна задати явно: `cpu`, `mps` або індекс CUDA. Новий вихідний файл не потребує `--overwrite`.
+Типові параметри: `--weights weights/best.pt --imgsz 640 --conf 0.25 --iou 0.5 --device auto`. Пристрій можна задати явно: `cpu`, `mps` або індекс CUDA. Для заміни вже наявного вихідного файлу додайте `--overwrite`.
 
 Зберігаються всі кадри, розмір і FPS; аудіо не копіюється. Вихід перевіряється повторним декодуванням. Поруч створюється `*.metrics.json` із часом, кількістю кадрів і хешем ваг.
 
@@ -38,6 +38,8 @@ python predict_video.py --input examples/input.mp4 --output examples/output.mp4 
 [CUB-200-2011](https://www.vision.caltech.edu/datasets/cub_200_2011/): 200 видів об’єднані в один клас. Фінальний набір: **5 377 train / 600 validation / 499 test**. Вихідні bbox перетворені на нормалізований YOLO-формат; розмітку, дублікати й перетини вибірок перевірено. Перцептивний пошук схожих кадрів евристичний.
 
 Дані завантажуються окремо, без ключів. Лише некомерційні дослідження та навчання; джерела й ліцензії — [THIRD_PARTY.md](THIRD_PARTY.md).
+
+Для фінального донавчання D додано **87 відеоприкладів LaSOT і 512 фото CUB**. Окрема відеовалідація — **32 приклади: 24 позитивні кадри та 8 фонових вирізок**. Навчальні й валідаційні відеопослідовності розділені. [Підготовка, розмітка й аудит](reports/video_training.md).
 
 ## Навчання
 
@@ -61,7 +63,7 @@ python train_video.py --model runs/experiments/expanded-bbox640/weights/best.pt 
   --cub-images 512 --lr0 0.00001 --name video-more-photos
 ```
 
-Етапи: 5 епох класифікації → 3 bbox-епохи при 320 → 3 bbox-епохи при 640 → 3 епохи голови на суміші відео й фото. AdamW, batch=8, CPU; backbone і neck зафіксовані. Останній етап із валідаціями зайняв **8 хв 28 с**. Параметри — [training_provenance.json](reports/training_provenance.json).
+Етапи: 5 епох класифікаційних гілок голови детектора → 3 епохи bbox-гілок при 320 px → 3 епохи bbox-гілок при 640 px → 3 епохи всієї голови на суміші відео й фото. AdamW, batch=8, CPU; backbone і neck зафіксовані. Останній етап із валідаціями зайняв **8 хв 28 с**. Параметри — [training_provenance.json](reports/training_provenance.json).
 
 Результат: `runs/experiments/video-more-photos/weights/best.pt`. Обробка відео власними навченими вагами:
 
@@ -74,7 +76,7 @@ python predict_video.py --input examples/input.mp4 --output examples/my_output.m
 
 ## Метрики на валідації та тесті
 
-CPU, 640 px, batch=4; кандидат обрано за validation, test оцінено після вибору.
+Метрики D на **CUB**: CPU, 640 px, batch=4. Кандидата обрано за фото- й відеовалідаціями; test оцінено після вибору.
 
 | Метрика | Валідація, 600 | Тест, 499 |
 |---|---:|---:|
@@ -86,8 +88,10 @@ CPU, 640 px, batch=4; кандидат обрано за validation, test оці
 Це поточний варіант **D**. Порівняно з A: CUB validation +0,09 в.п., нова відеовалідація +1,02 в.п.; CUB test −0,02 в.п. [Усі варіанти й правило вибору](reports/model_profiles.md).
 
 ```bash
-python evaluate.py --data datasets/bird-expanded/data.yaml --split val --imgsz 640
-python evaluate.py --data datasets/bird-expanded/data.yaml --split test --imgsz 640
+python evaluate.py --data datasets/bird-expanded/data.yaml --split val --imgsz 640 \
+  --report runs/evaluate/recheck-val.json
+python evaluate.py --data datasets/bird-expanded/data.yaml --split test --imgsz 640 \
+  --report runs/evaluate/recheck-test.json
 python -m unittest discover -s tests -v
 ```
 
@@ -96,17 +100,6 @@ python -m unittest discover -s tests -v
 ## Відеоперевірка
 
 Окремий LaSOT-тест: **64,00% цільового recall при IoU≥0,5 на 300 кадрах**. Розмітка охоплює одного птаха на кадр, тому це не повний mAP відеодетектора. [Метрики й команди](reports/video_test.md).
-
-## Навчальні відеокадри
-
-Готовий набір із польотами, дрібними птахами та негативами: **87 train / 32 validation**. Підготовка й реальне донавчання перевірені. [Розмітка, аудит і результат](reports/video_training.md).
-
-```bash
-python prepare_video_training.py
-python train_video.py --model weights/photo_reference.pt --cub-images 512 --name video-more-photos
-```
-
-D включений до релізу; нові запуски не перезаписують додані ваги. Уже підготовлений набір повторно створювати не потрібно.
 
 ## Варіанти моделі
 
@@ -118,13 +111,19 @@ D включений до релізу; нові запуски не перез�
 
 За замовчуванням використовується D. Для іншого варіанта передайте його файл через `--weights`. C з меншим LR перевірено й відхилено. [Порівняння A/B/C/D](reports/model_profiles.md).
 
+Стійкість фінального етапу D перевірена від однакових ваг A на фіксованих даних: **5/5 seed** пройшли критерій проти A. Середні mAP50–95 — **81,22% CUB / 51,51% відео**; вибіркове SD — **0,04 / 0,38 в.п.** Це не довірчі інтервали. [Протокол і результати](reports/seed_study/README.md).
+
+## Дослідження стенда
+
+На однакових даних і параметрах прогріта train-епоха CPU — **24,98 с**, MPS — **27,36 с**. Це один короткий парний замір, а не загальна перевага CPU. Якість обох запусків оцінена на CPU; релізні ваги не змінювалися. [Протокол, швидкість і пам’ять](reports/stand_benchmark/README.md).
+
 ## Проблеми та можливі покращення
 
 - Відеовалідація мала: 24 позитивні кадри й 8 фонових вирізок. Результати одного запуску не доводять статистичної переваги на всіх відеосценах.
-- Старий MPS спотворював відновлення координат: `SafeDetectionPredictor` виконує цей крок на CPU, залишаючи нейромережу на вибраному пристрої.
+- У перевіреному стеку torch 2.2.2/MPS виявлено спотворення відновлення координат: `SafeDetectionPredictor` виконує цей крок на CPU, залишаючи нейромережу на вибраному пристрої.
 - Відео має додатковий NMS IoU=0.5; офіційні метрики валідатора його не включають. Покадрової еталонної розмітки прикладу немає.
 
-[Підготовка й запуск у Warp](reports/expanded_dataset.md) · [Наступні експерименти](reports/finetuning_recommendations.md) · [Перевірки](reports/verification.md)
+[Підготовка й запуск у Warp](reports/expanded_dataset.md) · [Рекомендації з донавчання](reports/finetuning_recommendations.md) · [Перевірки](reports/verification.md)
 
 Код — AGPL-3.0. Умови датасету й відео наведені окремо в THIRD_PARTY.md.
 
@@ -161,9 +160,3 @@ bird-detector/
 ```
 
 Додаткові скрипти підготовки, навчання й оцінювання забезпечують відтворення описаних результатів.
-
-[Стійкість D на п’яти seed: протокол, стан і результати](reports/seed_study/README.md). Дані й стартові ваги фіксовані; тестові вибірки не використовуються.
-
-Стійкість D підтверджена в межах фіксованих валідацій: **5/5 seed** пройшли критерій проти A. Середні mAP50–95 — **81,22% CUB / 51,51% відео**; SD — **0,04 / 0,38 в.п.** [Повний звіт](reports/seed_study/README.md).
-
-[CPU/MPS benchmark завершено](reports/stand_benchmark/README.md): на цьому короткому замірі прогріта train-епоха CPU — 24,98 с, MPS — 27,36 с; релізні ваги не змінювалися.
