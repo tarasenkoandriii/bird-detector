@@ -57,4 +57,4 @@ python compare_profiles.py
 
 Точні числа, хеші та джерела — [model_profiles.json](model_profiles.json). Основний звіт — [improvement.md](improvement.md).
 
-Окремо виконується [дослідження стійкості D на п’яти seed](seed_study/README.md); часткові результати не вважаються підсумком.
+[Дослідження стійкості D завершене](seed_study/README.md): 5/5 seed пройшли спільний критерій.

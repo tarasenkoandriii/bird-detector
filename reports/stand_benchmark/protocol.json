@@ -1,0 +1,28 @@
+{
+  "source_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+  "release_sha256_before": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+  "dataset_sha256": "beb48730d9a7a58f192f37a2c6b863998bbeb0e6e062de6d88c77c150169d3ac",
+  "counts": {
+    "train": 128,
+    "val": 64
+  },
+  "seed": 26,
+  "epochs": 3,
+  "imgsz": 640,
+  "batch": 8,
+  "nbs": 8,
+  "optimizer": "AdamW",
+  "lr0": 1e-05,
+  "freeze": 23,
+  "bn_statistics_frozen": true,
+  "quality_evaluation": "CPU, 600 CUB validation, batch=4; test не використовується",
+  "mps_api": {
+    "synchronize": true,
+    "current_allocated_memory": true,
+    "driver_allocated_memory": true
+  },
+  "order": [
+    "cpu",
+    "mps"
+  ]
+}

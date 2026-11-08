@@ -1,0 +1,68 @@
+{
+  "cpu": {
+    "device": "cpu",
+    "timing_seconds": {
+      "train": [
+        31.48093869299919,
+        24.79998911099392,
+        25.15565095799684
+      ],
+      "validation": [
+        8.613377086992841,
+        7.5067686249967664,
+        7.595137758005876,
+        5.451527413999429
+      ]
+    },
+    "wall_seconds": 115.35353735499666,
+    "peak_process_rss_mib": 3023.89453125,
+    "sampled_mps_peak_bytes": {
+      "allocated": 0,
+      "driver": 0
+    },
+    "last": "/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/cpu/weights/last.pt",
+    "torch": "2.2.2",
+    "mps_fallback_enabled": "1",
+    "metrics": {
+      "metrics/precision(B)": 0.9533356032555167,
+      "metrics/recall(B)": 0.9533820555916246,
+      "metrics/mAP50(B)": 0.9818080906218603,
+      "metrics/mAP50-95(B)": 0.8123799506360727,
+      "fitness": 0.8123799506360727
+    },
+    "fallback_warning_seen": false
+  },
+  "mps": {
+    "device": "mps",
+    "timing_seconds": {
+      "train": [
+        34.97292654500052,
+        27.294764926002244,
+        27.420696447996306
+      ],
+      "validation": [
+        19.940602420989308,
+        7.051153916007024,
+        6.981569830997614,
+        8.104549618001329
+      ]
+    },
+    "wall_seconds": 162.17269194799883,
+    "peak_process_rss_mib": 3489.84375,
+    "sampled_mps_peak_bytes": {
+      "allocated": 151572736,
+      "driver": 1257988096
+    },
+    "last": "/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps/weights/last.pt",
+    "torch": "2.2.2",
+    "mps_fallback_enabled": "1",
+    "metrics": {
+      "metrics/precision(B)": 0.9560209149718666,
+      "metrics/recall(B)": 0.9483333333333334,
+      "metrics/mAP50(B)": 0.9817836157280292,
+      "metrics/mAP50-95(B)": 0.8098578726524892,
+      "fitness": 0.8098578726524892
+    },
+    "fallback_warning_seen": false
+  }
+}

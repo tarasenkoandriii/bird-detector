@@ -1,0 +1,302 @@
+New https://pypi.org/project/ultralytics/8.4.208 available 😃 Update with 'pip install -U ultralytics'
+Ultralytics 8.4.204 🚀 Python-3.11.6 torch-2.2.2 MPS (Intel Core i7-8750H 2.20GHz)
+[34m[1mengine/trainer: [0magnostic_nms=False, amp=False, angle=1.0, augment=False, auto_augment=randaugment, batch=8, bgr=0.0, box=7.5, cache=False, cfg=None, channels_last=None, classes=None, close_mosaic=0, cls=0.5, cls_pw=0.0, cls_remap=True, compile=False, conf=None, copy_paste=0.0, copy_paste_mode=flip, cos_lr=False, cutmix=0.0, data=/Users/macbook/Documents/ChatGPT/birds/work/stand-benchmark/data.yaml, degrees=0.0, deterministic=True, device=mps, dfl=1.5, dgrad=0.5, dis=6.0, distill_model=None, dlam=1.0, dlog=1.0, dnn=False, dropout=0.0, dynamic=False, embed=None, epochs=3, erasing=0.4, exist_ok=False, fliplr=0, flipud=0.0, format=torchscript, fraction=1.0, freeze=23, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, imgsz=640, iou=0.7, kobj=1.0, line_width=None, lr0=1e-05, lrf=0.1, mask_ratio=4, max_det=300, mixup=0.0, mode=train, model=/Users/macbook/Documents/ChatGPT/birds/work/stand-benchmark/source.pt, momentum=0.937, mosaic=0, multi_scale=0.0, name=mps, nbs=8, nms=None, opset=None, optimize=False, optimizer=AdamW, overlap_mask=True, patience=0, perspective=0.0, plots=False, pose=12.0, pretrained=True, profile=False, project=/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark, quantize=None, rect=False, resume=False, retina_masks=False, rle=1.0, save=True, save_conf=False, save_crop=False, save_dir=/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps, save_frames=False, save_json=False, save_period=-1, save_txt=False, scale=0, seed=26, shear=0.0, show=False, show_boxes=True, show_conf=True, show_labels=True, simplify=True, single_cls=False, source=None, split=val, stream_buffer=False, task=detect, tile=False, time=None, tracker=tracktrack.yaml, translate=0, val=True, verbose=True, vid_stride=1, visualize=False, warmup_bias_lr=0, warmup_epochs=0, warmup_momentum=0.8, weight_decay=0, workers=0, workspace=None
+
+                   from  n    params  module                                       arguments                     
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
+  2                  -1  1      6640  ultralytics.nn.modules.block.C3k2            [32, 64, 1, False, 0.25]      
+  3                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+  4                  -1  1     26080  ultralytics.nn.modules.block.C3k2            [64, 128, 1, False, 0.25]     
+  5                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+  6                  -1  1     87040  ultralytics.nn.modules.block.C3k2            [128, 128, 1, True]           
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
+  8                  -1  1    346112  ultralytics.nn.modules.block.C3k2            [256, 256, 1, True]           
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5, 3, True]        
+ 10                  -1  1    249728  ultralytics.nn.modules.block.C2PSA           [256, 256, 1]                 
+ 11                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 12             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 13                  -1  1    119808  ultralytics.nn.modules.block.C3k2            [384, 128, 1, True]           
+ 14                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
+ 15             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 16                  -1  1     34304  ultralytics.nn.modules.block.C3k2            [256, 64, 1, True]            
+ 17                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
+ 18            [-1, 13]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 19                  -1  1     95232  ultralytics.nn.modules.block.C3k2            [192, 128, 1, True]           
+ 20                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
+ 21            [-1, 10]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
+ 22                  -1  1    463104  ultralytics.nn.modules.block.C3k2            [384, 256, 1, True, 0.5, True]
+ 23        [16, 19, 22]  1    241566  ultralytics.nn.modules.head.Detect           [1, 1, True, [64, 128, 256]]  
+YOLO26n summary: 260 layers, 2,504,190 parameters, 2,504,190 gradients, 5.9 GFLOPs
+
+Transferred 708/708 items from pretrained weights
+Freezing layer 'model.0.conv.weight'
+Freezing layer 'model.0.bn.weight'
+Freezing layer 'model.0.bn.bias'
+Freezing layer 'model.1.conv.weight'
+Freezing layer 'model.1.bn.weight'
+Freezing layer 'model.1.bn.bias'
+Freezing layer 'model.2.cv1.conv.weight'
+Freezing layer 'model.2.cv1.bn.weight'
+Freezing layer 'model.2.cv1.bn.bias'
+Freezing layer 'model.2.cv2.conv.weight'
+Freezing layer 'model.2.cv2.bn.weight'
+Freezing layer 'model.2.cv2.bn.bias'
+Freezing layer 'model.2.m.0.cv1.conv.weight'
+Freezing layer 'model.2.m.0.cv1.bn.weight'
+Freezing layer 'model.2.m.0.cv1.bn.bias'
+Freezing layer 'model.2.m.0.cv2.conv.weight'
+Freezing layer 'model.2.m.0.cv2.bn.weight'
+Freezing layer 'model.2.m.0.cv2.bn.bias'
+Freezing layer 'model.3.conv.weight'
+Freezing layer 'model.3.bn.weight'
+Freezing layer 'model.3.bn.bias'
+Freezing layer 'model.4.cv1.conv.weight'
+Freezing layer 'model.4.cv1.bn.weight'
+Freezing layer 'model.4.cv1.bn.bias'
+Freezing layer 'model.4.cv2.conv.weight'
+Freezing layer 'model.4.cv2.bn.weight'
+Freezing layer 'model.4.cv2.bn.bias'
+Freezing layer 'model.4.m.0.cv1.conv.weight'
+Freezing layer 'model.4.m.0.cv1.bn.weight'
+Freezing layer 'model.4.m.0.cv1.bn.bias'
+Freezing layer 'model.4.m.0.cv2.conv.weight'
+Freezing layer 'model.4.m.0.cv2.bn.weight'
+Freezing layer 'model.4.m.0.cv2.bn.bias'
+Freezing layer 'model.5.conv.weight'
+Freezing layer 'model.5.bn.weight'
+Freezing layer 'model.5.bn.bias'
+Freezing layer 'model.6.cv1.conv.weight'
+Freezing layer 'model.6.cv1.bn.weight'
+Freezing layer 'model.6.cv1.bn.bias'
+Freezing layer 'model.6.cv2.conv.weight'
+Freezing layer 'model.6.cv2.bn.weight'
+Freezing layer 'model.6.cv2.bn.bias'
+Freezing layer 'model.6.m.0.cv1.conv.weight'
+Freezing layer 'model.6.m.0.cv1.bn.weight'
+Freezing layer 'model.6.m.0.cv1.bn.bias'
+Freezing layer 'model.6.m.0.cv2.conv.weight'
+Freezing layer 'model.6.m.0.cv2.bn.weight'
+Freezing layer 'model.6.m.0.cv2.bn.bias'
+Freezing layer 'model.6.m.0.cv3.conv.weight'
+Freezing layer 'model.6.m.0.cv3.bn.weight'
+Freezing layer 'model.6.m.0.cv3.bn.bias'
+Freezing layer 'model.6.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.6.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.6.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.6.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.6.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.6.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.6.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.6.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.6.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.6.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.6.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.6.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.7.conv.weight'
+Freezing layer 'model.7.bn.weight'
+Freezing layer 'model.7.bn.bias'
+Freezing layer 'model.8.cv1.conv.weight'
+Freezing layer 'model.8.cv1.bn.weight'
+Freezing layer 'model.8.cv1.bn.bias'
+Freezing layer 'model.8.cv2.conv.weight'
+Freezing layer 'model.8.cv2.bn.weight'
+Freezing layer 'model.8.cv2.bn.bias'
+Freezing layer 'model.8.m.0.cv1.conv.weight'
+Freezing layer 'model.8.m.0.cv1.bn.weight'
+Freezing layer 'model.8.m.0.cv1.bn.bias'
+Freezing layer 'model.8.m.0.cv2.conv.weight'
+Freezing layer 'model.8.m.0.cv2.bn.weight'
+Freezing layer 'model.8.m.0.cv2.bn.bias'
+Freezing layer 'model.8.m.0.cv3.conv.weight'
+Freezing layer 'model.8.m.0.cv3.bn.weight'
+Freezing layer 'model.8.m.0.cv3.bn.bias'
+Freezing layer 'model.8.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.8.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.8.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.8.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.8.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.8.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.8.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.8.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.8.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.8.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.8.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.8.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.9.cv1.conv.weight'
+Freezing layer 'model.9.cv1.bn.weight'
+Freezing layer 'model.9.cv1.bn.bias'
+Freezing layer 'model.9.cv2.conv.weight'
+Freezing layer 'model.9.cv2.bn.weight'
+Freezing layer 'model.9.cv2.bn.bias'
+Freezing layer 'model.10.cv1.conv.weight'
+Freezing layer 'model.10.cv1.bn.weight'
+Freezing layer 'model.10.cv1.bn.bias'
+Freezing layer 'model.10.cv2.conv.weight'
+Freezing layer 'model.10.cv2.bn.weight'
+Freezing layer 'model.10.cv2.bn.bias'
+Freezing layer 'model.10.m.0.attn.qkv.conv.weight'
+Freezing layer 'model.10.m.0.attn.qkv.bn.weight'
+Freezing layer 'model.10.m.0.attn.qkv.bn.bias'
+Freezing layer 'model.10.m.0.attn.proj.conv.weight'
+Freezing layer 'model.10.m.0.attn.proj.bn.weight'
+Freezing layer 'model.10.m.0.attn.proj.bn.bias'
+Freezing layer 'model.10.m.0.attn.pe.conv.weight'
+Freezing layer 'model.10.m.0.attn.pe.bn.weight'
+Freezing layer 'model.10.m.0.attn.pe.bn.bias'
+Freezing layer 'model.10.m.0.ffn.0.conv.weight'
+Freezing layer 'model.10.m.0.ffn.0.bn.weight'
+Freezing layer 'model.10.m.0.ffn.0.bn.bias'
+Freezing layer 'model.10.m.0.ffn.1.conv.weight'
+Freezing layer 'model.10.m.0.ffn.1.bn.weight'
+Freezing layer 'model.10.m.0.ffn.1.bn.bias'
+Freezing layer 'model.13.cv1.conv.weight'
+Freezing layer 'model.13.cv1.bn.weight'
+Freezing layer 'model.13.cv1.bn.bias'
+Freezing layer 'model.13.cv2.conv.weight'
+Freezing layer 'model.13.cv2.bn.weight'
+Freezing layer 'model.13.cv2.bn.bias'
+Freezing layer 'model.13.m.0.cv1.conv.weight'
+Freezing layer 'model.13.m.0.cv1.bn.weight'
+Freezing layer 'model.13.m.0.cv1.bn.bias'
+Freezing layer 'model.13.m.0.cv2.conv.weight'
+Freezing layer 'model.13.m.0.cv2.bn.weight'
+Freezing layer 'model.13.m.0.cv2.bn.bias'
+Freezing layer 'model.13.m.0.cv3.conv.weight'
+Freezing layer 'model.13.m.0.cv3.bn.weight'
+Freezing layer 'model.13.m.0.cv3.bn.bias'
+Freezing layer 'model.13.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.13.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.13.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.13.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.13.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.13.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.13.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.13.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.13.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.13.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.13.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.13.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.16.cv1.conv.weight'
+Freezing layer 'model.16.cv1.bn.weight'
+Freezing layer 'model.16.cv1.bn.bias'
+Freezing layer 'model.16.cv2.conv.weight'
+Freezing layer 'model.16.cv2.bn.weight'
+Freezing layer 'model.16.cv2.bn.bias'
+Freezing layer 'model.16.m.0.cv1.conv.weight'
+Freezing layer 'model.16.m.0.cv1.bn.weight'
+Freezing layer 'model.16.m.0.cv1.bn.bias'
+Freezing layer 'model.16.m.0.cv2.conv.weight'
+Freezing layer 'model.16.m.0.cv2.bn.weight'
+Freezing layer 'model.16.m.0.cv2.bn.bias'
+Freezing layer 'model.16.m.0.cv3.conv.weight'
+Freezing layer 'model.16.m.0.cv3.bn.weight'
+Freezing layer 'model.16.m.0.cv3.bn.bias'
+Freezing layer 'model.16.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.16.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.16.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.16.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.16.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.16.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.16.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.16.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.16.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.16.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.16.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.16.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.17.conv.weight'
+Freezing layer 'model.17.bn.weight'
+Freezing layer 'model.17.bn.bias'
+Freezing layer 'model.19.cv1.conv.weight'
+Freezing layer 'model.19.cv1.bn.weight'
+Freezing layer 'model.19.cv1.bn.bias'
+Freezing layer 'model.19.cv2.conv.weight'
+Freezing layer 'model.19.cv2.bn.weight'
+Freezing layer 'model.19.cv2.bn.bias'
+Freezing layer 'model.19.m.0.cv1.conv.weight'
+Freezing layer 'model.19.m.0.cv1.bn.weight'
+Freezing layer 'model.19.m.0.cv1.bn.bias'
+Freezing layer 'model.19.m.0.cv2.conv.weight'
+Freezing layer 'model.19.m.0.cv2.bn.weight'
+Freezing layer 'model.19.m.0.cv2.bn.bias'
+Freezing layer 'model.19.m.0.cv3.conv.weight'
+Freezing layer 'model.19.m.0.cv3.bn.weight'
+Freezing layer 'model.19.m.0.cv3.bn.bias'
+Freezing layer 'model.19.m.0.m.0.cv1.conv.weight'
+Freezing layer 'model.19.m.0.m.0.cv1.bn.weight'
+Freezing layer 'model.19.m.0.m.0.cv1.bn.bias'
+Freezing layer 'model.19.m.0.m.0.cv2.conv.weight'
+Freezing layer 'model.19.m.0.m.0.cv2.bn.weight'
+Freezing layer 'model.19.m.0.m.0.cv2.bn.bias'
+Freezing layer 'model.19.m.0.m.1.cv1.conv.weight'
+Freezing layer 'model.19.m.0.m.1.cv1.bn.weight'
+Freezing layer 'model.19.m.0.m.1.cv1.bn.bias'
+Freezing layer 'model.19.m.0.m.1.cv2.conv.weight'
+Freezing layer 'model.19.m.0.m.1.cv2.bn.weight'
+Freezing layer 'model.19.m.0.m.1.cv2.bn.bias'
+Freezing layer 'model.20.conv.weight'
+Freezing layer 'model.20.bn.weight'
+Freezing layer 'model.20.bn.bias'
+Freezing layer 'model.22.cv1.conv.weight'
+Freezing layer 'model.22.cv1.bn.weight'
+Freezing layer 'model.22.cv1.bn.bias'
+Freezing layer 'model.22.cv2.conv.weight'
+Freezing layer 'model.22.cv2.bn.weight'
+Freezing layer 'model.22.cv2.bn.bias'
+Freezing layer 'model.22.m.0.0.cv1.conv.weight'
+Freezing layer 'model.22.m.0.0.cv1.bn.weight'
+Freezing layer 'model.22.m.0.0.cv1.bn.bias'
+Freezing layer 'model.22.m.0.0.cv2.conv.weight'
+Freezing layer 'model.22.m.0.0.cv2.bn.weight'
+Freezing layer 'model.22.m.0.0.cv2.bn.bias'
+Freezing layer 'model.22.m.0.1.attn.qkv.conv.weight'
+Freezing layer 'model.22.m.0.1.attn.qkv.bn.weight'
+Freezing layer 'model.22.m.0.1.attn.qkv.bn.bias'
+Freezing layer 'model.22.m.0.1.attn.proj.conv.weight'
+Freezing layer 'model.22.m.0.1.attn.proj.bn.weight'
+Freezing layer 'model.22.m.0.1.attn.proj.bn.bias'
+Freezing layer 'model.22.m.0.1.attn.pe.conv.weight'
+Freezing layer 'model.22.m.0.1.attn.pe.bn.weight'
+Freezing layer 'model.22.m.0.1.attn.pe.bn.bias'
+Freezing layer 'model.22.m.0.1.ffn.0.conv.weight'
+Freezing layer 'model.22.m.0.1.ffn.0.bn.weight'
+Freezing layer 'model.22.m.0.1.ffn.0.bn.bias'
+Freezing layer 'model.22.m.0.1.ffn.1.conv.weight'
+Freezing layer 'model.22.m.0.1.ffn.1.bn.weight'
+Freezing layer 'model.22.m.0.1.ffn.1.bn.bias'
+[34m[1mtrain: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 911.1±285.2 MB/s, size: 67.7 KB)
+[K[34m[1mtrain: [0mScanning /Users/macbook/Documents/ChatGPT/birds/datasets/bird-expanded/train/labels.cache... 128 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 128/128 33.6Mit/s 0.0s
+[34m[1mval: [0mFast image access ✅ (ping: 0.0±0.0 ms, read: 1129.1±594.8 MB/s, size: 69.7 KB)
+[K[34m[1mval: [0mScanning /Users/macbook/Documents/ChatGPT/birds/datasets/bird-expanded/val/labels... 64 images, 0 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 64/64 1.5Kit/s 0.0s
+[34m[1mval: [0mNew cache created: /Users/macbook/Documents/ChatGPT/birds/datasets/bird-expanded/val/labels.cache
+[34m[1moptimizer:[0m AdamW(lr=1e-05, momentum=0.937) with parameter groups 114 weight(decay=0.0), 126 weight(decay=0.0), 126 bias(decay=0.0)
+Using 128 train, 64 val images for fraction=1.0 at imgsz=640
+Using 0 dataloader workers
+Logging results to [1m/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps[0m
+Starting training for 3 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss    l1_loss  Instances       Size
+[K        1/3     0.846G      0.283     0.1096   0.007116          8        640: 0% ──────────── 0/16  11.3s[K        1/3      1.14G     0.3357     0.1302   0.008341          8        640: 6% ╸─────────── 1/16 5.3s/it 12.9s<1:19[K        1/3      1.14G     0.4479     0.2792     0.0111          8        640: 12% ━─────────── 2/16 3.1s/it 14.5s<43.6s[K        1/3      1.14G     0.5024      0.295    0.01371          8        640: 18% ━━────────── 3/16 2.4s/it 16.1s<31.5s[K        1/3      1.14G      0.467     0.2589    0.01272          8        640: 25% ━━━───────── 4/16 2.1s/it 17.6s<24.9s[K        1/3      1.14G     0.5122      0.302     0.0137          8        640: 31% ━━━╸──────── 5/16 1.9s/it 19.2s<20.8s[K        1/3      1.14G     0.5554     0.3061    0.01497          8        640: 37% ━━━━──────── 6/16 1.8s/it 20.8s<17.9s[K        1/3      1.14G     0.5936     0.3042    0.01567          8        640: 43% ━━━━━─────── 7/16 1.7s/it 22.4s<15.4s[K        1/3      1.14G     0.5685     0.2862      0.015          8        640: 50% ━━━━━━────── 8/16 1.6s/it 23.9s<13.2s[K        1/3      1.14G     0.5692     0.3418    0.01498          8        640: 56% ━━━━━━╸───── 9/16 1.6s/it 25.4s<11.3s[K        1/3      1.14G     0.5648     0.3591    0.01478          8        640: 62% ━━━━━━━───── 10/16 1.6s/it 27.0s<9.6s[K        1/3      1.14G     0.5586     0.3456    0.01497          8        640: 68% ━━━━━━━━──── 11/16 1.6s/it 28.6s<8.0s[K        1/3      1.14G      0.569     0.3347     0.0153          8        640: 75% ━━━━━━━━━─── 12/16 1.6s/it 30.2s<6.4s[K        1/3      1.14G     0.5835     0.3275    0.01559          8        640: 81% ━━━━━━━━━╸── 13/16 1.6s/it 31.7s<4.7s[K        1/3      1.14G     0.5751     0.3148    0.01528          8        640: 87% ━━━━━━━━━━── 14/16 1.6s/it 33.3s<3.2s[K        1/3      1.14G     0.5556     0.3126    0.01489          8        640: 93% ━━━━━━━━━━━─ 15/16 1.6s/it 35.0s<1.6s[K        1/3      1.14G     0.5556     0.3126    0.01489          8        640: 100% ━━━━━━━━━━━━ 16/16 2.2s/it 35.0s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 1/4 20.1s/it 6.0s<1:00[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 2/4 10.2s/it 10.8s<20.4s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 3/4 7.6s/it 15.5s<7.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 4/4 5.0s/it 19.9s
+                   all         64         64      0.969      0.968      0.982      0.808
+
+      Epoch    GPU_mem   box_loss   cls_loss    l1_loss  Instances       Size
+[K        2/3     0.903G     0.5505     0.2054    0.01639          8        640: 0% ──────────── 0/16  1.7s[K        2/3      1.15G     0.7538     0.3944    0.02166          8        640: 6% ╸─────────── 1/16 6.0s/it 3.5s<1:30[K        2/3      1.15G     0.6581     0.3777    0.01886          8        640: 12% ━─────────── 2/16 3.4s/it 5.1s<47.0s[K        2/3      1.15G     0.6581     0.3771    0.01832          8        640: 18% ━━────────── 3/16 2.6s/it 6.8s<33.3s[K        2/3      1.15G     0.6466     0.3374    0.01743          8        640: 25% ━━━───────── 4/16 2.3s/it 8.6s<27.2s[K        2/3      1.15G       0.65     0.3619    0.01722          8        640: 31% ━━━╸──────── 5/16 2.0s/it 10.2s<22.3s[K        2/3      1.15G     0.6072     0.3287    0.01593          8        640: 37% ━━━━──────── 6/16 1.9s/it 11.9s<19.3s[K        2/3      1.15G     0.5752      0.307    0.01512          8        640: 43% ━━━━━─────── 7/16 1.9s/it 13.6s<16.7s[K        2/3      1.15G     0.5812     0.2967    0.01556          8        640: 50% ━━━━━━────── 8/16 1.8s/it 15.3s<14.5s[K        2/3      1.15G     0.5703     0.2936    0.01539          8        640: 56% ━━━━━━╸───── 9/16 1.8s/it 17.0s<12.4s[K        2/3      1.15G     0.5737     0.2929    0.01533          8        640: 62% ━━━━━━━───── 10/16 1.8s/it 18.7s<10.5s[K        2/3      1.15G     0.5915     0.2902    0.01558          8        640: 68% ━━━━━━━━──── 11/16 1.7s/it 20.4s<8.6s[K        2/3      1.15G     0.5865     0.2802    0.01541          8        640: 75% ━━━━━━━━━─── 12/16 1.7s/it 22.1s<6.9s[K        2/3      1.15G     0.5723     0.2773    0.01501          8        640: 81% ━━━━━━━━━╸── 13/16 1.7s/it 23.8s<5.2s[K        2/3      1.15G      0.578     0.2775     0.0154          8        640: 87% ━━━━━━━━━━── 14/16 1.7s/it 25.5s<3.4s[K        2/3      1.15G     0.5772     0.2714    0.01545          8        640: 93% ━━━━━━━━━━━─ 15/16 1.7s/it 27.3s<1.7s[K        2/3      1.15G     0.5772     0.2714    0.01545          8        640: 100% ━━━━━━━━━━━━ 16/16 1.7s/it 27.3s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 1/4 5.0s/it 1.5s<15.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 2/4 3.0s/it 3.1s<6.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 3/4 2.7s/it 5.2s<2.7s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 4/4 1.8s/it 7.0s
+                   all         64         64      0.967      0.969      0.983      0.805
+
+      Epoch    GPU_mem   box_loss   cls_loss    l1_loss  Instances       Size
+[K        3/3     0.918G     0.7611     0.4151    0.02037          8        640: 0% ──────────── 0/16  1.7s[K        3/3      1.16G     0.6431     0.2879    0.01698          8        640: 6% ╸─────────── 1/16 5.7s/it 3.4s<1:25[K        3/3      1.16G     0.5858     0.2536    0.01622          8        640: 12% ━─────────── 2/16 3.3s/it 5.1s<46.4s[K        3/3      1.16G     0.5791     0.2307    0.01528          8        640: 18% ━━────────── 3/16 2.6s/it 6.8s<33.7s[K        3/3      1.16G     0.6098     0.2357    0.01611          8        640: 25% ━━━───────── 4/16 2.2s/it 8.5s<26.8s[K        3/3      1.16G     0.5857     0.2604      0.016          8        640: 31% ━━━╸──────── 5/16 2.1s/it 10.2s<22.6s[K        3/3      1.16G     0.5691     0.2615    0.01565          8        640: 37% ━━━━──────── 6/16 1.9s/it 11.9s<19.3s[K        3/3      1.16G     0.5464     0.3134    0.01487          8        640: 43% ━━━━━─────── 7/16 1.9s/it 13.6s<16.7s[K        3/3      1.17G     0.5592     0.3056    0.01481          8        640: 50% ━━━━━━────── 8/16 1.8s/it 15.3s<14.4s[K        3/3      1.17G     0.5645     0.3027     0.0148          8        640: 56% ━━━━━━╸───── 9/16 1.8s/it 17.0s<12.4s[K        3/3      1.17G     0.5622      0.293    0.01482          8        640: 62% ━━━━━━━───── 10/16 1.7s/it 18.7s<10.5s[K        3/3      1.17G     0.5543      0.308    0.01459          8        640: 68% ━━━━━━━━──── 11/16 1.7s/it 20.5s<8.7s[K        3/3      1.17G     0.5489     0.2986     0.0146          8        640: 75% ━━━━━━━━━─── 12/16 1.7s/it 22.2s<7.0s[K        3/3      1.17G     0.5488     0.2898    0.01458          8        640: 81% ━━━━━━━━━╸── 13/16 1.7s/it 23.9s<5.2s[K        3/3      1.17G     0.5613     0.2928    0.01513          8        640: 87% ━━━━━━━━━━── 14/16 1.7s/it 25.7s<3.5s[K        3/3      1.17G     0.5722     0.2933    0.01548          8        640: 93% ━━━━━━━━━━━─ 15/16 1.7s/it 27.4s<1.7s[K        3/3      1.17G     0.5722     0.2933    0.01548          8        640: 100% ━━━━━━━━━━━━ 16/16 1.7s/it 27.4s
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 1/4 5.2s/it 1.6s<15.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 2/4 3.0s/it 3.1s<6.0s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 3/4 2.6s/it 5.0s<2.6s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 4/4 1.7s/it 7.0s
+                   all         64         64      0.967      0.969      0.983      0.804
+
+3 epochs completed in 0.038 hours.
+Optimizer stripped from /Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps/weights/last.pt, 5.5MB
+Optimizer stripped from /Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps/weights/best.pt, 5.5MB
+
+Validating /Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps/weights/best.pt...
+Ultralytics 8.4.204 🚀 Python-3.11.6 torch-2.2.2 MPS (Intel Core i7-8750H 2.20GHz)
+YOLO26n summary (fused): 121 layers, 2,389,735 parameters, 0 gradients, 5.4 GFLOPs
+[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 25% ━━━───────── 1/4 9.8s/it 2.9s<29.5s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 50% ━━━━━━────── 2/4 4.0s/it 4.7s<8.1s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 75% ━━━━━━━━━─── 3/4 2.8s/it 6.3s<2.8s[K                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 4/4 2.0s/it 8.1s
+                   all         64         64      0.969      0.968      0.982      0.808
+Speed: 0.5ms preprocess, 95.5ms inference, 0.0ms loss, 11.0ms postprocess per image

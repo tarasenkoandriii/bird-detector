@@ -1,0 +1,25 @@
+{
+  "device": "mps",
+  "timing_seconds": {
+    "train": [
+      34.97292654500052,
+      27.294764926002244,
+      27.420696447996306
+    ],
+    "validation": [
+      19.940602420989308,
+      7.051153916007024,
+      6.981569830997614,
+      8.104549618001329
+    ]
+  },
+  "wall_seconds": 162.17269194799883,
+  "peak_process_rss_mib": 3489.84375,
+  "sampled_mps_peak_bytes": {
+    "allocated": 151572736,
+    "driver": 1257988096
+  },
+  "last": "/Users/macbook/Documents/ChatGPT/birds/runs/stand-benchmark/mps/weights/last.pt",
+  "torch": "2.2.2",
+  "mps_fallback_enabled": "1"
+}
