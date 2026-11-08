@@ -1,43 +1,57 @@
-# Покращення локалізації птахів
+# Донавчання на розширеному CUB
 
-8 листопада 2026 року виконано контрольоване донавчання bbox-гілок після п’яти епох класифікаційного навчання. Дані незмінні: 998 train, 200 validation, 100 test.
+Поточний реліз: YOLO26n, один клас bird. Навчання завершено 8 листопада 2026 року. SHA256 `weights/best.pt`: `e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276`.
 
-## Результат
+## Результат на однакових вибірках
 
-| Конфігурація | До bbox-етапу | Після bbox-етапу | Приріст, в.п. |
+| Показник при 640, CPU | До expanded-етапу | Після expanded-етапу | Зміна, в.п. |
 |---|---:|---:|---:|
-| Validation mAP50–95, 320 | 77,58% | 79,26% | +1,68 |
-| Validation mAP50–95, 640 | 79,46% | 81,41% | +1,95 |
-| Test mAP50–95, 320 | 77,50% | 78,96% | +1,46 |
-| Test mAP50–95, 640 | 79,48% | 80,80% | +1,32 |
+| Validation mAP50–95, 600 зображень | 80,24% | **81,08%** | +0,84 |
+| Test mAP50–95, 499 зображень | 82,88% | **83,62%** | +0,73 |
+| Test mAP50 | 99,11% | **99,16%** | +0,05 |
+| Test Precision | 98,00% | **98,21%** | +0,20 |
+| Test Recall | 96,39% | **96,59%** | +0,20 |
 
-Усі числа — CPU, batch=4, conf=0.001, IoU=0.7, однакові split. Виграш стосується точності рамок. При 640 test mAP50 = 98,65%, Precision = 99,63%, Recall = 94,00%; показники пошуку птахів практично незмінні. Невелика вибірка не дає підстав стверджувати статистичну значущість або переносити результат на довільні відеосцени.
+Batch=4, conf=0.001, IoU=0.7. Validation Precision=95,28%, Recall=95,17%, mAP50=98,06%. Основний приріст — точність рамок; приріст пошуку птахів невеликий. Відсоткові пункти обчислено з точних чисел до округлення.
 
-## Протокол
+Baseline і кандидат оцінені на тих самих розширених split. Результати на попередніх 200/100 зображеннях не використовуються як безпосереднє порівняння. Попередній bbox-етап описано окремо в [bbox_stage_improvement.md](bbox_stage_improvement.md).
 
-- Початкова модель для bbox-етапу: класифікаційний checkpoint із SHA256 `95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f`.
-- 3 епохи, CPU, imgsz=320, batch=8, AdamW lr0=0.00001, lrf=0.1, weight_decay=0, seed=26.
-- Навчаються лише cv2 та one2one_cv2 останньої голови. Backbone, neck і класифікація зафіксовані; статистика всіх BN зафіксована.
-- Mosaic, scale, translate та fliplr вимкнені; warmup=0.
-- Після кожної епохи перевірено незмінність захищених параметрів. Найкращий checkpoint — перша епоха за validation fitness. Повторна оцінка з batch=4 може відрізнятися від внутрішньої оцінки тренера з іншим batch.
-- Рішення про застосування прийнято за validation 320/640. Test оцінено після вибору; наступного підбору параметрів за test не було. Test уже використовувався для попередніх звітів, тому нова незалежна вибірка потрібна для остаточної оцінки узагальнення.
+## Протокол і вибір кандидата
 
-Поточні `weights/best.pt`: SHA256 `f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18`.
+- Дані: **5 377 train / 600 validation / 499 резервних test**, 200 species CUB об’єднано в bird.
+- Попередні validation/test виключені з train; підготовка й аудит — [expanded_dataset.md](expanded_dataset.md).
+- Стартові ваги: попередній bbox-checkpoint із SHA256 `f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18`.
+- CPU, 3 епохи, imgsz=640, batch=8, nbs=64, AdamW lr0=0.00001, lrf=0.1, weight_decay=0, seed=26.
+- Навчаються bbox-гілки cv2 та one2one_cv2; backbone, neck і класифікація зафіксовані. Статистика всіх BN зафіксована; affine-параметри bbox-BN можуть навчатися.
+- Mosaic/scale/translate/fliplr вимкнені, warmup=0; типові HSV-аугментації залишаються активними.
+- Захищені параметри перевірено після кожної епохи: незмінні.
+- Найкращий checkpoint — третя епоха, обрана за validation fitness. Після тренера його окремо оцінено з batch=4.
+- Рішення про кандидата прийнято за validation. Лише після цього baseline і кандидат оцінені на резервному test; наступного підбору за test не проводилося. Тепер цей test уже розкритий і не повинен використовуватися для подальшого пошуку параметрів.
+
+Повна робота з фінальними оцінками тривала **47 хв 59 с**. Власне train-частини епох: 849,08 / 829,20 / 866,24 с; epoch validation: 72,65 / 70,80 / 71,11 с. Припущення benchmark про 63 хв було консервативним; тривалий запуск виявився швидшим.
+
+## Відео та перевірки
+
+На CPU та MPS окремо оброблено всі 240 кадрів прикладу при 640 без пропусків: 245 рамок, 240 кадрів із детекціями, 23,93 с обробки — близько 10,03 кадрів/с. FPS відтворення, розмір і тривалість збережені; MP4 і контрольні кадри оновлені. Усі 17 автоматичних тестів пройшли після заміни ваг.
+
+Відео має додатковий NMS IoU=0.5. Офіційні числові метрики валідатора вище не включають цей крок. Покадрової GT-розмітки відео немає: кількість рамок не є precision або recall.
+
+CUB — фотографії птахів; високі показники не доводять таку саму якість для далеких птахів у польоті, негативних відеосцен чи незнайомих камер. Можливі перетини CUB із даними pretraining. Новий test був незалежним від локального fine-tuning, але не гарантовано від попереднього навчання.
 
 ## Відтворення
 
+Після підготовки розширеного набору:
+
 ```bash
-python prepare_data.py
-python train.py
-python train_boxes.py --model runs/train/bird/weights/best.pt --name bbox-conservative
-python compare_models.py --skip-base --trained runs/experiments/bbox-conservative/weights/best.pt
-python evaluate.py --split test --weights runs/experiments/bbox-conservative/weights/best.pt --imgsz 640 --report reports/reproduced_test.json
+python train_boxes.py --data datasets/bird-expanded/data.yaml \
+  --model runs/experiments/bbox-conservative/weights/best.pt \
+  --imgsz 640 --epochs 3 --lr0 0.00001 --name expanded-bbox640
+python evaluate.py --data datasets/bird-expanded/data.yaml --split val --imgsz 640
+python evaluate.py --data datasets/bird-expanded/data.yaml --split test --imgsz 640
 python predict_video.py --input examples/input.mp4 --output examples/output.mp4 --overwrite
 python -m unittest discover -s tests -v
 ```
 
-Для оцінки власних ваг передайте їх явно; train-скрипти не перезаписують додані weights/best.pt. Числовий результат повторного навчання може відрізнятися.
+Перші два етапи для отримання стартових ваг наведені в README. Для оцінки власного checkpoint передайте `--weights`; train-скрипти не перезаписують додані ваги автоматично. Наявні каталоги запусків не перезаписуються: задавайте нове --name. Повторне навчання може дати дещо інші числа.
 
-Точні результати: bbox_validation.json, val.json, test.json, test_640.json; параметри й історія: bbox_training_protocol.json, bbox_training_history.csv, bbox_protected_parameters.json та training_provenance.json. Порівняння з початковою COCO YOLO26n — model_comparison.json; bird=14 відбирається перед перетворенням на bird=0.
-
-Відео обробляється при 640 із додатковим NMS IoU=0.5. Офіційні метрики вище не включають цей додатковий крок. Кількість детекцій на демонстраційному відео не є recall — ручної покадрової GT-розмітки немає. Подальший пріоритет — окрема вибірка реальних відеокадрів із негативними сценами та розділенням за вихідним роликом.
+Точні звіти: [expanded_baseline.json](expanded_baseline.json), [expanded_candidate_validation.json](expanded_candidate_validation.json), [expanded_test_baseline.json](expanded_test_baseline.json), [expanded_test_candidate.json](expanded_test_candidate.json). Історія, параметри та перевірки: expanded_training_history.csv, expanded_training_protocol.json, expanded_training_timing.json, expanded_protected_parameters.json, expanded_training_result.json.

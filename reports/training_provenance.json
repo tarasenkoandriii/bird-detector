@@ -3,9 +3,9 @@
   "classes": {
     "0": "bird"
   },
-  "strategy": "classifier_then_bbox",
-  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
-  "note": "Спочатку 5 епох класифікації, потім 3 епохи bbox-гілок. Checkpoint обрано за validation. Test оцінено після вибору; за ним параметри не коригувалися.",
+  "strategy": "classifier_then_bbox_then_expanded_bbox",
+  "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+  "note": "Після двох початкових етапів виконано 3 bbox-епохи на розширеному CUB. Кандидат обраний за validation. Резервний test оцінено після вибору; його не використовували для наступного підбору.",
   "classifier_training": {
     "epochs": 5,
     "imgsz": 320,
@@ -37,5 +37,20 @@
     "device": "cpu",
     "seed": 26,
     "freeze": "backbone, neck, classifier; all BN statistics fixed"
+  },
+  "expanded_bbox_training": {
+    "epochs": 3,
+    "selected_epoch": 3,
+    "train_images": 5377,
+    "validation_images": 600,
+    "imgsz": 640,
+    "batch": 8,
+    "nbs": 64,
+    "optimizer": "AdamW",
+    "lr0": 1e-05,
+    "lrf": 0.1,
+    "device": "cpu",
+    "source_weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+    "protected_parameters_unchanged": true
   }
 }

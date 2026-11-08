@@ -1,22 +1,22 @@
 {
   "split": "val",
   "device": "cpu",
-  "imgsz": 320,
+  "imgsz": 640,
   "batch": 4,
-  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
   "torch": "2.2.2",
   "ultralytics": "8.4.204",
   "metrics": {
-    "metrics/precision(B)": 0.9594777874696128,
-    "metrics/recall(B)": 0.95,
-    "metrics/mAP50(B)": 0.9704510205305468,
-    "metrics/mAP50-95(B)": 0.7925503801060744,
-    "fitness": 0.7925503801060744
+    "metrics/precision(B)": 0.9528278165465431,
+    "metrics/recall(B)": 0.9516666666666667,
+    "metrics/mAP50(B)": 0.9805866505963368,
+    "metrics/mAP50-95(B)": 0.8108172076455288,
+    "fitness": 0.8108172076455288
   },
   "speed_ms_per_image": {
-    "preprocess": 0.613486969814403,
-    "inference": 40.90925841010176,
-    "loss": 0.00034001481253653765,
-    "postprocess": 0.9153580998827238
+    "preprocess": 1.2680356500156147,
+    "inference": 80.09754573996663,
+    "loss": 0.00027702182705979794,
+    "postprocess": 1.3732608451634103
   }
 }

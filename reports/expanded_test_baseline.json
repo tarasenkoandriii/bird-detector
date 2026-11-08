@@ -1,0 +1,22 @@
+{
+  "split": "test",
+  "device": "cpu",
+  "imgsz": 640,
+  "batch": 4,
+  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "torch": "2.2.2",
+  "ultralytics": "8.4.204",
+  "metrics": {
+    "metrics/precision(B)": 0.9800400582606109,
+    "metrics/recall(B)": 0.9639278557114228,
+    "metrics/mAP50(B)": 0.9911154916543655,
+    "metrics/mAP50-95(B)": 0.8288274841471089,
+    "fitness": 0.8288274841471089
+  },
+  "speed_ms_per_image": {
+    "preprocess": 1.7313005309715261,
+    "inference": 112.39572746716748,
+    "loss": 0.00033550502061433266,
+    "postprocess": 1.920928264566126
+  }
+}

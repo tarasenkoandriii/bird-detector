@@ -1,0 +1,7 @@
+{
+  "source_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "epochs": 3,
+  "imgsz": 640,
+  "lr0": 1e-05,
+  "note": "Лише bbox-гілки; вибір за validation, test не використовується."
+}

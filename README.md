@@ -2,7 +2,7 @@
 
 Детекція одного класу `bird` на зображеннях і **кожному кадрі відео**. У репозиторії є навчені ваги, справжній вхідний MP4, оброблений MP4 та приклади кадрів.
 
-**Оновлення моделі:** виконано двоетапне донавчання класифікації та bbox-гілок. Порівняння з початковою YOLO26n та аналіз помилок наведені в [звіті про покращення](reports/improvement.md).
+**Оновлення моделі:** виконано навчання класифікації та bbox-гілок, потім ще 3 bbox-епохи на розширеному CUB. Порівняння з початковою YOLO26n та аналіз помилок наведені в [звіті про покращення](reports/improvement.md).
 
 ![Приклад детекції](examples/frame-000.jpg)
 
@@ -97,27 +97,28 @@ python train.py --resume runs/train/bird/weights/last.pt --strategy head --batch
 python train.py --strategy full --epochs 50 --batch 8 --lr0 0.001 --name full-experiment
 ```
 
-Поточні `weights/best.pt` отримані за два етапи: 5 епох класифікації та 3 епохи bbox-гілок (обрано checkpoint першої bbox-епохи); параметри — [training_provenance.json](reports/training_provenance.json). Новий запуск не гарантує побітового збігу ваг.
+Поточні `weights/best.pt` отримані за три етапи: 5 епох класифікації, 3 bbox-епохи на початковій підвибірці та 3 bbox-епохи при 640 на розширеному наборі; параметри — [training_provenance.json](reports/training_provenance.json). Новий запуск не гарантує побітового збігу ваг.
 
 ## Метрики
 
-Еталонний повторний запуск **тих самих best.pt** на CPU, imgsz=320, batch=4. Validation і test розділені; test не використовується для підбору confidence.
+Еталонна оцінка поточних best.pt на CPU, imgsz=640, batch=4. Train — 5 377, validation — 600, резервний test — 499. Кандидата обрано за validation; test оцінено після вибору.
 
-| Метрика | Validation, 200 зображень | Test, 100 зображень |
+| Метрика | Validation, 600 зображень | Test, 499 зображень |
 | --- | ---: | ---: |
-| Precision | 95.95% | 96.84% |
-| Recall | 95.00% | 91.81% |
-| mAP50 | 97.05% | 95.36% |
-| mAP50–95 | 79.26% | 78.96% |
+| Precision | 95,28% | 98,21% |
+| Recall | 95,17% | 96,59% |
+| mAP50 | 98,06% | 99,16% |
+| mAP50–95 | 81,08% | 83,62% |
 
-Повні числа, версії, SHA256 і швидкість — [val.json](reports/val.json) та [test.json](reports/test.json). Перевірити:
+Повні числа й SHA256 — [val.json](reports/val.json) та [test.json](reports/test.json). Порівняння до/після на однакових split — [improvement.md](reports/improvement.md). Ці результати не слід напряму порівнювати з показниками на попередніх 200/100 зображеннях.
 
 ```bash
-python evaluate.py --split val --device cpu
-python evaluate.py --split test --device cpu
+python prepare_expanded.py
+python evaluate.py --data datasets/bird-expanded/data.yaml --split val --imgsz 640
+python evaluate.py --data datasets/bird-expanded/data.yaml --split test --imgsz 640
 ```
 
-Для відеоприкладу використано 640 px, а не 320 px оцінки — це явно інша конфігурація інференсу.
+Відео використовує додатковий NMS IoU=0.5; офіційні метрики валідатора вище не включають цей окремий крок.
 
 ## Проблеми, обмеження та покращення
 
@@ -185,10 +186,23 @@ bird-detector/
 python train_boxes.py --model runs/train/bird/weights/best.pt --name bbox-conservative
 ```
 
-Скрипт навчає лише bbox-гілки 3 епохи на CPU із lr0=0.00001; backbone, neck, класифікація та статистика BN зафіксовані. Результат — `runs/experiments/bbox-conservative/weights/best.pt`. Додані ваги автоматично не перезаписуються. На цьому Mac етап зайняв близько 4 хвилин. При 640 validation mAP50–95 = **81,41%**, test = **80,80%**; для обох використано CPU. Це метрики офіційного валідатора; додатковий відео-NMS є окремою постобробкою. Деталі — [improvement.md](reports/improvement.md).
+Скрипт навчає лише bbox-гілки 3 епохи на CPU із lr0=0.00001; backbone, neck, класифікація та статистика BN зафіксовані. Результат — `runs/experiments/bbox-conservative/weights/best.pt`. Додані ваги автоматично не перезаписуються. На цьому Mac етап зайняв близько 4 хвилин. Для історичного bbox-етапу до розширення при 640 validation mAP50–95 = **81,41%**, test = **80,80%**; для обох використано CPU. Деталі — [bbox_stage_improvement.md](reports/bbox_stage_improvement.md).
 
-Огляд офіційних рекомендацій, перевірка локального API та рецепти наступних експериментів — [finetuning_recommendations.md](reports/finetuning_recommendations.md). Це план, поточні ваги ним не змінені.
+Огляд офіційних рекомендацій, перевірка локального API та рецепти наступних експериментів — [finetuning_recommendations.md](reports/finetuning_recommendations.md). Це огляд гіпотез; виконаний expanded-етап описано в improvement.md.
 
 ## Розширений набір даних
 
-Підготовлено окремий CUB-набір: 5 377 train / 600 validation / 499 резервних test, з аудитом дублікатів та захистом попередніх split. Скрипти `prepare_expanded.py` і `benchmark_expanded.py`; виміряний прогноз bbox-навчання при 640 на CPU — близько години на 3 епохи. Дані не включені в репозиторій. Протокол і команди Warp — [expanded_dataset.md](reports/expanded_dataset.md). Поточні ваги цим benchmark не замінено.
+Підготовлено окремий CUB-набір: 5 377 train / 600 validation / 499 резервних test, з аудитом дублікатів та захистом попередніх split. Скрипти `prepare_expanded.py` і `benchmark_expanded.py`; виміряний прогноз bbox-навчання при 640 на CPU — близько години на 3 епохи. Дані не включені в репозиторій. Протокол і команди Warp — [expanded_dataset.md](reports/expanded_dataset.md). Після benchmark виконано повний expanded-етап; його ваги включені до релізу.
+
+## Фінальний етап відтворення поточних ваг
+
+Після `python train.py` та bbox-етапу на початковій підвибірці:
+
+```bash
+python prepare_expanded.py
+python train_boxes.py --data datasets/bird-expanded/data.yaml \
+  --model runs/experiments/bbox-conservative/weights/best.pt \
+  --imgsz 640 --epochs 3 --lr0 0.00001 --name expanded-bbox640
+```
+
+Результат — `runs/experiments/expanded-bbox640/weights/best.pt`. Цей етап зайняв близько 48 хвилин разом із фінальними перевірками. Всі train-скрипти зберігають додані weights/best.pt; для свого інференсу передайте шлях явно.

@@ -1,22 +1,22 @@
 {
   "split": "test",
   "device": "cpu",
-  "imgsz": 320,
+  "imgsz": 640,
   "batch": 4,
-  "weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
   "torch": "2.2.2",
   "ultralytics": "8.4.204",
   "metrics": {
-    "metrics/precision(B)": 0.9683558140604829,
-    "metrics/recall(B)": 0.9180580652003718,
-    "metrics/mAP50(B)": 0.9535514953730272,
-    "metrics/mAP50-95(B)": 0.7895894961563152,
-    "fitness": 0.7895894961563152
+    "metrics/precision(B)": 0.98207756357924,
+    "metrics/recall(B)": 0.9659318637274549,
+    "metrics/mAP50(B)": 0.9915862453547344,
+    "metrics/mAP50-95(B)": 0.8361772755712437,
+    "fitness": 0.8361772755712437
   },
   "speed_ms_per_image": {
-    "preprocess": 0.5838710699754301,
-    "inference": 41.83748180032126,
-    "loss": 0.0003125196963082999,
-    "postprocess": 0.8904788497602567
+    "preprocess": 1.7254694347409345,
+    "inference": 112.65987671521759,
+    "loss": 0.00038368119190975217,
+    "postprocess": 1.6719878176791791
   }
 }

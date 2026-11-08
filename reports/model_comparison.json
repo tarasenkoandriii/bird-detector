@@ -83,5 +83,6 @@
         "postprocess": 1.5740613396337721
       }
     }
-  ]
+  ],
+  "scope_note": "Історична оцінка на попередніх 200 validation-зображеннях до expanded-етапу. Чинні метрики — val.json/test.json."
 }

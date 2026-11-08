@@ -1,0 +1,22 @@
+{
+  "run": "expanded-bbox640",
+  "state": "completed",
+  "started_utc": "2026-11-08T06:50:22.228064+00:00",
+  "source_weights_sha256": "f61344a84ebc357103459dd98ada79d80abbcccdbd8f1d9c6e1ba94bcb140d18",
+  "finished_utc": "2026-11-08T07:38:21.617643+00:00",
+  "candidate": "runs/experiments/expanded-bbox640/weights/best.pt",
+  "validation_metrics": {
+    "metrics/precision(B)": 0.9528278165465431,
+    "metrics/recall(B)": 0.9516666666666667,
+    "metrics/mAP50(B)": 0.9805866505963368,
+    "metrics/mAP50-95(B)": 0.8108172076455288,
+    "fitness": 0.8108172076455288
+  },
+  "map50_95_gain": 0.008444339230287978,
+  "working_weights_unchanged": true,
+  "test_evaluated": true,
+  "released_weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+  "release_validation_report": "expanded_candidate_validation.json",
+  "test_evaluated_after_selection": true,
+  "test_report": "expanded_test_candidate.json"
+}

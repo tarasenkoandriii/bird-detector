@@ -1,3 +1,5 @@
+> Оновлення: повний expanded-етап уже завершено, ваги включені до релізу. Наведені нижче baseline та benchmark описують стан до навчання. Результат — [improvement.md](improvement.md).
+
 # Розширений CUB: підготовка та benchmark
 
 8 листопада 2026 року підготовлено окремий однокласовий датасет `datasets/bird-expanded`. Чинний `datasets/bird` та робочі `weights/best.pt` збережені.
