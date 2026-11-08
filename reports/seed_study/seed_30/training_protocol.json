@@ -1,0 +1,14 @@
+{
+  "source_weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+  "video_train_images": 87,
+  "cub_train_images": 512,
+  "epochs": 3,
+  "imgsz": 640,
+  "batch": 8,
+  "nbs": 8,
+  "lr0": 1e-05,
+  "seed": 30,
+  "data_seed": 26,
+  "train_selection_sha256": "24b24cdfd4b786f7fc069ae66ce8eab90212f4007c74947718f4859511069370",
+  "note": "Навчається вся голова; backbone/neck і BN-статистика зафіксовані. Test не використовується. Релізні ваги не перезаписуються."
+}

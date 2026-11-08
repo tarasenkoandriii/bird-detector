@@ -1,0 +1,45 @@
+{
+  "weights_sha256": "7c76ee25e04d69995e114d18a8fbf4862d625ef75558b7a7d22c50479f6bb492",
+  "split": "val",
+  "images": 8,
+  "images_with_false_positives": 0,
+  "false_positive_boxes": 0,
+  "conf": 0.25,
+  "imgsz": 640,
+  "post_nms_iou": 0.5,
+  "note": "Негативна валідація містить перевірені фонові вирізки, не повні негативні ролики.",
+  "frames": [
+    {
+      "image": "val/images/ff61134434c1c9c7.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/7113dd0e310c962e.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/76e2631a36f90947.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/d3f7364210a8b1fe.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/9db47e812d4dbd9d.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/66503b8809a433eb.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/fd134e09d454ce52.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/f7b7d28e2a965708.jpg",
+      "false_positive_boxes": 0
+    }
+  ]
+}

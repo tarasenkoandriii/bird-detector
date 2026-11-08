@@ -1,22 +1,22 @@
 {
-  "n": 1,
+  "n": 5,
   "cub": {
-    "n": 1,
-    "mean": 0.8117036776208397,
-    "sd": null,
+    "n": 5,
+    "mean": 0.8122263518490436,
+    "sd": 0.0004260881302555349,
     "min": 0.8117036776208397,
-    "max": 0.8117036776208397
+    "max": 0.8126527055947654
   },
   "video": {
-    "n": 1,
-    "mean": 0.5198413335002593,
-    "sd": null,
-    "min": 0.5198413335002593,
+    "n": 5,
+    "mean": 0.5151465270639877,
+    "sd": 0.0038319873100243393,
+    "min": 0.5103520402019124,
     "max": 0.5198413335002593
   },
-  "joint_passes": 1,
+  "joint_passes": 5,
   "max_background_fp_images": 0,
-  "completed": false,
+  "completed": true,
   "planned_seeds": [
     26,
     27,
@@ -31,6 +31,34 @@
       "video": 0.5198413335002593,
       "background_fp_images": 0,
       "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f"
+    },
+    {
+      "seed": 27,
+      "cub": 0.8118772249584897,
+      "video": 0.5176127597189681,
+      "background_fp_images": 0,
+      "weights_sha256": "bcc4b9d63cb3914f18df59045ccbcf6d041741f8a00bddae17f7330962c2cc7f"
+    },
+    {
+      "seed": 28,
+      "cub": 0.8126527055947654,
+      "video": 0.5124099307961666,
+      "background_fp_images": 0,
+      "weights_sha256": "7c76ee25e04d69995e114d18a8fbf4862d625ef75558b7a7d22c50479f6bb492"
+    },
+    {
+      "seed": 29,
+      "cub": 0.8126074062762264,
+      "video": 0.5155165711026317,
+      "background_fp_images": 0,
+      "weights_sha256": "ad54767fab584eca569e8ab328254e57e0332c3a88955757939119b329a2f808"
+    },
+    {
+      "seed": 30,
+      "cub": 0.8122907447948965,
+      "video": 0.5103520402019124,
+      "background_fp_images": 0,
+      "weights_sha256": "3219dcdc0235138431494f00fe2319209d38e9cbec93cb9ea441ebbe9de99625"
     }
   ],
   "baseline_a": {
@@ -38,5 +66,5 @@
     "video": 0.5096901984934742,
     "background_fp_images": 0
   },
-  "state": "виконується"
+  "state": "завершено"
 }
