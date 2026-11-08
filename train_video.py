@@ -13,8 +13,17 @@ def main():
     p.add_argument("--model", type=Path, default=ROOT / "weights/best.pt")
     p.add_argument("--epochs", type=int, default=3)
     p.add_argument("--name", default="video-head-pilot")
+    p.add_argument("--lr0", type=float, default=0.00001)
+    p.add_argument("--cub-images", type=int, default=128)
+    p.add_argument("--seed", type=int, default=26)
     a = p.parse_args()
-    if not a.data.is_file() or not a.model.is_file() or a.epochs < 1:
+    if (
+        not a.data.is_file()
+        or not a.model.is_file()
+        or a.epochs < 1
+        or a.lr0 <= 0
+        or a.cub_images < 1
+    ):
         p.error("Потрібні підготовлені дані, ваги й додатна кількість епох.")
     out = ROOT / "runs/experiments" / a.name
     if out.exists():
@@ -27,8 +36,8 @@ def main():
     photos = sorted((ROOT / "datasets/bird-expanded/train/images").glob("*.jpg"))
     if not videos or not photos:
         p.error("Потрібні відеонабір і розширений CUB.")
-    random.Random(26).shuffle(photos)
-    photos = photos[:128]
+    random.Random(a.seed).shuffle(photos)
+    photos = photos[: a.cub_images]
     work = ROOT / "work" / a.name
     work.mkdir(parents=True, exist_ok=True)
     (work / "train.txt").write_text("".join(str(x.resolve()) + "\n" for x in videos + photos))
@@ -73,8 +82,8 @@ def main():
                     "imgsz": 640,
                     "batch": 8,
                     "nbs": 8,
-                    "lr0": 1e-5,
-                    "seed": 26,
+                    "lr0": a.lr0,
+                    "seed": a.seed,
                     "note": "Навчається вся голова; backbone/neck і BN-статистика зафіксовані. Test не використовується. Релізні ваги не перезаписуються.",
                 },
                 indent=2,
@@ -107,7 +116,7 @@ def main():
         workers=0,
         freeze=head,
         optimizer="AdamW",
-        lr0=1e-5,
+        lr0=a.lr0,
         lrf=0.1,
         warmup_epochs=0,
         warmup_bias_lr=0,
@@ -118,7 +127,7 @@ def main():
         translate=0,
         fliplr=0,
         amp=False,
-        seed=26,
+        seed=a.seed,
         deterministic=True,
         patience=0,
         plots=False,

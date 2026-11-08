@@ -50,3 +50,7 @@
 SHA256 best.pt: `e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276`.
 
 Точні числа та джерела кожного рядка — [results_summary.json](results_summary.json). Чинні метрики — [val.json](val.json), [test.json](test.json); параметри — [training_provenance.json](training_provenance.json). Команди відтворення — у [README](../README.md).
+
+## Варіанти рішення
+
+**A — основний; B — окремий відеопілот із компромісом між вибірками; C — перевірений і відхилений менший LR; D — запущений експеримент із більшою часткою фото, результат ще не отриманий.** [Порівняння та команди](model_profiles.md).

@@ -1,0 +1,89 @@
+{
+  "datasets": {
+    "cub_validation_images": 600,
+    "video_validation_images": 32,
+    "video_validation_positive_images": 24,
+    "video_validation_background_crops": 8,
+    "imgsz": 640,
+    "device": "cpu",
+    "batch": 4
+  },
+  "rule": "Заміна релізної моделі — лише якщо обидві mAP50–95 не нижчі, одна вища, а хибних фонових спрацьовувань не більше. Компромісний варіант публікується окремо.",
+  "profiles": [
+    {
+      "id": "A",
+      "name": "Релізна модель",
+      "status": "виміряно",
+      "weights_sha256": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+      "lr0": null,
+      "cub_train_images": 5377,
+      "video_map50_95": 0.5096901984934742,
+      "cub_map50_95": 0.8108172076455288,
+      "negative_images_with_fp": 0,
+      "sources": [
+        "video_training_baseline.json",
+        "val.json",
+        "video_backgrounds_baseline.json"
+      ],
+      "video_train_images": 0,
+      "video_delta_pp": 0.0,
+      "cub_delta_pp": 0.0,
+      "dominates_release": false,
+      "decision": "основний",
+      "published_weights": "weights/best.pt"
+    },
+    {
+      "id": "B",
+      "name": "Відеопілот",
+      "status": "виміряно",
+      "weights_sha256": "3523d66f2e52ac9f45b86f656506177d0337226e2b708268a210bab394bf1a75",
+      "lr0": 1e-05,
+      "cub_train_images": 128,
+      "video_map50_95": 0.5194169080895424,
+      "cub_map50_95": 0.8081083462569831,
+      "negative_images_with_fp": 0,
+      "sources": [
+        "video_training_candidate.json",
+        "video_training_cub_validation.json",
+        "video_backgrounds_candidate.json"
+      ],
+      "video_train_images": 87,
+      "video_delta_pp": 0.972670959606825,
+      "cub_delta_pp": -0.2708861388545647,
+      "dominates_release": false,
+      "decision": "компромісний пілот",
+      "published_weights": "weights/video_pilot.pt"
+    },
+    {
+      "id": "C",
+      "name": "Відео: менший LR",
+      "status": "виміряно",
+      "weights_sha256": "46d9e16c33bdbfbbba5458e666383d949a1853eb24c3f5079d2307fb5bd7300b",
+      "lr0": 3e-06,
+      "cub_train_images": 128,
+      "video_map50_95": 0.5066167044549654,
+      "cub_map50_95": 0.8106724059792187,
+      "negative_images_with_fp": 0,
+      "sources": [
+        "profile_c_video_validation.json",
+        "profile_c_cub_validation.json",
+        "profile_c_backgrounds.json"
+      ],
+      "video_train_images": 87,
+      "video_delta_pp": -0.30734940385087617,
+      "cub_delta_pp": -0.014480166631003488,
+      "dominates_release": false,
+      "decision": "відхилено",
+      "published_weights": null
+    },
+    {
+      "id": "D",
+      "name": "Більша частка фото",
+      "status": "виконується",
+      "lr0": 1e-05,
+      "cub_train_images": 512,
+      "video_train_images": 87,
+      "decision": "виконується"
+    }
+  ]
+}

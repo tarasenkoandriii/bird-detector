@@ -30,7 +30,7 @@
 
 Ці mAP-метрики не слід змішувати з цільовим recall попереднього відеотесту LaSOT.
 
-Пілот дав компроміс між вибірками; релізні `weights/best.pt` збережені. Новий checkpoint — `runs/experiments/video-head-pilot/weights/best.pt`. **22 автоматичні тести пройшли.** [Параметри](video_training_protocol.json) · [Історія](video_training_history.csv) · [Результат пілота](video_training_candidate.json).
+Пілот B дав компроміс між вибірками; основні `weights/best.pt` збережені. B опублікований окремо як `weights/video_pilot.pt`. Додатковий варіант C з меншим LR перевірений і відхилений; [усі варіанти](model_profiles.md). Новий checkpoint — `runs/experiments/video-head-pilot/weights/best.pt`. **22 автоматичні тести пройшли.** [Параметри](video_training_protocol.json) · [Історія](video_training_history.csv) · [Результат пілота](video_training_candidate.json).
 
 ## Відтворення
 

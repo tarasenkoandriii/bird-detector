@@ -25,3 +25,5 @@
 [Донавчання й заморожування](https://docs.ultralytics.com/guides/finetuning-guide) · [Рецепт YOLO26](https://docs.ultralytics.com/guides/yolo26-training-recipe) · [Параметри оптимізації](https://docs.ultralytics.com/modes/train) · [Аугментації](https://docs.ultralytics.com/guides/yolo-data-augmentation) · [Дослідження LP-FT](https://arxiv.org/abs/2202.10054).
 
 Джерела перевірено 8 листопада 2026 року. Офіційний великомасштабний рецепт і результати LP-FT для класифікації не гарантують переваги на нашій задачі.
+
+Перевірені та неперевірені рецепти обліковані окремо в [model_profiles.md](model_profiles.md). Зменшення LR до 3e-6 вже перевірено: варіант C відхилений, тому не подається як рекомендація з доведеним виграшем.

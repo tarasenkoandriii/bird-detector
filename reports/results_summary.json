@@ -260,5 +260,17 @@
       "fitness": 0.8081083462569831
     },
     "adopted_as_release": false
+  },
+  "model_profiles": {
+    "source": "model_profiles.json",
+    "default": "A",
+    "experimental_video": "B",
+    "rejected": [
+      "C"
+    ],
+    "not_tested": [],
+    "running": [
+      "D"
+    ]
   }
 }
