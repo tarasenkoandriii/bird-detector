@@ -1,0 +1,48 @@
+{
+  "split": "val",
+  "imgsz": 640,
+  "device": "cpu",
+  "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+  "fusion_match_iou": 0.55,
+  "post_nms_iou": 0.5,
+  "unmatched_weight": 0.5,
+  "note": "Додаткова постобробка й другий forward враховані в extra_quality_ms_per_image; базовий inference-time Ultralytics їх не охоплює.",
+  "runs": [
+    {
+      "mode": "nms",
+      "metrics": {
+        "metrics/precision(B)": 0.9648061786971356,
+        "metrics/recall(B)": 0.9594950378746685,
+        "metrics/mAP50(B)": 0.97615098537833,
+        "metrics/mAP50-95(B)": 0.7848231449384631,
+        "fitness": 0.7848231449384631
+      },
+      "wall_seconds": 37.92432743200334,
+      "base_speed_ms_per_image": {
+        "preprocess": 2.436265644937521,
+        "inference": 158.80881961980776,
+        "loss": 0.0006241698429221287,
+        "postprocess": 2.2433054250723217
+      },
+      "extra_quality_ms_per_image": 0.36508331970253494
+    },
+    {
+      "mode": "flip",
+      "metrics": {
+        "metrics/precision(B)": 0.9504990232731455,
+        "metrics/recall(B)": 0.95,
+        "metrics/mAP50(B)": 0.9727534289100815,
+        "metrics/mAP50-95(B)": 0.7985554833081052,
+        "fitness": 0.7985554833081052
+      },
+      "wall_seconds": 50.288581285989494,
+      "base_speed_ms_per_image": {
+        "preprocess": 1.8656435750017408,
+        "inference": 119.00924295499863,
+        "loss": 0.0004625999281415716,
+        "postprocess": 1.8801802251982735
+      },
+      "extra_quality_ms_per_image": 119.0785525002866
+    }
+  ]
+}

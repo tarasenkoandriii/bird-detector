@@ -1,0 +1,49 @@
+{
+  "split": "val",
+  "device": "cpu",
+  "batch": 4,
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "note": "Лише validation; COCO bird=14 та донавчений bird=0 оцінюються як клас 0. Test не використовується.",
+  "runs": [
+    {
+      "model": "finetuned",
+      "imgsz": 960,
+      "source_class": 0,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.9291442835894818,
+        "metrics/recall(B)": 0.8523639680865502,
+        "metrics/mAP50(B)": 0.9378883711159899,
+        "metrics/mAP50-95(B)": 0.6359747062218718,
+        "fitness": 0.6359747062218718
+      },
+      "speed_ms_per_image": {
+        "preprocess": 4.478651185199851,
+        "inference": 255.7351423552609,
+        "loss": 0.0004401300975587219,
+        "postprocess": 2.104185644639074
+      }
+    },
+    {
+      "model": "finetuned",
+      "imgsz": 1280,
+      "source_class": 0,
+      "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+      "metrics": {
+        "metrics/precision(B)": 0.7230206689772969,
+        "metrics/recall(B)": 0.64,
+        "metrics/mAP50(B)": 0.7047528273082169,
+        "metrics/mAP50-95(B)": 0.29215738371756067,
+        "fitness": 0.29215738371756067
+      },
+      "speed_ms_per_image": {
+        "preprocess": 8.22160362964496,
+        "inference": 477.87281784956576,
+        "loss": 0.0008727746899239719,
+        "postprocess": 3.328125094922143
+      }
+    }
+  ]
+}
