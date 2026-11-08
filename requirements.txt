@@ -1,0 +1,10 @@
+# Tested on Python 3.11.6, macOS Intel; matching torch/torchvision pair.
+torch==2.2.2
+torchvision==0.17.2
+numpy==1.26.4
+opencv-python==4.10.0.84
+ultralytics==8.4.204
+PyYAML==6.0.3
+Pillow>=10,<14
+# Dataset preparation only; not needed by video inference itself.
+pyarrow>=14,<24

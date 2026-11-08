@@ -1,0 +1,13 @@
+.venv*/
+__pycache__/
+*.pyc
+.DS_Store
+work/
+datasets/
+runs/
+*.partial*
+
+yolo26n.pt
+
+.env
+.env.*
