@@ -3,20 +3,20 @@
   "device": "cpu",
   "imgsz": 320,
   "batch": 4,
-  "weights_sha256": "0d53dc154ea6e7bd489d8c59b616409302909a10a66f3b83958d7f2927bac4ee",
+  "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
   "torch": "2.2.2",
   "ultralytics": "8.4.204",
   "metrics": {
-    "metrics/precision(B)": 0.5862415814263366,
-    "metrics/recall(B)": 0.4392389602955382,
-    "metrics/mAP50(B)": 0.46787638794805536,
-    "metrics/mAP50-95(B)": 0.17331356920432472,
-    "fitness": 0.17331356920432472
+    "metrics/precision(B)": 0.9582848876596528,
+    "metrics/recall(B)": 0.9188954386400833,
+    "metrics/mAP50(B)": 0.9532519080394504,
+    "metrics/mAP50-95(B)": 0.7750181674068994,
+    "fitness": 0.7750181674068994
   },
   "speed_ms_per_image": {
-    "preprocess": 0.6360986904473975,
-    "inference": 40.95654630975332,
-    "loss": 0.00043312975321896374,
-    "postprocess": 0.8270731197262648
+    "preprocess": 0.4576377499324735,
+    "inference": 35.402031360717956,
+    "loss": 0.00029937029466964304,
+    "postprocess": 0.753386289725313
   }
 }

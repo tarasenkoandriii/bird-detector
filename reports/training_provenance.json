@@ -3,60 +3,26 @@
   "classes": {
     "0": "bird"
   },
-  "epochs": 50,
-  "imgsz": 320,
-  "optimizer": "AdamW",
-  "lr0": 0.001,
-  "workers": 0,
-  "amp": false,
-  "mosaic": 0,
-  "seed": 26,
-  "batch_schedule": [
-    {
-      "epochs": [
-        1,
-        1
-      ],
-      "batch": 2
-    },
-    {
-      "epochs": [
-        2,
-        36
-      ],
-      "batch": 4
-    },
-    {
-      "epochs": [
-        37,
-        40
-      ],
-      "batch": 6
-    },
-    {
-      "epochs": [
-        41,
-        42
-      ],
-      "batch": 8
-    },
-    {
-      "epochs": [
-        43,
-        50
-      ],
-      "batch": 10
-    }
-  ],
-  "dataset": {
-    "repository": "bentrevett/caltech-ucsd-birds-200-2011",
-    "revision": "1ef09e021b0b65b40337f6f285909656f407f6e0",
-    "train": 998,
-    "val": 200,
-    "test": 100,
-    "species_merged": 100,
-    "invalid_bbox_excluded": 2
+  "strategy": "classifier_only",
+  "training": {
+    "epochs": 5,
+    "imgsz": 320,
+    "batch": 8,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "lrf": 0.1,
+    "warmup_epochs": 0,
+    "warmup_bias_lr": 0.0001,
+    "weight_decay": 0.0001,
+    "mosaic": 0,
+    "scale": 0,
+    "translate": 0,
+    "seed": 26,
+    "freeze": 23,
+    "device": "cpu",
+    "workers": 0,
+    "amp": false
   },
-  "weights_sha256": "0d53dc154ea6e7bd489d8c59b616409302909a10a66f3b83958d7f2927bac4ee",
-  "note": "Додані найкращі ваги отримані до останньої епохи. Нове типове навчання має фіксований batch; відтворення запуску не гарантує побітово однакових ваг. Час у CSV починається заново після відновлень."
+  "weights_sha256": "95fcef6935b48f663c10dc4bfbd71d2bc8d11ca2ebef77ddefaa85e1419f995f",
+  "note": "Навчалися лише cv3 та one2one_cv3 останньої голови. Backbone, neck і bbox-параметри незмінні. Вибір кандидата — лише за validation; test оцінено після цього вибору. Початковий експеримент із 50 епох архівовано в reports/v1 та weights/best_v1.pt."
 }

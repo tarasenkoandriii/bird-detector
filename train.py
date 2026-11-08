@@ -13,12 +13,19 @@ def parser():
         default="yolo26n.pt",
         help="Початкові ваги; за відсутності завантажуються Ultralytics",
     )
-    p.add_argument("--epochs", type=int, default=50)
+    p.add_argument("--epochs", type=int, default=5)
     p.add_argument("--batch", type=int, default=8)
     p.add_argument("--imgsz", type=int, default=320)
-    p.add_argument("--device", default="auto", help="auto, cpu, mps або індекс пристрою CUDA")
+    p.add_argument("--device", default="cpu", help="auto, cpu, mps або індекс пристрою CUDA")
     p.add_argument("--project", type=Path, default=ROOT / "runs/train")
     p.add_argument("--name", default="bird")
+    p.add_argument("--lr0", type=float, default=0.0001, help="Початкова швидкість навчання")
+    p.add_argument(
+        "--strategy",
+        choices=["head", "full"],
+        default="head",
+        help="head: лише класифікація; full: усі параметри",
+    )
     p.add_argument("--resume", type=Path, help="Незавершений last.pt зі станом оптимізатора")
     return p
 
@@ -26,7 +33,7 @@ def parser():
 def main():
     p = parser()
     a = p.parse_args()
-    if min(a.epochs, a.batch, a.imgsz) < 1 or a.imgsz % 32:
+    if min(a.epochs, a.batch, a.imgsz) < 1 or a.imgsz % 32 or a.lr0 <= 0:
         p.error("epochs і batch мають бути додатними, а imgsz — кратним 32.")
     if not a.data.is_file():
         p.error(
@@ -35,6 +42,12 @@ def main():
     if a.resume and not a.resume.is_file():
         p.error("Файл checkpoint для відновлення не існує.")
     try:
+        if a.strategy == "head":
+            from train_head import train_classifier_only
+
+            best = train_classifier_only(a)
+            print(f"Найкращі ваги: {best}")
+            return
         device = resolve_device(a.device)
         from ultralytics import YOLO
 
@@ -52,7 +65,7 @@ def main():
                 amp=False,
                 cache=False,
                 optimizer="AdamW",
-                lr0=0.001,
+                lr0=a.lr0,
                 seed=26,
                 deterministic=True,
                 mosaic=0,

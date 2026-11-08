@@ -1,0 +1,3234 @@
+{
+  "split": "val",
+  "conf": 0.25,
+  "iou_match": 0.5,
+  "imgsz": 320,
+  "images": 200,
+  "note": "Порівняння з наданими bbox, не повна розмітка всіх можливих птахів у сцені; test не використовується.",
+  "models": {
+    "pretrained": {
+      "tp": 189,
+      "fp": 22,
+      "fn": 11,
+      "images_without_detections": 7,
+      "localization_failures": 4,
+      "mean_matched_iou": 0.8892039960529117,
+      "precision": 0.8957345971563981,
+      "recall": 0.945,
+      "per_image": [
+        {
+          "image": "00b2bf94e06abc1b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5578198441674437
+        },
+        {
+          "image": "03404e01560dead9.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.26305503291047594
+        },
+        {
+          "image": "0411dffe439afe27.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9392677048499299
+        },
+        {
+          "image": "04342799ec5c8c83.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8910635390318719
+        },
+        {
+          "image": "08aab4388ba89dbd.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5023950594051015
+        },
+        {
+          "image": "09446b5c7623594c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9465835660546508
+        },
+        {
+          "image": "09ee714c79520841.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9369126517035168
+        },
+        {
+          "image": "0a0c1944aadca5fb.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9183638706772468
+        },
+        {
+          "image": "0df576fe2142bb94.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8930624572792641
+        },
+        {
+          "image": "110d9e770fec64b2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8840136229425628
+        },
+        {
+          "image": "12d6c95e4bdf4eb7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9576704529127587
+        },
+        {
+          "image": "177575623d6d4334.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8688747505408678
+        },
+        {
+          "image": "18ad6eb6597cbfca.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9025032655235361
+        },
+        {
+          "image": "1a81eb2df8c9cd65.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9769215207017861
+        },
+        {
+          "image": "1ada5803b0d4f52c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7165556204236058
+        },
+        {
+          "image": "1b94186c5c5d5d3f.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5990170006576754
+        },
+        {
+          "image": "1df44f30d4e8ccc8.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7541510122389118
+        },
+        {
+          "image": "1fc89304ba34740c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8633914142813836
+        },
+        {
+          "image": "209a5472328e5865.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9311446894828277
+        },
+        {
+          "image": "22688e376c1a05b0.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6194770185528252
+        },
+        {
+          "image": "26fa75fe10743f28.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8941981306417917
+        },
+        {
+          "image": "2711bf23cd88a184.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9828727617958566
+        },
+        {
+          "image": "28997ca54225e250.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9429197666198494
+        },
+        {
+          "image": "296ee95aa2b66864.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.927148811770421
+        },
+        {
+          "image": "2974781b68c14bf7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9564558151118258
+        },
+        {
+          "image": "29e7facfab4d9911.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9433960614871786
+        },
+        {
+          "image": "2c64ea7a8fe99fd5.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9172034088596511
+        },
+        {
+          "image": "2cd7553855c292e2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6745489986759341
+        },
+        {
+          "image": "2dc60b432d42eeb2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8044556792732412
+        },
+        {
+          "image": "2de323829f54958e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9582427944990404
+        },
+        {
+          "image": "2df98e8c8948316d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8309085171747768
+        },
+        {
+          "image": "2ffe827af4e5c10c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8642634950426492
+        },
+        {
+          "image": "31ac5a26d16c0888.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.913580043922057
+        },
+        {
+          "image": "32155a1a0dcc70d9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8978089459607
+        },
+        {
+          "image": "33c6591839d20884.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.858709192964171
+        },
+        {
+          "image": "343b48fe9f6f7871.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7744641806185825
+        },
+        {
+          "image": "348622cbe4584a84.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "3711c6a9bf61b2c2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9700193891286525
+        },
+        {
+          "image": "37126c35f7ab2798.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9505905518091888
+        },
+        {
+          "image": "37a99dddc5533eb8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9799634480861174
+        },
+        {
+          "image": "383b8d854585911b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9454515220995656
+        },
+        {
+          "image": "38aaf7af4d0f48c1.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9643501636627615
+        },
+        {
+          "image": "3a17b0346d89c174.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8647011160962443
+        },
+        {
+          "image": "3b3b25e1ff7669cd.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9765636857262378
+        },
+        {
+          "image": "3b748ac841194620.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.734233945484146
+        },
+        {
+          "image": "3ce5cc157c5b5fae.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7266082737125295
+        },
+        {
+          "image": "3dfad59f5e016146.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9225194659671703
+        },
+        {
+          "image": "3ee485a5e5a378af.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9513735127286954
+        },
+        {
+          "image": "3f59eed25a3a988a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9511673316793423
+        },
+        {
+          "image": "40cf1b00e08b515e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8784354554647127
+        },
+        {
+          "image": "41b71fd15792da50.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9183459736734694
+        },
+        {
+          "image": "41ed67d79a604a0a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9464045418287966
+        },
+        {
+          "image": "43519527197c8903.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8455108152894543
+        },
+        {
+          "image": "44baff874732e5c4.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8345565739474459
+        },
+        {
+          "image": "456c8e1c42b8fe43.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9076745648897195
+        },
+        {
+          "image": "468212154d7ff1eb.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.894441376570672
+        },
+        {
+          "image": "4930a8943167fe7b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9546555577091965
+        },
+        {
+          "image": "4a11f01a5cff5cc4.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9357661258306286
+        },
+        {
+          "image": "4b7da2da5800210c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9200027163791931
+        },
+        {
+          "image": "4b9ccb61f0cede71.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "4c099881587597be.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9105897919602522
+        },
+        {
+          "image": "4ca2c0c9282d6ea0.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9806682791582654
+        },
+        {
+          "image": "4d8a56d384ff2702.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9615872105894436
+        },
+        {
+          "image": "4e8407ecb10e6003.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9549648601420462
+        },
+        {
+          "image": "50495edba44bc253.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9426048063057461
+        },
+        {
+          "image": "50d3242df2ada62e.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "51605d5ac7455653.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.37360236146362114
+        },
+        {
+          "image": "51820a698cc37098.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9160920732870026
+        },
+        {
+          "image": "52ec97d3ce2b3812.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9442975911370209
+        },
+        {
+          "image": "530df35dc545da0d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.930153221154936
+        },
+        {
+          "image": "547c097688bc7dcf.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9788598214680314
+        },
+        {
+          "image": "54aec2aaff53a101.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7947634643721346
+        },
+        {
+          "image": "55f29ec60b68ed9b.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8131822928617092
+        },
+        {
+          "image": "561b486cc274cec8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8904576398441957
+        },
+        {
+          "image": "561f32d7a3b31ba0.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7960850866975617
+        },
+        {
+          "image": "56ed160d2ea60d86.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9710902437327749
+        },
+        {
+          "image": "582fe675d03eeb92.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8427988285922005
+        },
+        {
+          "image": "58534993b7046236.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9131314131524182
+        },
+        {
+          "image": "586a0672ea77a84c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9449808449153135
+        },
+        {
+          "image": "5d62a6a91d7a7c29.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7597931949866866
+        },
+        {
+          "image": "5da85c737d4e3bab.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8670299585471316
+        },
+        {
+          "image": "5db8a0c15b652e7a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7964545215010874
+        },
+        {
+          "image": "60248eedceb737f0.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "61f1c67a380bd5fa.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9569405758411359
+        },
+        {
+          "image": "66acec8e4a047fa3.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9086485084765502
+        },
+        {
+          "image": "68a1d3d564d6e58b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9136931260988119
+        },
+        {
+          "image": "68ba427fbe9e30f2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7756737856728129
+        },
+        {
+          "image": "692810a575ad8c66.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9867678022524412
+        },
+        {
+          "image": "6a0ab47b3d0b4c7f.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9528219603806968
+        },
+        {
+          "image": "6a2c9dd7f8d4e070.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8303925504642341
+        },
+        {
+          "image": "6af35c416a2f6ee7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.981072479112971
+        },
+        {
+          "image": "6c362062ffbcc20a.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "6c613822c4558ba3.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8139082437206691
+        },
+        {
+          "image": "6d5be83002406b16.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8497402630465064
+        },
+        {
+          "image": "6e4d7f2fd2c294a6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9888960692046727
+        },
+        {
+          "image": "6f6510817a6ae17a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8452842440569103
+        },
+        {
+          "image": "70971af52b12a35d.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8663119159490713
+        },
+        {
+          "image": "72c011b539ca1603.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9408880378447488
+        },
+        {
+          "image": "736a784326a58ad7.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.588087620910355
+        },
+        {
+          "image": "74ca2c53b21fe42c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9854682323773033
+        },
+        {
+          "image": "7751956c1c363075.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.932853005796077
+        },
+        {
+          "image": "7855ee0cbe0813ed.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9653124363101718
+        },
+        {
+          "image": "79ca60633ab18806.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9340382805071273
+        },
+        {
+          "image": "7a63e66b4cce82b8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9166965897750466
+        },
+        {
+          "image": "7c4e167666eed842.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9557077291873182
+        },
+        {
+          "image": "7ce14866210db366.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9765975138321382
+        },
+        {
+          "image": "7d2fc23e3179cd8b.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "7e56501e2fdba510.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8955744360802964
+        },
+        {
+          "image": "7e78b24de21f5b12.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.96738300733394
+        },
+        {
+          "image": "811df5d7fd6c0ab6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9532905549146183
+        },
+        {
+          "image": "815e3baaead1f7f9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8498871125260142
+        },
+        {
+          "image": "8281d7c55f24803c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "85c7734e3c894e2c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9524023603760482
+        },
+        {
+          "image": "8644b6240493011d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9411774547951585
+        },
+        {
+          "image": "880a7e890aece7f9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.892991438370155
+        },
+        {
+          "image": "8a84feefea7fb7a7.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.32104205192777674
+        },
+        {
+          "image": "8b0431764342caff.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9425372647971146
+        },
+        {
+          "image": "8b7252390ff57e1e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9232513407633148
+        },
+        {
+          "image": "8bc0f857884bc2eb.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8698667840785375
+        },
+        {
+          "image": "8c7417221b7b8a79.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9423151874785972
+        },
+        {
+          "image": "8ce2fe8162640833.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9809866961603542
+        },
+        {
+          "image": "8d402c62976c5e3e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9715329828384499
+        },
+        {
+          "image": "8d9c95da884abef6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9746491237503707
+        },
+        {
+          "image": "8e6dc903891a9823.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9785309291400496
+        },
+        {
+          "image": "8f05658dcbed95ee.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9597653051600831
+        },
+        {
+          "image": "8fa4120ff07b9bc6.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9144720802857684
+        },
+        {
+          "image": "90efac913a20d26c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9820146803303109
+        },
+        {
+          "image": "93be4ad84aa214c7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9639672377631616
+        },
+        {
+          "image": "93da7099a81cffcf.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9442829863169474
+        },
+        {
+          "image": "9561dae3101c53ea.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.661279188860684
+        },
+        {
+          "image": "959082f2fd807c35.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9476721833350457
+        },
+        {
+          "image": "96c58371de1e0533.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9204273386243352
+        },
+        {
+          "image": "9b3727e73d46b374.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9839743828686007
+        },
+        {
+          "image": "9df97bae73ec91b2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9552191364551105
+        },
+        {
+          "image": "9f1bb2ded1a5e60e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9944433945232045
+        },
+        {
+          "image": "9f758d1583be8247.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9603220789996377
+        },
+        {
+          "image": "a0df60a5c1b24d4c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7965060553392548
+        },
+        {
+          "image": "a28a1837f7721e46.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.9744324171159533
+        },
+        {
+          "image": "a89ad7538b65f5de.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5938228514260322
+        },
+        {
+          "image": "aca8c8f6b9a97408.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.786743614616683
+        },
+        {
+          "image": "afdbf369ce32eb76.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9432635065923562
+        },
+        {
+          "image": "b213482ffb88f4f6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9761464717901791
+        },
+        {
+          "image": "b3cb922a285c73e8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.817093093227905
+        },
+        {
+          "image": "b4efa2e3b55305d0.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8718448158365296
+        },
+        {
+          "image": "b57853884709438c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9251930410881658
+        },
+        {
+          "image": "b6bf25319cf5d555.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9741410765950721
+        },
+        {
+          "image": "b7afe7dae5a8895f.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6174010452372256
+        },
+        {
+          "image": "b9816582513946e2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.943061477130976
+        },
+        {
+          "image": "bcdc7a76a8dc13df.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9205554314160569
+        },
+        {
+          "image": "bdb84e8d98de4a51.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.677858697446651
+        },
+        {
+          "image": "be35e5001586633c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8799638793827589
+        },
+        {
+          "image": "bf9147e57f599439.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9801682623450141
+        },
+        {
+          "image": "bfd7247ce1a3914d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7676595481572247
+        },
+        {
+          "image": "c07e77227d6cb556.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9406504480859956
+        },
+        {
+          "image": "c10f4917a66f7c1a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.84583893292262
+        },
+        {
+          "image": "c171c26a4b7b155a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.87769586216938
+        },
+        {
+          "image": "c1e32ce824d90786.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9828141214860404
+        },
+        {
+          "image": "c33e7070f6610140.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.46835513791815137
+        },
+        {
+          "image": "c34f16c18a7315f9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9535698490525061
+        },
+        {
+          "image": "c3505184faa0af4c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9606361573167814
+        },
+        {
+          "image": "c6ab7cb6be6fdd1c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9513689648992754
+        },
+        {
+          "image": "c7471e33b5249a2b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6763273760130276
+        },
+        {
+          "image": "c77ec727b35ae47e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9665977076605832
+        },
+        {
+          "image": "c913210e60d6b533.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8462079920178285
+        },
+        {
+          "image": "cb8c77ef7b7b6e1c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.961044198977791
+        },
+        {
+          "image": "d0e30a05aa461133.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7153610161427066
+        },
+        {
+          "image": "d0f91481869f2583.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8371599434548206
+        },
+        {
+          "image": "d420a81b58464c9a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9213628085890394
+        },
+        {
+          "image": "d4e032885c35efb6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9206465510532982
+        },
+        {
+          "image": "d5226a63ee7e532b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9688956435384231
+        },
+        {
+          "image": "d75c70c0074fe5a1.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9834020199624484
+        },
+        {
+          "image": "dfcc01f8ce9a2594.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5433834655918929
+        },
+        {
+          "image": "e07f3648bc24913d.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7612748476015944
+        },
+        {
+          "image": "e0ae607fca5de76d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9874370329150643
+        },
+        {
+          "image": "e12c14fc1eefb35d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.945603429501682
+        },
+        {
+          "image": "e4457138ede2de67.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7406578651360212
+        },
+        {
+          "image": "e531c3a9831816ea.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9700834960517086
+        },
+        {
+          "image": "e598785f0483e0b5.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9250430881756234
+        },
+        {
+          "image": "e6f8c67e8a92d65c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9641577564764178
+        },
+        {
+          "image": "e79e59517d8d7bc2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9230988875417242
+        },
+        {
+          "image": "e7bcfa980bf6b0f9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8723601484487808
+        },
+        {
+          "image": "ea44c45fba386219.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9041603284399231
+        },
+        {
+          "image": "eb1e5db4336f46ee.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.954370032210866
+        },
+        {
+          "image": "eb6ab9e941bfc50e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8791887782403629
+        },
+        {
+          "image": "ee06d94ee4340ea2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9628487896149083
+        },
+        {
+          "image": "efe479aec7a3c8d7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.898447218050465
+        },
+        {
+          "image": "f03954caaf5a6897.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9827980075461041
+        },
+        {
+          "image": "f1651bb50432cc8f.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9176102052109748
+        },
+        {
+          "image": "f59c3868e4f08254.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7531052985939861
+        },
+        {
+          "image": "f5ff94efd21d7d9f.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9277069518380564
+        },
+        {
+          "image": "f807c958032b9a18.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9756425078985096
+        },
+        {
+          "image": "f809ed113fc521f2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8450515402665986
+        },
+        {
+          "image": "f8fdae2e0d20b5dd.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9205310030913592
+        },
+        {
+          "image": "f93e6d90332355cf.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9776863614299938
+        },
+        {
+          "image": "fbe364e1b50004b8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8560366153795577
+        },
+        {
+          "image": "fc96fe1b71d9c7eb.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9129463974856197
+        },
+        {
+          "image": "fd3daf0399ea0b8b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9815185778243305
+        },
+        {
+          "image": "fef7cfcdb8d9c05e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6431908934647611
+        },
+        {
+          "image": "ff04f82613f08026.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6955032845927617
+        },
+        {
+          "image": "ff19545b0a951d96.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9093730115349631
+        }
+      ]
+    },
+    "finetuned": {
+      "tp": 106,
+      "fp": 95,
+      "fn": 94,
+      "images_without_detections": 62,
+      "localization_failures": 32,
+      "mean_matched_iou": 0.6609940343204185,
+      "precision": 0.527363184079602,
+      "recall": 0.53,
+      "per_image": [
+        {
+          "image": "00b2bf94e06abc1b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5014077479259746
+        },
+        {
+          "image": "03404e01560dead9.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6566522035121708
+        },
+        {
+          "image": "0411dffe439afe27.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5992218455963174
+        },
+        {
+          "image": "04342799ec5c8c83.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.568929386158094
+        },
+        {
+          "image": "08aab4388ba89dbd.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "09446b5c7623594c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "09ee714c79520841.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "0a0c1944aadca5fb.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "0df576fe2142bb94.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5378024644572381
+        },
+        {
+          "image": "110d9e770fec64b2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7264771257520689
+        },
+        {
+          "image": "12d6c95e4bdf4eb7.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.41048382203274697
+        },
+        {
+          "image": "177575623d6d4334.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5569093596941453
+        },
+        {
+          "image": "18ad6eb6597cbfca.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.22976617978408065
+        },
+        {
+          "image": "1a81eb2df8c9cd65.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.22229535084099944
+        },
+        {
+          "image": "1ada5803b0d4f52c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7089893157538152
+        },
+        {
+          "image": "1b94186c5c5d5d3f.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.3138214290485305
+        },
+        {
+          "image": "1df44f30d4e8ccc8.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5953784228197855
+        },
+        {
+          "image": "1fc89304ba34740c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7939457886309969
+        },
+        {
+          "image": "209a5472328e5865.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.1943833106410397
+        },
+        {
+          "image": "22688e376c1a05b0.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.324695015645666
+        },
+        {
+          "image": "26fa75fe10743f28.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2711bf23cd88a184.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6868299226617768
+        },
+        {
+          "image": "28997ca54225e250.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6633469863029828
+        },
+        {
+          "image": "296ee95aa2b66864.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2974781b68c14bf7.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6824008826596173
+        },
+        {
+          "image": "29e7facfab4d9911.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2c64ea7a8fe99fd5.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6704338670540232
+        },
+        {
+          "image": "2cd7553855c292e2.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.2378475760836981
+        },
+        {
+          "image": "2dc60b432d42eeb2.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2de323829f54958e.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2df98e8c8948316d.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "2ffe827af4e5c10c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "31ac5a26d16c0888.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5217693064798485
+        },
+        {
+          "image": "32155a1a0dcc70d9.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.439206544606284
+        },
+        {
+          "image": "33c6591839d20884.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6077073022489953
+        },
+        {
+          "image": "343b48fe9f6f7871.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "348622cbe4584a84.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6347158491042617
+        },
+        {
+          "image": "3711c6a9bf61b2c2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5505450684935632
+        },
+        {
+          "image": "37126c35f7ab2798.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4603619421991955
+        },
+        {
+          "image": "37a99dddc5533eb8.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8305215937833673
+        },
+        {
+          "image": "383b8d854585911b.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "38aaf7af4d0f48c1.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5927010517552421
+        },
+        {
+          "image": "3a17b0346d89c174.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5035270055438775
+        },
+        {
+          "image": "3b3b25e1ff7669cd.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "3b748ac841194620.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.3797497546782531
+        },
+        {
+          "image": "3ce5cc157c5b5fae.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.4544628149791507
+        },
+        {
+          "image": "3dfad59f5e016146.jpg",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 3,
+          "best_iou": 0.6512728722447062
+        },
+        {
+          "image": "3ee485a5e5a378af.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7505334708745199
+        },
+        {
+          "image": "3f59eed25a3a988a.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "40cf1b00e08b515e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6092218618188647
+        },
+        {
+          "image": "41b71fd15792da50.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5952251365457001
+        },
+        {
+          "image": "41ed67d79a604a0a.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "43519527197c8903.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "44baff874732e5c4.jpg",
+          "tp": 1,
+          "fp": 3,
+          "fn": 0,
+          "predictions": 4,
+          "best_iou": 0.7100124227490618
+        },
+        {
+          "image": "456c8e1c42b8fe43.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.3572856001625005
+        },
+        {
+          "image": "468212154d7ff1eb.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "4930a8943167fe7b.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.4982239529112252
+        },
+        {
+          "image": "4a11f01a5cff5cc4.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6484519108135492
+        },
+        {
+          "image": "4b7da2da5800210c.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.3731881018370692
+        },
+        {
+          "image": "4b9ccb61f0cede71.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "4c099881587597be.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6016535687311251
+        },
+        {
+          "image": "4ca2c0c9282d6ea0.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.31049873159005165
+        },
+        {
+          "image": "4d8a56d384ff2702.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5777087298875346
+        },
+        {
+          "image": "4e8407ecb10e6003.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7848147321387114
+        },
+        {
+          "image": "50495edba44bc253.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5135441959629241
+        },
+        {
+          "image": "50d3242df2ada62e.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "51605d5ac7455653.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5404042066428448
+        },
+        {
+          "image": "51820a698cc37098.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6325128055813405
+        },
+        {
+          "image": "52ec97d3ce2b3812.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.3169839007069427
+        },
+        {
+          "image": "530df35dc545da0d.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "547c097688bc7dcf.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6821243783078267
+        },
+        {
+          "image": "54aec2aaff53a101.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "55f29ec60b68ed9b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6234486699296645
+        },
+        {
+          "image": "561b486cc274cec8.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.46777727413784775
+        },
+        {
+          "image": "561f32d7a3b31ba0.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5638878981253039
+        },
+        {
+          "image": "56ed160d2ea60d86.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7398536305651641
+        },
+        {
+          "image": "582fe675d03eeb92.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5909030071457227
+        },
+        {
+          "image": "58534993b7046236.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "586a0672ea77a84c.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.2744034156665201
+        },
+        {
+          "image": "5d62a6a91d7a7c29.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5728095855301214
+        },
+        {
+          "image": "5da85c737d4e3bab.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "5db8a0c15b652e7a.jpg",
+          "tp": 1,
+          "fp": 3,
+          "fn": 0,
+          "predictions": 4,
+          "best_iou": 0.5790322072884156
+        },
+        {
+          "image": "60248eedceb737f0.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "61f1c67a380bd5fa.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6426692847555107
+        },
+        {
+          "image": "66acec8e4a047fa3.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.539684085307547
+        },
+        {
+          "image": "68a1d3d564d6e58b.jpg",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 3,
+          "best_iou": 0.7027140907765034
+        },
+        {
+          "image": "68ba427fbe9e30f2.jpg",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 3,
+          "best_iou": 0.6915466046240137
+        },
+        {
+          "image": "692810a575ad8c66.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5507685687559752
+        },
+        {
+          "image": "6a0ab47b3d0b4c7f.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "6a2c9dd7f8d4e070.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.9170859063539435
+        },
+        {
+          "image": "6af35c416a2f6ee7.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8543495924864847
+        },
+        {
+          "image": "6c362062ffbcc20a.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "6c613822c4558ba3.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "6d5be83002406b16.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5447224380540886
+        },
+        {
+          "image": "6e4d7f2fd2c294a6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6986823744771733
+        },
+        {
+          "image": "6f6510817a6ae17a.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "70971af52b12a35d.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "72c011b539ca1603.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.886246949789362
+        },
+        {
+          "image": "736a784326a58ad7.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "74ca2c53b21fe42c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "7751956c1c363075.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7201001706699413
+        },
+        {
+          "image": "7855ee0cbe0813ed.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "79ca60633ab18806.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8801333638541777
+        },
+        {
+          "image": "7a63e66b4cce82b8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5214002652775452
+        },
+        {
+          "image": "7c4e167666eed842.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5586210348417607
+        },
+        {
+          "image": "7ce14866210db366.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "7d2fc23e3179cd8b.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "7e56501e2fdba510.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "7e78b24de21f5b12.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6685271230330573
+        },
+        {
+          "image": "811df5d7fd6c0ab6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7082271310187878
+        },
+        {
+          "image": "815e3baaead1f7f9.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "8281d7c55f24803c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "85c7734e3c894e2c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6683191609539314
+        },
+        {
+          "image": "8644b6240493011d.jpg",
+          "tp": 0,
+          "fp": 2,
+          "fn": 1,
+          "predictions": 2,
+          "best_iou": 0.43889871702128186
+        },
+        {
+          "image": "880a7e890aece7f9.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7506814502912332
+        },
+        {
+          "image": "8a84feefea7fb7a7.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "8b0431764342caff.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6458835032551695
+        },
+        {
+          "image": "8b7252390ff57e1e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6456343735471594
+        },
+        {
+          "image": "8bc0f857884bc2eb.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5075961597897288
+        },
+        {
+          "image": "8c7417221b7b8a79.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "8ce2fe8162640833.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8252190881046001
+        },
+        {
+          "image": "8d402c62976c5e3e.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "8d9c95da884abef6.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8402433381086809
+        },
+        {
+          "image": "8e6dc903891a9823.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "8f05658dcbed95ee.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7357039389443244
+        },
+        {
+          "image": "8fa4120ff07b9bc6.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6165750725841128
+        },
+        {
+          "image": "90efac913a20d26c.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6564888983829328
+        },
+        {
+          "image": "93be4ad84aa214c7.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6486852750720482
+        },
+        {
+          "image": "93da7099a81cffcf.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4174941953117981
+        },
+        {
+          "image": "9561dae3101c53ea.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.725718664216156
+        },
+        {
+          "image": "959082f2fd807c35.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "96c58371de1e0533.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "9b3727e73d46b374.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8565278713600374
+        },
+        {
+          "image": "9df97bae73ec91b2.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "9f1bb2ded1a5e60e.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5289239854557845
+        },
+        {
+          "image": "9f758d1583be8247.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "a0df60a5c1b24d4c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "a28a1837f7721e46.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.43426320898666526
+        },
+        {
+          "image": "a89ad7538b65f5de.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6454874923134021
+        },
+        {
+          "image": "aca8c8f6b9a97408.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "afdbf369ce32eb76.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.27518267710679506
+        },
+        {
+          "image": "b213482ffb88f4f6.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6751263064384593
+        },
+        {
+          "image": "b3cb922a285c73e8.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8084221567118343
+        },
+        {
+          "image": "b4efa2e3b55305d0.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "b57853884709438c.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4959280710372458
+        },
+        {
+          "image": "b6bf25319cf5d555.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "b7afe7dae5a8895f.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "b9816582513946e2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.5393347764962738
+        },
+        {
+          "image": "bcdc7a76a8dc13df.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "bdb84e8d98de4a51.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.38686061439478464
+        },
+        {
+          "image": "be35e5001586633c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "bf9147e57f599439.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8114898011613774
+        },
+        {
+          "image": "bfd7247ce1a3914d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.548106947972284
+        },
+        {
+          "image": "c07e77227d6cb556.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5428151802851919
+        },
+        {
+          "image": "c10f4917a66f7c1a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5850860630762039
+        },
+        {
+          "image": "c171c26a4b7b155a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.7408095449192167
+        },
+        {
+          "image": "c1e32ce824d90786.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "c33e7070f6610140.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "c34f16c18a7315f9.jpg",
+          "tp": 1,
+          "fp": 3,
+          "fn": 0,
+          "predictions": 4,
+          "best_iou": 0.7588106159949602
+        },
+        {
+          "image": "c3505184faa0af4c.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "c6ab7cb6be6fdd1c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8184671807219601
+        },
+        {
+          "image": "c7471e33b5249a2b.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "c77ec727b35ae47e.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7396595895030668
+        },
+        {
+          "image": "c913210e60d6b533.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.22158493039379054
+        },
+        {
+          "image": "cb8c77ef7b7b6e1c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6046652249057537
+        },
+        {
+          "image": "d0e30a05aa461133.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4761771838283823
+        },
+        {
+          "image": "d0f91481869f2583.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.12090554553365218
+        },
+        {
+          "image": "d420a81b58464c9a.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5236862596375229
+        },
+        {
+          "image": "d4e032885c35efb6.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6321311764618087
+        },
+        {
+          "image": "d5226a63ee7e532b.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6944563709684157
+        },
+        {
+          "image": "d75c70c0074fe5a1.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4185970290026686
+        },
+        {
+          "image": "dfcc01f8ce9a2594.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7446366055339297
+        },
+        {
+          "image": "e07f3648bc24913d.jpg",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 3,
+          "best_iou": 0.7417140611193017
+        },
+        {
+          "image": "e0ae607fca5de76d.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.40533380271598207
+        },
+        {
+          "image": "e12c14fc1eefb35d.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.811354391795024
+        },
+        {
+          "image": "e4457138ede2de67.jpg",
+          "tp": 1,
+          "fp": 2,
+          "fn": 0,
+          "predictions": 3,
+          "best_iou": 0.701091941622688
+        },
+        {
+          "image": "e531c3a9831816ea.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5952497183847818
+        },
+        {
+          "image": "e598785f0483e0b5.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6066479790732016
+        },
+        {
+          "image": "e6f8c67e8a92d65c.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7097067613482605
+        },
+        {
+          "image": "e79e59517d8d7bc2.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5411986168425068
+        },
+        {
+          "image": "e7bcfa980bf6b0f9.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "ea44c45fba386219.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.34751645694842026
+        },
+        {
+          "image": "eb1e5db4336f46ee.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.8279957558540841
+        },
+        {
+          "image": "eb6ab9e941bfc50e.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.6181961100647217
+        },
+        {
+          "image": "ee06d94ee4340ea2.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.570971016537238
+        },
+        {
+          "image": "efe479aec7a3c8d7.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7078238791723961
+        },
+        {
+          "image": "f03954caaf5a6897.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5667869186958657
+        },
+        {
+          "image": "f1651bb50432cc8f.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4292190472629683
+        },
+        {
+          "image": "f59c3868e4f08254.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "f5ff94efd21d7d9f.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "f807c958032b9a18.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5651867974000248
+        },
+        {
+          "image": "f809ed113fc521f2.jpg",
+          "tp": 0,
+          "fp": 1,
+          "fn": 1,
+          "predictions": 1,
+          "best_iou": 0.4964121507633338
+        },
+        {
+          "image": "f8fdae2e0d20b5dd.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "f93e6d90332355cf.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.7038457895289233
+        },
+        {
+          "image": "fbe364e1b50004b8.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.8449892063921112
+        },
+        {
+          "image": "fc96fe1b71d9c7eb.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.743166984959451
+        },
+        {
+          "image": "fd3daf0399ea0b8b.jpg",
+          "tp": 1,
+          "fp": 0,
+          "fn": 0,
+          "predictions": 1,
+          "best_iou": 0.5909900539068562
+        },
+        {
+          "image": "fef7cfcdb8d9c05e.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6371947947387532
+        },
+        {
+          "image": "ff04f82613f08026.jpg",
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "predictions": 0,
+          "best_iou": 0
+        },
+        {
+          "image": "ff19545b0a951d96.jpg",
+          "tp": 1,
+          "fp": 1,
+          "fn": 0,
+          "predictions": 2,
+          "best_iou": 0.6727580160134797
+        }
+      ]
+    }
+  }
+}

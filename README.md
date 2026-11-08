@@ -2,6 +2,8 @@
 
 Детекція одного класу `bird` на зображеннях і **кожному кадрі відео**. У репозиторії є навчені ваги, справжній вхідний MP4, оброблений MP4 та приклади кадрів.
 
+**Оновлення моделі:** контрольоване донавчання лише класифікаційної голови замінило попередній невдалий повний fine-tuning. Порівняння з початковою YOLO26n, аналіз помилок і старі результати збережені в [звіті про покращення](reports/improvement.md).
+
 ![Приклад детекції](examples/frame-000.jpg)
 
 [Вхідне відео](examples/input.mp4) · [Відео з детекціями](examples/output.mp4) · [Метрики validation](reports/val.json)
@@ -69,24 +71,33 @@ BBox джерела `[x0,y0,x1,y1]` перетворюються на норма
 python train.py
 ```
 
-Типовий запуск: pretrained `yolo26n.pt`, 50 епох, imgsz=320, batch=8, workers=0, amp=False, AdamW lr0=0.001, mosaic=0, seed=26. Вихідні pretrained ваги за потреби завантажуються Ultralytics при першому запуску.
+Типовий рекомендований запуск: pretrained `yolo26n.pt`, **5 епох на CPU**, imgsz=320, batch=8, AdamW lr0=0.0001, warmup=0, seed=26. Навчаються лише `cv3` та `one2one_cv3` останньої голови: backbone, neck і bbox-гілки зафіксовані. Після кожної епохи перевіряється, що захищені параметри не змінилися. На перевіреному Intel Mac короткий експеримент тривав приблизно 10 хвилин.
 
 ```bash
-python train.py --data datasets/bird/data.yaml --epochs 50 --batch 8 --imgsz 320 --device mps
+python train.py
+python train.py --epochs 5 --batch 8 --imgsz 320 --device cpu --strategy head
 python train.py --epochs 1 --batch 2 --device cpu --name smoke
 ```
 
-Нові результати — `runs/train/bird*/weights/best.pt` та `results.csv`; доданий `weights/best.pt` автоматично не замінюється. Для інференсу новими вагами передайте `--weights`.
+Початкові pretrained ваги за потреби завантажуються Ultralytics. Для повторного запуску задайте нове `--name`, якщо каталог уже існує. Детальний експеримент можна відтворити також через `python train_head.py`.
 
-Відновлення **незавершеного** навчання:
+Нові результати — `runs/train/bird/weights/best.pt`, `results.csv`, `protocol.json`, `protected_parameters.json`. Доданий `weights/best.pt` автоматично не перезаписується. Для нового відео передайте `--weights` із потрібним шляхом.
+
+Відновлення незавершеного навчання:
 
 ```bash
-python train.py --resume runs/train/bird/weights/last.pt --batch 8 --device mps
+python train.py --resume runs/train/bird/weights/last.pt --strategy head --batch 8 --device cpu
 ```
 
-Фінальні best.pt/last.pt після 50 епох мають видалений optimizer і не призначені для `--resume`. Для нового fine-tuning використовуйте `--model weights/best.pt` без `--resume`.
+Фінальні ваги після завершення мають видалений optimizer і не призначені для `--resume`. Для нового fine-tuning використовуйте `--model weights/best.pt` без `--resume`.
 
-Додані ваги отримані під час 50-епохового експерименту з batch 2 → 4 → 6 → 8 → 10; точний графік — [training_provenance.json](reports/training_provenance.json). Seed задано, але новий типовий запуск не обіцяє побітового збігу з цими вагами. Час у сирому [training_history.csv](reports/training_history.csv) починається заново після відновлень. Best обирався за validation fitness; це не обов’язково остання епоха.
+Повне донавчання всіх параметрів доступне як окремий, **не рекомендований за замовчуванням** експеримент:
+
+```bash
+python train.py --strategy full --epochs 50 --batch 8 --lr0 0.001 --name full-experiment
+```
+
+Попередній 50-епоховий запуск із batch 2 → 4 → 6 → 8 → 10 погіршив якість. Його ваги збережені як `weights/best_v1.pt`, метрики й історія — в `reports/v1/`. Поточні `weights/best.pt` отримані контрольованим п’ятиепоховим навчанням; параметри — [training_provenance.json](reports/training_provenance.json). Новий запуск не гарантує побітового збігу ваг.
 
 ## Метрики
 
@@ -94,10 +105,10 @@ python train.py --resume runs/train/bird/weights/last.pt --batch 8 --device mps
 
 | Метрика | Validation, 200 зображень | Test, 100 зображень |
 | --- | ---: | ---: |
-| Precision | 52.31% | 58.62% |
-| Recall | 51.00% | 43.92% |
-| mAP50 | 48.47% | 46.79% |
-| mAP50–95 | 15.44% | 17.33% |
+| Precision | 95.95% | 95.83% |
+| Recall | 95.00% | 91.89% |
+| mAP50 | 97.04% | 95.33% |
+| mAP50–95 | 77.58% | 77.50% |
 
 Повні числа, версії, SHA256 і швидкість — [val.json](reports/val.json) та [test.json](reports/test.json). Перевірити:
 
@@ -111,11 +122,20 @@ python evaluate.py --split test --device cpu
 ## Проблеми, обмеження та покращення
 
 - **Старий MPS і масштабування bbox.** На torch 2.2.2 прямокутні кадри давали різні координати на CPU та MPS. `SafeDetectionPredictor` переносить raw detections на CPU перед відновленням координат. Нейромережа залишається на вибраному пристрої; встановлені пакети не змінюються. Регресійний тест перевіряє масштаб і padding. Для еталонних метрик використано CPU.
-- **Невисокий recall і точність локалізації.** Є пропуски, рамки можуть не охоплювати хвіст або всю птицю; модель не є production-ready. На цьому відео 640 px візуально працює краще за 320; це не гарантія для інших сцен.
+- **Перенесення на інші сцени.** Оновлені ваги значно кращі за v1, але нові види фону, далекі птахи та польоти потребують окремої перевірки. Це дослідницька модель, а не гарантія промислової якості.
 - **Повторні рамки.** Для відео застосовано додатковий CPU NMS, IoU=0.5. На щільних сценах його поріг може впливати на близько розташованих птахів.
 - **Зсув домену.** CUB — фотографії окремих птахів, не перевірка далеких птахів у польоті чи всіх птахів у багатопташиній сцені. Спеціальних негативних відеосцен у підвибірці немає; можливі перетини з даними попереднього навчання.
 - **MPS fallback.** Непідтримувані операції, зокрема NMS у цьому стеку, можуть виконуватися на CPU. Сам факт GPU-доступності не доводить прискорення. При OOM зменшіть batch або використайте CPU.
 - **Наступні покращення:** відеокадри з ручною розміткою, негативні приклади, візуальний аналіз FP/FN, контрольований експеримент з більшим train imgsz та порогом confidence на validation. Трекінг не є частиною цього мінімального завдання.
+
+## Порівняння моделей та аналіз помилок
+
+```bash
+python compare_models.py
+python analyze_errors.py
+```
+
+Порівняння виконується лише на validation. У початковій COCO-моделі bird має індекс 14: перед оцінкою відбирається саме цей клас і перетворюється на 0. Інші COCO-класи не враховуються як птахи. `compare_models.py --trained weights/best_v1.pt --report reports/v1_comparison_repeat.json` порівняє початкові й старі ваги. Аналіз помилок використовує явно зафіксовані conf=0.25 та IoU=0.5; його Precision/Recall не тотожні оптимальній точці PR-кривої в таблиці вище.
 
 ## Перевірки
 
@@ -125,7 +145,7 @@ python -m unittest discover -s tests -v
 
 Тести покривають збереження кожного кадру, порожні детекції, відмову перезапису/однакового input-output, очищення часткового файлу після помилки, некоректне відео, NMS, валідацію розмітки та cross-split дублікати. Є CPU/MPS-регресія координат (MPS-гілка виконується за доступності GPU).
 
-Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md).
+Підтверджено встановлення у новий venv, `pip check`, коротке справжнє навчання з backward/checkpoint, повторну оцінку best.pt на validation/test і обробку реального MP4. Детальний протокол — [verification.md](reports/verification.md). У поточній версії 12 автоматичних тестів, включно з COCO→bird mapping, вибором навчальних параметрів і обліком дублікатів як FP.
 
 ## Структура
 
@@ -134,6 +154,9 @@ bird-detector/
 ├── README.md
 ├── requirements.txt
 ├── train.py
+├── train_head.py
+├── compare_models.py
+├── analyze_errors.py
 ├── predict_video.py
 ├── prepare_data.py
 ├── evaluate.py
@@ -148,4 +171,4 @@ bird-detector/
 
 Відео — Matt MacGillivray, CC BY 2.0; джерело та всі зміни наведені в [THIRD_PARTY.md](THIRD_PARTY.md). Python-код — AGPL-3.0, умови сторонніх матеріалів окремі; див. [LICENSE](LICENSE).
 
-Репозиторій приватний за запитом власника. Для перегляду та клонування потрібен дозволений GitHub-обліковий запис; перевіряльнику слід надати доступ. Оригінальний текст GNU AGPL у LICENSE збережено без перекладу; українське пояснення джерел і ліцензій — THIRD_PARTY.md.
+Репозиторій знову публічний за запитом власника. Оригінальний текст GNU AGPL у LICENSE збережено без перекладу; українське пояснення джерел і ліцензій — THIRD_PARTY.md.
