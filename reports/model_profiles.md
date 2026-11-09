@@ -50,7 +50,7 @@ python train_video.py --model weights/photo_reference.pt --lr0 0.00001 --cub-ima
 python train_video.py --model weights/photo_reference.pt --lr0 0.000003 --cub-images 128 --name video-low-lr
 # D: окремий рецепт із більшою часткою фото.
 python train_video.py --model weights/photo_reference.pt --lr0 0.00001 --cub-images 512 --name video-more-photos
-python compare_profiles.py
+python compare_profiles.py --allow-legacy
 ```
 
 `compare_profiles.py` читає збережені JSON, не запускає навчання. Існуючі каталоги запусків не перезаписуються. Для іншого повтору задайте новий --name.
@@ -58,3 +58,5 @@ python compare_profiles.py
 Точні числа, хеші та джерела — [model_profiles.json](model_profiles.json). Основний звіт — [improvement.md](improvement.md).
 
 [Дослідження стійкості D завершене](seed_study/README.md): 5/5 seed пройшли спільний критерій.
+
+Повторне зіставлення тепер записується в окремий каталог `runs/`. Історичні JSON не мають хешів GT; `--allow-legacy` дозволяє цей обмежений режим явно. Нові звіти перевіряються за provenance; [виправлення аудитора](project_audit/README.md).

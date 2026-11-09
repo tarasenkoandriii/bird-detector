@@ -6,6 +6,9 @@ from pathlib import Path
 from types import SimpleNamespace
 import cv2
 import torch
+import shutil
+import subprocess
+from unittest.mock import patch
 import predict_video
 
 
@@ -87,6 +90,40 @@ class VideoTests(unittest.TestCase):
             a.output = a.input
             with self.assertRaises(ValueError):
                 predict_video.validate(a)
+
+    def test_metrics_sidecar_is_protected_without_overwrite(self):
+        with tempfile.TemporaryDirectory() as d:
+            a = self.fixture(Path(d))
+            metrics = a.output.with_suffix('.metrics.json')
+            metrics.write_text('keep')
+            with self.assertRaises(ValueError):
+                predict_video.run(a, FakeModel)
+            self.assertEqual(metrics.read_text(), 'keep')
+            self.assertFalse(a.output.exists())
+
+    @unittest.skipUnless(shutil.which('ffmpeg'), 'Потрібен FFmpeg для непарного джерела')
+    def test_odd_dimensions_preserved_and_output_uses_umask(self):
+        import numpy as np
+        import os
+        with tempfile.TemporaryDirectory() as d:
+            a = self.fixture(Path(d))
+            a.input = Path(d)/'odd.mkv'
+            frame = np.full((359,639,3),110,dtype=np.uint8)
+            subprocess.run(['ffmpeg','-v','error','-y','-f','rawvideo','-pix_fmt','bgr24',
+                            '-s:v','639x359','-framerate','12.5','-i','pipe:0',
+                            '-c:v','ffv1',str(a.input)],input=frame.tobytes()*4,check=True)
+            mask=os.umask(0);os.umask(mask)
+            report=predict_video.run(a,FakeModel)
+            self.assertEqual((report['width'],report['height']),(639,359))
+            self.assertEqual(report['output_frames'],4)
+            self.assertEqual(report['pixel_format'],'yuv444p')
+            self.assertEqual(a.output.stat().st_mode & 0o777,0o666 & ~mask)
+            self.assertEqual(a.output.with_suffix('.metrics.json').stat().st_mode & 0o777,0o666 & ~mask)
+            a.output.unlink();a.output.with_suffix('.metrics.json').unlink()
+            with patch('predict_video.shutil.which',return_value=None):
+                with self.assertRaisesRegex(ValueError,'FFmpeg'):
+                    predict_video.run(a,FakeModel)
+            self.assertFalse(a.output.exists())
 
     def test_suppresses_overlapping_copy_but_keeps_separate_bird(self):
         boxes = [[0, 0, 40, 40, 0.9], [1, 1, 41, 41, 0.7], [60, 0, 90, 40, 0.8]]

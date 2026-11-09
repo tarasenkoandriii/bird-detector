@@ -1,0 +1,10 @@
+{
+  "purpose": "Лише технічна перевірка remap. Псевдорозмітка від моделі D не є GT для оцінки якості.",
+  "images": 12,
+  "source": "Перші 12 кадрів examples/input.mp4",
+  "model": "pretrained YOLO26n",
+  "source_class": 14,
+  "old_validator_map50_95": 0.0,
+  "fixed_validator_map50_95": 0.9515,
+  "not_a_quality_measurement": true
+}

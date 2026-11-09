@@ -1,23 +1,24 @@
 #!/usr/bin/env python3
-"""Детекція птахів на кожному кадрі відео зі збереженням FPS і розміру кадрів."""
+"""Детекція птахів на кожному кадрі зі збереженням розміру й записом із постійним FPS."""
 
 import hashlib, json, math, os, shutil, subprocess, tempfile, time
 from pathlib import Path
 from common import UkrainianParser, ROOT, resolve_device
+from report_io import normal_file_mode
 
 
 def parser():
     p = UkrainianParser(description=__doc__)
     p.add_argument("--input", required=True, type=Path, help="Шлях до вхідного відео")
     p.add_argument("--output", required=True, type=Path, help="Шлях до вихідного MP4")
-    p.add_argument("--weights", type=Path, default=ROOT / "weights/best.pt")
-    p.add_argument("--conf", type=float, default=0.25)
+    p.add_argument("--weights", type=Path, default=ROOT / "weights/best.pt", help="Однокласові ваги bird")
+    p.add_argument("--conf", type=float, default=0.25, help="Мінімальна впевненість детекції, від 0 до 1")
     p.add_argument(
         "--iou", type=float, default=0.5, help="Поріг CPU NMS для повторних рамок тієї самої птиці"
     )
-    p.add_argument("--imgsz", type=int, default=640)
+    p.add_argument("--imgsz", type=int, default=640, help="Розмір входу моделі, кратний 32")
     p.add_argument("--device", default="auto", help="auto, cpu, mps або індекс пристрою CUDA")
-    p.add_argument("--overwrite", action="store_true", help="Дозволити заміну наявного результату")
+    p.add_argument("--overwrite", action="store_true", help="Дозволити заміну вихідного відео та його metrics.json")
     return p
 
 
@@ -26,12 +27,17 @@ def validate(a):
         raise ValueError(f"Вхідне відео не існує: {a.input}")
     if not a.weights.is_file():
         raise ValueError(f"Файл ваг не існує: {a.weights}")
-    if a.input.resolve() == a.output.resolve():
-        raise ValueError("Вхідний і вихідний файли мають бути різними.")
+    if a.output.resolve() in {a.input.resolve(), a.weights.resolve()}:
+        raise ValueError("Вихідний файл не може замінювати вхідне відео або ваги.")
     if a.output.suffix.lower() != ".mp4":
         raise ValueError("Вихідний файл має мати розширення .mp4.")
     if a.output.exists() and not a.overwrite:
         raise ValueError("Вихідний файл уже існує; явно додайте --overwrite.")
+    metrics = a.output.with_suffix('.metrics.json')
+    if metrics.resolve() in {a.input.resolve(), a.weights.resolve()}:
+        raise ValueError('Звіт не може замінювати вхідне відео або ваги.')
+    if metrics.exists() and not a.overwrite:
+        raise ValueError('Звіт metrics.json уже існує; явно додайте --overwrite.')
     if not 0 < a.conf < 1:
         raise ValueError("--conf має бути між 0 та 1.")
     if not 0 < a.iou < 1:
@@ -92,7 +98,56 @@ def video_info(cap):
     return fps, w, h
 
 
+class OddFrameWriter:
+    """FFmpeg пише непарні розміри без обрізання, властивого OpenCV mp4v."""
+
+    def __init__(self, path, fps, width, height):
+        self.errors = tempfile.TemporaryFile()
+        try:
+            self.process = subprocess.Popen([
+                'ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'bgr24',
+                '-s:v', f'{width}x{height}', '-framerate', format(fps, '.17g'),
+                '-i', 'pipe:0', '-an', '-c:v', 'libx264', '-pix_fmt', 'yuv444p',
+                '-movflags', '+faststart', str(path),
+            ], stdin=subprocess.PIPE, stderr=self.errors, stdout=subprocess.DEVNULL)
+        except BaseException:
+            self.errors.close()
+            raise
+
+    def isOpened(self):
+        return self.process is not None and self.process.poll() is None
+
+    def write(self, frame):
+        try:
+            self.process.stdin.write(frame.tobytes())
+        except BrokenPipeError as exc:
+            raise RuntimeError('FFmpeg перервав запис непарного кадру.') from exc
+
+    def release(self):
+        if self.process is None:
+            return
+        process, self.process = self.process, None
+        try:
+            try:
+                process.stdin.close()
+            except BrokenPipeError:
+                pass
+            code = process.wait()
+            self.errors.seek(0)
+            message = self.errors.read().decode(errors='replace')
+            if code:
+                raise RuntimeError(f'FFmpeg не завершив запис: {message}')
+        finally:
+            self.errors.close()
+
+
+def publish_mode():
+    """Звичайні права нового файла з урахуванням umask замість mkstemp 0600."""
+    return normal_file_mode()
+
+
 def run(a, model_factory=None):
+    total_start = time.perf_counter()
     validate(a)
     import cv2
 
@@ -103,6 +158,9 @@ def run(a, model_factory=None):
         if not cap.isOpened():
             raise ValueError("Не вдалося декодувати вхідне відео.")
         fps, w, h = video_info(cap)
+        odd = bool(w % 2 or h % 2)
+        if odd and not shutil.which('ffmpeg'):
+            raise ValueError('Для непарних розмірів кадру потрібен FFmpeg: brew install ffmpeg.')
         expected = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         device = resolve_device(a.device)
         if model_factory is None:
@@ -126,7 +184,8 @@ def run(a, model_factory=None):
             return p
 
         raw = temp()
-        writer = cv2.VideoWriter(str(raw), cv2.VideoWriter_fourcc(*"mp4v"), fps, (w, h))
+        writer = (OddFrameWriter(raw, fps, w, h) if odd else
+                  cv2.VideoWriter(str(raw), cv2.VideoWriter_fourcc(*"mp4v"), fps, (w, h)))
         if not writer.isOpened():
             raise ValueError("Не вдалося відкрити запис MP4.")
         count = 0
@@ -170,8 +229,8 @@ def run(a, model_factory=None):
                 f"Неповне декодування: прочитано {count}, заголовок указує {expected} кадрів."
             )
         encoded = raw
-        codec = "mp4v"
-        if shutil.which("ffmpeg") and w % 2 == 0 and h % 2 == 0:
+        codec = 'h264' if odd else 'mp4v'
+        if shutil.which("ffmpeg") and not odd:
             encoded = temp()
             subprocess.run(
                 [
@@ -211,7 +270,9 @@ def run(a, model_factory=None):
             raise ValueError("Перевірка результату не пройшла: змінилися кадри, FPS або розміри.")
         if a.output.exists() and not a.overwrite:
             raise ValueError("Вихідний файл з’явився під час обробки; перезапис скасовано.")
-        os.replace(encoded, a.output)
+        metrics_path = a.output.with_suffix('.metrics.json')
+        if metrics_path.exists() and not a.overwrite:
+            raise ValueError('Звіт з’явився під час обробки; перезапис скасовано.')
         report = {
             "input": str(a.input),
             "output": str(a.output),
@@ -226,16 +287,30 @@ def run(a, model_factory=None):
             "width": w,
             "height": h,
             "fps": fps,
+            "output_fps": out_fps,
+            "timing_mode": 'Постійний FPS; для VFR використано середній FPS джерела.',
             "duration_seconds": count / fps,
             "processing_seconds": elapsed,
             "processing_fps": count / elapsed,
+            "processing_time_scope": 'Цикл читання, інференсу й малювання/запису, включно з першим forward; без завантаження моделі, фінального перекодування та перевірки.',
+            "total_seconds_before_publish": time.perf_counter() - total_start,
             "frames_with_detections": detected,
             "total_detections": total_boxes,
             "codec": codec,
+            "pixel_format": 'yuv444p' if odd else ('yuv420p' if codec == 'h264' else 'mp4v default'),
             "audio": "не копіюється",
             "sample_detections": samples,
         }
-        a.output.with_suffix(".metrics.json").write_text(json.dumps(report, indent=2))
+        descriptor, staged_report = tempfile.mkstemp(dir=a.output.parent, prefix='.bird-', suffix='.json')
+        staged_report = Path(staged_report)
+        temporary.append(staged_report)
+        with os.fdopen(descriptor, 'w') as stream:
+            json.dump(report, stream, indent=2, ensure_ascii=False)
+        mode = publish_mode()
+        os.chmod(encoded, mode)
+        os.chmod(staged_report, mode)
+        os.replace(encoded, a.output)
+        os.replace(staged_report, metrics_path)
         print(json.dumps(report, indent=2))
         return report
     finally:
