@@ -1,0 +1,20 @@
+{
+  "system": "Darwin",
+  "macOS": "15.8.1",
+  "python": "3.11.6",
+  "torch": "2.2.2",
+  "mps_available": true,
+  "weights_after": {
+    "video_pilot.pt": "3523d66f2e52ac9f45b86f656506177d0337226e2b708268a210bab394bf1a75",
+    "best.pt": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+    "photo_reference.pt": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+    "video_focus.pt": "5512380a6d9943b02f0b579fa7b76c7b9c5d033336a8ef21bbb2af073227348d"
+  },
+  "weights_before": {
+    "video_pilot.pt": "3523d66f2e52ac9f45b86f656506177d0337226e2b708268a210bab394bf1a75",
+    "best.pt": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+    "photo_reference.pt": "e0085bc7dfbb260d2411d72d42d15d66d65156a32b3b051943515b695fe4c276",
+    "video_focus.pt": "5512380a6d9943b02f0b579fa7b76c7b9c5d033336a8ef21bbb2af073227348d"
+  },
+  "weights_unchanged": true
+}

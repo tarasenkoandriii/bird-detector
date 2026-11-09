@@ -30,7 +30,9 @@ Raw `yolo26s.pt`, head-only, **3 епохи**, CPU, 640 px, batch=nbs=8, AdamW L
 
 Вибрано найкращий **навчений S checkpoint** серед старту й 3 епох, бо він перевищив власний початковий контроль:
 
-`/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-small-head-3ep/weights/best.pt`
+`runs/experiments/video-v2-small-head-3ep/weights/best.pt`
+
+Це локальний шлях після відтворення; S-checkpoint не включений до релізних ваг.
 
 SHA256: `95d4e3445e5c5ef4bdfe2ddf2962a14c543d5b8befa7c3a839244b683d692890`.
 
@@ -47,7 +49,7 @@ python train_video_small.py --base yolo26s.pt \
 
 Наявні каталоги запусків не перезаписуються. Бюджет 5 епох доступний окремим повтором із новою назвою; його не запущено. Спільний helper `train_video_neck.py` має source-scale guard та paired raw/remap контроль. Вихідний S checkpoint перевірено без forward до запуску: scale=s, 80 класів, bird=14, 10 009 784 параметри.
 
-Джерела: `reports/video_study/small_head_3ep.json`, `work/video-v2-small-head-3ep/{baseline,protocol,status,zero_step,protected}.json`; D/head3 — `work/video-v2-d-head-3ep/status.json`. Хеш manifest v2: `a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947`.
+Джерела: `reports/video_study/small_head_3ep.json`, `reports/video_study/runs/video-v2-small-head-3ep/{baseline,protocol,status,zero_step,protected}.json`; D/head3 — `reports/video_study/runs/video-v2-d-head-3ep/status.json`. Хеш manifest v2: `a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947`.
 
 ## H: дистиляція — наступний окремий контроль
 
@@ -55,4 +57,4 @@ python train_video_small.py --base yolo26s.pt \
 
 У native loss teacher weighting бере максимум confidence за класами; 80-класовий учитель може зважувати не лише bird. Для bird-експерименту доцільний підготовлений однокласовий S. **Поточний S/head3 не довів переваги над nano**, тому підстав запускати його як сильнішого вчителя поки немає. Teacher inference / distillation не запускалися.
 
-F/tiled inference підготовлено окремо в `evaluate_tiled.py`; **фактичний F-контроль ще не запускався**. Наступний крок визначає головний агент після вибору фіксованого nano-кандидата.
+F/tiled inference завершено після S. Поточну комбінацію з head3 відхилено через зниження AP і швидкості; [результати](tiled_recipe.md).
