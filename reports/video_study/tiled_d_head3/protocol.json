@@ -1,0 +1,187 @@
+{
+  "state": "completed",
+  "method": "manual tiled inference за принципом SAHI",
+  "split": "val",
+  "data_yaml": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/data.yaml",
+  "data_sha256": "49a7cca52600023c56e1c8391c7d9a8b1268e08949d770d083de6123814fead1",
+  "evaluator_sha256": "95c0836332e0911e023c575c7a607e4404c10ec1bd47b951427d22f60942d003",
+  "weights_sha256": "5512380a6d9943b02f0b579fa7b76c7b9c5d033336a8ef21bbb2af073227348d",
+  "classes": {
+    "0": "bird"
+  },
+  "device": "cpu",
+  "imgsz": 640,
+  "conf": 0.001,
+  "global_nms_iou": 0.7,
+  "max_det": 300,
+  "tile_size": 640,
+  "overlap": 0.2,
+  "tiled_includes_full_frame": true,
+  "order": [
+    "full_frame",
+    "full_frame_plus_tiles"
+  ],
+  "records": [
+    {
+      "image": "06487335071462f0.jpg",
+      "image_sha256": "545e1f01f1c85ade97e4ddb671e63bc40ee56cf44602500d8950ee3859215233",
+      "label_sha256": "732fc09e2ad8106bdb91beb0894705a8753512ca8e808146accff2b4fd9ff217"
+    },
+    {
+      "image": "13fbd2a8e527a98e.jpg",
+      "image_sha256": "5d01b4a0444f4f4900cf884e7fb85afbc34dd63c7f4563f0e94bb59397100fc6",
+      "label_sha256": "9864862cf569d8246d89e51d0912576071887b56afc2dc5d15e8cff094655f4f"
+    },
+    {
+      "image": "237266ace1cfbd11.jpg",
+      "image_sha256": "83b978286adfcc521e2af5f71b66384f336583dc8dc0107a882cf17b7c33b196",
+      "label_sha256": "d9116fa969c9a706e259d4365a5ee51124e87dfacbe89583c81a9b1a77a1f56f"
+    },
+    {
+      "image": "2e8069be1286695b.jpg",
+      "image_sha256": "b175fbe629fb0e9d8c532597bda1cf954a8b68af00dbb1ec809480209b38cd26",
+      "label_sha256": "07e10ee7f021a4e641d7e37819e8c42fb7148a0e3933191030ab5e1ebb4150bd"
+    },
+    {
+      "image": "30e7b4db7d08fce2.jpg",
+      "image_sha256": "c45b84ef06c661cb22b43588fcbf00f4e3547226f3aa48fa332034edce0a3d4f",
+      "label_sha256": "cecbff2e3ec94a9808b368a042777550370afbac2182be071e28c942335d9ad2"
+    },
+    {
+      "image": "352bdce4bd13775f.jpg",
+      "image_sha256": "b6f8b7ff9df403960fee561ab4ada9f4a9ec2962b32a63d64bc69daaf8dc5600",
+      "label_sha256": "4d989baeaf0ee753b786a02e906f49e14ff4a0febf04b4a02b47b375bb72d992"
+    },
+    {
+      "image": "39516faec81873bd.jpg",
+      "image_sha256": "69f88f0f3c0533b6964e4b72a108052d0e0538848b6e571de2a2c3cd9d063428",
+      "label_sha256": "20c7623e39a410b1b86a1f5e43548ebc820ec18084097a44751d035e841793af"
+    },
+    {
+      "image": "3a78be00e28b3c7e.jpg",
+      "image_sha256": "634c3b0ffa751ebf063d75a9c64181ff2fa60020169df891b33cc61777370d86",
+      "label_sha256": "136e043e04248fd364a8a86bc3894998b2a51784f07fc61bfe4bed498eb6c975"
+    },
+    {
+      "image": "3c6427869879bfbd.jpg",
+      "image_sha256": "bdbb847372054f144b0e151a76af6183fb2350c4e731531081ab273c8333b5cc",
+      "label_sha256": "1167eeb7e2a32f19efc62745af915b915b5f0df37bf73f71f992a2697f76365e"
+    },
+    {
+      "image": "5bb619812e137e09.jpg",
+      "image_sha256": "7e5491c2c9d9b3d99422f803f93310ab820c6a84b961120a9281d107d979db2c",
+      "label_sha256": "c389edbfc1fade312d7d5cba8553581170580f3e9620f1bfee378ffdbae3ffa6"
+    },
+    {
+      "image": "5e7841c2f39ffc07.jpg",
+      "image_sha256": "12cb54b8c7293fe49ad2d106d9eaa1bc4a12d95bf6c9163b7540ef111410a450",
+      "label_sha256": "52d184176a6fbb15bc64f4642e5fb7efef3d6b63daeff8ebed66db7b7daf7388"
+    },
+    {
+      "image": "619429f82b6ac661.jpg",
+      "image_sha256": "031e3e2d521d3d3912f49a0e06706cd05fe150037c7fa1866d937576787da554",
+      "label_sha256": "6cb8b2134a6c276ea19db75146670526521eeeeb58e5c2c1ed5aff7b6546291f"
+    },
+    {
+      "image": "66503b8809a433eb.jpg",
+      "image_sha256": "7a339a2ac5d969599f54a61755a41e8b50b815873e4fc2dc533ca8a57ffbb980",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "68e1b6a6225d5b0b.jpg",
+      "image_sha256": "e9012499b9c323fe8efd27242b0fc6c41bb83a209866011737444a14e9eb3a84",
+      "label_sha256": "86c86a52f38d39d599666d7a7f6c17990fc8ef555c5ee4865438da1154df1414"
+    },
+    {
+      "image": "7113dd0e310c962e.jpg",
+      "image_sha256": "f2ab6dbc8e41b4e4764eb588e2ab2a8cee5290207edfa3125ebe8442d61fb716",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "727b1e7501c78ee1.jpg",
+      "image_sha256": "d479ed2ca7fd1443c0557b5cb74f527cc0332be7d2e2a1fb24d4c15347641328",
+      "label_sha256": "cd141853aeeeaccdd5ed0c5bd827f498bec74ae958a0f7ccd9fc0d43eb5a1eca"
+    },
+    {
+      "image": "76e2631a36f90947.jpg",
+      "image_sha256": "508544404f3bd053ffb37cc4a91e65dc3c7321b018046f7810a7a0a185f7f1da",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "842c846565914093.jpg",
+      "image_sha256": "4bf6c38547f2cc8914df2e428f0b94d1609671a89f668376ad90bee6a43183b0",
+      "label_sha256": "8180245a901b8cfe962ca890730c785efde2b8c94c979e281337f8fe30a831c1"
+    },
+    {
+      "image": "880a071c0ce96ea1.jpg",
+      "image_sha256": "a762a3116db4aeff05d966a1eec1969dc8666caa788aab3964e5e37859508387",
+      "label_sha256": "caaa2e0d350608636c0300d99bb0ca656a7325b4d851998be1ed13bfddbea86e"
+    },
+    {
+      "image": "8b1b02db075ee174.jpg",
+      "image_sha256": "277f7fa03b7713662284e06c605db34c1a747dcafb13f4c662ce4ded3c7cf763",
+      "label_sha256": "45a39acdbdc2c2bdb99e6d10bba8db4945f05c36f0ae381d16b2a84e142cbe2d"
+    },
+    {
+      "image": "95fc73b2b7509ab6.jpg",
+      "image_sha256": "e06afc805866482fb1c13d3a7293d2f2c2bb584c79d458dc38763545d38fe749",
+      "label_sha256": "fe01bbdfbaea445b561a8f8a246c17ddb3717509ff0010212cac0845b92e5fa1"
+    },
+    {
+      "image": "96e4b723bb6f71da.jpg",
+      "image_sha256": "6a7996180461d9b62306f115c0a00db97e8ca06eac12eb94a4e345cc5e4fd3c9",
+      "label_sha256": "6bcbf2e65234157610f4c47dddc704ae7fde9b677a0c8d576bed2f670e04f708"
+    },
+    {
+      "image": "9c3ec857eedf8ab6.jpg",
+      "image_sha256": "e004e4a31d60ef6bbbd77199b177de90ef11569e93d9ad959d2f4322e7b0c06c",
+      "label_sha256": "11ea8424dc0d900a702e49edb310e644d334ecf7fe175bc6ae2e2156dbf1f2cd"
+    },
+    {
+      "image": "9db47e812d4dbd9d.jpg",
+      "image_sha256": "9b5c4aaeb65f7f46a5778ef4be45101c46593d2f798717019319c88195ee2de8",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "a564a14c944266f4.jpg",
+      "image_sha256": "e1dcedb36eb636b9751ad3807621a4a97c50642af9ce5a0214dd1cd7d919cd9c",
+      "label_sha256": "425f826f8d0a3e42315bb6e1914a0fbef0b19feb2f6cf8f0963a7488f6f7cb59"
+    },
+    {
+      "image": "a5eb004746a7dc1e.jpg",
+      "image_sha256": "740b4634f7da160b6466d1e83880cbcb55be7c1b36fefe96f79e1c79ae25770a",
+      "label_sha256": "5c26397ac81af22ab3d3f99ed4725519e24ac44384b7536d309af07e8f080419"
+    },
+    {
+      "image": "cf1c5e96383b9d51.jpg",
+      "image_sha256": "b639b5a4749989c083882d6d70f4d7fd1e45c76b1324c075f85299352f10e0f0",
+      "label_sha256": "3e4d59a4d69e7b8383ea20a2a6b7e4fc8b9e8cab48d548a4326ec72caf7d364a"
+    },
+    {
+      "image": "d3f7364210a8b1fe.jpg",
+      "image_sha256": "ecee155af8960dda7f3e075bed5b297c30955b7e7396582010670d757cd8aee0",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "f7b7d28e2a965708.jpg",
+      "image_sha256": "bcb7a04b0a5c2c5e2faad7f7d8ce349a92476c35da0f2137e785f711a2e5c031",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "f994278835c3e5d2.jpg",
+      "image_sha256": "073874ccb1636056618e186edb8444456e24b29273fe413707ec621b36e8e522",
+      "label_sha256": "05314d924365ff51d3279a0c15ba49de674327a7be44b35544fdd4b893a7b1c9"
+    },
+    {
+      "image": "fd134e09d454ce52.jpg",
+      "image_sha256": "07729e40881790097114a061c6bdbe8746dc7009217d96db2487805c52cab35f",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "ff61134434c1c9c7.jpg",
+      "image_sha256": "d82c03b5b53cf334038aaf2f45bbf2ce8ecdaf69173cf072c26188bb8b9bedc9",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "note": "Фіксований протокол до запуску; без пошуку параметрів. Test не читається. Це парний контроль predict(batch=1) з однаковим NMS, не підміна старих val(batch=4)."
+}

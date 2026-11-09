@@ -1,0 +1,32 @@
+{
+  "state": "trained",
+  "pid": 88773,
+  "name": "video-v2-raw-n-head-3ep",
+  "scope": "head",
+  "epochs": 3,
+  "completed_epochs": 3,
+  "started_unix": 1794188708.826806,
+  "updated_unix": 1794188848.659253,
+  "baseline_video_map50_95": 0.7723769739779971,
+  "video_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9262002778245976,
+    "metrics/mAP50(B)": 0.9905555555555557,
+    "metrics/mAP50-95(B)": 0.759916035560537
+  },
+  "best_trained": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-raw-n-head-3ep/weights/best.pt",
+  "selected": "/Users/macbook/Documents/ChatGPT/birds/work/video-v2-raw-n-head-3ep/initial-bird.pt",
+  "initial_retained": true,
+  "best_video_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9262002778245976,
+    "metrics/mAP50(B)": 0.9905555555555557,
+    "metrics/mAP50-95(B)": 0.759916035560537,
+    "fitness": 0.759916035560537
+  },
+  "video_gain_pp": -1.24609384174601,
+  "release_replaced": false,
+  "elapsed_seconds": 139.83244490623474,
+  "best_trained_sha256": "714a5efec55e8de5686702b5135940dae70b022996ab2d413f9a91b1fc2094be",
+  "best_trained_repo_path": "runs/experiments/video-v2-raw-n-head-3ep/weights/best.pt"
+}

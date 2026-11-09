@@ -1,0 +1,9 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests -v",
+  "tests": 37,
+  "passed": 37,
+  "failed": 0,
+  "duration_seconds": 0.281,
+  "scope": "Unit/synthetic checks. Actual training and validation are recorded separately in runs/.",
+  "release_weights_replaced": false
+}

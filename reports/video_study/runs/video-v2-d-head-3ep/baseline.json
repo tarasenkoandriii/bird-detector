@@ -1,0 +1,20 @@
+{
+  "base": {
+    "metrics/precision(B)": 0.9905855821895939,
+    "metrics/recall(B)": 0.9583333333333334,
+    "metrics/mAP50(B)": 0.9934000000000002,
+    "metrics/mAP50-95(B)": 0.7797099089557785,
+    "fitness": 0.7797099089557785
+  },
+  "initial_bird": {
+    "metrics/precision(B)": 0.9905855821895939,
+    "metrics/recall(B)": 0.9583333333333334,
+    "metrics/mAP50(B)": 0.9934000000000002,
+    "metrics/mAP50-95(B)": 0.7797099089557785,
+    "fitness": 0.7797099089557785
+  },
+  "source_schema": "single-bird",
+  "source_weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+  "initial_weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+  "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+}

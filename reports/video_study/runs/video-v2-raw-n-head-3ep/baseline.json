@@ -1,0 +1,20 @@
+{
+  "base": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9175391749282629,
+    "metrics/mAP50(B)": 0.9905555555555557,
+    "metrics/mAP50-95(B)": 0.7723769739779971,
+    "fitness": 0.7723769739779971
+  },
+  "initial_bird": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9175391749282629,
+    "metrics/mAP50(B)": 0.9905555555555557,
+    "metrics/mAP50-95(B)": 0.7723769739779971,
+    "fitness": 0.7723769739779971
+  },
+  "source_schema": "coco80",
+  "source_weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "initial_weights_sha256": "d0e5dd8014e5d971da3fd5a0c12c24079fc2189d967d2eca51e36abac001e841",
+  "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+}

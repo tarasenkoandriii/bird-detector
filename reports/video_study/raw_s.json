@@ -1,0 +1,21 @@
+{
+  "id": "raw_s",
+  "weights": "/Users/macbook/Documents/ChatGPT/birds/yolo26s.pt",
+  "weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+  "split": "val",
+  "images": 32,
+  "imgsz": 640,
+  "batch": 4,
+  "device": "cpu",
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "metrics": {
+    "metrics/precision(B)": 0.8432571320164,
+    "metrics/recall(B)": 0.9583333333333334,
+    "metrics/mAP50(B)": 0.9560619528619527,
+    "metrics/mAP50-95(B)": 0.7119745446220447,
+    "fitness": 0.7119745446220447
+  }
+}

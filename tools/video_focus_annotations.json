@@ -1,0 +1,309 @@
+{
+  "annotation": "Візуальна розмітка всіх видимих птахів асистентом за вихідними кадрами; без передбачень моделі. Незалежний людський аудит не проводився.",
+  "reviewed": true,
+  "records": [
+    {
+      "sequence": "bird-4",
+      "frame": 1,
+      "source_sha256": "e9766a779ec4170dea3e7292fe19df128c8078a0d12246b5be6f74fb413d5f99",
+      "boxes_xywh": [
+        [
+          222,
+          154,
+          192,
+          502
+        ],
+        [
+          600,
+          0,
+          450,
+          205
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-4",
+      "frame": 855,
+      "source_sha256": "a6f2a5abe6561d8b828c370b80e3db2c134d39adefa3f3ba285f19cef1e5ac8e",
+      "boxes_xywh": [
+        [
+          477,
+          326,
+          345,
+          220
+        ],
+        [
+          643,
+          15,
+          178,
+          270
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-4",
+      "frame": 2594,
+      "source_sha256": "840b3549c43a952099bae7b0d787ec67e9e34a990d8c7740020ec848ebd762bd",
+      "boxes_xywh": [
+        [
+          350,
+          145,
+          270,
+          242
+        ],
+        [
+          510,
+          10,
+          367,
+          215
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-12",
+      "frame": 1,
+      "source_sha256": "27d2f38c78a0d5d30b55bf240992ef995fab324f6547b0303a93de3e825b717d",
+      "boxes_xywh": [
+        [
+          400,
+          140,
+          220,
+          255
+        ],
+        [
+          380,
+          490,
+          510,
+          225
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-12",
+      "frame": 400,
+      "source_sha256": "f00f5fb1ccd13bc8d65a34665e65e315318e5882e958baec25b99658d788891f",
+      "boxes_xywh": [
+        [
+          195,
+          138,
+          545,
+          340
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-12",
+      "frame": 800,
+      "source_sha256": "0e2c1a39fba2ebba8f130284018cde9a3ae6a8279cf5a91d19a195a749ae138f",
+      "boxes_xywh": [
+        [
+          412,
+          85,
+          610,
+          402
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-12",
+      "frame": 1200,
+      "source_sha256": "b108ab8141442a0fa645ba4b8ef5f5b46212a917c3636b173e1c2354d0c5cbb7",
+      "boxes_xywh": [
+        [
+          140,
+          118,
+          485,
+          495
+        ],
+        [
+          812,
+          170,
+          468,
+          350
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-13",
+      "frame": 1,
+      "source_sha256": "b61733001f4a75f8fa3347a03389563dc314d0d4d48688962e83dc7b8108d7ea",
+      "boxes_xywh": [
+        [
+          382,
+          140,
+          108,
+          185
+        ],
+        [
+          714,
+          92,
+          99,
+          122
+        ],
+        [
+          785,
+          105,
+          135,
+          125
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-13",
+      "frame": 629,
+      "source_sha256": "bba047b2e746fa9f57634f061fc1efa861a795b0f997c7ee24b6cc92a80033e7",
+      "boxes_xywh": [
+        [
+          480,
+          103,
+          234,
+          290
+        ],
+        [
+          700,
+          117,
+          205,
+          285
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-13",
+      "frame": 1257,
+      "source_sha256": "bc2b0e223935ac948e0a5e6401bc33eff817aa2e9e30808d367deb26fc2b3e6a",
+      "boxes_xywh": [
+        [
+          384,
+          220,
+          275,
+          315
+        ],
+        [
+          575,
+          182,
+          270,
+          266
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-13",
+      "frame": 1886,
+      "source_sha256": "6df5850f71699279b8bfae8f004fbf6e9702b24a5d0542139961b1c63be7f6ba",
+      "boxes_xywh": [
+        [
+          30,
+          65,
+          318,
+          370
+        ],
+        [
+          650,
+          100,
+          330,
+          305
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-20",
+      "frame": 1,
+      "source_sha256": "dd699233b6a209eaa5667783bffed5a35dcd1f65ddd5e6b7d333a23046f0b5fd",
+      "boxes_xywh": [
+        [
+          558,
+          325,
+          218,
+          185
+        ],
+        [
+          915,
+          187,
+          155,
+          185
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-20",
+      "frame": 530,
+      "source_sha256": "f67f70f4360495c5e58b7a93371c54b8e5d2b92219da0293bc1c5bc3dff1c79d",
+      "boxes_xywh": [
+        [
+          78,
+          330,
+          173,
+          178
+        ],
+        [
+          780,
+          284,
+          42,
+          73
+        ],
+        [
+          785,
+          387,
+          88,
+          78
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-20",
+      "frame": 1060,
+      "source_sha256": "43cb63cbbbd4c0937634eccaeb5620cd8f326bb647af8d12be89bf6ddcca04d4",
+      "boxes_xywh": [
+        [
+          390,
+          325,
+          160,
+          198
+        ],
+        [
+          795,
+          327,
+          160,
+          201
+        ],
+        [
+          325,
+          205,
+          48,
+          77
+        ]
+      ]
+    },
+    {
+      "sequence": "bird-20",
+      "frame": 1590,
+      "source_sha256": "7dbb86e008fdcb90f989666e9713b622bd1f7555a6e38a183c2b1cac78813fdf",
+      "boxes_xywh": [
+        [
+          685,
+          310,
+          122,
+          135
+        ],
+        [
+          455,
+          170,
+          44,
+          62
+        ],
+        [
+          497,
+          151,
+          45,
+          77
+        ],
+        [
+          0,
+          234,
+          45,
+          118
+        ]
+      ]
+    }
+  ]
+}

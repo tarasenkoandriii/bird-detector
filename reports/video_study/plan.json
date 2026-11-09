@@ -1,0 +1,42 @@
+{
+  "dataset": "bird-video-detection-v2",
+  "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+  "validation_role": "development, 24 positive + 8 negative, two sequences; not independent test",
+  "epochs_first_round": 3,
+  "epochs_followup": 5,
+  "seed": 26,
+  "data_seed": 26,
+  "imgsz": 640,
+  "batch": 8,
+  "nbs": 8,
+  "lr0": 3e-06,
+  "cub_images": 32,
+  "extra_repeat": 3,
+  "train_exposures": 164,
+  "device": "cpu",
+  "execution": "sequential under fcntl lock",
+  "experiments": [
+    {
+      "id": "raw-n-head",
+      "source": "yolo26n.pt",
+      "scope": "head"
+    },
+    {
+      "id": "d-head",
+      "source": "weights/best.pt",
+      "scope": "head"
+    },
+    {
+      "id": "d-neck",
+      "source": "weights/best.pt",
+      "scope": "neck-head"
+    },
+    {
+      "id": "small-head",
+      "source": "yolo26s.pt",
+      "scope": "head"
+    }
+  ],
+  "selection": "Порівнюємо кожен trained з власною epoch0 та з поточним D на тих самих GT. Основна відео mAP50–95, додатково mAP50, FP на фоні, CUB validation і швидкість. Початкові ваги залишаються кандидатами; слабший trained не замінює старт. Tiled оцінюється окремим paired-протоколом, з однаковим postprocessing у двох режимах. Фінальний nano потрібний для ТЗ; S окремий challenger. Test не використовується.",
+  "release_replaced": false
+}

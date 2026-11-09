@@ -1,0 +1,58 @@
+{
+  "state": "completed",
+  "head_protocol_equal_except_epochs": true,
+  "release_weights_unchanged": true,
+  "test_used": false,
+  "D0_video_map50_95": 0.7797099089557785,
+  "D0_photo_map50_95": 0.8117036776208397,
+  "runs": [
+    {
+      "label": "head3",
+      "name": "video-v2-d-head-3ep",
+      "selected_epoch": 2,
+      "video_map50_95": 0.7849805169976223,
+      "video_gain_pp": 0.5270608041843761,
+      "best_trained": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-d-head-3ep/weights/best.pt",
+      "weights_sha256": "5512380a6d9943b02f0b579fa7b76c7b9c5d033336a8ef21bbb2af073227348d",
+      "photo_map50_95": 0.8108096093207173,
+      "protocol_sha256": "02dd2ebcb55bc40137242752ae4110a4fa13f0bc667135b2c5b1bc278be6651f",
+      "source_weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+      "training_sha256": "cca5bfb7e483c106829b1074f6ac21ad528644d8e848d7f27b0ac340347a1e2e",
+      "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+    },
+    {
+      "label": "head5",
+      "name": "video-v2-d-head-5ep",
+      "selected_epoch": 1,
+      "video_map50_95": 0.7840393575773325,
+      "video_gain_pp": 0.4329448621553933,
+      "best_trained": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-d-head-5ep/weights/best.pt",
+      "weights_sha256": "5a730f5d3ad99fb6e5240846a65cf7d29acfcf7a4154c7e977755c124491ef03",
+      "photo_map50_95": 0.8109316384737808,
+      "protocol_sha256": "3aa85c87ca2b6c3c417461401052f4f729e81c164d6e7f69d6c6bede1c34668b",
+      "source_weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+      "training_sha256": "cca5bfb7e483c106829b1074f6ac21ad528644d8e848d7f27b0ac340347a1e2e",
+      "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+    },
+    {
+      "label": "neck3",
+      "name": "video-v2-d-neck-3ep",
+      "selected_epoch": 1,
+      "video_map50_95": 0.7801530759402278,
+      "video_gain_pp": 0.04431669844492392,
+      "best_trained": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-d-neck-3ep/weights/best.pt",
+      "weights_sha256": "86147dfdcc4db2022820d186fb42a20020715b6ef808818de394d23dd7d1de9e",
+      "photo_map50_95": null,
+      "protocol_sha256": "c0a60da8674d895b56f0e6f92687439ac4d2ae9ed8f990110d1b0d806deb3500",
+      "source_weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+      "training_sha256": "cca5bfb7e483c106829b1074f6ac21ad528644d8e848d7f27b0ac340347a1e2e",
+      "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+    }
+  ],
+  "photo_guard": "reports/video_study/photo_guard.json",
+  "background_guards": [
+    "reports/video_study/backgrounds_D0.json",
+    "reports/video_study/backgrounds_head3.json",
+    "reports/video_study/backgrounds_head5.json"
+  ]
+}

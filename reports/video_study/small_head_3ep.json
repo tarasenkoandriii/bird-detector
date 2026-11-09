@@ -1,0 +1,97 @@
+{
+  "dataset": "bird-video-detection-v2",
+  "annotation_manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+  "source_weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+  "selected_weights_sha256": "95d4e3445e5c5ef4bdfe2ddf2962a14c543d5b8befa7c3a839244b683d692890",
+  "baseline": {
+    "base": {
+      "metrics/precision(B)": 0.8432571320164,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9560619528619527,
+      "metrics/mAP50-95(B)": 0.7119745446220447,
+      "fitness": 0.7119745446220447
+    },
+    "initial_bird": {
+      "metrics/precision(B)": 0.8432571320164,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9560619528619527,
+      "metrics/mAP50-95(B)": 0.7119745446220447,
+      "fitness": 0.7119745446220447
+    },
+    "source_schema": "coco80",
+    "source_weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+    "initial_weights_sha256": "650eed086a821f31358a4dafd4e6ae1b29ce174e25963b8b93e566f343bac5e4",
+    "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a"
+  },
+  "trained": {
+    "metrics/precision(B)": 0.8444703436697897,
+    "metrics/recall(B)": 0.9583333333333334,
+    "metrics/mAP50(B)": 0.9560619528619527,
+    "metrics/mAP50-95(B)": 0.7144319573847204,
+    "fitness": 0.7144319573847204
+  },
+  "video_gain_pp": 0.2457412762675748,
+  "selected": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-small-head-3ep/weights/best.pt",
+  "release_replaced": false,
+  "controller_pid": 88785,
+  "worker_pid": 88974,
+  "state": "trained",
+  "epochs": 3,
+  "elapsed_seconds": 260.51772904396057,
+  "training_sha256": "cca5bfb7e483c106829b1074f6ac21ad528644d8e848d7f27b0ac340347a1e2e",
+  "validation_sha256": "15e27823752a3d8aa3938564bc241a5064a9675267166ed0d89aad98bbf08b1a",
+  "protocol": {
+    "epochs": 3,
+    "imgsz": 640,
+    "batch": 8,
+    "nbs": 8,
+    "seed": 26,
+    "optimizer": "AdamW",
+    "lr0": 3e-06,
+    "lrf": 0.1,
+    "weight_decay": 0,
+    "warmup_epochs": 0,
+    "warmup_bias_lr": 0,
+    "mosaic": 0,
+    "close_mosaic": 0,
+    "scale": 0,
+    "translate": 0,
+    "fliplr": 0,
+    "hsv_h": 0,
+    "hsv_s": 0,
+    "hsv_v": 0,
+    "amp": false,
+    "workers": 0,
+    "deterministic": true,
+    "patience": 0,
+    "plots": false,
+    "save": true,
+    "save_period": 1
+  },
+  "zero_step": {
+    "live": {
+      "unchanged": true,
+      "differences": []
+    },
+    "ema": {
+      "unchanged": true,
+      "differences": []
+    }
+  },
+  "protected": {
+    "unchanged": true,
+    "bn_buffers_unchanged": true
+  },
+  "comparison_d_head3": {
+    "source": "D nano, вже донавчений",
+    "baseline": 0.7797099089557785,
+    "trained": {
+      "metrics/precision(B)": 1.0,
+      "metrics/recall(B)": 0.98752058474245,
+      "metrics/mAP50(B)": 0.995,
+      "metrics/mAP50-95(B)": 0.7849805169976223,
+      "fitness": 0.7849805169976223
+    },
+    "gain_pp": 0.5270608041843761
+  }
+}

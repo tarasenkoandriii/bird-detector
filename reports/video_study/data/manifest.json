@@ -1,0 +1,4690 @@
+{
+  "version": "bird-video-detection-v2",
+  "author": "assistant",
+  "human_audit": false,
+  "predictions_used": false,
+  "annotation_scope": "full visible bird; all birds; exclude logos/reflections/prey",
+  "policy_uk": "Рамка охоплює всі видимі частини кожного птаха: дзьоб, голову, тулуб, крила, хвіст, видимі ноги/стопи. Не домислювати прихованих частин. Усі видимі справжні птахи; не логотипи, не малюнки, не риба/здобич. Незмінний legacy; v2 development validation, не незалежний test. Віддзеркалення у воді не вважати окремим птахом; об’єкти здобичі не входять до bird bbox.",
+  "validation_role": "development validation; not independent test",
+  "annotation_file": "tools/video_full_validation_annotations.json",
+  "annotation_sha256": "9dea1da9f77f951385e4debc3c392966c5c20a6114684e423db54f1554f45a2d",
+  "counts": {
+    "train": 102,
+    "val": 32
+  },
+  "bbox_counts": {
+    "train": 109,
+    "val": 24
+  },
+  "revised_annotation_counts": {
+    "train": 7,
+    "val": 23
+  },
+  "validation_negatives_unchanged": 8,
+  "image_bytes_unchanged": true,
+  "source_sequences": {
+    "train": [
+      "bird-1",
+      "bird-12",
+      "bird-13",
+      "bird-18",
+      "bird-20",
+      "bird-4",
+      "bird-6"
+    ],
+    "val": [
+      "bird-7",
+      "bird-8"
+    ]
+  },
+  "cross_split_exact_duplicates": 0,
+  "cross_split_near_candidates": 0,
+  "limitations": [
+    "Розмічав асистент; незалежної перевірки людиною немає.",
+    "Малі/розмиті/частково закриті птахи мають невизначені точні межі.",
+    "Validation містить лише дві відомі послідовності; це не новий незалежний test.",
+    "У train переважно лишено вихідні bbox, які після візуального перегляду охоплювали видимі частини; 7 очевидних відтинань уточнено."
+  ],
+  "records": [
+    {
+      "split": "train",
+      "image": "train/images/04542f33b13a2dbd.jpg",
+      "sequence": "bird-1",
+      "frame": 1,
+      "kind": "negative_crop",
+      "image_sha256": "5a0ba7a82b49eeaf83f0b98f81ae778b05a5fd646a9c6b01924ff560759b4610",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/04542f33b13a2dbd.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4981be9d489d9fcc.jpg",
+      "sequence": "bird-1",
+      "frame": 1,
+      "kind": "positive",
+      "image_sha256": "45e6146f6f1a43e8292b019ea206b83be83968b0c6313d5c25cb0bc433b392fa",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "f3ca01c35b56a20555962b8dac505cb1ac7f0276d01a68f01feac46c63bb2e0d",
+      "old_boxes_xywh": [
+        [
+          207.0,
+          120.0,
+          21.0,
+          46.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          207.0,
+          120.0,
+          21.0,
+          46.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4981be9d489d9fcc.txt",
+      "label_sha256": "f3ca01c35b56a20555962b8dac505cb1ac7f0276d01a68f01feac46c63bb2e0d",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/9485c8d07a026d3b.jpg",
+      "sequence": "bird-1",
+      "frame": 195,
+      "kind": "positive",
+      "image_sha256": "f2af4c143dd04db40751fd7d4cc7b8edd1761559ab4118eda4c2d3344173edf3",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "c69ccd0f8fd30347f9a893176249f2c385252f8791f105800e49dc854f578b44",
+      "old_boxes_xywh": [
+        [
+          256.00000000000006,
+          80.99999999999999,
+          29.0,
+          64.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          256.00000000000006,
+          80.99999999999999,
+          29.0,
+          64.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/9485c8d07a026d3b.txt",
+      "label_sha256": "c69ccd0f8fd30347f9a893176249f2c385252f8791f105800e49dc854f578b44",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/aef835417d1b9955.jpg",
+      "sequence": "bird-1",
+      "frame": 390,
+      "kind": "positive",
+      "image_sha256": "6ed747f6b3924467ccad0240e5e8c23ac4e28857d6bf71ec579c076fe8a38344",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "f89a34c7411a5a84f2818119bf704eb65640a0c9593b5223255275b5c85e5d45",
+      "old_boxes_xywh": [
+        [
+          197.0,
+          110.00000000000001,
+          40.0,
+          94.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          197.0,
+          110.00000000000001,
+          40.0,
+          94.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/aef835417d1b9955.txt",
+      "label_sha256": "f89a34c7411a5a84f2818119bf704eb65640a0c9593b5223255275b5c85e5d45",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/25484a02ba46abc9.jpg",
+      "sequence": "bird-1",
+      "frame": 584,
+      "kind": "positive",
+      "image_sha256": "c32b492f6cfdadd819f0d70c75c93d252d5da8451077bcbafa74b9e8952d57dc",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "bf982f85a07358851a00cd2f07c6d31a3f7502a16787561f9f59f6e4f2653bfa",
+      "old_boxes_xywh": [
+        [
+          202.0,
+          89.0,
+          46.0,
+          110.00000000000001
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          202.0,
+          89.0,
+          46.0,
+          110.00000000000001
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/25484a02ba46abc9.txt",
+      "label_sha256": "bf982f85a07358851a00cd2f07c6d31a3f7502a16787561f9f59f6e4f2653bfa",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/2cc9423efb8e2006.jpg",
+      "sequence": "bird-1",
+      "frame": 779,
+      "kind": "positive",
+      "image_sha256": "b5a26fd41f12cbbccd65b819cfc4b4293fcaff71adcd32a556b29f5dd4e06bad",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "2b3bf28218ac605ee6e8791dc808572189b7676f917efd22dbb31d28c37d1c7b",
+      "old_boxes_xywh": [
+        [
+          193.99999999999997,
+          103.99999999999999,
+          54.0,
+          128.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          193.99999999999997,
+          103.99999999999999,
+          54.0,
+          128.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/2cc9423efb8e2006.txt",
+      "label_sha256": "2b3bf28218ac605ee6e8791dc808572189b7676f917efd22dbb31d28c37d1c7b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/1dbd0e224ecd0760.jpg",
+      "sequence": "bird-1",
+      "frame": 973,
+      "kind": "positive",
+      "image_sha256": "f2aec0eb4b049f1058ab2e4e54203567976e85f7a9eb53ff8314bc60dc8a07e2",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "74f3940dedd81c9e0f5f885b4802361e47cebe5b0c1dc6074cf16b56b1ef5989",
+      "old_boxes_xywh": [
+        [
+          204.0,
+          114.99999999999999,
+          56.0,
+          132.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          204.0,
+          114.99999999999999,
+          56.0,
+          132.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/1dbd0e224ecd0760.txt",
+      "label_sha256": "74f3940dedd81c9e0f5f885b4802361e47cebe5b0c1dc6074cf16b56b1ef5989",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/f120c295f0f8709f.jpg",
+      "sequence": "bird-1",
+      "frame": 1168,
+      "kind": "negative_crop",
+      "image_sha256": "9d5abc43107a146aa266ada1c73ccbb2e894405125d0099d4f0b7ee085adeae6",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/f120c295f0f8709f.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/2d9e49af19cf4a8d.jpg",
+      "sequence": "bird-1",
+      "frame": 1168,
+      "kind": "positive",
+      "image_sha256": "32f5222012b294b252c8515130625894e20ccadf69c8401b7583c99e454e99dc",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "fea25eb63b797f797b241c91a1c016469ffd71e3dd4d93e19b2ed522b4e72d28",
+      "old_boxes_xywh": [
+        [
+          187.0,
+          77.0,
+          56.0,
+          133.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          187.0,
+          77.0,
+          56.0,
+          133.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/2d9e49af19cf4a8d.txt",
+      "label_sha256": "fea25eb63b797f797b241c91a1c016469ffd71e3dd4d93e19b2ed522b4e72d28",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/bbad78d71c1ef8fd.jpg",
+      "sequence": "bird-1",
+      "frame": 1362,
+      "kind": "positive",
+      "image_sha256": "cf880ea01ea049340c592d0190d40b33345bb9a12b029e2c17752480fd44283b",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "0d88ced96145b731ac19e0237c6c62030649c44180648ca887c36c50a4e67792",
+      "old_boxes_xywh": [
+        [
+          179.0,
+          140.99999999999997,
+          74.0,
+          177.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          179.0,
+          140.99999999999997,
+          74.0,
+          177.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/bbad78d71c1ef8fd.txt",
+      "label_sha256": "0d88ced96145b731ac19e0237c6c62030649c44180648ca887c36c50a4e67792",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/57588bb5e6c96c66.jpg",
+      "sequence": "bird-1",
+      "frame": 1557,
+      "kind": "positive",
+      "image_sha256": "727c82bcdfd0fd541fb2f2733d247beeca4539722f97a2aad91ec017964ed6b3",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "27443419dd90c540f9e7c8353baafc992e45bc3969ae530d8e77c718a7703864",
+      "old_boxes_xywh": [
+        [
+          192.0,
+          112.00000000000003,
+          74.0,
+          171.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          192.0,
+          112.00000000000003,
+          74.0,
+          171.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/57588bb5e6c96c66.txt",
+      "label_sha256": "27443419dd90c540f9e7c8353baafc992e45bc3969ae530d8e77c718a7703864",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7a6f7aad0562cf5d.jpg",
+      "sequence": "bird-1",
+      "frame": 1751,
+      "kind": "positive",
+      "image_sha256": "ee980f744e8cc7e6eb69f811e319af4e387cbed05e06c007a9064540b36a6b54",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "010286ea7f247515404501e363bcb7e67ba8f03cbe9076567110ffbacb8645cc",
+      "old_boxes_xywh": [
+        [
+          191.99999999999997,
+          122.99999999999999,
+          73.0,
+          169.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          191.99999999999997,
+          122.99999999999999,
+          73.0,
+          169.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7a6f7aad0562cf5d.txt",
+      "label_sha256": "010286ea7f247515404501e363bcb7e67ba8f03cbe9076567110ffbacb8645cc",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/1a3d46f432e3e913.jpg",
+      "sequence": "bird-1",
+      "frame": 1946,
+      "kind": "positive",
+      "image_sha256": "f21479276ececc224a2447deaeea08a148266e95afea6cfbef436ba543ecd24e",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "cf5b2c277c62f9a387ec05cbb04b8c4b207cf7bb559791d797cfa9945d095f48",
+      "old_boxes_xywh": [
+        [
+          150.0,
+          134.0,
+          87.0,
+          206.99999999999997
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          150.0,
+          134.0,
+          87.0,
+          206.99999999999997
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/1a3d46f432e3e913.txt",
+      "label_sha256": "cf5b2c277c62f9a387ec05cbb04b8c4b207cf7bb559791d797cfa9945d095f48",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/2976a28000ac4c3b.jpg",
+      "sequence": "bird-1",
+      "frame": 2140,
+      "kind": "positive",
+      "image_sha256": "c8111799d156febd7757b541526dae3887f02c722baeabdb3e5fd47f4b2440d7",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "b29db6a74380be21a0bb212ad16cdc98d0ace06f92d61ca310ec20b3f4f7b24c",
+      "old_boxes_xywh": [
+        [
+          184.0,
+          96.0,
+          103.0,
+          236.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          184.0,
+          96.0,
+          103.0,
+          236.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/2976a28000ac4c3b.txt",
+      "label_sha256": "b29db6a74380be21a0bb212ad16cdc98d0ace06f92d61ca310ec20b3f4f7b24c",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/90ab3467bca73926.jpg",
+      "sequence": "bird-1",
+      "frame": 2529,
+      "kind": "negative_crop",
+      "image_sha256": "d1790a016bbb44665e6658bdef4af718fe33150d26125d8f99ba44123e26551e",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/90ab3467bca73926.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/52c94dceadafbc93.jpg",
+      "sequence": "bird-1",
+      "frame": 2529,
+      "kind": "positive",
+      "image_sha256": "c932fd2bc05d27febfc5a4bc0dec54e325f76d10e528f09e60ecae293217cb25",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "3c5b4686c317dd8ccc694d26e8f92753d4a1010bfc0ce039950019f58bcaa87b",
+      "old_boxes_xywh": [
+        [
+          126.0,
+          78.0,
+          119.0,
+          273.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          126.0,
+          78.0,
+          119.0,
+          273.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/52c94dceadafbc93.txt",
+      "label_sha256": "3c5b4686c317dd8ccc694d26e8f92753d4a1010bfc0ce039950019f58bcaa87b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/0d02456fbebd0eff.jpg",
+      "sequence": "bird-1",
+      "frame": 2724,
+      "kind": "positive",
+      "image_sha256": "60d1ab83a6c09cd41ee43167b5802815309b71858f603f2168b910fe26491b6f",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "272714ae12c32020588dff9832972b9e7604e308470ce8cebe7c2595d4876bd6",
+      "old_boxes_xywh": [
+        [
+          191.0,
+          65.00000000000001,
+          134.0,
+          295.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          191.0,
+          65.00000000000001,
+          134.0,
+          295.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/0d02456fbebd0eff.txt",
+      "label_sha256": "272714ae12c32020588dff9832972b9e7604e308470ce8cebe7c2595d4876bd6",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/be3cc62a191163d8.jpg",
+      "sequence": "bird-1",
+      "frame": 2918,
+      "kind": "positive",
+      "image_sha256": "c74d4fd0bae5e9a4a5a3146063519828fb5213949b0d66a20420c711f0983e75",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "697d7fd80954d5ae1f2710c5e4b840bfff629bd127069850c766811f37165d9f",
+      "old_boxes_xywh": [
+        [
+          178.0,
+          50.0,
+          144.0,
+          281.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          178.0,
+          50.0,
+          144.0,
+          281.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/be3cc62a191163d8.txt",
+      "label_sha256": "697d7fd80954d5ae1f2710c5e4b840bfff629bd127069850c766811f37165d9f",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/daa3d464bd6eee84.jpg",
+      "sequence": "bird-1",
+      "frame": 3113,
+      "kind": "positive",
+      "image_sha256": "4a7915bed5796a737ee94720c47983aaa21379b2534796cf137682d344a29731",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "82c113b451aa994011a8793d371c72ea7004a7939b62a5d5036f227a7debe660",
+      "old_boxes_xywh": [
+        [
+          184.00000000000003,
+          75.0,
+          143.0,
+          276.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          184.00000000000003,
+          75.0,
+          143.0,
+          276.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/daa3d464bd6eee84.txt",
+      "label_sha256": "82c113b451aa994011a8793d371c72ea7004a7939b62a5d5036f227a7debe660",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4ac18fcd2e78cf62.jpg",
+      "sequence": "bird-1",
+      "frame": 3307,
+      "kind": "positive",
+      "image_sha256": "619c389dacf53f9b38c1175179f099c24c8fc5692a7c73fa14559f2f7a0fab1f",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "932bee3da44d90274a8d8045596eaad1ecd79d8d0e0aac2233e03377320c4546",
+      "old_boxes_xywh": [
+        [
+          186.00000000000003,
+          91.0,
+          141.0,
+          268.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          186.00000000000003,
+          91.0,
+          141.0,
+          268.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4ac18fcd2e78cf62.txt",
+      "label_sha256": "932bee3da44d90274a8d8045596eaad1ecd79d8d0e0aac2233e03377320c4546",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/5c06bd4355a231fa.jpg",
+      "sequence": "bird-1",
+      "frame": 3696,
+      "kind": "positive",
+      "image_sha256": "a5b6adbf42a75591383a0084e295597f6ecef7194685ec2c8c1380342cebf75e",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "8e790fe80fed37e27d44272799fa7bc4f034e0929f36d6c02d89ca54a35a6c5e",
+      "old_boxes_xywh": [
+        [
+          190.00000000000003,
+          84.00000000000003,
+          143.0,
+          274.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          190.00000000000003,
+          84.00000000000003,
+          143.0,
+          274.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/5c06bd4355a231fa.txt",
+      "label_sha256": "8e790fe80fed37e27d44272799fa7bc4f034e0929f36d6c02d89ca54a35a6c5e",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/d6d4263b9957c31a.jpg",
+      "sequence": "bird-1",
+      "frame": 3891,
+      "kind": "positive",
+      "image_sha256": "d133f3de022047b15aa8626c963bba27e99af641eb0422f587aec6a405d1e84f",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "c645019ce3358249b3a08db2e3c299049658932ac84b0c2ef462d9dbdb33e54c",
+      "old_boxes_xywh": [
+        [
+          184.00000000000003,
+          0.9999999999999964,
+          143.0,
+          304.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          184.00000000000003,
+          0.9999999999999964,
+          143.0,
+          304.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/d6d4263b9957c31a.txt",
+      "label_sha256": "c645019ce3358249b3a08db2e3c299049658932ac84b0c2ef462d9dbdb33e54c",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/114624b12a303434.jpg",
+      "sequence": "bird-1",
+      "frame": 4085,
+      "kind": "positive",
+      "image_sha256": "5462a85f9580a17fdcceff98ff6ff319097a5dd756e8200d648640b0b41d0bd3",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "df10a48c6e444515a34ccb1802f3c92b284f14ee123fcdceb21d12dc7da86a90",
+      "old_boxes_xywh": [
+        [
+          187.99999999999997,
+          37.999999999999986,
+          142.0,
+          316.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          187.99999999999997,
+          37.999999999999986,
+          142.0,
+          316.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/114624b12a303434.txt",
+      "label_sha256": "df10a48c6e444515a34ccb1802f3c92b284f14ee123fcdceb21d12dc7da86a90",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/ebc242ec16796b3e.jpg",
+      "sequence": "bird-1",
+      "frame": 4475,
+      "kind": "negative_crop",
+      "image_sha256": "2f02867c0bec4a71ad2bb9840313ea92fe9c94be2b0d8aaf9115e55abc810a8f",
+      "size": [
+        120,
+        90
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/ebc242ec16796b3e.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7235d75ea113c7af.jpg",
+      "sequence": "bird-1",
+      "frame": 4475,
+      "kind": "positive",
+      "image_sha256": "be07d428f823fdbc0bcc23b745486c639731a7813b928a176cabe44318d345d0",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "d38a7929b3ae76b2da7129f324ef620454d1eabdc3c174a1a45c66ba12c784b9",
+      "old_boxes_xywh": [
+        [
+          175.00000000000003,
+          54.999999999999986,
+          141.0,
+          305.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          175.00000000000003,
+          54.999999999999986,
+          141.0,
+          305.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7235d75ea113c7af.txt",
+      "label_sha256": "d38a7929b3ae76b2da7129f324ef620454d1eabdc3c174a1a45c66ba12c784b9",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/92ef89909972fa02.jpg",
+      "sequence": "bird-18",
+      "frame": 1,
+      "kind": "negative_crop",
+      "image_sha256": "160e340e76ea778f7c4ede8e30b1981b4114641437ba61afd0b16d3055582a3f",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/92ef89909972fa02.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/fd50c7f370967ae6.jpg",
+      "sequence": "bird-18",
+      "frame": 1,
+      "kind": "positive",
+      "image_sha256": "35dfd8bed996c61a3ee6b2627333884e4f00eb1af67b90f0a36d0b9456067709",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "6ea560e4c880832d0bee5920f6f962f938cbc8be61803940b79e6fb91023b3c6",
+      "old_boxes_xywh": [
+        [
+          293.0,
+          136.0,
+          40.0,
+          67.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          293.0,
+          136.0,
+          40.0,
+          67.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/fd50c7f370967ae6.txt",
+      "label_sha256": "6ea560e4c880832d0bee5920f6f962f938cbc8be61803940b79e6fb91023b3c6",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/40f0e3c2e9003f87.jpg",
+      "sequence": "bird-18",
+      "frame": 157,
+      "kind": "positive",
+      "image_sha256": "078f7dc93d9084a80711fea5a58d336974f4c049c0b870dd422450191259fd54",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "3d56282d54d7c0f638f7c4aca07c01382f377b37f7a6f69199b5d19735372e1f",
+      "old_boxes_xywh": [
+        [
+          292.0,
+          144.0,
+          34.0,
+          71.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          290,
+          144,
+          40,
+          71
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/40f0e3c2e9003f87.txt",
+      "label_sha256": "d8c5d44dba0888a410a08927b712df77740447e814c20c53746e209640e3b8b4",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/afe782817640997a.jpg",
+      "sequence": "bird-18",
+      "frame": 313,
+      "kind": "positive",
+      "image_sha256": "44d8aa09f3164f53300746be93dc2f2a1b2cbbf22431bfa344711c9566860320",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "9a94827050ca9e2b37272b89e15578e46fc82ccf73133bc51cd8b10fa275f2e0",
+      "old_boxes_xywh": [
+        [
+          271.0,
+          148.0,
+          36.0,
+          68.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          271.0,
+          148.0,
+          36.0,
+          68.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/afe782817640997a.txt",
+      "label_sha256": "9a94827050ca9e2b37272b89e15578e46fc82ccf73133bc51cd8b10fa275f2e0",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4063c4be07ae529a.jpg",
+      "sequence": "bird-18",
+      "frame": 469,
+      "kind": "positive",
+      "image_sha256": "494d8a427636717568b7fa3d34f0758b08caab2758a537b5128535e5a33915b0",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "c8e7cbb314a8839edc9f8bfcc232cfa20df6041ea9b70968f53cf8372306e46a",
+      "old_boxes_xywh": [
+        [
+          192.0,
+          104.99999999999999,
+          129.0,
+          95.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          192,
+          105,
+          129,
+          105
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4063c4be07ae529a.txt",
+      "label_sha256": "463713c9184f197eb830b8f0bb69fdd4545c3a7bd2bd479402434de4510f9ab4",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/e16d073e9a24c1f0.jpg",
+      "sequence": "bird-18",
+      "frame": 625,
+      "kind": "positive",
+      "image_sha256": "b302155ce1fe8f953764ac5845e95d6aef37b98378eb1456c49d3004a0171cbc",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "dfbaa108df99bce21cc14aa00ba7ce5225f65329d9c4377ae367d3e3a349dcde",
+      "old_boxes_xywh": [
+        [
+          174.00000000000003,
+          175.00000000000003,
+          84.0,
+          74.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          174,
+          175,
+          94,
+          74
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/e16d073e9a24c1f0.txt",
+      "label_sha256": "0a84d9d3d1d1c1ad4d8b26976fa7706834b23b74398ed6fd655a2abad31c2d2e",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/77c9ee7cbaf4a229.jpg",
+      "sequence": "bird-18",
+      "frame": 781,
+      "kind": "positive",
+      "image_sha256": "2aba4068f1e98bb2bdf45b8064e5c20615943b76840b4d2061e0e2176040f2c4",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "ca4e2cb54a4c545f6fe96c7a1a81887059f86819afeeb51d0c5b4c9792e38d28",
+      "old_boxes_xywh": [
+        [
+          180.0,
+          173.99999999999997,
+          99.0,
+          111.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          180,
+          174,
+          109,
+          111
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/77c9ee7cbaf4a229.txt",
+      "label_sha256": "11f1c15e7568099882e60e28a90b1f72547320334f57fa839773b71050b4011f",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/40a0d146b93a8911.jpg",
+      "sequence": "bird-18",
+      "frame": 937,
+      "kind": "positive",
+      "image_sha256": "c820c7a3ed5a147bb21956b7eff425a17340a5430d4113904c1c70c13ebb5430",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "5ce19262c5468f6bc11d5d22e6a56f16a569ae13ffe44b0e82649c5f42011c51",
+      "old_boxes_xywh": [
+        [
+          174.00000000000003,
+          155.0,
+          97.0,
+          96.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          174,
+          155,
+          102,
+          96
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/40a0d146b93a8911.txt",
+      "label_sha256": "1c3e0eb22df7305526f66c8cdd1a3a94130151dffbf1b7d72eadd7d295ce6385",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/86808b2b98c68e7c.jpg",
+      "sequence": "bird-18",
+      "frame": 1093,
+      "kind": "positive",
+      "image_sha256": "c8ce5e093eff7b4534605c932236d6727c413efd93e6fa231b5962647b8f462b",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "b824c6d5fd709470d9d69a2026ab73c8dbeee71187aa59e6296a11c89cb5546c",
+      "old_boxes_xywh": [
+        [
+          284.0,
+          191.0,
+          79.0,
+          85.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          284,
+          190,
+          85,
+          86
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/86808b2b98c68e7c.txt",
+      "label_sha256": "ad584a73f6a8a592155dff2dcad5e043decd6b0530fe4269988762aa67551119",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/c20b6d00bcc0a23f.jpg",
+      "sequence": "bird-18",
+      "frame": 1249,
+      "kind": "negative_crop",
+      "image_sha256": "475475b5abb370a9da5b2fa34821990eefe0adab10b8ffe8e8045d7d03749ebe",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/c20b6d00bcc0a23f.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/9012781fbb6f421e.jpg",
+      "sequence": "bird-18",
+      "frame": 1249,
+      "kind": "positive",
+      "image_sha256": "97538583ab29ccc7eaa33139612bcd33ab2f8a48c1a6197570d75d901bf23186",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "feeb96b2a4cad45bf970be7077834edfdf42cbe49012079830c1803e78e0ed1e",
+      "old_boxes_xywh": [
+        [
+          231.99999999999997,
+          174.00000000000003,
+          103.0,
+          92.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          231.99999999999997,
+          174.00000000000003,
+          103.0,
+          92.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/9012781fbb6f421e.txt",
+      "label_sha256": "feeb96b2a4cad45bf970be7077834edfdf42cbe49012079830c1803e78e0ed1e",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4615fd4a1b25b7fc.jpg",
+      "sequence": "bird-18",
+      "frame": 1405,
+      "kind": "positive",
+      "image_sha256": "8f7e47bea246fc180c6155039af4663baa3ff6f729e453139a8316697e366a1b",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "3bd502a29851d8f1bb9cf09ec238b02bdd5047ded549a07e1d6a5c7b80566ca1",
+      "old_boxes_xywh": [
+        [
+          174.0,
+          202.0,
+          48.0,
+          53.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          174.0,
+          202.0,
+          48.0,
+          53.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4615fd4a1b25b7fc.txt",
+      "label_sha256": "3bd502a29851d8f1bb9cf09ec238b02bdd5047ded549a07e1d6a5c7b80566ca1",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7bfb57f7d8a8d79e.jpg",
+      "sequence": "bird-18",
+      "frame": 1561,
+      "kind": "positive",
+      "image_sha256": "d2b4e9e6ce31053f25a50f7a5bd7decdf07b1407bfb1950c00c27aaed1656d00",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "b2ef019cf2b15d248cbf24e44f1c1fb3e2ab4a6370b29bd410a612793b631c75",
+      "old_boxes_xywh": [
+        [
+          202.0,
+          168.0,
+          87.0,
+          40.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          202.0,
+          168.0,
+          87.0,
+          40.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7bfb57f7d8a8d79e.txt",
+      "label_sha256": "b2ef019cf2b15d248cbf24e44f1c1fb3e2ab4a6370b29bd410a612793b631c75",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/1700d2ac67476fd0.jpg",
+      "sequence": "bird-18",
+      "frame": 1717,
+      "kind": "positive",
+      "image_sha256": "eb1910e9b4eb8491556b8473503d96f343bad6f5434e37f58e7164b4ec958972",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "ed0a7840c4e1501d4d4c3fdb250a71e7caa9dc2edbfef2976be8bcf3ec4a6dda",
+      "old_boxes_xywh": [
+        [
+          211.00000000000003,
+          136.0,
+          63.0,
+          35.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          211.00000000000003,
+          136.0,
+          63.0,
+          35.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/1700d2ac67476fd0.txt",
+      "label_sha256": "ed0a7840c4e1501d4d4c3fdb250a71e7caa9dc2edbfef2976be8bcf3ec4a6dda",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/3107078bbb45212d.jpg",
+      "sequence": "bird-18",
+      "frame": 1873,
+      "kind": "positive",
+      "image_sha256": "0cbd7bcbd7932435f40f53db8ba76245c21191b22df42b6b2af695cec3064edf",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "5c7a0d9d75e8e3dbc53625abd2539aad89a788f938f911aafb8c6b16732e50c0",
+      "old_boxes_xywh": [
+        [
+          196.0,
+          153.00000000000003,
+          37.0,
+          39.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          196.0,
+          153.00000000000003,
+          37.0,
+          39.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/3107078bbb45212d.txt",
+      "label_sha256": "5c7a0d9d75e8e3dbc53625abd2539aad89a788f938f911aafb8c6b16732e50c0",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/526d0d4765a01326.jpg",
+      "sequence": "bird-18",
+      "frame": 2029,
+      "kind": "positive",
+      "image_sha256": "d8d0fa21212691a28fcf26e5c547add3db7a89b257e71e9501e0c39471a5f161",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "49eab7c5c1fca6ab95ac42aeb6587170c2f80296eef1635cf35050d51aa2234b",
+      "old_boxes_xywh": [
+        [
+          183.0,
+          136.0,
+          60.0,
+          32.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          183,
+          134,
+          61,
+          34
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/526d0d4765a01326.txt",
+      "label_sha256": "62443fe6d142d9068fc6ae0530c6e36f7756aeb7b53af75df0f2eb54b8f8a1b3",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/9bbd2e1b6ba5699c.jpg",
+      "sequence": "bird-18",
+      "frame": 2185,
+      "kind": "positive",
+      "image_sha256": "f087f1b4d101d9d0c800e0323f457f4c83d019ab11bc7ae0e790661dcb27709d",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "e1cd1e630bba93845c52730ac4241bf830f2446df72fc75cb3d8110cf8ca7088",
+      "old_boxes_xywh": [
+        [
+          241.0,
+          170.0,
+          42.0,
+          21.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          241.0,
+          170.0,
+          42.0,
+          21.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/9bbd2e1b6ba5699c.txt",
+      "label_sha256": "e1cd1e630bba93845c52730ac4241bf830f2446df72fc75cb3d8110cf8ca7088",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/25f9cc615b79f484.jpg",
+      "sequence": "bird-18",
+      "frame": 2341,
+      "kind": "positive",
+      "image_sha256": "d7a6c38a70a137bc5a044fefb0b54f89bf0d5a1ffaec2b7f904e33ec429fe2a7",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "ddff6f87692067e01be85215235d909c638a54c6861a69e8230f3c691a87a453",
+      "old_boxes_xywh": [
+        [
+          225.00000000000003,
+          178.0,
+          33.0,
+          25.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          225.00000000000003,
+          178.0,
+          33.0,
+          25.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/25f9cc615b79f484.txt",
+      "label_sha256": "ddff6f87692067e01be85215235d909c638a54c6861a69e8230f3c691a87a453",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/dc534e30641ba461.jpg",
+      "sequence": "bird-18",
+      "frame": 2497,
+      "kind": "negative_crop",
+      "image_sha256": "2df5b4cab033c8a1ee7f01ed30073587b8da8e2b5028359bcbf6cf7de8a9e2c5",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/dc534e30641ba461.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/85f6333266ba3df8.jpg",
+      "sequence": "bird-18",
+      "frame": 2497,
+      "kind": "positive",
+      "image_sha256": "b961912c1ebbd2a2e15b0a5f06579d1c33ee5e8c7f4dd2d7c5107e7781d66b32",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "33d176ca29e37832606e3c2af42ba7562e3faaa12d98959c034ba2d1118409da",
+      "old_boxes_xywh": [
+        [
+          263.0,
+          186.00000000000003,
+          34.0,
+          22.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          263.0,
+          186.00000000000003,
+          34.0,
+          22.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/85f6333266ba3df8.txt",
+      "label_sha256": "33d176ca29e37832606e3c2af42ba7562e3faaa12d98959c034ba2d1118409da",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4671fb404aacc848.jpg",
+      "sequence": "bird-18",
+      "frame": 2594,
+      "kind": "positive",
+      "image_sha256": "feece36cbba347957e3e6bf307a5559ad9e4fa29ca4ff517976aefd84c13d982",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "a01ac82e563a29f99b2d5b1b6aa0e691ab8161feff39208f14e06302709999b4",
+      "old_boxes_xywh": [
+        [
+          242.0,
+          190.0,
+          22.0,
+          18.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          242.0,
+          190.0,
+          22.0,
+          18.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4671fb404aacc848.txt",
+      "label_sha256": "a01ac82e563a29f99b2d5b1b6aa0e691ab8161feff39208f14e06302709999b4",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/8324d0941ed666ed.jpg",
+      "sequence": "bird-18",
+      "frame": 2653,
+      "kind": "positive",
+      "image_sha256": "3d2ba77afe5e5ec29bdd076b27262090efd5b7c0fc66ce72e730de569d2416fc",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "ea3489c439e407406ea0239817925b0aa867fad1727753e4cfaf4782a6a4abf7",
+      "old_boxes_xywh": [
+        [
+          259.0,
+          222.0,
+          28.0,
+          21.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          259.0,
+          222.0,
+          28.0,
+          21.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/8324d0941ed666ed.txt",
+      "label_sha256": "ea3489c439e407406ea0239817925b0aa867fad1727753e4cfaf4782a6a4abf7",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7df3d49c073abe18.jpg",
+      "sequence": "bird-18",
+      "frame": 2809,
+      "kind": "positive",
+      "image_sha256": "c41676c4794f39d035059642c936fef816fb6e5cba449681cbbb160f1cdc10ad",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "b4c713d62185ff71ad967156d7a5d209d869439eb8493f81dd4f6b88636d3ca6",
+      "old_boxes_xywh": [
+        [
+          284.0,
+          179.00000000000003,
+          26.0,
+          15.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          284.0,
+          179.00000000000003,
+          26.0,
+          15.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7df3d49c073abe18.txt",
+      "label_sha256": "b4c713d62185ff71ad967156d7a5d209d869439eb8493f81dd4f6b88636d3ca6",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/da999d5f42148a49.jpg",
+      "sequence": "bird-18",
+      "frame": 2965,
+      "kind": "positive",
+      "image_sha256": "28a232dcbb9f41330571159f50ded059b0a397f084d44dfca21f7ea68ca9b1c3",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "2cf717ccddef4e39a9b2d93062a76d1d442c5e58a36cd7549aed06f96c661075",
+      "old_boxes_xywh": [
+        [
+          254.0,
+          193.0,
+          28.0,
+          12.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          254.0,
+          193.0,
+          28.0,
+          12.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/da999d5f42148a49.txt",
+      "label_sha256": "2cf717ccddef4e39a9b2d93062a76d1d442c5e58a36cd7549aed06f96c661075",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/e77e61fe2b3262da.jpg",
+      "sequence": "bird-18",
+      "frame": 3062,
+      "kind": "positive",
+      "image_sha256": "2b343451c34c26c1fe253ce735f9f11b1f618fc405bb26e96137ee163b283ba3",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "0c88482a93583805eb10bd3d99e5ae3d32f3f5664ad3b2fbfc784319c5f89109",
+      "old_boxes_xywh": [
+        [
+          241.0,
+          173.0,
+          21.0,
+          12.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          241.0,
+          173.0,
+          21.0,
+          12.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/e77e61fe2b3262da.txt",
+      "label_sha256": "0c88482a93583805eb10bd3d99e5ae3d32f3f5664ad3b2fbfc784319c5f89109",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7bf2f51b9719d93a.jpg",
+      "sequence": "bird-18",
+      "frame": 3121,
+      "kind": "positive",
+      "image_sha256": "1a7407c8e1ae8fffd137e4f094b720aebb209cf9a7585fea4d5e1de21e48f43e",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "659563f4e5485d0166246a178703bbd9e2ed1d01b0039738856d26dbb22b20dc",
+      "old_boxes_xywh": [
+        [
+          231.0,
+          190.0,
+          15.0,
+          22.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          231.0,
+          190.0,
+          15.0,
+          22.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7bf2f51b9719d93a.txt",
+      "label_sha256": "659563f4e5485d0166246a178703bbd9e2ed1d01b0039738856d26dbb22b20dc",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/a3ad7bd2ce25c55d.jpg",
+      "sequence": "bird-18",
+      "frame": 3153,
+      "kind": "positive",
+      "image_sha256": "d048494705c3ed7bc45de26643a1c85cc014def1e6a7b07f6ca134e4a9189671",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "d92508f9deccc817cffb2c994ec9d76627e06b2602d59499dc753f1423a69dc3",
+      "old_boxes_xywh": [
+        [
+          221.99999999999997,
+          199.99999999999997,
+          23.0,
+          12.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          221.99999999999997,
+          199.99999999999997,
+          23.0,
+          12.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/a3ad7bd2ce25c55d.txt",
+      "label_sha256": "d92508f9deccc817cffb2c994ec9d76627e06b2602d59499dc753f1423a69dc3",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/f49bed97c1556e37.jpg",
+      "sequence": "bird-18",
+      "frame": 3223,
+      "kind": "positive",
+      "image_sha256": "f9922cfee52e413f839968b146a16d164b0a8dea99dad4ea6a2560a8d102337f",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "c2501a7eada40080481d9bd596b9788439a25eb8581519988a1f6c1b1d27f93e",
+      "old_boxes_xywh": [
+        [
+          233.0,
+          195.99999999999997,
+          23.0,
+          12.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          233.0,
+          195.99999999999997,
+          23.0,
+          12.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/f49bed97c1556e37.txt",
+      "label_sha256": "c2501a7eada40080481d9bd596b9788439a25eb8581519988a1f6c1b1d27f93e",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/9d03aad1b9ba84f8.jpg",
+      "sequence": "bird-18",
+      "frame": 3287,
+      "kind": "positive",
+      "image_sha256": "c6cc5c5708ed3452b3a8f1023c539bcd9ec4a528d0b07fc63c0dc359c41d7b7f",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "cf1ac2b30dc784e3c0468886913fefba49b3eeecd6bdc977416068699bb41ffe",
+      "old_boxes_xywh": [
+        [
+          209.0,
+          175.0,
+          27.0,
+          11.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          209.0,
+          175.0,
+          27.0,
+          11.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/9d03aad1b9ba84f8.txt",
+      "label_sha256": "cf1ac2b30dc784e3c0468886913fefba49b3eeecd6bdc977416068699bb41ffe",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/86e0e13a8627d1e6.jpg",
+      "sequence": "bird-18",
+      "frame": 3327,
+      "kind": "positive",
+      "image_sha256": "14db2085adb8a1dd5e92e04f759dc040713abcb1ae5bc3b1149b81b91b8bf327",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "e9df56e683af9dc8d00a3aaac1e1bdee8b6855ab968286352092b0e974dbd8d3",
+      "old_boxes_xywh": [
+        [
+          211.0,
+          181.0,
+          20.0,
+          15.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          211.0,
+          181.0,
+          20.0,
+          15.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/86e0e13a8627d1e6.txt",
+      "label_sha256": "e9df56e683af9dc8d00a3aaac1e1bdee8b6855ab968286352092b0e974dbd8d3",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/ecfbcf54423cda19.jpg",
+      "sequence": "bird-18",
+      "frame": 3381,
+      "kind": "positive",
+      "image_sha256": "814e70f82fc3e3981368df3edc2823bbb7d73dd081a9e37d86e21608ab345cae",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "2b6c1fff9edef12e0ec9d9a2364d0ed11a60c1fad62979d4423ada0d9f1c5126",
+      "old_boxes_xywh": [
+        [
+          241.0,
+          180.0,
+          22.0,
+          12.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          241.0,
+          180.0,
+          22.0,
+          12.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/ecfbcf54423cda19.txt",
+      "label_sha256": "2b6c1fff9edef12e0ec9d9a2364d0ed11a60c1fad62979d4423ada0d9f1c5126",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4a45423af27238f4.jpg",
+      "sequence": "bird-18",
+      "frame": 3443,
+      "kind": "positive",
+      "image_sha256": "cf7d1d55915455ea267a3687d98df8312a36f55815828f349eecde11612c15cb",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "b61c03c7145e2147b45a72249e3b343a7128851041009649473469c423cde89b",
+      "old_boxes_xywh": [
+        [
+          256.0,
+          178.0,
+          19.0,
+          15.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          256.0,
+          178.0,
+          19.0,
+          15.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4a45423af27238f4.txt",
+      "label_sha256": "b61c03c7145e2147b45a72249e3b343a7128851041009649473469c423cde89b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/ec11619dfcf38d07.jpg",
+      "sequence": "bird-18",
+      "frame": 3496,
+      "kind": "positive",
+      "image_sha256": "392694fe8ead2a7ad7eac62d6027fe8ebdf3224fc5032175d5dc34e7c352a683",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "1ee9bde49db899d5b19aa2a19f84945a7201f08f083b0c873b53c11e2057d367",
+      "old_boxes_xywh": [
+        [
+          239.0,
+          181.0,
+          21.0,
+          20.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          239.0,
+          181.0,
+          21.0,
+          20.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/ec11619dfcf38d07.txt",
+      "label_sha256": "1ee9bde49db899d5b19aa2a19f84945a7201f08f083b0c873b53c11e2057d367",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/cd0ff09d4293c519.jpg",
+      "sequence": "bird-18",
+      "frame": 3554,
+      "kind": "positive",
+      "image_sha256": "ab23e8dc360069353a85f661773cb7afdd962fac1728c6f64b5fb7c6df190f5b",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "48e4918c008e74ff8d0411ee01c700493afbfa23cb4a4b4c5d1442fb247fbb10",
+      "old_boxes_xywh": [
+        [
+          249.00000000000003,
+          189.0,
+          19.0,
+          19.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          249.00000000000003,
+          189.0,
+          19.0,
+          19.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/cd0ff09d4293c519.txt",
+      "label_sha256": "48e4918c008e74ff8d0411ee01c700493afbfa23cb4a4b4c5d1442fb247fbb10",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/6fac8a3209d6cd13.jpg",
+      "sequence": "bird-18",
+      "frame": 3600,
+      "kind": "negative_crop",
+      "image_sha256": "22980cecfe66c7d54aaa734acddae0a36d4abc28f0261c8588458fe84573b044",
+      "size": [
+        144,
+        108
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/6fac8a3209d6cd13.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/bc170131e588de97.jpg",
+      "sequence": "bird-18",
+      "frame": 3600,
+      "kind": "positive",
+      "image_sha256": "fd366655980c73e59c8f14b059bbecb5ce63faa78c3cb36211661c13b3fdcb12",
+      "size": [
+        480,
+        360
+      ],
+      "old_label_sha256": "f8523d9080a08303863b1c8401071d40a3abe2f68cc4101e20f48533ce789dd6",
+      "old_boxes_xywh": [
+        [
+          274.0,
+          173.99999999999997,
+          20.0,
+          19.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          274.0,
+          173.99999999999997,
+          20.0,
+          19.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/bc170131e588de97.txt",
+      "label_sha256": "f8523d9080a08303863b1c8401071d40a3abe2f68cc4101e20f48533ce789dd6",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/0061795dd8729c14.jpg",
+      "sequence": "bird-6",
+      "frame": 1,
+      "kind": "positive",
+      "image_sha256": "ef95eebc50a9e9480ea14a069031c65cb0ffe2c4444d11635d86e8ecb49b079a",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "2e70ac37e83efe2ac2f065a07b57e42c6ba2eff5b067d62a0fc1ef5741c6e13e",
+      "old_boxes_xywh": [
+        [
+          475.0,
+          312.99999999999994,
+          159.0,
+          204.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          475.0,
+          312.99999999999994,
+          159.0,
+          204.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/0061795dd8729c14.txt",
+      "label_sha256": "2e70ac37e83efe2ac2f065a07b57e42c6ba2eff5b067d62a0fc1ef5741c6e13e",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/a420dbafc7470b92.jpg",
+      "sequence": "bird-6",
+      "frame": 54,
+      "kind": "positive",
+      "image_sha256": "e22a2bbaa45026a94f627e5e6b121e57771ed39e48e2444243a3adb5fe1429b3",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "4872df3a115df9a2a9663525a86aca804e0bed0297f023aa7ed2811bb16b0fad",
+      "old_boxes_xywh": [
+        [
+          520.0,
+          348.00000000000006,
+          115.0,
+          183.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          520.0,
+          348.00000000000006,
+          115.0,
+          183.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/a420dbafc7470b92.txt",
+      "label_sha256": "4872df3a115df9a2a9663525a86aca804e0bed0297f023aa7ed2811bb16b0fad",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4e428b035519473b.jpg",
+      "sequence": "bird-6",
+      "frame": 108,
+      "kind": "positive",
+      "image_sha256": "d6e84260d14aab4cc2c655ff7c2541dc86abb324145096936468d72c4b119505",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "afb0c476dfab84c5bfb71f64821443fb64fc0ee28f14f65be2f350a6114185d1",
+      "old_boxes_xywh": [
+        [
+          386.0,
+          263.0,
+          522.0,
+          229.99999999999997
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          386.0,
+          263.0,
+          522.0,
+          229.99999999999997
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4e428b035519473b.txt",
+      "label_sha256": "afb0c476dfab84c5bfb71f64821443fb64fc0ee28f14f65be2f350a6114185d1",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/e3b05d301e35b260.jpg",
+      "sequence": "bird-6",
+      "frame": 162,
+      "kind": "positive",
+      "image_sha256": "6829474c924f9d5036ef95f993e669d1b820ed67c4f2274543e12b75d7c39c56",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "804a1eec2000f8faaf101893277c5d2662915ac8840498fe5f40258ea2e852d3",
+      "old_boxes_xywh": [
+        [
+          451.99999999999994,
+          240.0,
+          407.0,
+          228.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          451.99999999999994,
+          240.0,
+          407.0,
+          228.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/e3b05d301e35b260.txt",
+      "label_sha256": "804a1eec2000f8faaf101893277c5d2662915ac8840498fe5f40258ea2e852d3",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/c7d1ceaaf1dddac5.jpg",
+      "sequence": "bird-6",
+      "frame": 216,
+      "kind": "positive",
+      "image_sha256": "1d13ce21ef258ad40053d1ecd988fa8e24d9653258569bdd6572893b3ad32fb3",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "4978908e0a1a2cedc921b9f2939d7c7aa9817c41856e6fd33e46c1563f0846c8",
+      "old_boxes_xywh": [
+        [
+          556.0,
+          235.00000000000006,
+          113.0,
+          217.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          556.0,
+          235.00000000000006,
+          113.0,
+          217.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/c7d1ceaaf1dddac5.txt",
+      "label_sha256": "4978908e0a1a2cedc921b9f2939d7c7aa9817c41856e6fd33e46c1563f0846c8",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/8cb15fda65347dd1.jpg",
+      "sequence": "bird-6",
+      "frame": 270,
+      "kind": "positive",
+      "image_sha256": "afc5c0fbefca0e71235572b8e6302038e2060d6b20e3b719e8fd8beabc802b27",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "06dda2f483cf75acfab4a44ff90c5ae6e3126e307331d295729bc251ff108f6d",
+      "old_boxes_xywh": [
+        [
+          566.0,
+          268.0,
+          142.0,
+          166.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          566.0,
+          268.0,
+          142.0,
+          166.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/8cb15fda65347dd1.txt",
+      "label_sha256": "06dda2f483cf75acfab4a44ff90c5ae6e3126e307331d295729bc251ff108f6d",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/3bfd7a7a11c52c33.jpg",
+      "sequence": "bird-6",
+      "frame": 324,
+      "kind": "positive",
+      "image_sha256": "9e0bbeb216558dba61eb211c9c3a9f5fe5334e499fa627c968e508bcc54cbd85",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "d42cc05ae4e3184983a59d55998bfb48258cdc4e36b4b5256f4352500f9e76ce",
+      "old_boxes_xywh": [
+        [
+          518.0,
+          227.0,
+          154.0,
+          205.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          518.0,
+          227.0,
+          154.0,
+          205.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/3bfd7a7a11c52c33.txt",
+      "label_sha256": "d42cc05ae4e3184983a59d55998bfb48258cdc4e36b4b5256f4352500f9e76ce",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/aa8621dd3bac4d08.jpg",
+      "sequence": "bird-6",
+      "frame": 378,
+      "kind": "positive",
+      "image_sha256": "340bec04a7cf72feb91e769ea625fb316c13999860c8bbf3847eb95328d858bd",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "62d02c1d222c87f2c718e32c84bc1db22237946c505d25ae3ccf03a4ec813b9b",
+      "old_boxes_xywh": [
+        [
+          524.0,
+          256.0,
+          130.0,
+          207.99999999999997
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          524.0,
+          256.0,
+          130.0,
+          207.99999999999997
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/aa8621dd3bac4d08.txt",
+      "label_sha256": "62d02c1d222c87f2c718e32c84bc1db22237946c505d25ae3ccf03a4ec813b9b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/1dc6ead2edc67838.jpg",
+      "sequence": "bird-6",
+      "frame": 432,
+      "kind": "positive",
+      "image_sha256": "9d507137cc02b1dc4a06159641c2351e09af2386802266d208d729d00d4ec2fd",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "d6b586cae49d31565d8a2c3aae08b3b5656700f1a3b02d7d6bb49ee7f71f59d3",
+      "old_boxes_xywh": [
+        [
+          558.0,
+          301.99999999999994,
+          117.0,
+          209.00000000000003
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          558.0,
+          301.99999999999994,
+          117.0,
+          209.00000000000003
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/1dc6ead2edc67838.txt",
+      "label_sha256": "d6b586cae49d31565d8a2c3aae08b3b5656700f1a3b02d7d6bb49ee7f71f59d3",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/52195e8e4aed12fe.jpg",
+      "sequence": "bird-6",
+      "frame": 486,
+      "kind": "positive",
+      "image_sha256": "ae36a20994708a4c6b62bf84f3798c58a01dae2bcee6e3c88ad344072fce7a1c",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "6fca533968492e786a63de9db418994b5111c2ad06d04d42b9c43a2ab67d4af6",
+      "old_boxes_xywh": [
+        [
+          572.0,
+          349.0,
+          110.0,
+          206.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          572.0,
+          349.0,
+          110.0,
+          206.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/52195e8e4aed12fe.txt",
+      "label_sha256": "6fca533968492e786a63de9db418994b5111c2ad06d04d42b9c43a2ab67d4af6",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/ce6affcf625ee8ff.jpg",
+      "sequence": "bird-6",
+      "frame": 594,
+      "kind": "positive",
+      "image_sha256": "fceb3317d9e9f620763048249c7a4265ca964de793d8dba75cde021d001b6f7c",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "5cd93bb28a6518a1e549fb91baa1fde30ef0f68f37824e16260fb64dca221cdf",
+      "old_boxes_xywh": [
+        [
+          558.0,
+          395.00000000000006,
+          142.0,
+          193.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          558.0,
+          395.00000000000006,
+          142.0,
+          193.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/ce6affcf625ee8ff.txt",
+      "label_sha256": "5cd93bb28a6518a1e549fb91baa1fde30ef0f68f37824e16260fb64dca221cdf",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/ff8ea246b1d0c5ef.jpg",
+      "sequence": "bird-6",
+      "frame": 647,
+      "kind": "positive",
+      "image_sha256": "80b43701c72b8b2be831b083a0281b60d02147d31e39954ed275b525ba309231",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "76abb4872e98cbd338f4b61004bde146c28d13d6094d3faaf54ab6d1a8f68c2c",
+      "old_boxes_xywh": [
+        [
+          487.0,
+          312.0,
+          123.0,
+          192.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          487.0,
+          312.0,
+          123.0,
+          192.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/ff8ea246b1d0c5ef.txt",
+      "label_sha256": "76abb4872e98cbd338f4b61004bde146c28d13d6094d3faaf54ab6d1a8f68c2c",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/1dcf9849b1019d69.jpg",
+      "sequence": "bird-6",
+      "frame": 701,
+      "kind": "positive",
+      "image_sha256": "1ced49428f697aa20076be1020d130d8f65a855486280a65c6f727d7e749ab0a",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "03d0234e9bf22f0411f86773672362709cfb8047e71626d0b66cb311d8d23958",
+      "old_boxes_xywh": [
+        [
+          303.0,
+          227.0,
+          441.0,
+          221.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          303.0,
+          227.0,
+          441.0,
+          221.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/1dcf9849b1019d69.txt",
+      "label_sha256": "03d0234e9bf22f0411f86773672362709cfb8047e71626d0b66cb311d8d23958",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/63ed6ad94afcd17d.jpg",
+      "sequence": "bird-6",
+      "frame": 755,
+      "kind": "positive",
+      "image_sha256": "77538974c03e55a8e0e72f21e713e65e5b7ab217e0a977d50db8ec6fb7a726cf",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "961e39c5995768f1cc2a77530564569aab878d97317a39cbcab4f6f3992c4e7b",
+      "old_boxes_xywh": [
+        [
+          377.0,
+          233.0,
+          233.0,
+          206.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          377.0,
+          233.0,
+          233.0,
+          206.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/63ed6ad94afcd17d.txt",
+      "label_sha256": "961e39c5995768f1cc2a77530564569aab878d97317a39cbcab4f6f3992c4e7b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/7d283b8e05f4ae35.jpg",
+      "sequence": "bird-6",
+      "frame": 809,
+      "kind": "positive",
+      "image_sha256": "21389818801d93e9062ab189c992e7fa0e9334d36ff93d3d8e069e9f9547fa50",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "3cfce23971f54f4983906585c130ec8eb14d93060f2da8c6d769bb1c59f4f6ba",
+      "old_boxes_xywh": [
+        [
+          342.0,
+          251.0,
+          246.0,
+          206.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          342.0,
+          251.0,
+          246.0,
+          206.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/7d283b8e05f4ae35.txt",
+      "label_sha256": "3cfce23971f54f4983906585c130ec8eb14d93060f2da8c6d769bb1c59f4f6ba",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/4127942d75e2bce0.jpg",
+      "sequence": "bird-6",
+      "frame": 863,
+      "kind": "positive",
+      "image_sha256": "ebbd76273cc728789110676687542d27b39f4b4570c4b60cab4aef7c4a6bc4d8",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "6c9aa009731f9960ec9f41587db79f5aeb9f181d02d60ea9d0b4631d3d512bf5",
+      "old_boxes_xywh": [
+        [
+          827.0,
+          22.0,
+          312.0,
+          443.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          827.0,
+          22.0,
+          312.0,
+          443.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/4127942d75e2bce0.txt",
+      "label_sha256": "6c9aa009731f9960ec9f41587db79f5aeb9f181d02d60ea9d0b4631d3d512bf5",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/76f1f275d53ba0f8.jpg",
+      "sequence": "bird-6",
+      "frame": 874,
+      "kind": "negative_full",
+      "image_sha256": "7409e7802eed165a72a681a4ba7f0b7bf372b176ce7dbec9b5b3d3ccf9b476ea",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/76f1f275d53ba0f8.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/bbe8f7d83b63820f.jpg",
+      "sequence": "bird-6",
+      "frame": 880,
+      "kind": "negative_full",
+      "image_sha256": "1bc84678a0991d49e1d08e976d676af2bac6641aa37c216ad8953b3da1c808fd",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/bbe8f7d83b63820f.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/e375c17e1bb8632d.jpg",
+      "sequence": "bird-6",
+      "frame": 901,
+      "kind": "negative_full",
+      "image_sha256": "b9ab149ce5df817cfb034cfc579d7859e40abffcde96b9e841e999166c623e59",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "train/labels/e375c17e1bb8632d.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/233681542cf85ae0.jpg",
+      "sequence": "bird-6",
+      "frame": 931,
+      "kind": "positive",
+      "image_sha256": "6e02ddd6fdf33f0ffed90ef735a842ff6174709d6a1c1ea89166aa14fe027255",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "c0f294455b3137ca2016d8b16f37a070a3df87c84fb5206fef09c04080d08da1",
+      "old_boxes_xywh": [
+        [
+          873.0,
+          233.0,
+          165.0,
+          68.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          873.0,
+          233.0,
+          165.0,
+          68.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/233681542cf85ae0.txt",
+      "label_sha256": "c0f294455b3137ca2016d8b16f37a070a3df87c84fb5206fef09c04080d08da1",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/c5625b84a3969584.jpg",
+      "sequence": "bird-6",
+      "frame": 991,
+      "kind": "positive",
+      "image_sha256": "0a7c7ddf3d533f5609e6f7dd9322aff490d5f13fdf677da2a5aec2b82e7fbbc4",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "b7f9d26a48bc32349b2e6b3a8361ab9a23068bb86fce2e64924ecd7380ed0520",
+      "old_boxes_xywh": [
+        [
+          613.0,
+          334.0,
+          158.0,
+          105.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          613.0,
+          334.0,
+          158.0,
+          105.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/c5625b84a3969584.txt",
+      "label_sha256": "b7f9d26a48bc32349b2e6b3a8361ab9a23068bb86fce2e64924ecd7380ed0520",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/8f98bb02246d951a.jpg",
+      "sequence": "bird-6",
+      "frame": 1045,
+      "kind": "positive",
+      "image_sha256": "0a3d6a8f1829309ad7f4d7127700b69b9ca681f576443e464bf5e6b2383613fc",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "e842c66dad5c97d74a7336dbfc41aa31870d657e76cb2a8d7078b510a24675fc",
+      "old_boxes_xywh": [
+        [
+          579.0,
+          321.0,
+          150.0,
+          74.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          579.0,
+          321.0,
+          150.0,
+          74.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/8f98bb02246d951a.txt",
+      "label_sha256": "e842c66dad5c97d74a7336dbfc41aa31870d657e76cb2a8d7078b510a24675fc",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/6fae85d67640d802.jpg",
+      "sequence": "bird-6",
+      "frame": 1099,
+      "kind": "positive",
+      "image_sha256": "5653caea101e76168f8da4beaf544cd05625aa95167fd9c553245f3708682c49",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "0e61d001986cb1892d56780e4454342752250c5be5afadf14690a80e2d4a985f",
+      "old_boxes_xywh": [
+        [
+          434.00000000000006,
+          366.0,
+          346.0,
+          139.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          434.00000000000006,
+          366.0,
+          346.0,
+          139.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/6fae85d67640d802.txt",
+      "label_sha256": "0e61d001986cb1892d56780e4454342752250c5be5afadf14690a80e2d4a985f",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/771eb6ebd1f54196.jpg",
+      "sequence": "bird-6",
+      "frame": 1153,
+      "kind": "positive",
+      "image_sha256": "1eb34e2092dbc569db3085a3147949a8ebe062bf4b7647f64ef20c69b0953837",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "fc17a0622437bb3aa1ea3b574533be425e7de6c49dc78dceda163b9e11dff90f",
+      "old_boxes_xywh": [
+        [
+          421.99999999999994,
+          348.0,
+          227.0,
+          112.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          421.99999999999994,
+          348.0,
+          227.0,
+          112.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/771eb6ebd1f54196.txt",
+      "label_sha256": "fc17a0622437bb3aa1ea3b574533be425e7de6c49dc78dceda163b9e11dff90f",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/19c5149cdc443740.jpg",
+      "sequence": "bird-6",
+      "frame": 1207,
+      "kind": "positive",
+      "image_sha256": "397c6b8cf4f3098526c8d4be3563b1de4664f1026be523c3edcd2bbd4d151d56",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "d983dce3c971d8ecf413980c6db44cacdeb9a1c7a17c62bfea652fcba029c145",
+      "old_boxes_xywh": [
+        [
+          604.0,
+          580.0,
+          54.0,
+          105.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          604.0,
+          580.0,
+          54.0,
+          105.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/19c5149cdc443740.txt",
+      "label_sha256": "d983dce3c971d8ecf413980c6db44cacdeb9a1c7a17c62bfea652fcba029c145",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/11ac88e9c6555bc2.jpg",
+      "sequence": "bird-6",
+      "frame": 1261,
+      "kind": "positive",
+      "image_sha256": "fa9413dfe49644dc1b6fa57f100c1281a58e59a5eeb033dd3e52f98cbb5a3cff",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "850dc8ed8f9b14e21e8958bffb2baec3963edfab5003eed729965bf726fdf35c",
+      "old_boxes_xywh": [
+        [
+          770.0,
+          410.00000000000006,
+          55.0,
+          105.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          770.0,
+          410.00000000000006,
+          55.0,
+          105.0
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_visual_review_source_retained",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "train/labels/11ac88e9c6555bc2.txt",
+      "label_sha256": "850dc8ed8f9b14e21e8958bffb2baec3963edfab5003eed729965bf726fdf35c",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/d3f7364210a8b1fe.jpg",
+      "sequence": "bird-7",
+      "frame": 1,
+      "kind": "negative_crop",
+      "image_sha256": "ecee155af8960dda7f3e075bed5b297c30955b7e7396582010670d757cd8aee0",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/d3f7364210a8b1fe.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/3a78be00e28b3c7e.jpg",
+      "sequence": "bird-7",
+      "frame": 1,
+      "kind": "positive",
+      "image_sha256": "634c3b0ffa751ebf063d75a9c64181ff2fa60020169df891b33cc61777370d86",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "53fcaa15b65c09a5e62dc9d7b702462b09738071aca32eccf6b6ff233afce28d",
+      "old_boxes_xywh": [
+        [
+          481.0,
+          203.0,
+          235.0,
+          344.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          480,
+          203,
+          240,
+          463
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/3a78be00e28b3c7e.txt",
+      "label_sha256": "136e043e04248fd364a8a86bc3894998b2a51784f07fc61bfe4bed498eb6c975",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/5e7841c2f39ffc07.jpg",
+      "sequence": "bird-7",
+      "frame": 265,
+      "kind": "positive",
+      "image_sha256": "12cb54b8c7293fe49ad2d106d9eaa1bc4a12d95bf6c9163b7540ef111410a450",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "52d184176a6fbb15bc64f4642e5fb7efef3d6b63daeff8ebed66db7b7daf7388",
+      "old_boxes_xywh": [
+        [
+          515.0,
+          149.00000000000003,
+          225.0,
+          458.99999999999994
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          515,
+          149,
+          225,
+          459
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/5e7841c2f39ffc07.txt",
+      "label_sha256": "52d184176a6fbb15bc64f4642e5fb7efef3d6b63daeff8ebed66db7b7daf7388",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/a564a14c944266f4.jpg",
+      "sequence": "bird-7",
+      "frame": 530,
+      "kind": "positive",
+      "image_sha256": "e1dcedb36eb636b9751ad3807621a4a97c50642af9ce5a0214dd1cd7d919cd9c",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "1023c44b84044e8c5c1e298a945c0883d280107b2ce4368d7b02bd6e27532ffb",
+      "old_boxes_xywh": [
+        [
+          496.0000000000001,
+          149.0,
+          291.0,
+          472.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          496,
+          149,
+          291,
+          571
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/a564a14c944266f4.txt",
+      "label_sha256": "425f826f8d0a3e42315bb6e1914a0fbef0b19feb2f6cf8f0963a7488f6f7cb59",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/66503b8809a433eb.jpg",
+      "sequence": "bird-7",
+      "frame": 794,
+      "kind": "negative_crop",
+      "image_sha256": "7a339a2ac5d969599f54a61755a41e8b50b815873e4fc2dc533ca8a57ffbb980",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/66503b8809a433eb.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/f994278835c3e5d2.jpg",
+      "sequence": "bird-7",
+      "frame": 794,
+      "kind": "positive",
+      "image_sha256": "073874ccb1636056618e186edb8444456e24b29273fe413707ec621b36e8e522",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "d92103a1b1c31afb531110b0659240b1d16ca8c5bb3e9fcfa656b021ca80f6c9",
+      "old_boxes_xywh": [
+        [
+          448.0,
+          130.99999999999997,
+          541.0,
+          514.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          460,
+          131,
+          532,
+          589
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/f994278835c3e5d2.txt",
+      "label_sha256": "05314d924365ff51d3279a0c15ba49de674327a7be44b35544fdd4b893a7b1c9",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/352bdce4bd13775f.jpg",
+      "sequence": "bird-7",
+      "frame": 1059,
+      "kind": "positive",
+      "image_sha256": "b6f8b7ff9df403960fee561ab4ada9f4a9ec2962b32a63d64bc69daaf8dc5600",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "4f8e708c751463da0b8657d460a2a127c1b569a488108493f8cd1d9a7e324e34",
+      "old_boxes_xywh": [
+        [
+          289.0,
+          159.0,
+          843.0,
+          460.99999999999994
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          310,
+          159,
+          825,
+          561
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/352bdce4bd13775f.txt",
+      "label_sha256": "4d989baeaf0ee753b786a02e906f49e14ff4a0febf04b4a02b47b375bb72d992",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/06487335071462f0.jpg",
+      "sequence": "bird-7",
+      "frame": 1323,
+      "kind": "positive",
+      "image_sha256": "545e1f01f1c85ade97e4ddb671e63bc40ee56cf44602500d8950ee3859215233",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "daba47c3d9b8cbf24692435434b9f16d98a38fad3f08b710b9038fa30360a2b6",
+      "old_boxes_xywh": [
+        [
+          380.0,
+          1.999999999999993,
+          739.0,
+          419.00000000000006
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          380,
+          0,
+          745,
+          568
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/06487335071462f0.txt",
+      "label_sha256": "732fc09e2ad8106bdb91beb0894705a8753512ca8e808146accff2b4fd9ff217",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/39516faec81873bd.jpg",
+      "sequence": "bird-7",
+      "frame": 1588,
+      "kind": "positive",
+      "image_sha256": "69f88f0f3c0533b6964e4b72a108052d0e0538848b6e571de2a2c3cd9d063428",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "2f6b070b63ef3cd8630978d2adcf92553c1350139887fe51f5d81ec53ffa41c9",
+      "old_boxes_xywh": [
+        [
+          373.0,
+          0.9999999999999964,
+          794.0,
+          421.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          373,
+          0,
+          794,
+          625
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/39516faec81873bd.txt",
+      "label_sha256": "20c7623e39a410b1b86a1f5e43548ebc820ec18084097a44751d035e841793af",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/9db47e812d4dbd9d.jpg",
+      "sequence": "bird-7",
+      "frame": 1852,
+      "kind": "negative_crop",
+      "image_sha256": "9b5c4aaeb65f7f46a5778ef4be45101c46593d2f798717019319c88195ee2de8",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/9db47e812d4dbd9d.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/96e4b723bb6f71da.jpg",
+      "sequence": "bird-7",
+      "frame": 1852,
+      "kind": "positive",
+      "image_sha256": "6a7996180461d9b62306f115c0a00db97e8ca06eac12eb94a4e345cc5e4fd3c9",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "77f4341452974d024b6924d451f62a8e3cadf3d659e86dc1894e7f8b4bcf6382",
+      "old_boxes_xywh": [
+        [
+          465.0,
+          77.0,
+          796.0,
+          457.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          465,
+          77,
+          805,
+          591
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/96e4b723bb6f71da.txt",
+      "label_sha256": "6bcbf2e65234157610f4c47dddc704ae7fde9b677a0c8d576bed2f670e04f708",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/3c6427869879bfbd.jpg",
+      "sequence": "bird-7",
+      "frame": 2117,
+      "kind": "positive",
+      "image_sha256": "bdbb847372054f144b0e151a76af6183fb2350c4e731531081ab273c8333b5cc",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "701c5a90633f3e19ec458c11b85626d4ba5ec4b4b5b26bddf504b429f8dd8736",
+      "old_boxes_xywh": [
+        [
+          365.99999999999994,
+          107.0,
+          900.0,
+          353.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          366,
+          107,
+          904,
+          533
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/3c6427869879bfbd.txt",
+      "label_sha256": "1167eeb7e2a32f19efc62745af915b915b5f0df37bf73f71f992a2697f76365e",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/237266ace1cfbd11.jpg",
+      "sequence": "bird-7",
+      "frame": 2381,
+      "kind": "positive",
+      "image_sha256": "83b978286adfcc521e2af5f71b66384f336583dc8dc0107a882cf17b7c33b196",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "c9251d0f3cfa6b6c92782d343b02b86fd28cd40631578e17c886b1a9d405f127",
+      "old_boxes_xywh": [
+        [
+          297.0,
+          96.99999999999997,
+          831.0,
+          418.00000000000006
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          310,
+          97,
+          818,
+          543
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/237266ace1cfbd11.txt",
+      "label_sha256": "d9116fa969c9a706e259d4365a5ee51124e87dfacbe89583c81a9b1a77a1f56f",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/5bb619812e137e09.jpg",
+      "sequence": "bird-7",
+      "frame": 2646,
+      "kind": "positive",
+      "image_sha256": "7e5491c2c9d9b3d99422f803f93310ab820c6a84b961120a9281d107d979db2c",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "e8bcb1b5b9b321a5fe32599ffed0787b0c9af1fdd9fdfa37bc553d4a90eb0f34",
+      "old_boxes_xywh": [
+        [
+          371.0,
+          147.00000000000003,
+          812.0,
+          455.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          371,
+          147,
+          814,
+          573
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/5bb619812e137e09.txt",
+      "label_sha256": "c389edbfc1fade312d7d5cba8553581170580f3e9620f1bfee378ffdbae3ffa6",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/7113dd0e310c962e.jpg",
+      "sequence": "bird-7",
+      "frame": 2911,
+      "kind": "negative_crop",
+      "image_sha256": "f2ab6dbc8e41b4e4764eb588e2ab2a8cee5290207edfa3125ebe8442d61fb716",
+      "size": [
+        256,
+        144
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/7113dd0e310c962e.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/cf1c5e96383b9d51.jpg",
+      "sequence": "bird-7",
+      "frame": 2911,
+      "kind": "positive",
+      "image_sha256": "b639b5a4749989c083882d6d70f4d7fd1e45c76b1324c075f85299352f10e0f0",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "b4f3fa8544fff56627ddd8f76d4d17574d3df1161a76a510bf74153d832ef02c",
+      "old_boxes_xywh": [
+        [
+          230.99999999999994,
+          203.0,
+          905.0,
+          488.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          315,
+          203,
+          825,
+          517
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/cf1c5e96383b9d51.txt",
+      "label_sha256": "3e4d59a4d69e7b8383ea20a2a6b7e4fc8b9e8cab48d548a4326ec72caf7d364a",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/fd134e09d454ce52.jpg",
+      "sequence": "bird-8",
+      "frame": 1,
+      "kind": "negative_crop",
+      "image_sha256": "07729e40881790097114a061c6bdbe8746dc7009217d96db2487805c52cab35f",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/fd134e09d454ce52.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/880a071c0ce96ea1.jpg",
+      "sequence": "bird-8",
+      "frame": 1,
+      "kind": "positive",
+      "image_sha256": "a762a3116db4aeff05d966a1eec1969dc8666caa788aab3964e5e37859508387",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "84ad4cf9bba771788b906eb0785a0203e39a5da96731bbc2cfba3fbf8bf3f4a9",
+      "old_boxes_xywh": [
+        [
+          525.0,
+          240.0,
+          191.0,
+          224.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          525,
+          240,
+          191,
+          345
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/880a071c0ce96ea1.txt",
+      "label_sha256": "caaa2e0d350608636c0300d99bb0ca656a7325b4d851998be1ed13bfddbea86e",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/68e1b6a6225d5b0b.jpg",
+      "sequence": "bird-8",
+      "frame": 183,
+      "kind": "positive",
+      "image_sha256": "e9012499b9c323fe8efd27242b0fc6c41bb83a209866011737444a14e9eb3a84",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "7309b1b68191d3d00c2467f3f81dcb07650b1719a51e11aeb8f0274cac3f5688",
+      "old_boxes_xywh": [
+        [
+          561.0,
+          228.0,
+          121.0,
+          233.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          560,
+          228,
+          128,
+          366
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/68e1b6a6225d5b0b.txt",
+      "label_sha256": "86c86a52f38d39d599666d7a7f6c17990fc8ef555c5ee4865438da1154df1414",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/2e8069be1286695b.jpg",
+      "sequence": "bird-8",
+      "frame": 366,
+      "kind": "positive",
+      "image_sha256": "b175fbe629fb0e9d8c532597bda1cf954a8b68af00dbb1ec809480209b38cd26",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "dfe3cc3fa5b7765ec6ff4e9c27ba83c4508c05c0c4e32df4ee9f787fd2c21cfd",
+      "old_boxes_xywh": [
+        [
+          505.0,
+          204.0,
+          104.0,
+          245.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          500,
+          204,
+          114,
+          396
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/2e8069be1286695b.txt",
+      "label_sha256": "07e10ee7f021a4e641d7e37819e8c42fb7148a0e3933191030ab5e1ebb4150bd",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/76e2631a36f90947.jpg",
+      "sequence": "bird-8",
+      "frame": 549,
+      "kind": "negative_crop",
+      "image_sha256": "508544404f3bd053ffb37cc4a91e65dc3c7321b018046f7810a7a0a185f7f1da",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/76e2631a36f90947.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/842c846565914093.jpg",
+      "sequence": "bird-8",
+      "frame": 549,
+      "kind": "positive",
+      "image_sha256": "4bf6c38547f2cc8914df2e428f0b94d1609671a89f668376ad90bee6a43183b0",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "c33190ef2a40997a956e7d053ef7a2f2fae267982b81b3e16134e8817fee4b3a",
+      "old_boxes_xywh": [
+        [
+          608.0,
+          218.00000000000003,
+          142.0,
+          239.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          608,
+          218,
+          144,
+          392
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/842c846565914093.txt",
+      "label_sha256": "8180245a901b8cfe962ca890730c785efde2b8c94c979e281337f8fe30a831c1",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/8b1b02db075ee174.jpg",
+      "sequence": "bird-8",
+      "frame": 731,
+      "kind": "positive",
+      "image_sha256": "277f7fa03b7713662284e06c605db34c1a747dcafb13f4c662ce4ded3c7cf763",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "5d66b921e5e34562a48b8d72e36dd3c20a576def92f6902072fe63fb6383513b",
+      "old_boxes_xywh": [
+        [
+          654.0,
+          220.00000000000003,
+          116.0,
+          258.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          654,
+          220,
+          118,
+          345
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/8b1b02db075ee174.txt",
+      "label_sha256": "45a39acdbdc2c2bdb99e6d10bba8db4945f05c36f0ae381d16b2a84e142cbe2d",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/30e7b4db7d08fce2.jpg",
+      "sequence": "bird-8",
+      "frame": 914,
+      "kind": "positive",
+      "image_sha256": "c45b84ef06c661cb22b43588fcbf00f4e3547226f3aa48fa332034edce0a3d4f",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "2ac6f0b219d6f501b3c0412b54907700c6d278feaab1bb229a665c1402c60d1b",
+      "old_boxes_xywh": [
+        [
+          663.0000000000001,
+          208.99999999999997,
+          132.0,
+          265.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          660,
+          209,
+          135,
+          341
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/30e7b4db7d08fce2.txt",
+      "label_sha256": "cecbff2e3ec94a9808b368a042777550370afbac2182be071e28c942335d9ad2",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/95fc73b2b7509ab6.jpg",
+      "sequence": "bird-8",
+      "frame": 1097,
+      "kind": "positive",
+      "image_sha256": "e06afc805866482fb1c13d3a7293d2f2c2bb584c79d458dc38763545d38fe749",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "6de3e0eb8dd11111a49af281a85d22011c2043ee945216b498548a897241d34d",
+      "old_boxes_xywh": [
+        [
+          621.0000000000001,
+          193.0,
+          116.0,
+          274.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          621,
+          193,
+          117,
+          342
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/95fc73b2b7509ab6.txt",
+      "label_sha256": "fe01bbdfbaea445b561a8f8a246c17ddb3717509ff0010212cac0845b92e5fa1",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/f7b7d28e2a965708.jpg",
+      "sequence": "bird-8",
+      "frame": 1280,
+      "kind": "negative_crop",
+      "image_sha256": "bcb7a04b0a5c2c5e2faad7f7d8ce349a92476c35da0f2137e785f711a2e5c031",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/f7b7d28e2a965708.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/13fbd2a8e527a98e.jpg",
+      "sequence": "bird-8",
+      "frame": 1280,
+      "kind": "positive",
+      "image_sha256": "5d01b4a0444f4f4900cf884e7fb85afbc34dd63c7f4563f0e94bb59397100fc6",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "a3b9f5ad17316cb3f998130cc9783530bec35a593ef7f14474a4a39399d7f339",
+      "old_boxes_xywh": [
+        [
+          562.0,
+          176.0,
+          152.0,
+          290.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          560,
+          176,
+          154,
+          364
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/13fbd2a8e527a98e.txt",
+      "label_sha256": "9864862cf569d8246d89e51d0912576071887b56afc2dc5d15e8cff094655f4f",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/727b1e7501c78ee1.jpg",
+      "sequence": "bird-8",
+      "frame": 1462,
+      "kind": "positive",
+      "image_sha256": "d479ed2ca7fd1443c0557b5cb74f527cc0332be7d2e2a1fb24d4c15347641328",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "b93183e1eb4d3dd60b58cfff7e8fc560d8fd1e9b75a79fb2e34de5e868dc5d33",
+      "old_boxes_xywh": [
+        [
+          556.0,
+          187.00000000000003,
+          260.0,
+          293.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          556,
+          187,
+          260,
+          378
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/727b1e7501c78ee1.txt",
+      "label_sha256": "cd141853aeeeaccdd5ed0c5bd827f498bec74ae958a0f7ccd9fc0d43eb5a1eca",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/619429f82b6ac661.jpg",
+      "sequence": "bird-8",
+      "frame": 1645,
+      "kind": "positive",
+      "image_sha256": "031e3e2d521d3d3912f49a0e06706cd05fe150037c7fa1866d937576787da554",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "6e60cb54d35eb6914a57fbf1751c5445ffc4ece1ea56bc5a38c298816042b777",
+      "old_boxes_xywh": [
+        [
+          607.0,
+          192.0,
+          340.0,
+          298.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          607,
+          192,
+          340,
+          388
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/619429f82b6ac661.txt",
+      "label_sha256": "6cb8b2134a6c276ea19db75146670526521eeeeb58e5c2c1ed5aff7b6546291f",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/9c3ec857eedf8ab6.jpg",
+      "sequence": "bird-8",
+      "frame": 1828,
+      "kind": "positive",
+      "image_sha256": "e004e4a31d60ef6bbbd77199b177de90ef11569e93d9ad959d2f4322e7b0c06c",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "349066ba0b233fd047c7aabe6a2a69c6b01c5d2f0fb50b03a5c51932ac8c03a7",
+      "old_boxes_xywh": [
+        [
+          491.99999999999994,
+          193.0,
+          337.0,
+          312.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          492,
+          193,
+          337,
+          392
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/9c3ec857eedf8ab6.txt",
+      "label_sha256": "11ea8424dc0d900a702e49edb310e644d334ecf7fe175bc6ae2e2156dbf1f2cd",
+      "annotation_changed": true
+    },
+    {
+      "split": "val",
+      "image": "val/images/ff61134434c1c9c7.jpg",
+      "sequence": "bird-8",
+      "frame": 2011,
+      "kind": "negative_crop",
+      "image_sha256": "d82c03b5b53cf334038aaf2f45bbf2ce8ecdaf69173cf072c26188bb8b9bedc9",
+      "size": [
+        384,
+        216
+      ],
+      "old_label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "old_boxes_xywh": [],
+      "new_boxes_xywh": [],
+      "author": "assistant",
+      "review": "negative_source_retained",
+      "notes": "Зображення й порожня розмітка збережені без змін.",
+      "label": "val/labels/ff61134434c1c9c7.txt",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "annotation_changed": false
+    },
+    {
+      "split": "val",
+      "image": "val/images/a5eb004746a7dc1e.jpg",
+      "sequence": "bird-8",
+      "frame": 2011,
+      "kind": "positive",
+      "image_sha256": "740b4634f7da160b6466d1e83880cbcb55be7c1b36fefe96f79e1c79ae25770a",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "c763de3970048d787d6fba91dcab5fc5b332545fc7e069b6bfd5258575158f62",
+      "old_boxes_xywh": [
+        [
+          632.0,
+          129.0,
+          330.0,
+          305.0
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          632,
+          129,
+          330,
+          446
+        ]
+      ],
+      "author": "assistant",
+      "review": "manual_full_visible_bird_reannotation",
+      "notes": "Ручне візуальне читання оригіналу, без прогнозів. Межі видимих частин; приховані частини не домислювалися.",
+      "label": "val/labels/a5eb004746a7dc1e.txt",
+      "label_sha256": "5c26397ac81af22ab3d3f99ed4725519e24ac44384b7536d309af07e8f080419",
+      "annotation_changed": true
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-4-00000001.jpg",
+      "sequence": "bird-4",
+      "frame": 1,
+      "kind": "positive_extra",
+      "image_sha256": "e9766a779ec4170dea3e7292fe19df128c8078a0d12246b5be6f74fb413d5f99",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "f982f45fe6a5f0dc3d2a565e918999aac34377dbf1d97c162d912bee985f1578",
+      "old_boxes_xywh": [
+        [
+          222,
+          154,
+          192,
+          502
+        ],
+        [
+          600,
+          0,
+          450,
+          205
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          222,
+          154,
+          192,
+          502
+        ],
+        [
+          600,
+          0,
+          450,
+          205
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-4-00000001.txt",
+      "label_sha256": "f982f45fe6a5f0dc3d2a565e918999aac34377dbf1d97c162d912bee985f1578",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-4-00000855.jpg",
+      "sequence": "bird-4",
+      "frame": 855,
+      "kind": "positive_extra",
+      "image_sha256": "a6f2a5abe6561d8b828c370b80e3db2c134d39adefa3f3ba285f19cef1e5ac8e",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "4cb87615e785abb6628628f709f493c6f0bca6bdbffedb113a93fe9804921ba5",
+      "old_boxes_xywh": [
+        [
+          477,
+          326,
+          345,
+          220
+        ],
+        [
+          643,
+          15,
+          178,
+          270
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          477,
+          326,
+          345,
+          220
+        ],
+        [
+          643,
+          15,
+          178,
+          270
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-4-00000855.txt",
+      "label_sha256": "4cb87615e785abb6628628f709f493c6f0bca6bdbffedb113a93fe9804921ba5",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-4-00002594.jpg",
+      "sequence": "bird-4",
+      "frame": 2594,
+      "kind": "positive_extra",
+      "image_sha256": "840b3549c43a952099bae7b0d787ec67e9e34a990d8c7740020ec848ebd762bd",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "a95f45a69691d7334a50ae708cd4fa9b4fc20a95447abbee5ebb8c71262d38a7",
+      "old_boxes_xywh": [
+        [
+          350,
+          145,
+          270,
+          242
+        ],
+        [
+          510,
+          10,
+          367,
+          215
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          350,
+          145,
+          270,
+          242
+        ],
+        [
+          510,
+          10,
+          367,
+          215
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-4-00002594.txt",
+      "label_sha256": "a95f45a69691d7334a50ae708cd4fa9b4fc20a95447abbee5ebb8c71262d38a7",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-12-00000001.jpg",
+      "sequence": "bird-12",
+      "frame": 1,
+      "kind": "positive_extra",
+      "image_sha256": "27d2f38c78a0d5d30b55bf240992ef995fab324f6547b0303a93de3e825b717d",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "2a41c8c8c35cda876e2b6660f63341ee1ccedffe0e1a36c0a8af0c98c3fe099a",
+      "old_boxes_xywh": [
+        [
+          400,
+          140,
+          220,
+          255
+        ],
+        [
+          380,
+          490,
+          510,
+          225
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          400,
+          140,
+          220,
+          255
+        ],
+        [
+          380,
+          490,
+          510,
+          225
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-12-00000001.txt",
+      "label_sha256": "2a41c8c8c35cda876e2b6660f63341ee1ccedffe0e1a36c0a8af0c98c3fe099a",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-12-00000400.jpg",
+      "sequence": "bird-12",
+      "frame": 400,
+      "kind": "positive_extra",
+      "image_sha256": "f00f5fb1ccd13bc8d65a34665e65e315318e5882e958baec25b99658d788891f",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "01d3a94240b274c11548da661b736b5f68d7e7a7f5a6dea7999eda4544151d3b",
+      "old_boxes_xywh": [
+        [
+          195,
+          138,
+          545,
+          340
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          195,
+          138,
+          545,
+          340
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-12-00000400.txt",
+      "label_sha256": "01d3a94240b274c11548da661b736b5f68d7e7a7f5a6dea7999eda4544151d3b",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-12-00000800.jpg",
+      "sequence": "bird-12",
+      "frame": 800,
+      "kind": "positive_extra",
+      "image_sha256": "0e2c1a39fba2ebba8f130284018cde9a3ae6a8279cf5a91d19a195a749ae138f",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "043145ba7c29291f3a3bfba922b5107b5d0712b9520fd0bcefb0da74be468b3d",
+      "old_boxes_xywh": [
+        [
+          412,
+          85,
+          610,
+          402
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          412,
+          85,
+          610,
+          402
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-12-00000800.txt",
+      "label_sha256": "043145ba7c29291f3a3bfba922b5107b5d0712b9520fd0bcefb0da74be468b3d",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-12-00001200.jpg",
+      "sequence": "bird-12",
+      "frame": 1200,
+      "kind": "positive_extra",
+      "image_sha256": "b108ab8141442a0fa645ba4b8ef5f5b46212a917c3636b173e1c2354d0c5cbb7",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "ce0f9d6c25288625e175e9d98fb4dc690e4e40439413a12774c18efc74d5907f",
+      "old_boxes_xywh": [
+        [
+          140,
+          118,
+          485,
+          495
+        ],
+        [
+          812,
+          170,
+          468,
+          350
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          140,
+          118,
+          485,
+          495
+        ],
+        [
+          812,
+          170,
+          468,
+          350
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-12-00001200.txt",
+      "label_sha256": "ce0f9d6c25288625e175e9d98fb4dc690e4e40439413a12774c18efc74d5907f",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-13-00000001.jpg",
+      "sequence": "bird-13",
+      "frame": 1,
+      "kind": "positive_extra",
+      "image_sha256": "b61733001f4a75f8fa3347a03389563dc314d0d4d48688962e83dc7b8108d7ea",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "c454f1b9c1ec1d3ac972b3acc56dcd2bdf162a10c05c29e6679eca3dd82ceac5",
+      "old_boxes_xywh": [
+        [
+          382,
+          140,
+          108,
+          185
+        ],
+        [
+          714,
+          92,
+          99,
+          122
+        ],
+        [
+          785,
+          105,
+          135,
+          125
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          382,
+          140,
+          108,
+          185
+        ],
+        [
+          714,
+          92,
+          99,
+          122
+        ],
+        [
+          785,
+          105,
+          135,
+          125
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-13-00000001.txt",
+      "label_sha256": "c454f1b9c1ec1d3ac972b3acc56dcd2bdf162a10c05c29e6679eca3dd82ceac5",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-13-00000629.jpg",
+      "sequence": "bird-13",
+      "frame": 629,
+      "kind": "positive_extra",
+      "image_sha256": "bba047b2e746fa9f57634f061fc1efa861a795b0f997c7ee24b6cc92a80033e7",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "1daf93e5916b652efe755381f723659856533e8f8be02e77a7010a9c9c43ff72",
+      "old_boxes_xywh": [
+        [
+          480,
+          103,
+          234,
+          290
+        ],
+        [
+          700,
+          117,
+          205,
+          285
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          480,
+          103,
+          234,
+          290
+        ],
+        [
+          700,
+          117,
+          205,
+          285
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-13-00000629.txt",
+      "label_sha256": "1daf93e5916b652efe755381f723659856533e8f8be02e77a7010a9c9c43ff72",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-13-00001257.jpg",
+      "sequence": "bird-13",
+      "frame": 1257,
+      "kind": "positive_extra",
+      "image_sha256": "bc2b0e223935ac948e0a5e6401bc33eff817aa2e9e30808d367deb26fc2b3e6a",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "f4dc62dee97854e117beeb13a2f1807690e4b7f2d30b00130ec21cda4423fb10",
+      "old_boxes_xywh": [
+        [
+          384,
+          220,
+          275,
+          315
+        ],
+        [
+          575,
+          182,
+          270,
+          266
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          384,
+          220,
+          275,
+          315
+        ],
+        [
+          575,
+          182,
+          270,
+          266
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-13-00001257.txt",
+      "label_sha256": "f4dc62dee97854e117beeb13a2f1807690e4b7f2d30b00130ec21cda4423fb10",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-13-00001886.jpg",
+      "sequence": "bird-13",
+      "frame": 1886,
+      "kind": "positive_extra",
+      "image_sha256": "6df5850f71699279b8bfae8f004fbf6e9702b24a5d0542139961b1c63be7f6ba",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "2d56710a0832c6a80dc66984af5e6cde5501de2a6d278a148c432fc1d87ab822",
+      "old_boxes_xywh": [
+        [
+          30,
+          65,
+          318,
+          370
+        ],
+        [
+          650,
+          100,
+          330,
+          305
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          30,
+          65,
+          318,
+          370
+        ],
+        [
+          650,
+          100,
+          330,
+          305
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-13-00001886.txt",
+      "label_sha256": "2d56710a0832c6a80dc66984af5e6cde5501de2a6d278a148c432fc1d87ab822",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-20-00000001.jpg",
+      "sequence": "bird-20",
+      "frame": 1,
+      "kind": "positive_extra",
+      "image_sha256": "dd699233b6a209eaa5667783bffed5a35dcd1f65ddd5e6b7d333a23046f0b5fd",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "f325914be58ea32529260d484ce927622bb23a19f44c6831e27e099abcf9a26c",
+      "old_boxes_xywh": [
+        [
+          558,
+          325,
+          218,
+          185
+        ],
+        [
+          915,
+          187,
+          155,
+          185
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          558,
+          325,
+          218,
+          185
+        ],
+        [
+          915,
+          187,
+          155,
+          185
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-20-00000001.txt",
+      "label_sha256": "f325914be58ea32529260d484ce927622bb23a19f44c6831e27e099abcf9a26c",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-20-00000530.jpg",
+      "sequence": "bird-20",
+      "frame": 530,
+      "kind": "positive_extra",
+      "image_sha256": "f67f70f4360495c5e58b7a93371c54b8e5d2b92219da0293bc1c5bc3dff1c79d",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "7e9ac4a13324b207d5b307f41139a4a843ecceafafeee545c0312aad2d449732",
+      "old_boxes_xywh": [
+        [
+          78,
+          330,
+          173,
+          178
+        ],
+        [
+          780,
+          284,
+          42,
+          73
+        ],
+        [
+          785,
+          387,
+          88,
+          78
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          78,
+          330,
+          173,
+          178
+        ],
+        [
+          780,
+          284,
+          42,
+          73
+        ],
+        [
+          785,
+          387,
+          88,
+          78
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-20-00000530.txt",
+      "label_sha256": "7e9ac4a13324b207d5b307f41139a4a843ecceafafeee545c0312aad2d449732",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-20-00001060.jpg",
+      "sequence": "bird-20",
+      "frame": 1060,
+      "kind": "positive_extra",
+      "image_sha256": "43cb63cbbbd4c0937634eccaeb5620cd8f326bb647af8d12be89bf6ddcca04d4",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "d8542997e46a219a86fda40db559cfbdbc6bac6658b9f9c5fa646f4742443e36",
+      "old_boxes_xywh": [
+        [
+          390,
+          325,
+          160,
+          198
+        ],
+        [
+          795,
+          327,
+          160,
+          201
+        ],
+        [
+          325,
+          205,
+          48,
+          77
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          390,
+          325,
+          160,
+          198
+        ],
+        [
+          795,
+          327,
+          160,
+          201
+        ],
+        [
+          325,
+          205,
+          48,
+          77
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-20-00001060.txt",
+      "label_sha256": "d8542997e46a219a86fda40db559cfbdbc6bac6658b9f9c5fa646f4742443e36",
+      "annotation_changed": false
+    },
+    {
+      "split": "train",
+      "image": "train/images/extra-bird-20-00001590.jpg",
+      "sequence": "bird-20",
+      "frame": 1590,
+      "kind": "positive_extra",
+      "image_sha256": "7dbb86e008fdcb90f989666e9713b622bd1f7555a6e38a183c2b1cac78813fdf",
+      "size": [
+        1280,
+        720
+      ],
+      "old_label_sha256": "4834b0334096e975b7270c29c99026b824d251ec4b32d0c7dc99f74e8c0e76bf",
+      "old_boxes_xywh": [
+        [
+          685,
+          310,
+          122,
+          135
+        ],
+        [
+          455,
+          170,
+          44,
+          62
+        ],
+        [
+          497,
+          151,
+          45,
+          77
+        ],
+        [
+          0,
+          234,
+          45,
+          118
+        ]
+      ],
+      "new_boxes_xywh": [
+        [
+          685,
+          310,
+          122,
+          135
+        ],
+        [
+          455,
+          170,
+          44,
+          62
+        ],
+        [
+          497,
+          151,
+          45,
+          77
+        ],
+        [
+          0,
+          234,
+          45,
+          118
+        ]
+      ],
+      "author": "assistant",
+      "review": "prior_manual_full_bird_annotation_retained",
+      "notes": "Попередня ручна розмітка асистента з tools/video_focus_annotations.json; не людський аудит і не pseudo-GT.",
+      "label": "train/labels/extra-bird-20-00001590.txt",
+      "label_sha256": "4834b0334096e975b7270c29c99026b824d251ec4b32d0c7dc99f74e8c0e76bf",
+      "annotation_changed": false
+    }
+  ]
+}

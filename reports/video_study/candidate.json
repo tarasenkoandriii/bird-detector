@@ -1,0 +1,8 @@
+{
+  "role": "experimental video candidate; release unchanged",
+  "weights": "weights/video_focus.pt",
+  "weights_sha256": "5512380a6d9943b02f0b579fa7b76c7b9c5d033336a8ef21bbb2af073227348d",
+  "source_run": "video-v2-d-head-3ep",
+  "best_epoch": 2,
+  "original_D_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f"
+}

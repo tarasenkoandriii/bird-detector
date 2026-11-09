@@ -1,0 +1,21 @@
+{
+  "id": "D",
+  "weights": "/Users/macbook/Documents/ChatGPT/birds/weights/best.pt",
+  "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+  "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+  "split": "val",
+  "images": 32,
+  "imgsz": 640,
+  "batch": 4,
+  "device": "cpu",
+  "conf": 0.001,
+  "iou": 0.7,
+  "max_det": 300,
+  "metrics": {
+    "metrics/precision(B)": 0.9905855821895939,
+    "metrics/recall(B)": 0.9583333333333334,
+    "metrics/mAP50(B)": 0.9934000000000002,
+    "metrics/mAP50-95(B)": 0.7797099089557785,
+    "fitness": 0.7797099089557785
+  }
+}

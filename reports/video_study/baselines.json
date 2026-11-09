@@ -1,0 +1,65 @@
+[
+  {
+    "id": "raw_n",
+    "weights": "/Users/macbook/Documents/ChatGPT/birds/yolo26n.pt",
+    "weights_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+    "split": "val",
+    "images": 32,
+    "imgsz": 640,
+    "batch": 4,
+    "device": "cpu",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "metrics": {
+      "metrics/precision(B)": 1.0,
+      "metrics/recall(B)": 0.9175391749282629,
+      "metrics/mAP50(B)": 0.9905555555555557,
+      "metrics/mAP50-95(B)": 0.7723769739779971,
+      "fitness": 0.7723769739779971
+    }
+  },
+  {
+    "id": "D",
+    "weights": "/Users/macbook/Documents/ChatGPT/birds/weights/best.pt",
+    "weights_sha256": "03b17557e228f19cdd75bb0ff0b8e10cbe3dec8ba8cb78b527d6c4462cec713f",
+    "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+    "split": "val",
+    "images": 32,
+    "imgsz": 640,
+    "batch": 4,
+    "device": "cpu",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "metrics": {
+      "metrics/precision(B)": 0.9905855821895939,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9934000000000002,
+      "metrics/mAP50-95(B)": 0.7797099089557785,
+      "fitness": 0.7797099089557785
+    }
+  },
+  {
+    "id": "raw_s",
+    "weights": "/Users/macbook/Documents/ChatGPT/birds/yolo26s.pt",
+    "weights_sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+    "manifest_sha256": "a7ac99f3bcd9211db2004b536986e71d9719b8ddfcdd28fe84b2fc1865433947",
+    "split": "val",
+    "images": 32,
+    "imgsz": 640,
+    "batch": 4,
+    "device": "cpu",
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "metrics": {
+      "metrics/precision(B)": 0.8432571320164,
+      "metrics/recall(B)": 0.9583333333333334,
+      "metrics/mAP50(B)": 0.9560619528619527,
+      "metrics/mAP50-95(B)": 0.7119745446220447,
+      "fitness": 0.7119745446220447
+    }
+  }
+]

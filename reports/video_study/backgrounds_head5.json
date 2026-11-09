@@ -1,0 +1,91 @@
+{
+  "weights_sha256": "5a730f5d3ad99fb6e5240846a65cf7d29acfcf7a4154c7e977755c124491ef03",
+  "split": "val",
+  "images": 8,
+  "images_with_false_positives": 0,
+  "false_positive_boxes": 0,
+  "conf": 0.25,
+  "imgsz": 640,
+  "post_nms_iou": 0.5,
+  "note": "Негативна валідація містить перевірені фонові вирізки, не повні негативні ролики.",
+  "frames": [
+    {
+      "image": "val/images/ff61134434c1c9c7.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/7113dd0e310c962e.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/76e2631a36f90947.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/d3f7364210a8b1fe.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/9db47e812d4dbd9d.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/66503b8809a433eb.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/fd134e09d454ce52.jpg",
+      "false_positive_boxes": 0
+    },
+    {
+      "image": "val/images/f7b7d28e2a965708.jpg",
+      "false_positive_boxes": 0
+    }
+  ],
+  "data_source": "datasets/bird-video/source.json",
+  "v2_backgrounds_byte_identical": true,
+  "records": [
+    {
+      "image": "val/images/ff61134434c1c9c7.jpg",
+      "image_sha256": "d82c03b5b53cf334038aaf2f45bbf2ce8ecdaf69173cf072c26188bb8b9bedc9",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/7113dd0e310c962e.jpg",
+      "image_sha256": "f2ab6dbc8e41b4e4764eb588e2ab2a8cee5290207edfa3125ebe8442d61fb716",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/76e2631a36f90947.jpg",
+      "image_sha256": "508544404f3bd053ffb37cc4a91e65dc3c7321b018046f7810a7a0a185f7f1da",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/d3f7364210a8b1fe.jpg",
+      "image_sha256": "ecee155af8960dda7f3e075bed5b297c30955b7e7396582010670d757cd8aee0",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/9db47e812d4dbd9d.jpg",
+      "image_sha256": "9b5c4aaeb65f7f46a5778ef4be45101c46593d2f798717019319c88195ee2de8",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/66503b8809a433eb.jpg",
+      "image_sha256": "7a339a2ac5d969599f54a61755a41e8b50b815873e4fc2dc533ca8a57ffbb980",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/fd134e09d454ce52.jpg",
+      "image_sha256": "07729e40881790097114a061c6bdbe8746dc7009217d96db2487805c52cab35f",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "image": "val/images/f7b7d28e2a965708.jpg",
+      "image_sha256": "bcb7a04b0a5c2c5e2faad7f7d8ce349a92476c35da0f2137e785f711a2e5c031",
+      "label_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "device": "cpu",
+  "test_used": false
+}

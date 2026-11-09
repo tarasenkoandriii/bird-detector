@@ -1,0 +1,32 @@
+{
+  "state": "trained",
+  "pid": 88912,
+  "name": "video-v2-d-neck-3ep",
+  "scope": "neck-head",
+  "epochs": 3,
+  "completed_epochs": 3,
+  "started_unix": 1794188991.32805,
+  "updated_unix": 1794189163.735115,
+  "baseline_video_map50_95": 0.7797099089557785,
+  "video_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9884293343353837,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.7801530759402278
+  },
+  "best_trained": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-d-neck-3ep/weights/best.pt",
+  "selected": "/Users/macbook/Documents/ChatGPT/birds/runs/experiments/video-v2-d-neck-3ep/weights/best.pt",
+  "initial_retained": false,
+  "best_video_metrics": {
+    "metrics/precision(B)": 1.0,
+    "metrics/recall(B)": 0.9884293343353837,
+    "metrics/mAP50(B)": 0.995,
+    "metrics/mAP50-95(B)": 0.7801530759402278,
+    "fitness": 0.7801530759402278
+  },
+  "video_gain_pp": 0.04431669844492392,
+  "release_replaced": false,
+  "elapsed_seconds": 172.40706300735474,
+  "best_trained_sha256": "86147dfdcc4db2022820d186fb42a20020715b6ef808818de394d23dd7d1de9e",
+  "best_trained_repo_path": "runs/experiments/video-v2-d-neck-3ep/weights/best.pt"
+}

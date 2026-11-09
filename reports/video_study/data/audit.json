@@ -1,0 +1,2807 @@
+{
+  "classes": {
+    "0": "bird"
+  },
+  "bird_ids": [
+    0
+  ],
+  "counts": {
+    "train": 102,
+    "val": 32
+  },
+  "errors": [],
+  "pairs": [],
+  "records": [
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/0061795dd8729c14.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/0061795dd8729c14.txt",
+      "split": "train",
+      "raw": "ef95eebc50a9e9480ea14a069031c65cb0ffe2c4444d11635d86e8ecb49b079a",
+      "pixel": "0061795dd8729c14a3ebc3fc299a6d0e4c2db248e102cf9331c786290de73acc",
+      "dhash": 9548902677758789258,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.433203125,
+          0.5763888888888888,
+          0.12421875,
+          0.2833333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 0
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/04542f33b13a2dbd.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/04542f33b13a2dbd.txt",
+      "split": "train",
+      "raw": "5a0ba7a82b49eeaf83f0b98f81ae778b05a5fd646a9c6b01924ff560759b4610",
+      "pixel": "04542f33b13a2dbd1f1ba761b1898fde78d73dce152ff2d8ed2b4cede01ad26b",
+      "dhash": 14412645861280415232,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 1
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/0d02456fbebd0eff.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/0d02456fbebd0eff.txt",
+      "split": "train",
+      "raw": "60d1ab83a6c09cd41ee43167b5802815309b71858f603f2168b910fe26491b6f",
+      "pixel": "0d02456fbebd0eff9af587b51e9a3aa0f8ade57feec8944201186ab436d64205",
+      "dhash": 3138389702881115333,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5375,
+          0.5902777777777778,
+          0.2791666666666667,
+          0.8194444444444444
+        ]
+      ],
+      "valid": true,
+      "group": 2
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/114624b12a303434.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/114624b12a303434.txt",
+      "split": "train",
+      "raw": "5462a85f9580a17fdcceff98ff6ff319097a5dd756e8200d648640b0b41d0bd3",
+      "pixel": "114624b12a303434773d77ff4d21d726e17fa8aeeae7d3a211e8b836eed7229d",
+      "dhash": 12380268710858651884,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5395833333333333,
+          0.5444444444444444,
+          0.29583333333333334,
+          0.8777777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 3
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/11ac88e9c6555bc2.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/11ac88e9c6555bc2.txt",
+      "split": "train",
+      "raw": "fa9413dfe49644dc1b6fa57f100c1281a58e59a5eeb033dd3e52f98cbb5a3cff",
+      "pixel": "11ac88e9c6555bc223824acffd64b27f2d498d1351d301c63d4af808d5730044",
+      "dhash": 9440503214948710374,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.623046875,
+          0.6423611111111112,
+          0.04296875,
+          0.14583333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 4
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/1700d2ac67476fd0.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/1700d2ac67476fd0.txt",
+      "split": "train",
+      "raw": "eb1910e9b4eb8491556b8473503d96f343bad6f5434e37f58e7164b4ec958972",
+      "pixel": "1700d2ac67476fd06869528dfa70a9f4060798c0a6b587282be936c8f1530df4",
+      "dhash": 17717124581463636925,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5052083333333334,
+          0.4263888888888889,
+          0.13125,
+          0.09722222222222222
+        ]
+      ],
+      "valid": true,
+      "group": 5
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/19c5149cdc443740.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/19c5149cdc443740.txt",
+      "split": "train",
+      "raw": "397c6b8cf4f3098526c8d4be3563b1de4664f1026be523c3edcd2bbd4d151d56",
+      "pixel": "19c5149cdc443740248fe18c448a299ab99836e0ca32d8c04d28274170a11ed4",
+      "dhash": 3697852740608848880,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.49296875,
+          0.8784722222222222,
+          0.0421875,
+          0.14583333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 6
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/1a3d46f432e3e913.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/1a3d46f432e3e913.txt",
+      "split": "train",
+      "raw": "f21479276ececc224a2447deaeea08a148266e95afea6cfbef436ba543ecd24e",
+      "pixel": "1a3d46f432e3e913b06e9c5f2d8883da3391a2b82a3b929c4bc0b2c627fcd71c",
+      "dhash": 8531583952719150168,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.403125,
+          0.6597222222222222,
+          0.18125,
+          0.575
+        ]
+      ],
+      "valid": true,
+      "group": 7
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/1dbd0e224ecd0760.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/1dbd0e224ecd0760.txt",
+      "split": "train",
+      "raw": "f2aec0eb4b049f1058ab2e4e54203567976e85f7a9eb53ff8314bc60dc8a07e2",
+      "pixel": "1dbd0e224ecd0760f4e4b7cfcb64764fe0242824dc13c1c2fa3b62633f637594",
+      "dhash": 7807396419778753526,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.48333333333333334,
+          0.5027777777777778,
+          0.11666666666666667,
+          0.36666666666666664
+        ]
+      ],
+      "valid": true,
+      "group": 8
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/1dc6ead2edc67838.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/1dc6ead2edc67838.txt",
+      "split": "train",
+      "raw": "9d507137cc02b1dc4a06159641c2351e09af2386802266d208d729d00d4ec2fd",
+      "pixel": "1dc6ead2edc67838cc055600a2735185763a1827139a56f4ee5d3ad60f47f34c",
+      "dhash": 10126495136227968714,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.481640625,
+          0.5645833333333333,
+          0.09140625,
+          0.2902777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 9
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/1dcf9849b1019d69.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/1dcf9849b1019d69.txt",
+      "split": "train",
+      "raw": "1ced49428f697aa20076be1020d130d8f65a855486280a65c6f727d7e749ab0a",
+      "pixel": "1dcf9849b1019d69954f4cd0fc2cd6764103c2cd6c93be299395bfe076d41e16",
+      "dhash": 10270041704992246368,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.408984375,
+          0.46875,
+          0.34453125,
+          0.30694444444444446
+        ]
+      ],
+      "valid": true,
+      "group": 10
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/233681542cf85ae0.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/233681542cf85ae0.txt",
+      "split": "train",
+      "raw": "6e02ddd6fdf33f0ffed90ef735a842ff6174709d6a1c1ea89166aa14fe027255",
+      "pixel": "233681542cf85ae052d913587f1f8d5cdc7f710f51b3aa94905935114e002634",
+      "dhash": 16339822741705232038,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.746484375,
+          0.37083333333333335,
+          0.12890625,
+          0.09444444444444444
+        ]
+      ],
+      "valid": true,
+      "group": 11
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/25484a02ba46abc9.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/25484a02ba46abc9.txt",
+      "split": "train",
+      "raw": "c32b492f6cfdadd819f0d70c75c93d252d5da8451077bcbafa74b9e8952d57dc",
+      "pixel": "25484a02ba46abc94deb42acdd11974381b6b9ad658a9076475356cdfba3f8ef",
+      "dhash": 6944958662016856672,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46875,
+          0.4,
+          0.09583333333333334,
+          0.3055555555555556
+        ]
+      ],
+      "valid": true,
+      "group": 12
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/25f9cc615b79f484.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/25f9cc615b79f484.txt",
+      "split": "train",
+      "raw": "d7a6c38a70a137bc5a044fefb0b54f89bf0d5a1ffaec2b7f904e33ec429fe2a7",
+      "pixel": "25f9cc615b79f4848afbc14ed797c03bcac3caca7fdc8d87121be0cbb7004d12",
+      "dhash": 11036900665584992203,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.503125,
+          0.5291666666666667,
+          0.06875,
+          0.06944444444444445
+        ]
+      ],
+      "valid": true,
+      "group": 13
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/2976a28000ac4c3b.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/2976a28000ac4c3b.txt",
+      "split": "train",
+      "raw": "c8111799d156febd7757b541526dae3887f02c722baeabdb3e5fd47f4b2440d7",
+      "pixel": "2976a28000ac4c3bffc9e6a4d3c01d7aff37b56f9177c6902bc6758c8491ba7b",
+      "dhash": 16775852055011458033,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.490625,
+          0.5944444444444444,
+          0.21458333333333332,
+          0.6555555555555556
+        ]
+      ],
+      "valid": true,
+      "group": 14
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/2cc9423efb8e2006.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/2cc9423efb8e2006.txt",
+      "split": "train",
+      "raw": "b5a26fd41f12cbbccd65b819cfc4b4293fcaff71adcd32a556b29f5dd4e06bad",
+      "pixel": "2cc9423efb8e20068f277d257f11b9a6c3c58e49e023d5b5d8c11b8b1967a0d6",
+      "dhash": 17342712962117923824,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46041666666666664,
+          0.4666666666666667,
+          0.1125,
+          0.35555555555555557
+        ]
+      ],
+      "valid": true,
+      "group": 15
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/2d9e49af19cf4a8d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/2d9e49af19cf4a8d.txt",
+      "split": "train",
+      "raw": "32f5222012b294b252c8515130625894e20ccadf69c8401b7583c99e454e99dc",
+      "pixel": "2d9e49af19cf4a8d00dcb5dbf8d302213517282ee77bb62a54e044145157fe86",
+      "dhash": 8098642218902673907,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.4479166666666667,
+          0.39861111111111114,
+          0.11666666666666667,
+          0.36944444444444446
+        ]
+      ],
+      "valid": true,
+      "group": 16
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/3107078bbb45212d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/3107078bbb45212d.txt",
+      "split": "train",
+      "raw": "0cbd7bcbd7932435f40f53db8ba76245c21191b22df42b6b2af695cec3064edf",
+      "pixel": "3107078bbb45212d4f1526a9c9275e832d113b0a0a914571e76fa5c8b9f05b3e",
+      "dhash": 15834092927294863283,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.446875,
+          0.4791666666666667,
+          0.07708333333333334,
+          0.10833333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 17
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/3bfd7a7a11c52c33.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/3bfd7a7a11c52c33.txt",
+      "split": "train",
+      "raw": "9e0bbeb216558dba61eb211c9c3a9f5fe5334e499fa627c968e508bcc54cbd85",
+      "pixel": "3bfd7a7a11c52c334f703b31747ecd08466858e7200b3b9a41ceb87d88357f51",
+      "dhash": 11136430497218348738,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46484375,
+          0.4576388888888889,
+          0.1203125,
+          0.2847222222222222
+        ]
+      ],
+      "valid": true,
+      "group": 18
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4063c4be07ae529a.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4063c4be07ae529a.txt",
+      "split": "train",
+      "raw": "494d8a427636717568b7fa3d34f0758b08caab2758a537b5128535e5a33915b0",
+      "pixel": "4063c4be07ae529a0e0633f63ffd710c699a2a78bb967fa6f0a3ddd916c45a20",
+      "dhash": 2813774029765874986,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.534375,
+          0.4375,
+          0.26875,
+          0.291666666667
+        ]
+      ],
+      "valid": true,
+      "group": 19
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/40a0d146b93a8911.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/40a0d146b93a8911.txt",
+      "split": "train",
+      "raw": "c820c7a3ed5a147bb21956b7eff425a17340a5430d4113904c1c70c13ebb5430",
+      "pixel": "40a0d146b93a89113de95b2d126eb515ebe85397d146f5ca205d9c9bba4ad535",
+      "dhash": 18121347928004493046,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46875,
+          0.563888888889,
+          0.2125,
+          0.266666666667
+        ]
+      ],
+      "valid": true,
+      "group": 20
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/40f0e3c2e9003f87.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/40f0e3c2e9003f87.txt",
+      "split": "train",
+      "raw": "078f7dc93d9084a80711fea5a58d336974f4c049c0b870dd422450191259fd54",
+      "pixel": "40f0e3c2e9003f8748b739e552deb82bd044eeda180dde987b91f94c3b8b927e",
+      "dhash": 2811662995089470034,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.645833333333,
+          0.498611111111,
+          0.083333333333,
+          0.197222222222
+        ]
+      ],
+      "valid": true,
+      "group": 21
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4127942d75e2bce0.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4127942d75e2bce0.txt",
+      "split": "train",
+      "raw": "ebbd76273cc728789110676687542d27b39f4b4570c4b60cab4aef7c4a6bc4d8",
+      "pixel": "4127942d75e2bce03a6a68e3fbbc68948c4ea312266ab5a3ec1f3d046e379163",
+      "dhash": 9277574335725334624,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.76796875,
+          0.33819444444444446,
+          0.24375,
+          0.6152777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 22
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4615fd4a1b25b7fc.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4615fd4a1b25b7fc.txt",
+      "split": "train",
+      "raw": "8f7e47bea246fc180c6155039af4663baa3ff6f729e453139a8316697e366a1b",
+      "pixel": "4615fd4a1b25b7fc5f0444eb0c6896cdb9d55f8cf9e47b94645ec6e269a83592",
+      "dhash": 18410704101118557175,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.4125,
+          0.6347222222222222,
+          0.1,
+          0.14722222222222223
+        ]
+      ],
+      "valid": true,
+      "group": 23
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4671fb404aacc848.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4671fb404aacc848.txt",
+      "split": "train",
+      "raw": "feece36cbba347957e3e6bf307a5559ad9e4fa29ca4ff517976aefd84c13d982",
+      "pixel": "4671fb404aacc8484d3ee8b81cb8f937c0d6b7c4280cd6065d36838510cdde07",
+      "dhash": 5859909656870826861,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5270833333333333,
+          0.5527777777777778,
+          0.04583333333333333,
+          0.05
+        ]
+      ],
+      "valid": true,
+      "group": 24
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4981be9d489d9fcc.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4981be9d489d9fcc.txt",
+      "split": "train",
+      "raw": "45e6146f6f1a43e8292b019ea206b83be83968b0c6313d5c25cb0bc433b392fa",
+      "pixel": "4981be9d489d9fcc42e15bf22e37a0b87f5ffd0ee8e15963c84e4038848b82fe",
+      "dhash": 12519353751097317659,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.453125,
+          0.3972222222222222,
+          0.04375,
+          0.12777777777777777
+        ]
+      ],
+      "valid": true,
+      "group": 25
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4a45423af27238f4.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4a45423af27238f4.txt",
+      "split": "train",
+      "raw": "cf7d1d55915455ea267a3687d98df8312a36f55815828f349eecde11612c15cb",
+      "pixel": "4a45423af27238f4e5d9ebcc74b980e932fbfdf9de84da4f121561edae1b4914",
+      "dhash": 9277627201514143744,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.553125,
+          0.5152777777777777,
+          0.03958333333333333,
+          0.041666666666666664
+        ]
+      ],
+      "valid": true,
+      "group": 26
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4ac18fcd2e78cf62.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4ac18fcd2e78cf62.txt",
+      "split": "train",
+      "raw": "619c389dacf53f9b38c1175179f099c24c8fc5692a7c73fa14559f2f7a0fab1f",
+      "pixel": "4ac18fcd2e78cf62a01da599d6183a1ab284e0bab9289faf11cf8cf61de3bd25",
+      "dhash": 10199752168978574543,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.534375,
+          0.625,
+          0.29375,
+          0.7444444444444445
+        ]
+      ],
+      "valid": true,
+      "group": 27
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/4e428b035519473b.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/4e428b035519473b.txt",
+      "split": "train",
+      "raw": "d6e84260d14aab4cc2c655ff7c2541dc86abb324145096936468d72c4b119505",
+      "pixel": "4e428b035519473b5e038324c9fbf01dec56484e9639d19ad0c56bf1bfbac0b9",
+      "dhash": 10127623519028561608,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.50546875,
+          0.525,
+          0.4078125,
+          0.3194444444444444
+        ]
+      ],
+      "valid": true,
+      "group": 28
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/52195e8e4aed12fe.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/52195e8e4aed12fe.txt",
+      "split": "train",
+      "raw": "ae36a20994708a4c6b62bf84f3798c58a01dae2bcee6e3c88ad344072fce7a1c",
+      "pixel": "52195e8e4aed12fe2ddc21e2eda718f8007a04f205de551b31e5f2636cb4c96d",
+      "dhash": 9838544586053961362,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.48984375,
+          0.6277777777777778,
+          0.0859375,
+          0.2861111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 29
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/526d0d4765a01326.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/526d0d4765a01326.txt",
+      "split": "train",
+      "raw": "d8d0fa21212691a28fcf26e5c547add3db7a89b257e71e9501e0c39471a5f161",
+      "pixel": "526d0d4765a01326ea8cfafdb1ab703f7c8e80288699391d3de71b29aa1012dd",
+      "dhash": 18437718989233124829,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.444791666667,
+          0.419444444444,
+          0.127083333333,
+          0.094444444444
+        ]
+      ],
+      "valid": true,
+      "group": 30
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/52c94dceadafbc93.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/52c94dceadafbc93.txt",
+      "split": "train",
+      "raw": "c932fd2bc05d27febfc5a4bc0dec54e325f76d10e528f09e60ecae293217cb25",
+      "pixel": "52c94dceadafbc93e4fe5331734b9736b40964cd4b0f89f0ba802eac2070000e",
+      "dhash": 17034767355625765881,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.38645833333333335,
+          0.5958333333333333,
+          0.24791666666666667,
+          0.7583333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 31
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/57588bb5e6c96c66.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/57588bb5e6c96c66.txt",
+      "split": "train",
+      "raw": "727c82bcdfd0fd541fb2f2733d247beeca4539722f97a2aad91ec017964ed6b3",
+      "pixel": "57588bb5e6c96c667df8f002378182c518be5816d3ca912afc9edfb2bc4cfb6e",
+      "dhash": 18191249934785017969,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.47708333333333336,
+          0.5486111111111112,
+          0.15416666666666667,
+          0.475
+        ]
+      ],
+      "valid": true,
+      "group": 32
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/5c06bd4355a231fa.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/5c06bd4355a231fa.txt",
+      "split": "train",
+      "raw": "a5b6adbf42a75591383a0084e295597f6ecef7194685ec2c8c1380342cebf75e",
+      "pixel": "5c06bd4355a231fafaf1f3ecbfc802a3051c7a3b18ec699468d1109714e1b8d2",
+      "dhash": 14883777256453893327,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5447916666666667,
+          0.6138888888888889,
+          0.29791666666666666,
+          0.7611111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 33
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/63ed6ad94afcd17d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/63ed6ad94afcd17d.txt",
+      "split": "train",
+      "raw": "77538974c03e55a8e0e72f21e713e65e5b7ab217e0a977d50db8ec6fb7a726cf",
+      "pixel": "63ed6ad94afcd17de84a61b45403dbc276506740d96047ea3aa6ff34cd4e5cad",
+      "dhash": 10125926516916915072,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.385546875,
+          0.4666666666666667,
+          0.18203125,
+          0.2861111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 34
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/6fac8a3209d6cd13.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/6fac8a3209d6cd13.txt",
+      "split": "train",
+      "raw": "22980cecfe66c7d54aaa734acddae0a36d4abc28f0261c8588458fe84573b044",
+      "pixel": "6fac8a3209d6cd1360d4ffd0f71cc94a687b155d89580e40a3d3c31dd5516036",
+      "dhash": 281474976776192,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 35
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/6fae85d67640d802.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/6fae85d67640d802.txt",
+      "split": "train",
+      "raw": "5653caea101e76168f8da4beaf544cd05625aa95167fd9c553245f3708682c49",
+      "pixel": "6fae85d67640d802a1fe5680e6758ec0adb18ddaf5e4b575d32d0e9e1aca2df9",
+      "dhash": 9478818288825250770,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.47421875,
+          0.6048611111111111,
+          0.2703125,
+          0.19305555555555556
+        ]
+      ],
+      "valid": true,
+      "group": 36
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7235d75ea113c7af.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7235d75ea113c7af.txt",
+      "split": "train",
+      "raw": "be07d428f823fdbc0bcc23b745486c639731a7813b928a176cabe44318d345d0",
+      "pixel": "7235d75ea113c7af69609690fc5479ce3a48560ec723d7b4d3dcfed36a70a200",
+      "dhash": 12668006519782833382,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5114583333333333,
+          0.5763888888888888,
+          0.29375,
+          0.8472222222222222
+        ]
+      ],
+      "valid": true,
+      "group": 37
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/76f1f275d53ba0f8.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/76f1f275d53ba0f8.txt",
+      "split": "train",
+      "raw": "7409e7802eed165a72a681a4ba7f0b7bf372b176ce7dbec9b5b3d3ccf9b476ea",
+      "pixel": "76f1f275d53ba0f82dd406a97acfb9d71fd127e9e85beffef3d5daf56d4442c9",
+      "dhash": 15247165239044107648,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 38
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/771eb6ebd1f54196.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/771eb6ebd1f54196.txt",
+      "split": "train",
+      "raw": "1eb34e2092dbc569db3085a3147949a8ebe062bf4b7647f64ef20c69b0953837",
+      "pixel": "771eb6ebd1f54196bc3c431687494b5cf54d7aa3c1e3b6a51d696748419b7b5a",
+      "dhash": 13965717256449850393,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.418359375,
+          0.5611111111111111,
+          0.17734375,
+          0.15555555555555556
+        ]
+      ],
+      "valid": true,
+      "group": 39
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/77c9ee7cbaf4a229.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/77c9ee7cbaf4a229.txt",
+      "split": "train",
+      "raw": "2aba4068f1e98bb2bdf45b8064e5c20615943b76840b4d2061e0e2176040f2c4",
+      "pixel": "77c9ee7cbaf4a229446fe3194d233b3d1419adb4f2143757b28172121638eee4",
+      "dhash": 3942467406941297949,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.488541666667,
+          0.6375,
+          0.227083333333,
+          0.308333333333
+        ]
+      ],
+      "valid": true,
+      "group": 40
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7a6f7aad0562cf5d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7a6f7aad0562cf5d.txt",
+      "split": "train",
+      "raw": "ee980f744e8cc7e6eb69f811e319af4e387cbed05e06c007a9064540b36a6b54",
+      "pixel": "7a6f7aad0562cf5d09c86bf2309c50e7e7cb3a19cd2da4af0fc8c794b788c664",
+      "dhash": 13005390148240504849,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.47604166666666664,
+          0.5763888888888888,
+          0.15208333333333332,
+          0.46944444444444444
+        ]
+      ],
+      "valid": true,
+      "group": 41
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7bf2f51b9719d93a.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7bf2f51b9719d93a.txt",
+      "split": "train",
+      "raw": "1a7407c8e1ae8fffd137e4f094b720aebb209cf9a7585fea4d5e1de21e48f43e",
+      "pixel": "7bf2f51b9719d93a569cc4f9f413bcc9f16cc02c10658f2f2cdb2d3616be6916",
+      "dhash": 14126676065565477642,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.496875,
+          0.5583333333333333,
+          0.03125,
+          0.06111111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 42
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7bfb57f7d8a8d79e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7bfb57f7d8a8d79e.txt",
+      "split": "train",
+      "raw": "d2b4e9e6ce31053f25a50f7a5bd7decdf07b1407bfb1950c00c27aaed1656d00",
+      "pixel": "7bfb57f7d8a8d79e77b191ea67c6bd177cd9c76dc9f4c5ce7d9b0f467cfdfccb",
+      "dhash": 17868020526205490615,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5114583333333333,
+          0.5222222222222223,
+          0.18125,
+          0.1111111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 43
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7d283b8e05f4ae35.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7d283b8e05f4ae35.txt",
+      "split": "train",
+      "raw": "21389818801d93e9062ab189c992e7fa0e9334d36ff93d3d8e069e9f9547fa50",
+      "pixel": "7d283b8e05f4ae35201ccbde726c85247744a12580b01fcd1d0308572a2778fe",
+      "dhash": 9549465773471926688,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.36328125,
+          0.49166666666666664,
+          0.1921875,
+          0.2861111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 44
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/7df3d49c073abe18.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/7df3d49c073abe18.txt",
+      "split": "train",
+      "raw": "c41676c4794f39d035059642c936fef816fb6e5cba449681cbbb160f1cdc10ad",
+      "pixel": "7df3d49c073abe188fd2c5eaf9b5116c6753bd1a5fffe2a270f8f4af9139266e",
+      "dhash": 35805405132824,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.61875,
+          0.5180555555555556,
+          0.05416666666666667,
+          0.041666666666666664
+        ]
+      ],
+      "valid": true,
+      "group": 45
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/8324d0941ed666ed.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/8324d0941ed666ed.txt",
+      "split": "train",
+      "raw": "3d2ba77afe5e5ec29bdd076b27262090efd5b7c0fc66ce72e730de569d2416fc",
+      "pixel": "8324d0941ed666ed165337289faccf38191d4374afff212f67af8fb7c7434264",
+      "dhash": 2497273874485700410,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.56875,
+          0.6458333333333334,
+          0.058333333333333334,
+          0.058333333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 46
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/85f6333266ba3df8.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/85f6333266ba3df8.txt",
+      "split": "train",
+      "raw": "b961912c1ebbd2a2e15b0a5f06579d1c33ee5e8c7f4dd2d7c5107e7781d66b32",
+      "pixel": "85f6333266ba3df833d8d492deaee8fcb6f255487e7b548e98bc4ff3cb47866d",
+      "dhash": 1822359555752442477,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5833333333333334,
+          0.5472222222222223,
+          0.07083333333333333,
+          0.06111111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 47
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/86808b2b98c68e7c.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/86808b2b98c68e7c.txt",
+      "split": "train",
+      "raw": "c8ce5e093eff7b4534605c932236d6727c413efd93e6fa231b5962647b8f462b",
+      "pixel": "86808b2b98c68e7c06f42328ad76fc3faa5eaa9fca142bcbcfd8611c5fc8525f",
+      "dhash": 18446673430087204076,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.680208333333,
+          0.647222222222,
+          0.177083333333,
+          0.238888888889
+        ]
+      ],
+      "valid": true,
+      "group": 48
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/86e0e13a8627d1e6.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/86e0e13a8627d1e6.txt",
+      "split": "train",
+      "raw": "14db2085adb8a1dd5e92e04f759dc040713abcb1ae5bc3b1149b81b91b8bf327",
+      "pixel": "86e0e13a8627d1e6cac4ea54fc9f3013f75c3359e4b2f1c1a4f2940ea969091c",
+      "dhash": 10995710212617826400,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46041666666666664,
+          0.5236111111111111,
+          0.041666666666666664,
+          0.041666666666666664
+        ]
+      ],
+      "valid": true,
+      "group": 49
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/8cb15fda65347dd1.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/8cb15fda65347dd1.txt",
+      "split": "train",
+      "raw": "afc5c0fbefca0e71235572b8e6302038e2060d6b20e3b719e8fd8beabc802b27",
+      "pixel": "8cb15fda65347dd1c4a91af0bccb08aa62dfa1a93e23c4d67bcc7ae7c38d5e68",
+      "dhash": 11135300198728652486,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.49765625,
+          0.4875,
+          0.1109375,
+          0.23055555555555557
+        ]
+      ],
+      "valid": true,
+      "group": 50
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/8f98bb02246d951a.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/8f98bb02246d951a.txt",
+      "split": "train",
+      "raw": "0a3d6a8f1829309ad7f4d7127700b69b9ca681f576443e464bf5e6b2383613fc",
+      "pixel": "8f98bb02246d951a73f2353531436ee4b3d1654cc122ce8325004fa3a72e8288",
+      "dhash": 17555159317910155632,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5109375,
+          0.49722222222222223,
+          0.1171875,
+          0.10277777777777777
+        ]
+      ],
+      "valid": true,
+      "group": 51
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/9012781fbb6f421e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/9012781fbb6f421e.txt",
+      "split": "train",
+      "raw": "97538583ab29ccc7eaa33139612bcd33ab2f8a48c1a6197570d75d901bf23186",
+      "pixel": "9012781fbb6f421e4f5cb8ff2e49dc6edf30d574a530f464ae11b3473481ca75",
+      "dhash": 9205251398034128126,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.590625,
+          0.6111111111111112,
+          0.21458333333333332,
+          0.25555555555555554
+        ]
+      ],
+      "valid": true,
+      "group": 52
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/90ab3467bca73926.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/90ab3467bca73926.txt",
+      "split": "train",
+      "raw": "d1790a016bbb44665e6658bdef4af718fe33150d26125d8f99ba44123e26551e",
+      "pixel": "90ab3467bca73926aaeb318093fab885010806e9acebde2f2129ef99b546f595",
+      "dhash": 795789897289931506,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 53
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/92ef89909972fa02.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/92ef89909972fa02.txt",
+      "split": "train",
+      "raw": "160e340e76ea778f7c4ede8e30b1981b4114641437ba61afd0b16d3055582a3f",
+      "pixel": "92ef89909972fa0231ab921d4551bec4ea4d40a1b3ce3a6708dbddc77ea720fc",
+      "dhash": 312457238768288069,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 54
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/9485c8d07a026d3b.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/9485c8d07a026d3b.txt",
+      "split": "train",
+      "raw": "f2af4c143dd04db40751fd7d4cc7b8edd1761559ab4118eda4c2d3344173edf3",
+      "pixel": "9485c8d07a026d3b7bebdc1375040b89ab10aac304c5f0d1ccb99fd73362b5fc",
+      "dhash": 16059366020851856239,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5635416666666667,
+          0.3138888888888889,
+          0.06041666666666667,
+          0.17777777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 55
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/9bbd2e1b6ba5699c.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/9bbd2e1b6ba5699c.txt",
+      "split": "train",
+      "raw": "f087f1b4d101d9d0c800e0323f457f4c83d019ab11bc7ae0e790661dcb27709d",
+      "pixel": "9bbd2e1b6ba5699c606864a193d155524337f51163ffb6b11cf666eab59b66fe",
+      "dhash": 17723630923811863517,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5458333333333333,
+          0.5013888888888889,
+          0.0875,
+          0.058333333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 56
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/9d03aad1b9ba84f8.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/9d03aad1b9ba84f8.txt",
+      "split": "train",
+      "raw": "c6cc5c5708ed3452b3a8f1023c539bcd9ec4a528d0b07fc63c0dc359c41d7b7f",
+      "pixel": "9d03aad1b9ba84f819fb330cc066abffe156af1319ff70ea4f632b9d6a5ab52d",
+      "dhash": 5497996425775855792,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.4635416666666667,
+          0.5013888888888889,
+          0.05625,
+          0.030555555555555555
+        ]
+      ],
+      "valid": true,
+      "group": 57
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/a3ad7bd2ce25c55d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/a3ad7bd2ce25c55d.txt",
+      "split": "train",
+      "raw": "d048494705c3ed7bc45de26643a1c85cc014def1e6a7b07f6ca134e4a9189671",
+      "pixel": "a3ad7bd2ce25c55d931d8397c2bbe7ce645a7e232fc1c0f5839aa708eb8b8848",
+      "dhash": 9874444664991782421,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.4864583333333333,
+          0.5722222222222222,
+          0.04791666666666667,
+          0.03333333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 58
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/a420dbafc7470b92.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/a420dbafc7470b92.txt",
+      "split": "train",
+      "raw": "e22a2bbaa45026a94f627e5e6b121e57771ed39e48e2444243a3adb5fe1429b3",
+      "pixel": "a420dbafc7470b9279cf35b04116eabe4d613e0130b74d7e8fc4825f5057c341",
+      "dhash": 10125372809738110664,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.451171875,
+          0.6104166666666667,
+          0.08984375,
+          0.25416666666666665
+        ]
+      ],
+      "valid": true,
+      "group": 59
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/aa8621dd3bac4d08.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/aa8621dd3bac4d08.txt",
+      "split": "train",
+      "raw": "340bec04a7cf72feb91e769ea625fb316c13999860c8bbf3847eb95328d858bd",
+      "pixel": "aa8621dd3bac4d0805631e89bc65bc854d5e96cfa890ebee5833c9a3f17b0de1",
+      "dhash": 9848388926380884674,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46015625,
+          0.5,
+          0.1015625,
+          0.28888888888888886
+        ]
+      ],
+      "valid": true,
+      "group": 60
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/aef835417d1b9955.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/aef835417d1b9955.txt",
+      "split": "train",
+      "raw": "6ed747f6b3924467ccad0240e5e8c23ac4e28857d6bf71ec579c076fe8a38344",
+      "pixel": "aef835417d1b9955825d2e3257e8d00985c958653a8c8f7870df032f20c508a6",
+      "dhash": 12764102527674874336,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.45208333333333334,
+          0.4361111111111111,
+          0.08333333333333333,
+          0.2611111111111111
+        ]
+      ],
+      "valid": true,
+      "group": 61
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/afe782817640997a.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/afe782817640997a.txt",
+      "split": "train",
+      "raw": "44d8aa09f3164f53300746be93dc2f2a1b2cbbf22431bfa344711c9566860320",
+      "pixel": "afe782817640997aac16453bc43d6c7d177bd90db337720642cdeccc015fec03",
+      "dhash": 3974156269179251538,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.6020833333333333,
+          0.5055555555555555,
+          0.075,
+          0.18888888888888888
+        ]
+      ],
+      "valid": true,
+      "group": 62
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/bbad78d71c1ef8fd.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/bbad78d71c1ef8fd.txt",
+      "split": "train",
+      "raw": "cf880ea01ea049340c592d0190d40b33345bb9a12b029e2c17752480fd44283b",
+      "pixel": "bbad78d71c1ef8fd53c108d4d57f2d1bf6abef2d7fb742f92ff637d06733c864",
+      "dhash": 13018830846478293139,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.45,
+          0.6375,
+          0.15416666666666667,
+          0.49166666666666664
+        ]
+      ],
+      "valid": true,
+      "group": 63
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/bbe8f7d83b63820f.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/bbe8f7d83b63820f.txt",
+      "split": "train",
+      "raw": "1bc84678a0991d49e1d08e976d676af2bac6641aa37c216ad8953b3da1c808fd",
+      "pixel": "bbe8f7d83b63820f108756674e8bbaa02db95e91f8a1b6c8ca971367be73353c",
+      "dhash": 18003697829536129248,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 64
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/bc170131e588de97.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/bc170131e588de97.txt",
+      "split": "train",
+      "raw": "fd366655980c73e59c8f14b059bbecb5ce63faa78c3cb36211661c13b3fdcb12",
+      "pixel": "bc170131e588de9759c8ddf90638c7d7f0f9efc0394b7cc27bfd3bc032e73011",
+      "dhash": 68987912192,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5916666666666667,
+          0.5097222222222222,
+          0.041666666666666664,
+          0.05277777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 65
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/be3cc62a191163d8.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/be3cc62a191163d8.txt",
+      "split": "train",
+      "raw": "c74d4fd0bae5e9a4a5a3146063519828fb5213949b0d66a20420c711f0983e75",
+      "pixel": "be3cc62a191163d8d02d4c5207ef080aa143c80e2436b3f1a7e64c2be1841b1c",
+      "dhash": 12649921748227914980,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5208333333333334,
+          0.5291666666666667,
+          0.3,
+          0.7805555555555556
+        ]
+      ],
+      "valid": true,
+      "group": 66
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/c20b6d00bcc0a23f.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/c20b6d00bcc0a23f.txt",
+      "split": "train",
+      "raw": "475475b5abb370a9da5b2fa34821990eefe0adab10b8ffe8e8045d7d03749ebe",
+      "pixel": "c20b6d00bcc0a23f86683d5ebf07c87d9c7f37ede5b5f2dfa14b69088f3c562e",
+      "dhash": 14394455900594671297,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 67
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/c5625b84a3969584.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/c5625b84a3969584.txt",
+      "split": "train",
+      "raw": "0a7c7ddf3d533f5609e6f7dd9322aff490d5f13fdf677da2a5aec2b82e7fbbc4",
+      "pixel": "c5625b84a39695841bb8d0b639dbb8f9ddebbc1828c7a122251227c7d882e915",
+      "dhash": 15065580038143106718,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.540625,
+          0.5368055555555555,
+          0.1234375,
+          0.14583333333333334
+        ]
+      ],
+      "valid": true,
+      "group": 68
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/c7d1ceaaf1dddac5.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/c7d1ceaaf1dddac5.txt",
+      "split": "train",
+      "raw": "1d13ce21ef258ad40053d1ecd988fa8e24d9653258569bdd6572893b3ad32fb3",
+      "pixel": "c7d1ceaaf1dddac5fcefdd6e47dca5c9d7929af6d9e390b06fcc4803178dd03a",
+      "dhash": 10558840546474251972,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.478515625,
+          0.47708333333333336,
+          0.08828125,
+          0.3013888888888889
+        ]
+      ],
+      "valid": true,
+      "group": 69
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/cd0ff09d4293c519.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/cd0ff09d4293c519.txt",
+      "split": "train",
+      "raw": "ab23e8dc360069353a85f661773cb7afdd962fac1728c6f64b5fb7c6df190f5b",
+      "pixel": "cd0ff09d4293c519a6bd5ebc740d6f8b90063be136872bec146177a5d119e9d9",
+      "dhash": 36507222016,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5385416666666667,
+          0.5513888888888889,
+          0.03958333333333333,
+          0.05277777777777778
+        ]
+      ],
+      "valid": true,
+      "group": 70
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/ce6affcf625ee8ff.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/ce6affcf625ee8ff.txt",
+      "split": "train",
+      "raw": "fceb3317d9e9f620763048249c7a4265ca964de793d8dba75cde021d001b6f7c",
+      "pixel": "ce6affcf625ee8ffef9a991cd1a704ae76487876c5c83c5e057e4f8e99053bcb",
+      "dhash": 9838302519539976322,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.49140625,
+          0.6826388888888889,
+          0.1109375,
+          0.26805555555555555
+        ]
+      ],
+      "valid": true,
+      "group": 71
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/d6d4263b9957c31a.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/d6d4263b9957c31a.txt",
+      "split": "train",
+      "raw": "d133f3de022047b15aa8626c963bba27e99af641eb0422f587aec6a405d1e84f",
+      "pixel": "d6d4263b9957c31a4921a34d06fb2959d180ce4157c4177fa9e54e4f7db8d565",
+      "dhash": 11144807968909729016,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5322916666666667,
+          0.425,
+          0.29791666666666666,
+          0.8444444444444444
+        ]
+      ],
+      "valid": true,
+      "group": 72
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/da999d5f42148a49.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/da999d5f42148a49.txt",
+      "split": "train",
+      "raw": "28a232dcbb9f41330571159f50ded059b0a397f084d44dfca21f7ea68ca9b1c3",
+      "pixel": "da999d5f42148a49a43d68ef2f39b0136546b52389340c0c67adbd55b612b81c",
+      "dhash": 563025140629889,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5583333333333333,
+          0.5527777777777778,
+          0.058333333333333334,
+          0.03333333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 73
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/daa3d464bd6eee84.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/daa3d464bd6eee84.txt",
+      "split": "train",
+      "raw": "4a7915bed5796a737ee94720c47983aaa21379b2534796cf137682d344a29731",
+      "pixel": "daa3d464bd6eee846eca116b0287b57d50970eec19c0efd98da194d9492ac353",
+      "dhash": 14955835125369994436,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5322916666666667,
+          0.5916666666666667,
+          0.29791666666666666,
+          0.7666666666666667
+        ]
+      ],
+      "valid": true,
+      "group": 74
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/dc534e30641ba461.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/dc534e30641ba461.txt",
+      "split": "train",
+      "raw": "2df5b4cab033c8a1ee7f01ed30073587b8da8e2b5028359bcbf6cf7de8a9e2c5",
+      "pixel": "dc534e30641ba461ce1cbab56119cd390221707c5861319a354e0fee963d0151",
+      "dhash": 180496997653006608,
+      "hash_usable": false,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 75
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/e16d073e9a24c1f0.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/e16d073e9a24c1f0.txt",
+      "split": "train",
+      "raw": "b302155ce1fe8f953764ac5845e95d6aef37b98378eb1456c49d3004a0171cbc",
+      "pixel": "e16d073e9a24c1f08b0aa267dca577dfcfeb7afbeadb2abcbd62099cddf1d7ca",
+      "dhash": 4205256847192114642,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.460416666667,
+          0.588888888889,
+          0.195833333333,
+          0.205555555556
+        ]
+      ],
+      "valid": true,
+      "group": 76
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/e375c17e1bb8632d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/e375c17e1bb8632d.txt",
+      "split": "train",
+      "raw": "b9ab149ce5df817cfb034cfc579d7859e40abffcde96b9e841e999166c623e59",
+      "pixel": "e375c17e1bb8632dbb7b7395b801720a6b91e77665c697d4c91546b7bb176a34",
+      "dhash": 11864332998505449856,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 77
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/e3b05d301e35b260.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/e3b05d301e35b260.txt",
+      "split": "train",
+      "raw": "6829474c924f9d5036ef95f993e669d1b820ed67c4f2274543e12b75d7c39c56",
+      "pixel": "e3b05d301e35b26093d0be67744e7f37f803cf168d1228bd218279237dd7f9c8",
+      "dhash": 10127620896649041600,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.512109375,
+          0.49166666666666664,
+          0.31796875,
+          0.31666666666666665
+        ]
+      ],
+      "valid": true,
+      "group": 78
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/e77e61fe2b3262da.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/e77e61fe2b3262da.txt",
+      "split": "train",
+      "raw": "2b343451c34c26c1fe253ce735f9f11b1f618fc405bb26e96137ee163b283ba3",
+      "pixel": "e77e61fe2b3262da5e9857f36a05fed0e05f0e0efb676be31cba6e9e69bdc1cf",
+      "dhash": 2522862441118041349,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5239583333333333,
+          0.49722222222222223,
+          0.04375,
+          0.03333333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 79
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/ebc242ec16796b3e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/ebc242ec16796b3e.txt",
+      "split": "train",
+      "raw": "2f02867c0bec4a71ad2bb9840313ea92fe9c94be2b0d8aaf9115e55abc810a8f",
+      "pixel": "ebc242ec16796b3efdba989b1dc3c0bda6e6184df86ad1d1ae2a7a8fcb4f2e3d",
+      "dhash": 289656305319317398,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 80
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/ec11619dfcf38d07.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/ec11619dfcf38d07.txt",
+      "split": "train",
+      "raw": "392694fe8ead2a7ad7eac62d6027fe8ebdf3224fc5032175d5dc34e7c352a683",
+      "pixel": "ec11619dfcf38d07d938755a28c7183c034e503867fb4c83786dc8d7d92074ec",
+      "dhash": 36170396868804608,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5197916666666667,
+          0.5305555555555556,
+          0.04375,
+          0.05555555555555555
+        ]
+      ],
+      "valid": true,
+      "group": 81
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/ecfbcf54423cda19.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/ecfbcf54423cda19.txt",
+      "split": "train",
+      "raw": "814e70f82fc3e3981368df3edc2823bbb7d73dd081a9e37d86e21608ab345cae",
+      "pixel": "ecfbcf54423cda19c2fb739f36e881167c07de6f29f64969ff80b839386f9d4e",
+      "dhash": 6944674840034992320,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.525,
+          0.5166666666666667,
+          0.04583333333333333,
+          0.03333333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 82
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-12-00000001.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-12-00000001.txt",
+      "split": "train",
+      "raw": "27d2f38c78a0d5d30b55bf240992ef995fab324f6547b0303a93de3e825b717d",
+      "pixel": "829a56211a375aabb1f27ae0d55aead929ddcda7a396dcd50446c758fc3bda55",
+      "dhash": 9734415590831671235,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.3984375,
+          0.37152778,
+          0.171875,
+          0.35416667
+        ],
+        [
+          0,
+          0.49609375,
+          0.83680556,
+          0.3984375,
+          0.3125
+        ]
+      ],
+      "valid": true,
+      "group": 83
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-12-00000400.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-12-00000400.txt",
+      "split": "train",
+      "raw": "f00f5fb1ccd13bc8d65a34665e65e315318e5882e958baec25b99658d788891f",
+      "pixel": "6781d709dfe1e92a2a2ab989f9586b9575e833b8e0365479defc3b61ec4e8f5a",
+      "dhash": 5695654236123091072,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.36523438,
+          0.42777778,
+          0.42578125,
+          0.47222222
+        ]
+      ],
+      "valid": true,
+      "group": 84
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-12-00000800.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-12-00000800.txt",
+      "split": "train",
+      "raw": "0e2c1a39fba2ebba8f130284018cde9a3ae6a8279cf5a91d19a195a749ae138f",
+      "pixel": "9bdb97a4018a1daed2e5c9899f30c5c6e510834d6dcf4f9f66f56b7d284e1b63",
+      "dhash": 14397338622516115199,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.56015625,
+          0.39722222,
+          0.4765625,
+          0.55833333
+        ]
+      ],
+      "valid": true,
+      "group": 85
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-12-00001200.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-12-00001200.txt",
+      "split": "train",
+      "raw": "b108ab8141442a0fa645ba4b8ef5f5b46212a917c3636b173e1c2354d0c5cbb7",
+      "pixel": "12b2a08846bd49f5abe5f5f5b14f85b692766d950d3168e6d15a4fe07022767a",
+      "dhash": 11808836151613816827,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.29882812,
+          0.50763889,
+          0.37890625,
+          0.6875
+        ],
+        [
+          0,
+          0.8171875,
+          0.47916667,
+          0.365625,
+          0.48611111
+        ]
+      ],
+      "valid": true,
+      "group": 86
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-13-00000001.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-13-00000001.txt",
+      "split": "train",
+      "raw": "b61733001f4a75f8fa3347a03389563dc314d0d4d48688962e83dc7b8108d7ea",
+      "pixel": "067169199ee22f956b5f6ca9d2b8254f70af1aa13cbf1e9dd179971b5dff56e5",
+      "dhash": 13315108767668613336,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.340625,
+          0.32291667,
+          0.084375,
+          0.25694444
+        ],
+        [
+          0,
+          0.59648437,
+          0.2125,
+          0.07734375,
+          0.16944444
+        ],
+        [
+          0,
+          0.66601562,
+          0.23263889,
+          0.10546875,
+          0.17361111
+        ]
+      ],
+      "valid": true,
+      "group": 87
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-13-00000629.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-13-00000629.txt",
+      "split": "train",
+      "raw": "bba047b2e746fa9f57634f061fc1efa861a795b0f997c7ee24b6cc92a80033e7",
+      "pixel": "9e1fc12d4cc03821c873bf5649d71dbb2450ea4ae32bf4dd31360bb7126bfb57",
+      "dhash": 9856348567058500809,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46640625,
+          0.34444444,
+          0.1828125,
+          0.40277778
+        ],
+        [
+          0,
+          0.62695312,
+          0.36041667,
+          0.16015625,
+          0.39583333
+        ]
+      ],
+      "valid": true,
+      "group": 88
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-13-00001257.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-13-00001257.txt",
+      "split": "train",
+      "raw": "bc2b0e223935ac948e0a5e6401bc33eff817aa2e9e30808d367deb26fc2b3e6a",
+      "pixel": "aefe2f2c531378c61a7b9907dd59b444a1c43f3bbf87e8b5b4ab4f2e42c0caca",
+      "dhash": 10136649286453479481,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.40742187,
+          0.52430556,
+          0.21484375,
+          0.4375
+        ],
+        [
+          0,
+          0.5546875,
+          0.4375,
+          0.2109375,
+          0.36944444
+        ]
+      ],
+      "valid": true,
+      "group": 89
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-13-00001886.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-13-00001886.txt",
+      "split": "train",
+      "raw": "6df5850f71699279b8bfae8f004fbf6e9702b24a5d0542139961b1c63be7f6ba",
+      "pixel": "67ef213c4addd15b30a7283ffbb04e0a910425164c5cdd799031f67ddc0a1fcf",
+      "dhash": 15031001357740642072,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.14765625,
+          0.34722222,
+          0.2484375,
+          0.51388889
+        ],
+        [
+          0,
+          0.63671875,
+          0.35069444,
+          0.2578125,
+          0.42361111
+        ]
+      ],
+      "valid": true,
+      "group": 90
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-20-00000001.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-20-00000001.txt",
+      "split": "train",
+      "raw": "dd699233b6a209eaa5667783bffed5a35dcd1f65ddd5e6b7d333a23046f0b5fd",
+      "pixel": "a679af17666f017820a6543d3fd9d8d6bbec617d682626d4bf213acae099db15",
+      "dhash": 10818547585296250018,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.52109375,
+          0.57986111,
+          0.1703125,
+          0.25694444
+        ],
+        [
+          0,
+          0.77539062,
+          0.38819444,
+          0.12109375,
+          0.25694444
+        ]
+      ],
+      "valid": true,
+      "group": 91
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-20-00000530.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-20-00000530.txt",
+      "split": "train",
+      "raw": "f67f70f4360495c5e58b7a93371c54b8e5d2b92219da0293bc1c5bc3dff1c79d",
+      "pixel": "bb1b1105225dafd1447ea8f5b2119fd53af62700cbb53eff980518d0858bb57e",
+      "dhash": 2820571418158296138,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.12851562,
+          0.58194444,
+          0.13515625,
+          0.24722222
+        ],
+        [
+          0,
+          0.62578125,
+          0.44513889,
+          0.0328125,
+          0.10138889
+        ],
+        [
+          0,
+          0.64765625,
+          0.59166667,
+          0.06875,
+          0.10833333
+        ]
+      ],
+      "valid": true,
+      "group": 92
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-20-00001060.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-20-00001060.txt",
+      "split": "train",
+      "raw": "43cb63cbbbd4c0937634eccaeb5620cd8f326bb647af8d12be89bf6ddcca04d4",
+      "pixel": "ee963f0b8d6242ed8298aca062bdca79458ff319b550e33bd7f9684108a84855",
+      "dhash": 16228273247464472125,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.3671875,
+          0.58888889,
+          0.125,
+          0.275
+        ],
+        [
+          0,
+          0.68359375,
+          0.59375,
+          0.125,
+          0.27916667
+        ],
+        [
+          0,
+          0.27265625,
+          0.33819444,
+          0.0375,
+          0.10694444
+        ]
+      ],
+      "valid": true,
+      "group": 93
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-20-00001590.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-20-00001590.txt",
+      "split": "train",
+      "raw": "7dbb86e008fdcb90f989666e9713b622bd1f7555a6e38a183c2b1cac78813fdf",
+      "pixel": "a86f0304558d8de547fa4694b4878a0d1e809f9a51f6f49047e35287351bcc9f",
+      "dhash": 10493724024268954684,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5828125,
+          0.52430556,
+          0.0953125,
+          0.1875
+        ],
+        [
+          0,
+          0.37265625,
+          0.27916667,
+          0.034375,
+          0.08611111
+        ],
+        [
+          0,
+          0.40585938,
+          0.26319444,
+          0.03515625,
+          0.10694444
+        ],
+        [
+          0,
+          0.01757812,
+          0.40694444,
+          0.03515625,
+          0.16388889
+        ]
+      ],
+      "valid": true,
+      "group": 94
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-4-00000001.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-4-00000001.txt",
+      "split": "train",
+      "raw": "e9766a779ec4170dea3e7292fe19df128c8078a0d12246b5be6f74fb413d5f99",
+      "pixel": "02e810302daa7a4bb8223f48133239149580683a573d64aadbdf38a44f6dc9dc",
+      "dhash": 18374395070216595628,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.2484375,
+          0.5625,
+          0.15,
+          0.69722222
+        ],
+        [
+          0,
+          0.64453125,
+          0.14236111,
+          0.3515625,
+          0.28472222
+        ]
+      ],
+      "valid": true,
+      "group": 95
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-4-00000855.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-4-00000855.txt",
+      "split": "train",
+      "raw": "a6f2a5abe6561d8b828c370b80e3db2c134d39adefa3f3ba285f19cef1e5ac8e",
+      "pixel": "ccbcffb27b5720f3b908c4cbb0746732a183c1e1b78d470045b9d9017985b2bd",
+      "dhash": 18374093761280925404,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.50742188,
+          0.60555556,
+          0.26953125,
+          0.30555556
+        ],
+        [
+          0,
+          0.571875,
+          0.20833333,
+          0.1390625,
+          0.375
+        ]
+      ],
+      "valid": true,
+      "group": 96
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/extra-bird-4-00002594.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/extra-bird-4-00002594.txt",
+      "split": "train",
+      "raw": "840b3549c43a952099bae7b0d787ec67e9e34a990d8c7740020ec848ebd762bd",
+      "pixel": "666501c69fd872ba248010779636c713d0b5837c771a88c019b65d6874f19f11",
+      "dhash": 18227462924827817716,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.37890625,
+          0.36944444,
+          0.2109375,
+          0.33611111
+        ],
+        [
+          0,
+          0.54179687,
+          0.16319444,
+          0.28671875,
+          0.29861111
+        ]
+      ],
+      "valid": true,
+      "group": 97
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/f120c295f0f8709f.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/f120c295f0f8709f.txt",
+      "split": "train",
+      "raw": "9d5abc43107a146aa266ada1c73ccbb2e894405125d0099d4f0b7ee085adeae6",
+      "pixel": "f120c295f0f8709fa5bc9b161c76269102b02db18105287c0b6160af42a776b0",
+      "dhash": 9266731351301684464,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 98
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/f49bed97c1556e37.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/f49bed97c1556e37.txt",
+      "split": "train",
+      "raw": "f9922cfee52e413f839968b146a16d164b0a8dea99dad4ea6a2560a8d102337f",
+      "pixel": "f49bed97c1556e377d357676d75c0b919a8554dfc9e7acfb2c3c7f343a73f791",
+      "dhash": 2821442835017783384,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.509375,
+          0.5611111111111111,
+          0.04791666666666667,
+          0.03333333333333333
+        ]
+      ],
+      "valid": true,
+      "group": 99
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/fd50c7f370967ae6.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/fd50c7f370967ae6.txt",
+      "split": "train",
+      "raw": "35dfd8bed996c61a3ee6b2627333884e4f00eb1af67b90f0a36d0b9456067709",
+      "pixel": "fd50c7f370967ae6cab6d44a8545ad603fd5bcc6210948a40d55e88f8cfca5a0",
+      "dhash": 2821235307891134860,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.6520833333333333,
+          0.4708333333333333,
+          0.08333333333333333,
+          0.18611111111111112
+        ]
+      ],
+      "valid": true,
+      "group": 100
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/images/ff8ea246b1d0c5ef.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/train/labels/ff8ea246b1d0c5ef.txt",
+      "split": "train",
+      "raw": "80b43701c72b8b2be831b083a0281b60d02147d31e39954ed275b525ba309231",
+      "pixel": "ff8ea246b1d0c5efa43fdf81336837ee1ccd27e195b745188f5f252226d03adb",
+      "dhash": 9548902952300366560,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.428515625,
+          0.5666666666666667,
+          0.09609375,
+          0.26666666666666666
+        ]
+      ],
+      "valid": true,
+      "group": 101
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/06487335071462f0.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/06487335071462f0.txt",
+      "split": "val",
+      "raw": "545e1f01f1c85ade97e4ddb671e63bc40ee56cf44602500d8950ee3859215233",
+      "pixel": "06487335071462f0cb5f690106abbaa850240ad7b70e8b28aee24d6cde06236b",
+      "dhash": 17623320117235565298,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.587890625,
+          0.394444444444,
+          0.58203125,
+          0.788888888889
+        ]
+      ],
+      "valid": true,
+      "group": 102
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/13fbd2a8e527a98e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/13fbd2a8e527a98e.txt",
+      "split": "val",
+      "raw": "5d01b4a0444f4f4900cf884e7fb85afbc34dd63c7f4563f0e94bb59397100fc6",
+      "pixel": "13fbd2a8e527a98e1c2485404ed5119b270a2688a83327347b6c422b0027bccb",
+      "dhash": 10844851025231017184,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.49765625,
+          0.497222222222,
+          0.1203125,
+          0.505555555556
+        ]
+      ],
+      "valid": true,
+      "group": 103
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/237266ace1cfbd11.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/237266ace1cfbd11.txt",
+      "split": "val",
+      "raw": "83b978286adfcc521e2af5f71b66384f336583dc8dc0107a882cf17b7c33b196",
+      "pixel": "237266ace1cfbd1103f331aa4450d2b7fb2e9b28a8e39436122aa4cfedd6e3ac",
+      "dhash": 17480806834871990745,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.56171875,
+          0.511805555556,
+          0.6390625,
+          0.754166666667
+        ]
+      ],
+      "valid": true,
+      "group": 104
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/2e8069be1286695b.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/2e8069be1286695b.txt",
+      "split": "val",
+      "raw": "b175fbe629fb0e9d8c532597bda1cf954a8b68af00dbb1ec809480209b38cd26",
+      "pixel": "2e8069be1286695b9564675259275319413d387ebb4c27977c286ffc0857fff9",
+      "dhash": 9764008934098925800,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.43515625,
+          0.558333333333,
+          0.0890625,
+          0.55
+        ]
+      ],
+      "valid": true,
+      "group": 105
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/30e7b4db7d08fce2.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/30e7b4db7d08fce2.txt",
+      "split": "val",
+      "raw": "c45b84ef06c661cb22b43588fcbf00f4e3547226f3aa48fa332034edce0a3d4f",
+      "pixel": "30e7b4db7d08fce27df1fcd9f8561cc41cc59c9a24b17ea732e4f9664eafc291",
+      "dhash": 11493425774524689648,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.568359375,
+          0.527083333333,
+          0.10546875,
+          0.473611111111
+        ]
+      ],
+      "valid": true,
+      "group": 106
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/352bdce4bd13775f.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/352bdce4bd13775f.txt",
+      "split": "val",
+      "raw": "b6f8b7ff9df403960fee561ab4ada9f4a9ec2962b32a63d64bc69daaf8dc5600",
+      "pixel": "352bdce4bd13775f8b801c612a09be2171413f0c65ca386032efe1b00cfd5ea6",
+      "dhash": 11242698617072081248,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.564453125,
+          0.610416666667,
+          0.64453125,
+          0.779166666667
+        ]
+      ],
+      "valid": true,
+      "group": 107
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/39516faec81873bd.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/39516faec81873bd.txt",
+      "split": "val",
+      "raw": "69f88f0f3c0533b6964e4b72a108052d0e0538848b6e571de2a2c3cd9d063428",
+      "pixel": "39516faec81873bd21d63d500811a79ddeed2cc0f732013a93b7d4c36251133f",
+      "dhash": 8408247056708589234,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.6015625,
+          0.434027777778,
+          0.6203125,
+          0.868055555556
+        ]
+      ],
+      "valid": true,
+      "group": 108
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/3a78be00e28b3c7e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/3a78be00e28b3c7e.txt",
+      "split": "val",
+      "raw": "634c3b0ffa751ebf063d75a9c64181ff2fa60020169df891b33cc61777370d86",
+      "pixel": "3a78be00e28b3c7eb4fcb37d94051ae4934309d32199e3efb1b67a3d581bc2c6",
+      "dhash": 14466866658934041772,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.46875,
+          0.603472222222,
+          0.1875,
+          0.643055555556
+        ]
+      ],
+      "valid": true,
+      "group": 109
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/3c6427869879bfbd.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/3c6427869879bfbd.txt",
+      "split": "val",
+      "raw": "bdbb847372054f144b0e151a76af6183fb2350c4e731531081ab273c8333b5cc",
+      "pixel": "3c6427869879bfbdc185f97df84b587fe33fbb876e7f7629b37211b44828f9a4",
+      "dhash": 17050831765151863482,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.6390625,
+          0.51875,
+          0.70625,
+          0.740277777778
+        ]
+      ],
+      "valid": true,
+      "group": 110
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/5bb619812e137e09.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/5bb619812e137e09.txt",
+      "split": "val",
+      "raw": "7e5491c2c9d9b3d99422f803f93310ab820c6a84b961120a9281d107d979db2c",
+      "pixel": "5bb619812e137e09ba5648ad93be672b7602cc9b8ed11c040e4af168240fb959",
+      "dhash": 10965762421799703248,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.6078125,
+          0.602083333333,
+          0.6359375,
+          0.795833333333
+        ]
+      ],
+      "valid": true,
+      "group": 111
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/5e7841c2f39ffc07.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/5e7841c2f39ffc07.txt",
+      "split": "val",
+      "raw": "12cb54b8c7293fe49ad2d106d9eaa1bc4a12d95bf6c9163b7540ef111410a450",
+      "pixel": "5e7841c2f39ffc07388c9e8e2dd53dc7886e0de48b9d3478c62940a6eb78f6c5",
+      "dhash": 13459194484222072013,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.490234375,
+          0.5256944444444445,
+          0.17578125,
+          0.6375
+        ]
+      ],
+      "valid": true,
+      "group": 112
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/619429f82b6ac661.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/619429f82b6ac661.txt",
+      "split": "val",
+      "raw": "031e3e2d521d3d3912f49a0e06706cd05fe150037c7fa1866d937576787da554",
+      "pixel": "619429f82b6ac6612b69b18995f8aa7023c4f2fa9832c27e3df8e7db802c2f80",
+      "dhash": 10988835936331104384,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.60703125,
+          0.536111111111,
+          0.265625,
+          0.538888888889
+        ]
+      ],
+      "valid": true,
+      "group": 113
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/66503b8809a433eb.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/66503b8809a433eb.txt",
+      "split": "val",
+      "raw": "7a339a2ac5d969599f54a61755a41e8b50b815873e4fc2dc533ca8a57ffbb980",
+      "pixel": "66503b8809a433eb85e43aaad6c65f45f704596fa16384f18a1ecc4bea1a3b71",
+      "dhash": 11733219831177450698,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 114
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/68e1b6a6225d5b0b.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/68e1b6a6225d5b0b.txt",
+      "split": "val",
+      "raw": "e9012499b9c323fe8efd27242b0fc6c41bb83a209866011737444a14e9eb3a84",
+      "pixel": "68e1b6a6225d5b0b5098184b201595c23d4f83d83678ee06f9012537b60a596a",
+      "dhash": 10133929213639315672,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.4875,
+          0.570833333333,
+          0.1,
+          0.508333333333
+        ]
+      ],
+      "valid": true,
+      "group": 115
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/7113dd0e310c962e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/7113dd0e310c962e.txt",
+      "split": "val",
+      "raw": "f2ab6dbc8e41b4e4764eb588e2ab2a8cee5290207edfa3125ebe8442d61fb716",
+      "pixel": "7113dd0e310c962e8bdb842b1e8524beb9e49d1a80f91497ac9c6fef08fec315",
+      "dhash": 14477092484405221897,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 116
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/727b1e7501c78ee1.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/727b1e7501c78ee1.txt",
+      "split": "val",
+      "raw": "d479ed2ca7fd1443c0557b5cb74f527cc0332be7d2e2a1fb24d4c15347641328",
+      "pixel": "727b1e7501c78ee14db1f833d35961ea6ddfce4afff8624a7e0b41ff56be7e3d",
+      "dhash": 12430317914531094752,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5359375,
+          0.522222222222,
+          0.203125,
+          0.525
+        ]
+      ],
+      "valid": true,
+      "group": 117
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/76e2631a36f90947.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/76e2631a36f90947.txt",
+      "split": "val",
+      "raw": "508544404f3bd053ffb37cc4a91e65dc3c7321b018046f7810a7a0a185f7f1da",
+      "pixel": "76e2631a36f90947602c5b374725047370ae907909093ce75fa4352fc0f9f08c",
+      "dhash": 14467999345515070050,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 118
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/842c846565914093.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/842c846565914093.txt",
+      "split": "val",
+      "raw": "4bf6c38547f2cc8914df2e428f0b94d1609671a89f668376ad90bee6a43183b0",
+      "pixel": "842c846565914093d44252db38e1a083547a9450ceb1d4823cfb84766ebffc43",
+      "dhash": 10340540484795822328,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.53125,
+          0.575,
+          0.1125,
+          0.544444444444
+        ]
+      ],
+      "valid": true,
+      "group": 119
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/880a071c0ce96ea1.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/880a071c0ce96ea1.txt",
+      "split": "val",
+      "raw": "a762a3116db4aeff05d966a1eec1969dc8666caa788aab3964e5e37859508387",
+      "pixel": "880a071c0ce96ea14fabcbff2f8ed49132816c124a0a14ccbcceb789e80e6bb6",
+      "dhash": 12002490930473788649,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.484765625,
+          0.572916666667,
+          0.14921875,
+          0.479166666667
+        ]
+      ],
+      "valid": true,
+      "group": 120
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/8b1b02db075ee174.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/8b1b02db075ee174.txt",
+      "split": "val",
+      "raw": "277f7fa03b7713662284e06c605db34c1a747dcafb13f4c662ce4ded3c7cf763",
+      "pixel": "8b1b02db075ee17494dcf975ebaa59393643fcf24ae8d416bcc38bb587e825d7",
+      "dhash": 10268441108192752880,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.55703125,
+          0.545138888889,
+          0.0921875,
+          0.479166666667
+        ]
+      ],
+      "valid": true,
+      "group": 121
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/95fc73b2b7509ab6.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/95fc73b2b7509ab6.txt",
+      "split": "val",
+      "raw": "e06afc805866482fb1c13d3a7293d2f2c2bb584c79d458dc38763545d38fe749",
+      "pixel": "95fc73b2b7509ab65abb7130874a71d9a89898fe1e56d125e580438e40d148b6",
+      "dhash": 10777335776893922528,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.530859375,
+          0.505555555556,
+          0.09140625,
+          0.475
+        ]
+      ],
+      "valid": true,
+      "group": 122
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/96e4b723bb6f71da.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/96e4b723bb6f71da.txt",
+      "split": "val",
+      "raw": "6a7996180461d9b62306f115c0a00db97e8ca06eac12eb94a4e345cc5e4fd3c9",
+      "pixel": "96e4b723bb6f71dae3326596ec8d4dbee99a360e7354397f5164ea80b8e937dc",
+      "dhash": 16445367536515987122,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.677734375,
+          0.517361111111,
+          0.62890625,
+          0.820833333333
+        ]
+      ],
+      "valid": true,
+      "group": 123
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/9c3ec857eedf8ab6.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/9c3ec857eedf8ab6.txt",
+      "split": "val",
+      "raw": "e004e4a31d60ef6bbbd77199b177de90ef11569e93d9ad959d2f4322e7b0c06c",
+      "pixel": "9c3ec857eedf8ab6a832dfcc442e8468a5eb6910854f9da673113c8f73edd786",
+      "dhash": 17478630242722110961,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.516015625,
+          0.540277777778,
+          0.26328125,
+          0.544444444444
+        ]
+      ],
+      "valid": true,
+      "group": 124
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/9db47e812d4dbd9d.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/9db47e812d4dbd9d.txt",
+      "split": "val",
+      "raw": "9b5c4aaeb65f7f46a5778ef4be45101c46593d2f798717019319c88195ee2de8",
+      "pixel": "9db47e812d4dbd9d4fe6b7ab97c79faa5871c4eb8a7d3a20cac535c5fe2f8ffa",
+      "dhash": 7089336939326914754,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 125
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/a564a14c944266f4.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/a564a14c944266f4.txt",
+      "split": "val",
+      "raw": "e1dcedb36eb636b9751ad3807621a4a97c50642af9ce5a0214dd1cd7d919cd9c",
+      "pixel": "a564a14c944266f431013de097e2de28d956e91541e1493bac544564494e57cb",
+      "dhash": 14702725515900703209,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.501171875,
+          0.603472222222,
+          0.22734375,
+          0.793055555556
+        ]
+      ],
+      "valid": true,
+      "group": 126
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/a5eb004746a7dc1e.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/a5eb004746a7dc1e.txt",
+      "split": "val",
+      "raw": "740b4634f7da160b6466d1e83880cbcb55be7c1b36fefe96f79e1c79ae25770a",
+      "pixel": "a5eb004746a7dc1e50f8723160d2851bf2fe4da6db49c34df7cb9716c3ac5cf0",
+      "dhash": 12580504016380624124,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.62265625,
+          0.488888888889,
+          0.2578125,
+          0.619444444444
+        ]
+      ],
+      "valid": true,
+      "group": 127
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/cf1c5e96383b9d51.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/cf1c5e96383b9d51.txt",
+      "split": "val",
+      "raw": "b639b5a4749989c083882d6d70f4d7fd1e45c76b1324c075f85299352f10e0f0",
+      "pixel": "cf1c5e96383b9d51f77219e5e600145c2daba3dff7d25dd5f836de7d78445ad0",
+      "dhash": 10992186474063845737,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.568359375,
+          0.640972222222,
+          0.64453125,
+          0.718055555556
+        ]
+      ],
+      "valid": true,
+      "group": 128
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/d3f7364210a8b1fe.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/d3f7364210a8b1fe.txt",
+      "split": "val",
+      "raw": "ecee155af8960dda7f3e075bed5b297c30955b7e7396582010670d757cd8aee0",
+      "pixel": "d3f7364210a8b1fe5f185c2be4722589f377a488a40540ad846977501dccd8fb",
+      "dhash": 2713000752265208741,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 129
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/f7b7d28e2a965708.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/f7b7d28e2a965708.txt",
+      "split": "val",
+      "raw": "bcb7a04b0a5c2c5e2faad7f7d8ce349a92476c35da0f2137e785f711a2e5c031",
+      "pixel": "f7b7d28e2a96570850cf51bfe0607ce68b9186c2c2a920fe7759fa3f803c1cf5",
+      "dhash": 14465722670861291520,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 130
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/f994278835c3e5d2.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/f994278835c3e5d2.txt",
+      "split": "val",
+      "raw": "073874ccb1636056618e186edb8444456e24b29273fe413707ec621b36e8e522",
+      "pixel": "f994278835c3e5d23b240464615f39beb107e3c884d4209682a24232925aee3c",
+      "dhash": 11035005266673713874,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [
+        [
+          0,
+          0.5671875,
+          0.590972222222,
+          0.415625,
+          0.818055555556
+        ]
+      ],
+      "valid": true,
+      "group": 131
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/fd134e09d454ce52.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/fd134e09d454ce52.txt",
+      "split": "val",
+      "raw": "07729e40881790097114a061c6bdbe8746dc7009217d96db2487805c52cab35f",
+      "pixel": "fd134e09d454ce529122af36fb6a0fa2edc384f41f9f7524a268198c606dbf05",
+      "dhash": 6147703762724375752,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 132
+    },
+    {
+      "image": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/images/ff61134434c1c9c7.jpg",
+      "label": "/Users/macbook/Documents/ChatGPT/birds/datasets/bird-video-detection-v2/val/labels/ff61134434c1c9c7.txt",
+      "split": "val",
+      "raw": "d82c03b5b53cf334038aaf2f45bbf2ce8ecdaf69173cf072c26188bb8b9bedc9",
+      "pixel": "ff61134434c1c9c759dc6c069647406eab7ced1d709b68058a69ece381c439fd",
+      "dhash": 13021230908451356804,
+      "hash_usable": true,
+      "family": null,
+      "boxes": [],
+      "valid": true,
+      "group": 133
+    }
+  ],
+  "notes": [
+    "Схожі зображення — евристичні кандидати. Обрізані кадри можуть не виявитися. Для наукової оцінки потрібне групування за джерелом або відео."
+  ]
+}
