@@ -1,0 +1,14 @@
+{
+  "provider": "Soniox",
+  "model": "tts-rt-v2",
+  "language": "uk",
+  "voice": "Daniel",
+  "speed": 1.15,
+  "speed_label": "1,15× від звичайного темпу",
+  "audio_format": "wav",
+  "deliverables": {
+    "per_slide_clips": true,
+    "combined_narration": true,
+    "include_in_audit_archive": true
+  }
+}
