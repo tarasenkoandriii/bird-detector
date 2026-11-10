@@ -78,6 +78,28 @@ function addImageOrChart(s,n,kind){
   const y=240,row=70;labels.forEach((lab,i)=>{const yy=y+i*row;txt(s,lab,670,yy,355,36,18,muted,true);rect(s,670,yy+42,Math.min(430,nums[i]/Math.max(...nums)*430),12,[cols.A,cols.D,cols.plan,cols.head][i%4],5);txt(s,String(nums[i]),1110,yy+24,90,34,24,[cols.A,cols.D,cols.plan,cols.head][i%4],true,'right');});return;
  }
  if(kind==='flow'||kind==='lineage'||kind==='variants'||kind==='protocol'||kind==='layers'||kind==='tiles'||kind==='decision'||kind==='roadmap'||kind==='plan'||kind==='audit'||kind==='sources'||kind==='baseline'||kind==='metric'||kind==='errors'||kind==='matrix'||kind==='limits'||kind==='summary'||kind==='labelAudit'||kind==='v2Annotation'||kind==='specs'||kind==='formula'||kind==='commands'){
+  if(kind==='lineage'){
+   // A two-dimensional parent/child map. Connectors stop at opaque cards so
+   // no route runs across candidate markers or labels.
+   const node=(x,y,w,h,title,detail,color)=>{
+    rect(s,x,y,w,h,panel,10,lineColor);
+    rect(s,x,y,6,h,color,3);
+    txt(s,title,x+18,y+7,w-28,25,17,color,true);
+    txt(s,detail,x+18,y+32,w-28,20,13,muted);
+   };
+   ln(s,850,372,880,372,lineColor,2);
+   ln(s,1030,372,1046,372,lineColor,2);
+   ln(s,1046,275,1046,465,lineColor,2);
+   ln(s,1046,275,1065,275,lineColor,2);
+   ln(s,1046,370,1065,370,lineColor,2);
+   ln(s,1046,465,1065,465,lineColor,2);
+   node(680,340,170,64,'Pretrained N','вихідні ваги',cols.N);
+   node(880,340,150,64,'A','фотоорієнтир',cols.A);
+   node(1065,245,165,60,'B','від A',cols.B);
+   node(1065,340,165,60,'C','від A',cols.C);
+   node(1065,435,165,60,'D','від A',cols.D);
+   return;
+  }
   let labels=[];
   if(kind==='flow')labels=['Вхідний MP4','Покадровий inference','BBox · class · conf','Вихідний MP4'];
   if(kind==='lineage')labels=['Pretrained N','A · фотоорієнтир',['B · від A','C · від A','D · від A']];
@@ -138,5 +160,17 @@ for(let i=0;i<60;i++){
  const png=await P.export({slide:s,format:'png',scale:1});
  await fs.writeFile(path.join(renders,`slide-${String(n).padStart(2,'0')}.png`),new Uint8Array(await png.arrayBuffer()));
 }
-const pptx=await PresentationFile.exportPptx(P);await pptx.save(path.join(output,'Bird_Detector_Presentation_UK.pptx'));
-console.log(`Створено ${P.slides.items.length} слайдів, PPTX і 60 повнорозмірних попередніх переглядів.`);
+const pptx=await PresentationFile.exportPptx(P);
+const stagedPptx=path.join(build,'Bird_Detector_Presentation_UK_without_audio.pptx');
+await pptx.save(stagedPptx);
+const {execFile}=await import('node:child_process');
+const {promisify}=await import('node:util');
+await promisify(execFile)('python3',[
+ path.join(here,'embed_slide_audio.py'),
+ stagedPptx,
+ path.join(repo,'audio','slide_clips'),
+ path.join(here,'assets','audio-play.png'),
+ path.join(output,'Bird_Detector_Presentation_UK.pptx'),
+ path.join(build,'audio_mp3'),
+],{maxBuffer:1024*1024});
+console.log(`Створено ${P.slides.items.length} слайдів, вбудовано окреме озвучення для кожного слайду.`);
